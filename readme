@@ -94,6 +94,21 @@ http://192.168.0.119/
         python, python for vscode, python extention pack 설치
     
      
+5. git 프로젝트를 관리할 폴더 생성
+  - powershell 에서
+    $mkdir py_projects  
+    $cd py_projects     
+  - git상 프로젝트 다운로드  
+    [public]
+    $git clone https://github.com/y0ngma/python_basic.git
+    [private]
+    $git clone https://ID:비번@github.com/y0ngma/python_basic.git
+  - vs code에다가 py_projects 폴더를 드래그 앤 드롭   
+  - git 사용자 임을 등록(powershell 에서)
+      $git config --global user.email "takeit2sy@pusan.ac.kr"  
+      $git config --global user.name "y0ngma"  
+  좌측세번째 공정관리에서 '1일차 수업내용' 등으로 작성하고 'V' 표시를 누른다.
+
      
 
 
