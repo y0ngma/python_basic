@@ -95,6 +95,7 @@ http://192.168.0.119/
     
      
 5. git 프로젝트를 관리할 폴더 생성
+  - 항상 리프레쉬 해서 꼬이지 않게 습관을 들인다.!!! 중요
   - powershell 에서
     $mkdir py_projects  
     $cd py_projects     
@@ -107,10 +108,14 @@ http://192.168.0.119/
   - git 사용자 임을 등록(powershell 에서)
       $git config --global user.email "takeit2sy@pusan.ac.kr"  
       $git config --global user.name "y0ngma"  
-  - 좌측세번째 공정관리에서 '1일차 수업내용' 등으로 작성하고 'V' 표시를 누른다.
-    이 내용은 깃허브 repository에 제목과 마지막수정시간 사이칸에 표현된다.
-  - 사이트에서 수정시
-    
-
+  5.1 수정내용 업로드(push)
+    - 수정내용이 있으면 Ctrl S 로 저장
+    - 좌측세번째 공정관리에서 '1일차 수업내용' 등으로 작성하고 'V' 표시를 누른다.
+      -이 내용은 깃허브 repository에 제목과 마지막수정시간 사이칸에 표현된다.
+    - 좌측하단에 화살표를 눌른다.
+  5.2 깃허브 사이트에서(push)
+    - 수정하거나 파일을 지울때 Commit 하게 된다.
+  5.3 수정내용 다운로드(pull)
+    - 
 
 
