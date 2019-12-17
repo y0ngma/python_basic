@@ -66,7 +66,7 @@ http://192.168.0.119/
 
 4. vs code 설정
  - 프로젝트를 원하는 위치에 폴더 생성
-   - python_projects
+   - py_projects
    - 해당 폴더를 드레그 해서, vs code에 드롭
    - 해당 위치로 vs code 재오픈
 - 에디터 설정
@@ -86,7 +86,7 @@ http://192.168.0.119/
       - 4 디버깅(코드가 오류가 있을때 잡는 방법)
       - 5 플러그인 검색 및 설치
   - 파이썬 설치 한 후에 파이썬 파일 한개를 생성시
-      -./basic/p1.python
+      -./python_basic/p1.py
       - vs code가 해당 파일을 인식하고, python경로를 잡거나 
       extention을 설치하라고 유도
       ->vs code 재가동
