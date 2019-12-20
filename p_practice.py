@@ -20,3 +20,19 @@
     # print(ori_data)
     # print(target_data)
 
+## 트럼프카드 => 타입4개, 타입별13장
+    # # 총카드수 13*4 =52. 일렬로 배치하면
+    # CARD_TYPE           = 4
+    # CARD_PER_TYPE_SIZE  = 13
+    # TOTAL_CARD_COUNT    = CARD_TYPE * CARD_PER_TYPE_SIZE
+    # # 모든 카드 생성
+    # all_cards           = list(range(TOTAL_CARD_COUNT))
+    # # 카드 타입의 순서
+    # seq                 = list('♤◇♡♧')
+    # card_id             = list('A23456789')+['10']+list('JQK')
+    # print(seq)
+    # # 33는 ♤k 이다
+    # target_number = 33
+    # print(seq[int(12/CARD_PER_TYPE_SIZE)])
+    # print(target_number % CARD_PER_TYPE_SIZE)
+
