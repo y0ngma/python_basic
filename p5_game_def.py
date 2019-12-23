@@ -9,13 +9,13 @@ PLAYER_NAME_LEN_MAX = 15
 GAME_LEVEL_LEN_MAX  = 9
 GAME_LEVEL_LEN_MIN  = 1
 IS_DEV_MODE         = True
-types   = list('♤◇♡♧') #
+types               = list('♤◇♡♧') #
     # 이하는 처음에 한번만 정하면되는 부분. gamecards로 사본을 이용
-nums    = list('A23456789')+['10']+list('JQK') #
+nums                = list('A23456789')+['10']+list('JQK') #
     #10을 같이 넣거나 list('10')으로 합치면 1,0 따로 분리되므로 
-cards       = [i+j for i in types for j in nums ] # 
+cards               = [i+j for i in types for j in nums ] # 
     # 카드 초기화   
-score_table = dict() #
+score_table         = dict() #
     #점수표 초기화
     # A~K 까지를 키로 보고, 이를 통해 값을 획득하면 간단하게 합산처리
     # 이를 위해 점수 변환표를 준비한다
@@ -28,9 +28,9 @@ for key in nums:score_table[key] = nums.index(key)+1 #
     #     score_table[key] = k
     #     k += 1
     # print(score_table)
-score_table['K'] = -5 #
+score_table['K']    = -5 #
     # 트럼프 K는 패널티를 주어서 -5점이다.
-# 함수지향적 프로그램으로 작성중에 추가된 변수
+    # 함수지향적 프로그램으로 작성중에 추가된 변수
 player_name         = None
 myTotalScore        = 0
 game_level          = 0
@@ -43,20 +43,18 @@ isOneGaming         = True
 
 def main():
     step1()
-    # 26번의 gameTitle 과 step2() 안의 gameTitle은 서로다른변수다
+    # 26번의 game_title 과 step2() 안의 game_title은 서로다른변수다
     # 그냥 편의상 이름만 동일하게 사용했다(이후 코 않고치기위해)
-    gametitle2 = step2()
+    game_title2 = step2()
     step3()
     step4()
     # =========
-    step6(gametitle2)
-    step5(gametitle2)
+    step6(game_title2)
+    step5(game_title2)
     while isOneGaming:
         step7()
-
-def step2():
+def step1():
     print( "Enjoy Custom Game world" )    
-
 def step2():
     while True:    
         tmp = input(" 게임 제목을 입력하시오,\n \
@@ -72,13 +70,14 @@ def step2():
             game_title = tmp
             break
     print( 'game title', game_title )
-    # gameTitle은 절차적 코드에서는 그냥 사용해도 되나,
+    # game_title은 절차적 코드에서는 그냥 사용해도 되나,
     # 함수지향적으로 전개해서 함수 내부로 가면 지역변수가 된다
     # 함수 밖에서 사용이 불가하므로, 값을 리턴하거나, 아예 
     # 전역 변수로 빼야 한다
-    return gameTitle
-
+    return game_title
 def step3():
+    global player_name
+    global myTotalScore    
     while True:
         tmp = input(" player_name을 입력하시오, \n단 {}자 이내로 입력가능\
         \n ------------------\n=>".format(PLAYER_NAME_LEN_MAX)).strip()
@@ -94,7 +93,8 @@ def step3():
         else:
             print("------------------\n!!!%s자가 초과 되었습니다!!!"%\
                 PLAYER_NAME_LEN_MAX)
-    # step4
+def step4():
+    global game_level
     while True: # 내가 짠것 
         #값이 정수일때 %d %d % (값1, 값2)
         tmp = input(" 게임 난이도를 입력하시오.\n 단, %d~%d까지 정수 형태로 제한한다\
@@ -131,36 +131,15 @@ def step3():
             #     break
             # print('game level은 %s' % game_level)
         ############# 긍정상황 스타일
-            # while True:
-            #     try: #오류가 발생시 예외처리
-            #         tmp = int(input(" 게임 난이도를 입력하시오. \
-            #         \n단, %d~%d까지 정수 형태로 제한한다\
-            #         \n ------------------\n =>"\
-            #         % (GAME_LEVEL_LEN_MAX, GAME_LEVEL_LEN_MIN)).strip())
-            #         if 1<= tmp <=9:
-            #             game_level = tmp
-            #             print('game level은 %s' % game_level)
-            #             break
-            #         else:
-            #             print("------------------\n!!!범위안의 레벨을 넣어주세요!!!")
-            #     except Exception as e:
-            #         print("------------------\n!!!범위안의 레벨을 넣어주세요!!!")
-else: # test or dev(개발) 버전으로 코드가 작동
-    # 매번 입력받아서 테스트하기 시간이 많이 소요되므로, 값을 고정하여 개발
-    game_title  ='test game'
-    player_name ='guest'
-    game_level  = 1
-    myTotalScore = 0 
-
-# step5
-if IS_DEV_MODE:
-    print('-' * 20)
-    print('현재까지 입력상황')
-    print('gametitle', game_title)
-    print('palyer_name', player_name)
-    print('game_level', game_level)
-    print('-' * 20)
-# step6
+def step5(game_title):
+    if IS_DEV_MODE:
+        print('-' * 20)
+        print('현재까지 입력상황')
+        print('game_title', game_title)
+        print('palyer_name', player_name)
+        print('game_level', game_level)
+        print('-' * 20)
+def step6(game_title):
     #인트로(가로길이 40칸. 추후에 해상도로 표현)
     '''
     ========================================
