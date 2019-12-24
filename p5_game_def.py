@@ -36,7 +36,6 @@ myTotalScore        = 0
 game_level          = 0
 
 isOneGaming         = True
-
 ## 3. 함수들 나열
 # 함수 지향적 프로그램은 반드시(대체적으로) 시작점이 존재한다.
 # =앤트리포인트 !!
