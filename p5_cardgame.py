@@ -17,7 +17,10 @@
 # 전체 룰
 # 1. 게임이 시작하면 카드를 섞는다. => 셔플 =>random모듈활용
 types   = list('♤◇♡♧')
-nums    = list('A23456789')+['10']+list('JQK')
+nums    = list('A23456789')+['10']+list('JQK') #
+    # a = [1, 2], b = [3, 4]
+    # a.append(b) = [1, 2, [3, 4]]
+    # a.extend(b) = [1, 2, 3, 4]
 cards       = [i+j for i in types for j in nums ] # 
     # 카드 초기화   
 score_table = dict() #
