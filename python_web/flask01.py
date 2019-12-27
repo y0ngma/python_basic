@@ -19,16 +19,22 @@ app = Flask(__name__)
 
 @app.route("/") 
 def index():
+    return render_template('index.html') 
+
+@app.route('/member', methods=['GET'])
+def member():
     sql = 'SELECT * FROM MEMBER'
     cursor.execute(sql)
     data = cursor.fetchall() 
     print(type(data))
-    print(data)
     sum = 0
+    mean = 0
     for i in data:
-        sum += i[3]    
-    print(sum)
-    return render_template('index.html') 
+        sum += i[3]
+        mean = sum/len(data) 
+        print('회원:', i)   
+    print('회원들의 평균나이는 %.1f 이다.' % mean)
+    return render_template('member.html', member=mean) 
 
 @app.route("/join", methods=['GET']) 
 def join():
@@ -36,7 +42,6 @@ def join():
         #return "join page <hr/><hr     />*5" # 줄넣어 꾸미기
     return render_template('join.html') 
         # 코드여러줄을 html화면으로 렌더링하라
-
 @app.route("/join", methods=['POST'])
 def join_post():
     a = request.form['id']
@@ -47,21 +52,20 @@ def join_post():
     cursor.execute(sql, id=a, pw=b, na=c, ag=d)
     conn.commit()
     print('{}:{}:{}:{}'.format(a,b,c,d))
-    return redirect("/")  
+    return redirect("/member")  
         # 127.0.0.1:5000/을 크롬에서 엔터친것 처럼 동작 
-        # "/congrat" 가입축하페이지 등으로 가도 됨
     # 오라클 DB접속하는법
     # 추가하는 SQL문 작성 => INSERT, SELECT, UPDATE, DELETE
     # SQL문 수행
+
 @app.route("/login", methods=['GET']) 
 def login():
     print('login-get')
     return render_template('login.html')
-
 @app.route("/login", methods=['POST']) 
 def login_post():
     print("login-post")
-    return redirect("/")
+    return redirect("/member")
 
 if __name__=='__main__':
     app.run(debug=True) # 
