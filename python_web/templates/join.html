@@ -1,0 +1,28 @@
+<!--주석문-->
+<!--단축키는 ctrl ?-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>join</title>
+</head>
+<body>
+    <h3>회원가입</h3>
+    <hr />  
+    <form action="/join" method="post">
+    <!-- input type="email" 이면 @ 이메일 형식 강제-->
+    아이디  : <input type="text" /><br />
+    <!-- input type이 password면 기호마스킹 -->
+    암호    : <input type="password" /><br />
+    암호확인: <input type="password" /><br />
+    <br />
+    이름    : <input type="text" /><br />
+    <!-- 숫자만 쳐짐 -->
+    나이    : <input type="number" /><br />
+    <!-- 버튼 -->
+    <input type="submit" value="회원가입" />
+    </form>
+</body>
+</html>
