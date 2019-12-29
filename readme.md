@@ -1,7 +1,7 @@
 자료실
 http://192.168.0.119/
 
-전체 과정
+# 전체 과정
 1. 개요
  - 파이썬을 기반
  - 데이터 분석(통계적, 시각적), 수집, 전처리등등.
@@ -75,8 +75,8 @@ http://192.168.0.119/
       -./python_basic/p1.py
       - vs code가 해당 파일을 인식하고, python경로를 잡거나 
       extention을 설치하라고 유도
-      ->vs code 재가동
-      ->좌측메뉴 다섯번째 extention 항목에서 python 검색하여 
+      - > vs code 재가동
+      - > 좌측메뉴 다섯번째 extention 항목에서 python 검색하여 
         python, python for vscode, python extention pack 설치
     
      
