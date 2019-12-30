@@ -75,8 +75,25 @@ WSGI_APPLICATION = 'web1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    ## sqlite DB 사용시
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    
+    ## mysql
+        # 'ENGINE'   : 'django.db.backends.mysql',
+        # 'NAME'     : 'DB명',
+        # 'PASSWORD' : '암호',
+        # 'USER'     : '아이디명',
+        # 'HOST'     : '127.0.0.1',
+        # 'PORT'     : '포트번호'
+
+    ## oracle
+        'ENGINE'   : 'django.db.backends.oracle',
+        'NAME'     : 'xe', # SID(db명)
+        'PASSWORD' : '1234',
+        'USER'     : 'admin',
+        'HOST'     : '192.168.99.100',
+        'PORT'     : '32764'
     }
 }
 
@@ -105,7 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul' 
 
 USE_I18N = True
 
@@ -118,3 +136,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# 정적파일 경로 지정하는 방법이다.
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]

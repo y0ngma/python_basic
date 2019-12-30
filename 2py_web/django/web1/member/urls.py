@@ -9,7 +9,11 @@ from . import views
 #127.0.0.1:8000/board/write 로 만듬
 #127.0.0.1:8000/board/list 로 만듬
 urlpatterns = [
-     path('index', views.index, name='index'),
-     path('join', views.join, name = 'join'),
-     path('login', views.login, name = 'login')
- ]
+    # index를 url끝에 치면 views의index함수를 불러와라
+    path('index', views.index, name='index'),
+    path('list', views.list, name = 'list'),
+    path('join1', views.join1, name = 'join1'),
+    path('member', views.member, name = 'member'),
+    path('join', views.join, name = 'join'),
+    path('login', views.login, name = 'login')
+]
