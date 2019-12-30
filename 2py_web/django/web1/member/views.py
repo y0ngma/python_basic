@@ -12,13 +12,6 @@ from django.db import connection #
     # cursor 사용
 cursor = connection.cursor() 
 
-@csrf_exempt # post로 값을 전달 받는 곳은 필수
-def join1(request):
-    if request.method == 'GET':
-        return render(request, 'member/join1.html')
-    elif request.method == 'POST':
-        return redirect('/member/index')
-
 def list(request): 
     # sql 쓴 이유 :
         # 데이터가 먼저냐 화면이 먼저냐?
@@ -48,8 +41,8 @@ def index(request):
     return render(request, 'member/index.html')
         #return HttpResponse('index page <hr />') 처럼 하던 불편사항 개선
 
-@csrf_exempt # POST로 값을 전달 받는곳은 필수
 # django에서는 보안상 csrf가 POST 할때 필수사용됨
+@csrf_exempt # POST로 값을 전달 받는곳은 필수
 def join(request):
     if request.method == 'GET':
         return render(request, 'member/join.html')

@@ -19,32 +19,41 @@
     <link rel='stylesheet' href='/static/css/mystle.css'/>
 </head>
 <body>
+<h3>VIP회원가입</h3>
+<hr />
+<form action="/member/join1" method="post">
     <div class = 'mybox'>
-        <input type = 'text'/>
-        <input type = 'text'/>
-        <input type = 'text'/>
+        <input type = 'text' name="id"/>
+        <input type = 'text' name='pw'/>
+        <input type = 'text' name = "email"/>
     </div>
     
     <div class = 'mybox'>
-        <input type = 'text'/>
-        <input type = 'text'/>
-        <input type = 'text'/>
+        <input type = 'text' name = "name"/>
+        <input type = 'text' name = "tel"/>
+        <input type = 'text' name = "img"/>
     </div>
+<input type="submit" value="회원가입" />
+</form>
+<form action='/member/index' method='get'>
+<input type='submit' value='홈' />
+</form>
 </body>
 </html>
 
 <!-- <h3>회원가입</h3>
 <hr />  
-
-<form action="/member/join" method="post"> 
+<form action="/member/join1" method="post"> 
 아이디  : <input type="text" name="id" /><br />
 암호    : <input type="password" name='pw'/><br />
 암호확인: <input type="password" /><br />
 이름    : <input type="text" name = "name"/><br />
-나이    : <input type="number" name = "age"/><br />
+나이    : <input type="tel" name = "tel"/><br />
+사진    : <input type="img" name = "img"/><br />
+이메일    : <input type="email" name = "email"/><br />
+
 <input type="submit" value="회원가입" />
 </form>
-
 <form action='/member/index' method='get'>
 <input type='submit' value='홈' />
 </form> -->
