@@ -8,8 +8,9 @@
 [^markdown]:주피터 시작디렉토리 변경, <https://jackerlab.com/jupyter-notebook-directory-change/> (2020.1.1.)
 ```
 1. 실행된것
-주피터를 켰을때 시작페이지 바꾸는방법은?[^markdown]
-[^markdown]:주피터 시작디렉토리 변경, <https://jackerlab.com/jupyter-notebook-directory-change/> (2020.1.1.)
+주피터를 켰을때 시작페이지 바꾸는방법은? [^markdown]
+
+[^markdown] : 주피터 시작디렉토리 변경, <https://jackerlab.com/jupyter-notebook-directory-change/> (2020.1.1.)
 #### 출처 제공용 
 1. 문장 밖에 각주 번호
     - 온라인 자료
