@@ -33,7 +33,7 @@ def member():
         sum += i[3]
         tmp = data.index(i)+1
         mean = sum/len(data)
-        print('%d번째 회원이름:%s 무게:%d', % (tmp, i[2], i[3]))
+        #print('%d번째 회원이름:%s 무게:%d', % (tmp, i[2], i[3]))
         print('{}번째 회원의 이름:{} 무게:{}' .format(tmp, i[2], i[3]))      
     print('회원들의 평균나이는 %.1f 이다.' % mean)
     return render_template('member.html', member=mean) 
