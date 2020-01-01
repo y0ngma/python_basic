@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>join1</title>
+<!--html 페이지 별 스타일 전체 주기
+    <style>
+    .mybox{
+        width:600px;
+        border:1px solid #cccccc;
+        padding:50px;
+        margin-bottom: 10px;
+    }
+    </style> -->   
+<!--여러 html 페이지에 스타일 주기 
+    href에 현재경로에서 Change Directory 할것을 적는다-->
+    <link rel = 'stylesheet' href =' /static/css/mystyle.css'/>
+</head>
+<body>
+<h3>VIP회원가입</h3>
+<hr />
+<form action="/member/join1" method="post">
+    <div class = 'mybox'>
+        <input type = 'text' name="id"/>
+        <input type = 'text' name='pw'/>
+        <input type = 'text' name = "email"/>
+    </div>
+    <hr />
+    
+    <div class = 'mybox'>
+        <input type = 'text' name = "name"/>
+        <input type = 'text' name = "tel"/>
+        <input type = 'text' name = "img"/>
+    </div>
+<input type="submit" value="회원가입" />
+</form>
+<form action='/member/index' method='get'>
+<input type='submit' value='홈' />
+</form>
+
+
+
+<!-- 편리한 링크 -->
+
+    {% if not request.session.userid %}
+        <a href='/member/list'>회원목록</a>
+        <a href='/member/login'>로그인</a>
+        <a href='/member/join'>회원가입</a>
+    {% else %}
+        {{request.session.username}}
+        <a href='/member/list'>회원목록</a>
+        <a href='/member/edit'>회원정보수정</a>
+        <a href='/member/delete'>회원탈퇴</a>
+        <form action='/member/delete' method='post'>
+            <input type='submit' value='회원탈퇴' />
+        </form>
+        <a href='/member/logout'>로그아웃</a>
+    {% endif %}
+</body>
+</html>
+
+<!-- <h3>회원가입</h3>
+<hr />  
+<form action="/member/join1" method="post"> 
+아이디  : <input type="text" name="id" /><br />
+암호    : <input type="password" name='pw'/><br />
+암호확인: <input type="password" /><br />
+이름    : <input type="text" name = "name"/><br />
+나이    : <input type="tel" name = "tel"/><br />
+사진    : <input type="img" name = "img"/><br />
+이메일    : <input type="email" name = "email"/><br />
+
+<input type="submit" value="회원가입" />
+</form>
+<form action='/member/index' method='get'>
+<input type='submit' value='홈' />
+</form> -->

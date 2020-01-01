@@ -12,8 +12,14 @@ urlpatterns = [
     # index를 url끝에 치면 views의index함수를 불러와라
     path('index', views.index, name='index'),
     path('list', views.list, name = 'list'),
-    path('join1', views.join1, name = 'join1'),
     path('member', views.member, name = 'member'),
     path('join', views.join, name = 'join'),
-    path('login', views.login, name = 'login')
+    path('join1', views.join1, name = 'join1'),
+    path('edit', views.edit, name='edit'),
+    path('delete', views.delete, name='delete'),
+    path('login', views.login, name = 'login'),
+    path('logout', views.logout, name = 'logout')
+
+
+
 ]

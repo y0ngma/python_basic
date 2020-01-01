@@ -7,7 +7,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.db import connection # 
+from django.db import connection 
+
+    # 
     # 모델거치지 않고 sql-DB 바로 연결시 connection필요
     # cursor 사용
 cursor = connection.cursor() 
@@ -37,7 +39,6 @@ def member(request):
 
 def index(request):
     request.method == 'GET'
-    print('indexGET')
     return render(request, 'member/index.html')
         #return HttpResponse('index page <hr />') 처럼 하던 불편사항 개선
 
@@ -52,10 +53,7 @@ def join(request):
         pw = request.POST['pw']
         ag = request.POST['age']
 
-        ar = [id, na, ag, pw] # list로 만듬
-        # for i in ar:
-        #     tmp = ar[i]
-        #     print('{}는 {} 이다'. format(tmp, ar))       
+        ar = [id, na, ag, pw] # list로 만듬     
     # # sql용
         # sql ='''
         #     INSERT INTO MEMBER(ID,NAME,AGE,PW,JOINDATE)
@@ -83,7 +81,7 @@ def join1(request):
         te = request.POST['tel']
         em = request.POST['email']
 
-        ar = [id, na, pw, im, te, em]
+        ar = [id, pw, na, em, te, im]
         sql = '''
             INSERT INTO MEMBER(ID, PW, NAME, EMAIL, TEL, IMG, JOINDATE)
             VALUES (%s, %s, %s, %s, %s, %s, SYSDATE)
@@ -92,8 +90,78 @@ def join1(request):
         return redirect('/member/member')
 
 @csrf_exempt
+def edit(request):
+    if request.method == "GET":
+        ar = [request.session['userid']]
+        sql = '''
+        SELECT * 
+        FROM MEMBER 
+        WHERE ID=%s 
+        '''
+            # WHERE 는 if 문(ID는 내가 넘겨주는값이 스트링으로 동일할때)
+        cursor.execute(sql, ar)
+        data=cursor.fetchone()
+        print(data)
+
+        return render(request, 'member/edit.html', {'one':data})
+    elif request.method == 'POST':
+        ar = [
+            request.POST['name'],
+            request.POST['age'],
+            request.POST['id']
+        ]
+
+        sql = '''
+            UPDATE MEMBER SET NAME=%s, AGE=%s
+            WHERE ID = %s
+        '''
+        cursor.execute(sql, ar)
+
+        return redirect('/member/index')
+
+@csrf_exempt
 def login(request):
     if request.method == 'GET':
+        print('loginGET')
         return render(request, 'member/login.html')
     elif request.method == 'POST':
-        return redirect('/member/member')
+        print('loginPOST')
+        ar = [request.POST['id'], request.POST['pw']]
+        sql = '''
+        SELECT ID, NAME
+        FROM MEMBER
+        WHERE ID=%s AND PW=%s
+        '''
+            # *은 모두 가져오기. 가져올 때 순서대로
+            # SELECT*FROM MEMBER WHERE ID=%s AND PW=%s
+        cursor.execute(sql, ar)
+        data = cursor.fetchone()
+        print(type(data))
+        print(data)
+
+        if data:
+            request.session['userid']=data[0]
+            request.session['username']=data[1]
+            for key, value in request.session.items():
+                print('키값은{} 이고 밸류는{}이다'.format(key, value))
+            return redirect('/member/index')
+            # 세션. 
+            # 암호는 가져오면 보안에 취약.
+        print('로그인실패')
+        return redirect('/member/index')
+        
+@csrf_exempt
+def logout(request):
+    if request.method == 'GET'or request.method=='POST':
+        del request.session['userid']
+        del request.session['username']
+        return redirect('/member/index')
+
+       
+@csrf_exempt
+def delete(request):
+    if request.method == 'GET'or request.method=='POST':
+        ar = [request.session['userid']]
+        sql = 'DELETE FROM MEMBER WHERE ID=%s'
+        cursor.execute(sql, ar)
+        return redirect('/member/logout')
