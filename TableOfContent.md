@@ -33,19 +33,19 @@
 
 - - - - -
 ### 수학표현식
-이 구문은 $$$sqrt{y-1}$$$ 인라인 방식
-아래구문은 블럭으로 표현된다.
+- 이 구문은 $sqrt{y-1}$ 인라인 방식
+- 아래구문은 블럭으로 표현된다.
 $$
 MSE = frac{1}{N}\sum\limits_{i=1}^n {y_i - t_i}^2
 $$
 
-## ***개발 환경 구축***
+## 개발 환경 구축
 
 ### 웹환경구축
 - [x] SQL developer
 - [x] docker 
 - [x] Oracle VM Virtualbox
-- [o] 
+- [ ] 
 #### 서버 구축
 - Docker 툴박스 다운로드
   - https://github.com/docker/toolbox/releases
@@ -58,7 +58,7 @@ $$
 - [x] Anaconda 설치 화면에서 PATH추가하기
 - [x] Virtual Studio CODE 설치
 - [x] Git 연동하기
-- [o] 쥬피터 시작경로 D:\python_basic 으로 변경
+- [ ] 쥬피터 시작경로 D:\python_basic 으로 변경
 
     학원 자료실 http://192.168.0.119/
 #### 1. 개요
