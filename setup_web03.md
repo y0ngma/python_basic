@@ -1,39 +1,40 @@
 ## 게시판 글쓰기 만들기
 - write.html
 [django 서버 구동시]
-$ python manage.py runserver  => django 서버 구동
-$ django-admin startapp board =>  board앱 생성
-
+```
+    $ python manage.py runserver  $ => django 서버 구동
+    $ django-admin startapp board $ =>  board앱 생성
+```
 
 ### url 연결
-- 다음내용 추가 : path('write', views.write, name='write'),
 C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\urls.py
-        ``` 
-        from django.urls import path
-        from . import views
+- 다음내용 추가 : path('write', views.write, name='write'),
 
-        urlpatterns = [
-            # index를 url끝에 치면 views의index함수를 불러와라
-            path('write', views.write, name='write'),
-        ]
-        ```
+    ``` 
+    from django.urls import path
+    from . import views
 
-### urls 추가         
+    urlpatterns = [
+        # index를 url끝에 치면 views의index함수를 불러와라
+        path('write', views.write, name='write'),
+    ]
+    ```
+   
 C:\Users\admin\Documents\python_basic\2py_web\django\web1\web1\urls.py    
 - 다음 내용 추가 path('board/', include('board.urls')),
-```
-from django.contrib import admin
-from django.urls import path, include
-        #127.0.0.1:8000/admin
-        #127.0.0.1:8000/member
-        #127.0.0.1:8000/board/
+    ```
+    from django.contrib import admin
+    from django.urls import path, include
+            #127.0.0.1:8000/admin
+            #127.0.0.1:8000/member
+            #127.0.0.1:8000/board/
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('member/', include('member.urls')),
-    path('board/', include('board.urls')),
-]
-```
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('member/', include('member.urls')),
+        path('board/', include('board.urls')),
+    ]
+    ```
 ### 함수 정의
 C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\views.py
 - 다음 내용 추가
