@@ -24,9 +24,9 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\web1\urls.py
 ```
 from django.contrib import admin
 from django.urls import path, include
-#127.0.0.1:8000/admin
-#127.0.0.1:8000/member
-#127.0.0.1:8000/board/
+        #127.0.0.1:8000/admin
+        #127.0.0.1:8000/member
+        #127.0.0.1:8000/board/
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -190,7 +190,6 @@ a태그는 <a href=> GET만 가능
                 <th class="bg-light">제목</th>
                 <td>{{ one.1 }}</td>
             </tr>
-            
             <tr>
                 <th class="bg-light">내용</th>
                 <td>
@@ -199,7 +198,6 @@ a태그는 <a href=> GET만 가능
                     {% endautoescape %}
                 </td>
             </tr>
-
             <tr>
                 <th class="bg-light">작성자</th>
                 <td>{{ one.3 }}</td>
@@ -220,3 +218,14 @@ a태그는 <a href=> GET만 가능
         <a href="/board/delete" class="btn btn-success">글삭제</a>
     </div>
 </body>
+
+### http://127.0.0.1:8000/admin/ 환경구축
+- Oracle SQL Developer 와 같은 관리용 사이트
+- anaconda에서 다음과 같이 입력
+```
+ $ conda list => django version check
+ $ pip install django==2.2.5 => version change(기존것 자동삭제)
+ $ python manage.py createsuperuser
+       L id/pw = admin/1234
+ $ pyhton manage.py runserver
+```
