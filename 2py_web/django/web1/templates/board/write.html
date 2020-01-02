@@ -8,7 +8,7 @@
     <link  rel="stylesheet" href="/static/css/bootstrap.min.css" />
 </head>
 <body>
-    <form action='/board/write' method='post'>
+    <form action='/board/write' method='post' enctype='multipart/form-data'>
     <div class="container">
         <h3>게시판 글쓰기</h3>
         <div class="form-inline" style="margin-bottom: 5px;">
@@ -27,6 +27,12 @@
             <label>작성자</label>
             <input type="text" style="width:400px" 
                 name='writer' class="form-control"/>
+        </div>
+        
+        <div class="form-inline">
+            <label>이미지</label>
+            <input type="file" style="width:400px" 
+                name='img' class="form-control"/>
         </div>
         
         <div class="form-inline">

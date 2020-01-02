@@ -11,4 +11,5 @@ class Table1(models.Model):
     writer  = models.CharField(max_length=50)
 # -------------------------------------------------
     hit     = models.IntegerField() # 조회수
+    img     = models.BinaryField(null=True) # 바이너리 필수
     regdate = models.DateTimeField(auto_now_add=True) # 자동

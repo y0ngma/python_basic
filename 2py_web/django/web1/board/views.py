@@ -27,7 +27,7 @@ def content(request):
             '''
             cursor.execute(sql, [no])
             request.session['hit'] = 0
-            
+
         sql = '''
             SELECT
                 NO, TITLE, CONTENT, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS')
@@ -67,17 +67,19 @@ def write(request):
     if request.method == 'GET':
         return render(request, 'board/write.html')
     elif request.method == 'POST':
+        img = request.FILES['img'] # name값 img
         arr = [
             request.POST['title'],
             request.POST['content'],
-            request.POST['writer']
+            request.POST['writer'],
+            img.read() # 이미지를 byte[]으로 변경
         ]
         print(arr)
         try :
             sql = '''
                 INSERT INTO BOARD_TABLE1
-                (TITLE, CONTENT, WRITER, HIT, REGDATE)
-                VALUES(%s, %s, %s, 0, SYSDATE)    
+                (TITLE, CONTENT, WRITER, IMG, HIT, REGDATE)
+                VALUES(%s, %s, %s, %s, 0, SYSDATE)    
             '''
             cursor.execute(sql, arr)
             print('업로드')
