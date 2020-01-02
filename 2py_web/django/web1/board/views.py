@@ -7,21 +7,30 @@ from django.db import connection
 cursor = connection.cursor() # sql문 수행위한 cursor객체
 
 # 127.0.0.1:8000/board/content?no=21
-# 127.0.0.1:8000/board/content  ?no=21 => 오류발생
-#
+# 127.0.0.1:8000/board/content     => 오류발생
+# no = request.GET['no'] # 없을때 기본값 0 을 대신 주는 함수 get
+
 @csrf_exempt
 def content(request):
     if request.method == 'GET':
-        # no = request.GET['no'] # 없을때 기본값 0 을 대신 주는 함수 get
         no = request.GET.get('no', 0)
         print(no)
         if no == 0:
             return redirect('/board/list') # <a href 와 같음 
         
+        # 조회수 1 증가 시키고 가져오자
+        if request.session['hit'] == 1:
+            sql = '''
+                UPDATE BOARD_TABLE1 
+                SET HIT = HIT+1
+                WHERE NO = %s
+            '''
+            cursor.execute(sql, [no])
+            request.session['hit'] = 0
+            
         sql = '''
             SELECT
-                NO, TITLE, WRITER, HIT, CONTENT 
-                TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS')
+                NO, TITLE, CONTENT, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS')
             FROM 
                 BOARD_TABLE1
             WHERE
@@ -29,11 +38,13 @@ def content(request):
         '''
         cursor.execute(sql, [no])
         data = cursor.fetchone() # 글 번호가 일치하는것만 가져오니까 1개
-        return render(request, 'board/content.html')
+        return render(request, 'board/content.html', {'one':data})
 
 @csrf_exempt
 def list(request):
     if request.method == 'GET':
+        request.session['hit'] = 1
+
         sql = '''
             SELECT
                 NO, TITLE, WRITER, HIT, 

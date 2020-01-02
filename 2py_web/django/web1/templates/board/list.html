@@ -23,8 +23,10 @@
             {% for one in abc %}
             <tr>
                 <td>{{  one.0   }}</td>
-                <td><a href='/board/content?no={{one.1}}'>{{one.1}}</a></td>
-                <td>{{  one.1   }}</td>
+                <td>
+                    <a href='/board/content?no={{one.0}}'>{{one.1}}
+                    </a>
+                </td>
                 <td>{{  one.2   }}</td>
                 <td>{{  one.3   }}</td>
                 <td>{{  one.4   }}</td>
@@ -34,4 +36,3 @@
     </div>
 </body>
 </html>
-<!-- <th>칸</th> -->

@@ -140,8 +140,8 @@ def login(request):
         print(data)
 
         if data:
-            request.session['userid']=data[0]
-            request.session['username']=data[1]
+            request.session['userid']   =data[0]
+            request.session['username'] =data[1]
             for key, value in request.session.items():
                 print('키값은{} 이고 밸류는{}이다'.format(key, value))
             return redirect('/member/index')
@@ -152,7 +152,7 @@ def login(request):
         
 @csrf_exempt
 def logout(request):
-    if request.method == 'GET'or request.method=='POST':
+    if request.method == 'GET' or request.method== 'POST':
         del request.session['userid']
         del request.session['username']
         return redirect('/member/index')
@@ -160,7 +160,7 @@ def logout(request):
        
 @csrf_exempt
 def delete(request):
-    if request.method == 'GET'or request.method=='POST':
+    if request.method == 'GET'or request.method== 'POST':
         ar = [request.session['userid']]
         sql = 'DELETE FROM MEMBER WHERE ID=%s'
         cursor.execute(sql, ar)

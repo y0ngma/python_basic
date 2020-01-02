@@ -171,3 +171,52 @@ def list(request):
 ### web1\board\templates\board\list.html
 
 a태그는 <a href=> GET만 가능
+
+
+### web1\board\templates\board\content.html
+- tr, th, td 는 table row(표 셀의 가로줄), header(셀 해더), data(내용)
+
+<body>
+    <div class="container">
+        <div style="margin-top:5px; margin-bottom: 5px;">
+            <h3>글내용</h3>
+        </div>
+        <table class="table">
+            <tr>
+                <th class="bg-light">글번호</th>
+                <td>{{ one.0 }}</td>
+            </tr>
+            <tr>
+                <th class="bg-light">제목</th>
+                <td>{{ one.1 }}</td>
+            </tr>
+            
+            <tr>
+                <th class="bg-light">내용</th>
+                <td>
+                    {% autoescape off %}
+                    {{ one.2 | linebreaksbr }}
+                    {% endautoescape %}
+                </td>
+            </tr>
+
+            <tr>
+                <th class="bg-light">작성자</th>
+                <td>{{ one.3 }}</td>
+            </tr>
+            <tr>
+                <th class="bg-light">조회수</th>
+                <td>{{ one.4 }}</td>
+            </tr>            
+            <tr>
+                <th class="bg-light">날짜</th>
+                <td>{{ one.5 }}</td>
+            </tr>            
+        </table>
+        <a href="/board/list" class="btn btn-success">목록으로</a>
+        <a href="/board/content" class="btn btn-success">이전글</a>
+        <a href="/board/content" class="btn btn-success">다음글</a>
+        <a href="/board/edit" class="btn btn-success">글수정</a>
+        <a href="/board/delete" class="btn btn-success">글삭제</a>
+    </div>
+</body>
