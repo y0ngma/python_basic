@@ -41,9 +41,13 @@ def content(request):
         data = cursor.fetchone() # 글 번호가 일치하는것만 가져오니까 1개
         print('가져온 데이터는 =>', data)
         
-        img = data[6].read() # byte배열을 img에 넣음
-        img64 = b64encode(img).decode('utf-8')
-
+        if data[6] : # BLOB형식으로 DB에 첨부된 사진등이있을때
+            img = data[6].read() # byte배열을 img에 넣음
+            img64 = b64encode(img).decode('utf-8')
+        else : # 없을때 '사진없음' 이라는 이미지를 표시
+            file=open('./static/img/default.jpg', 'rb')
+            img = file.read()
+            img64 = b64encode(img).decode('utf-8')
 
         return render(request, 'board/content.html', {'one':data, 'image':img64})
 
