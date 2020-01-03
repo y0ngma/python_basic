@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection 
-
+from base64 import b64encode
+# 동영상 등의 파일은 BLOB로 저장되는데 이 byte 배열을 base64로 변경함.
 cursor = connection.cursor() # sql문 수행위한 cursor객체
 
 # 127.0.0.1:8000/board/content?no=21
@@ -30,7 +31,7 @@ def content(request):
 
         sql = '''
             SELECT
-                NO, TITLE, CONTENT, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS')
+                NO, TITLE, CONTENT, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'), IMG
             FROM 
                 BOARD_TABLE1
             WHERE
@@ -38,7 +39,13 @@ def content(request):
         '''
         cursor.execute(sql, [no])
         data = cursor.fetchone() # 글 번호가 일치하는것만 가져오니까 1개
-        return render(request, 'board/content.html', {'one':data})
+        print('가져온 데이터는 =>', data)
+        
+        img = data[6].read() # byte배열을 img에 넣음
+        img64 = b64encode(img).decode('utf-8')
+
+
+        return render(request, 'board/content.html', {'one':data, 'image':img64})
 
 @csrf_exempt
 def list(request):
