@@ -12,6 +12,21 @@
     <div class='container'>
         <h1>게시판 목록</h1>
         <a href='/board/write' class='btn btn-primary'>글쓰기</a>
+        <!--              우클릭 row justify-content-end      -->
+        <div class="form-inline row justify-content-end" 
+            style="margin-top:5px; margin-bottom: 5px;">
+            <select class ='form-control'>
+                <option>제목</option>
+                <option>내용</option>
+                <option>작성자</option>
+            </select> &nbsp;
+        <!--          &nbsp;는 스페이스     -->
+            <input type ='text'class='form-control'
+            placeholder='검색어' /> &nbsp;
+            <input type ='submit'class='btn btn-primary'
+            value='검색' />
+        </div>
+
         <table class = 'table'>
             <tr>
                 <th>번호</th>
