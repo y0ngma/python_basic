@@ -25,7 +25,8 @@ def dataframe(request):
         print(df)
         print(df['NO'], df['WRITER'])
         print(type(df))
-        return render(request, 'board/dataframe.html', {'dataframe':df.to_html(classes='table')})
+        return render(request, 'board/dataframe.html', 
+            {'dataframe':df.to_html(classes='table')})
 
     # elif request.method == 'POST':
     #     no = request.POST['no']
@@ -39,7 +40,6 @@ def dataframe(request):
     #     '''
     #     cursor.execute(sql, arr)
     #     return redirect('/board/content?no=' +  no)
-
 
 @csrf_exempt
 def edit(request):
@@ -83,11 +83,11 @@ def delete(request):
 def content(request):
     if request.method == 'GET':
         no = request.GET.get('no', 0)
-        print(no)
+        print(type(no), no)
         if no == 0:
             return redirect('/board/list') # <a href 와 같음 
-        
-    # 조회수 1 증가값 세션에 넘겨주자
+    # 세션을 이용, 새로고침에 의한 조회수 증가 방지법  
+        # list함수로 부터 
         if request.session['hit'] == 1:
             sql = '''
                 UPDATE BOARD_TABLE1 
@@ -95,8 +95,7 @@ def content(request):
                 WHERE NO = %s
             '''
             cursor.execute(sql, [no])
-            request.session['hit'] = 0
-
+            request.session['hit'] = 0 # # 글 번호가 일치하는것만 가져오니까 1개
     # 이전글/다음글 
         # NVL이용 없을때 디폴트값 0 주기
         sql = '''
@@ -113,32 +112,31 @@ def content(request):
         '''
         cursor.execute(sql, [no])
         nxt = cursor.fetchone() 
-    # 첫글/마지막글의 번호 가져오기
+        # 첫글/마지막글의 번호 가져오기
         sql = '''
             SELECT MAX(NO)
             FROM BOARD_TABLE1
         '''
-        cursor.execute(sql, [no])
-        first = cursor.fetchone() 
+        cursor.execute(sql)
+        last = cursor.fetchone() 
         sql = '''
             SELECT MIN(NO)
             FROM BOARD_TABLE1
         '''
-        cursor.execute(sql, [no])
-        last = cursor.fetchone() 
-
-
+        cursor.execute(sql)
+        first = cursor.fetchone() 
     # 내용 가져오기
         sql = '''
             SELECT
-                NO, TITLE, CONTENT, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'), IMG
+                NO, TITLE, CONTENT, WRITER, HIT, 
+                TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'), IMG
             FROM 
                 BOARD_TABLE1
             WHERE
                 NO = %s
         '''
         cursor.execute(sql, [no])
-        data = cursor.fetchone() # 글 번호가 일치하는것만 가져오니까 1개
+        data = cursor.fetchone()  #(89,)
         print('가져온 데이터는 =>', data)
         
         if data[6] : # BLOB형식으로 DB에 첨부된 사진등이있을때
@@ -148,29 +146,24 @@ def content(request):
             file=open('./static/img/default.jpg', 'rb')
             img = file.read()
             img64 = b64encode(img).decode('utf-8')
-
+        print('data:{} img64:{}\n last:{}{}\n last[0]:{}{}\n str(last):{} '\
+            .format(type(data),type(img64),last,type(last),last[0],type(last[0]),str(last[0])))
         return render(request, 'board/content.html', 
-            {'one':data, 'image':img64, 'prv':prv[0], 'nxt':nxt[0]},
-            {'first':first}, {'last':last})
+            {'one':data, 'image':img64, 'prv':prv[0], 
+            'nxt':nxt[0], 'first':str(first[0]), 'last':str(last[0])    }   )
 
 @csrf_exempt
 def list(request):
     if request.method == 'GET':
         request.session['hit'] = 1
-
         sql = '''
             SELECT
                 NO, TITLE, WRITER, HIT, 
                 TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS')
-            FROM 
-                BOARD_TABLE1
-            ORDER BY NO DESC 
-        '''
-        # 글 번호 내림차순으로 descendant
+            FROM BOARD_TABLE1 ORDER BY NO DESC 
+        ''' # 글 번호 내림차순으로 descendant
         cursor.execute(sql)
         data = cursor.fetchall()
-        print(type(data)) 
-        print(data) # [(    ), (    )]
         return render(request, 'board/list.html', {'abc':data})
 
 @csrf_exempt
