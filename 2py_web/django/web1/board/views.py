@@ -25,7 +25,7 @@ def dataframe(request):
         print(df)
         print(df['NO'], df['WRITER'])
         print(type(df))
-        return render(request, 'board/dataframe.html', {'dataframe':df.to_html()})
+        return render(request, 'board/dataframe.html', {'dataframe':df.to_html(classes='table')})
 
     # elif request.method == 'POST':
     #     no = request.POST['no']
