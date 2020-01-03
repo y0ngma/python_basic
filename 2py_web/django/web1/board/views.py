@@ -32,22 +32,16 @@ def content(request):
     # 이전글/다음글 
         # NVL이용 없을때 디폴트값 0 주기
         sql = '''
-            SELECT
-                NVL(MAX(NO), 0) 
-            FROM
-                BOARD_TABLE1
-            WHERE
-                NO < %s
+            SELECT NVL(MAX(NO), 0) 
+            FROM BOARD_TABLE1
+            WHERE NO < %s
         '''
         cursor.execute(sql, [no])
         prv = cursor.fetchone() 
         sql = '''
-            SELECT
-                NVL(MIN(NO), 0) 
-            FROM
-                BOARD_TABLE1
-            WHERE
-                NO > %s
+            SELECT NVL(MIN(NO), 0) 
+            FROM BOARD_TABLE1
+            WHERE NO > %s
         '''
         cursor.execute(sql, [no])
         nxt = cursor.fetchone() 
@@ -96,19 +90,21 @@ def list(request):
         print(data) # [(    ), (    )]
         return render(request, 'board/list.html', {'abc':data})
 
-    
-   
 @csrf_exempt
 def write(request):
     if request.method == 'GET':
         return render(request, 'board/write.html')
     elif request.method == 'POST':
-        img = request.FILES['img'] # name값 img
+        tmp = None
+        if 'img' in request.FILES:
+            img = request.FILES['img'] # name값 img
+            tmp = img.read()
+        # img = request.FILES.get('img', None)
         arr = [
             request.POST['title'],
             request.POST['content'],
             request.POST['writer'],
-            img.read() # 이미지를 byte[]으로 변경
+            tmp # 이미지를 byte[]으로 변경
         ]
         print(arr)
         try :
