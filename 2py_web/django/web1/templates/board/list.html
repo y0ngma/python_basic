@@ -12,6 +12,9 @@
     <div class='container'>
         <h1>게시판 목록</h1>
         <a href='/board/write' class='btn btn-success'>글쓰기</a>
+        {% if writer %}
+        <a href="/board/list" class="btn btn-secondary">시작 메뉴로</a>
+        {% endif %}
         <!--            우측정렬 row justify-content-end      -->
         <div class="form-inline row justify-content-end" 
             style="margin-top:5px; margin-bottom: 5px;">
@@ -35,14 +38,15 @@
                 <th>조회수</th>
                 <th>날짜</th>
             </tr>
-            {% for one in abc %}
+            {% for one in list %}
             <tr>
                 <td>{{  one.0   }}</td>
                 <td>
-                    <a href='/board/content?no={{one.0}}'>{{one.1}}
-                    </a>
+                    <a href='/board/content?no={{one.0}}'>{{one.1}}</a>
                 </td>
-                <td>{{  one.2   }}</td>
+                <td>
+                    <a href="/board/list?writer={{one.2}}">{{one.2}}</a>
+                </td>
                 <td>{{  one.3   }}</td>
                 <td>{{  one.4   }}</td>
             </tr>

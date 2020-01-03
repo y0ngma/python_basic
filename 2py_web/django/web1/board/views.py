@@ -156,15 +156,26 @@ def content(request):
 def list(request):
     if request.method == 'GET':
         request.session['hit'] = 1
-        sql = '''
-            SELECT
-                NO, TITLE, WRITER, HIT, 
-                TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS')
-            FROM BOARD_TABLE1 ORDER BY NO DESC 
-        ''' # 글 번호 내림차순으로 descendant
-        cursor.execute(sql)
-        data = cursor.fetchall()
-        return render(request, 'board/list.html', {'abc':data})
+
+        writer = request.GET.get('writer', None)
+        sql=""
+        if writer != None:
+            sql = """
+                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
+                FROM BOARD_TABLE1
+                WHERE WRITER=%s
+                ORDER BY NO DESC
+            """
+            cursor.execute(sql,[writer])
+        else:    
+            sql = """
+                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
+                FROM BOARD_TABLE1
+                ORDER BY NO DESC
+            """
+            cursor.execute(sql)
+    data = cursor.fetchall()
+    return render(request, 'board/list.html', {"list":data, "writer":writer})
 
 @csrf_exempt
 def write(request):
