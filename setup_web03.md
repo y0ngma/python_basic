@@ -6,6 +6,7 @@
     $ django-admin startapp board $ =>  board앱 생성
 ```
 
+
 ### url 연결
 C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\urls.py
 - 다음내용 추가 : path('write', views.write, name='write'),
