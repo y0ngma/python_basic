@@ -4,12 +4,80 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection 
 from base64 import b64encode
+import pandas as pd
 # 동영상 등의 파일은 BLOB로 저장되는데 이 byte 배열을 base64로 변경함.
 cursor = connection.cursor() # sql문 수행위한 cursor객체
 
 # 127.0.0.1:8000/board/content?no=21
 # 127.0.0.1:8000/board/content     => 오류발생
 # no = request.GET['no'] # 없을때 기본값 0 을 대신 주는 함수 get
+
+
+@csrf_exempt
+def dataframe(request):
+    if request.method == 'GET':
+        df = pd.read_sql(
+            '''
+            SELECT NO, WRITER, HIT, REGDATE
+            FROM BOARD_TABLE1
+            ''', con=connection)
+        print(df.columns)
+        print(df)
+        print(df['NO'], df['WRITER'])
+        print(type(df))
+        return render(request, 'board/dataframe.html', {'dataframe':df.to_html()})
+
+    # elif request.method == 'POST':
+    #     no = request.POST['no']
+    #     ti = request.POST['title']
+    #     co = request.POST['content']
+    #     arr = [ti, co, no]
+    #     sql = '''
+    #         UPDATE BOARD_TABLE1
+    #         SET TITLE=%s, CONTENT=%s
+    #         WHERE NO=%s
+    #     '''
+    #     cursor.execute(sql, arr)
+    #     return redirect('/board/content?no=' +  no)
+
+
+@csrf_exempt
+def edit(request):
+    if request.method == 'GET':
+        no = request.GET.get('no', 0)
+        sql = '''
+            SELECT NO, TITLE, CONTENT
+            FROM BOARD_TABLE1
+            WHERE NO = %s
+        '''
+        cursor.execute(sql, [no])
+        data = cursor.fetchone()
+        return render(request, 'board/edit.html',
+            {'one':data})
+
+    elif request.method == 'POST':
+        no = request.POST['no']
+        ti = request.POST['title']
+        co = request.POST['content']
+        arr = [ti, co, no]
+        sql = '''
+            UPDATE BOARD_TABLE1
+            SET TITLE=%s, CONTENT=%s
+            WHERE NO=%s
+        '''
+        cursor.execute(sql, arr)
+        return redirect('/board/content?no=' +  no)
+
+@csrf_exempt
+def delete(request):
+    if request.method == 'GET':
+        no = request.GET.get('no', 0)
+        sql = '''
+            DELETE FROM BOARD_TABLE1
+            WHERE NO = %s
+        '''
+        cursor.execute(sql, [no])
+        return redirect('/board/list')
 
 @csrf_exempt
 def content(request):
@@ -45,6 +113,20 @@ def content(request):
         '''
         cursor.execute(sql, [no])
         nxt = cursor.fetchone() 
+    # 첫글/마지막글의 번호 가져오기
+        sql = '''
+            SELECT MAX(NO)
+            FROM BOARD_TABLE1
+        '''
+        cursor.execute(sql, [no])
+        first = cursor.fetchone() 
+        sql = '''
+            SELECT MIN(NO)
+            FROM BOARD_TABLE1
+        '''
+        cursor.execute(sql, [no])
+        last = cursor.fetchone() 
+
 
     # 내용 가져오기
         sql = '''
@@ -68,7 +150,8 @@ def content(request):
             img64 = b64encode(img).decode('utf-8')
 
         return render(request, 'board/content.html', 
-            {'one':data, 'image':img64, 'prv':prv[0], 'nxt':nxt[0]})
+            {'one':data, 'image':img64, 'prv':prv[0], 'nxt':nxt[0]},
+            {'first':first}, {'last':last})
 
 @csrf_exempt
 def list(request):
