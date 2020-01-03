@@ -19,7 +19,7 @@ def content(request):
         if no == 0:
             return redirect('/board/list') # <a href 와 같음 
         
-        # 조회수 1 증가 시키고 가져오자
+    # 조회수 1 증가값 세션에 넘겨주자
         if request.session['hit'] == 1:
             sql = '''
                 UPDATE BOARD_TABLE1 
@@ -29,6 +29,30 @@ def content(request):
             cursor.execute(sql, [no])
             request.session['hit'] = 0
 
+    # 이전글/다음글 
+        # NVL이용 없을때 디폴트값 0 주기
+        sql = '''
+            SELECT
+                NVL(MAX(NO), 0) 
+            FROM
+                BOARD_TABLE1
+            WHERE
+                NO < %s
+        '''
+        cursor.execute(sql, [no])
+        prv = cursor.fetchone() 
+        sql = '''
+            SELECT
+                NVL(MIN(NO), 0) 
+            FROM
+                BOARD_TABLE1
+            WHERE
+                NO > %s
+        '''
+        cursor.execute(sql, [no])
+        nxt = cursor.fetchone() 
+
+    # 내용 가져오기
         sql = '''
             SELECT
                 NO, TITLE, CONTENT, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'), IMG
@@ -49,7 +73,8 @@ def content(request):
             img = file.read()
             img64 = b64encode(img).decode('utf-8')
 
-        return render(request, 'board/content.html', {'one':data, 'image':img64})
+        return render(request, 'board/content.html', 
+            {'one':data, 'image':img64, 'prv':prv[0], 'nxt':nxt[0]})
 
 @csrf_exempt
 def list(request):
