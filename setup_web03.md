@@ -58,7 +58,7 @@ http://127.0.0.1:8000/board/write
 
 ### model으로 DB에 생성
 
-```
+```py
 from django.db import models
 
 class Table1(models.Model):
@@ -225,8 +225,8 @@ a태그는 <a href=> GET만 가능
 - Oracle SQL Developer 와 같은 관리용 사이트
 - anaconda에서 다음과 같이 입력
 ```
- $ conda list => django version check
- $ pip install django==2.2.5 => version change(기존것 자동삭제)
+ $ conda list => django 버전확인
+ $ pip install django==2.2.5 => version 변경(기존것 자동삭제)
  $ python manage.py createsuperuser
        L id/pw = admin/1234
  $ pyhton manage.py runserver
