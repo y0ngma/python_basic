@@ -14,8 +14,37 @@ cursor = connection.cursor() # sql문 수행위한 cursor객체
 
 from .models import Table2 # models.py파일의 Table2클래스
 
+def t2_update_all(request):
+    if request.method == 'GET':
+        n   = request.session['no'] # 8,5,3
+        print(n)
+        # SELECT*FROM BOARD_TABLE2 WHERE NO=8, NO=5, NO=3
+        # SELECT*FROM BOARD_TABLE2 WHERE NO IN (8,5,2)
+        rows = Table2.objects.filter(no__in=n)
+        return render(request, 'board/t2_update_all.html', {'list':rows})
+    elif request.method == 'POST':
+        menu = request.POST['menu']
+        if menu == "1":
+            no = request.POST.getlist('chk[]')
+            request.session['no'] = no
+            return redirect('/board/t2_update_all')
+        elif menu == "2":
+            no = request.POST.getlist('no[]')
+            name = request.POST.getlist('name[]')
+            kor = request.POST.getlist('kor[]')
+            eng = request.POST.getlist('eng[]')
+            math = request.POST.getlist('math[]')
+            objs=[]
+            for i in range(0, len(no), 1):
+                obj = Table2.objects.get(no=no[i])
+                obj.name = name[i]
+                obj.kor  = kor[i]
+                obj.eng  = eng[i]
+                obj.math = math[i]
+                objs.append(obj)
+            Table2.objects.bulk_update(objs, ['name', 'kor', 'eng', 'math'])
+            return redirect('/board/t2_list')
 
-@csrf_exempt # 내가 보낸지를 검증
 def t2_insert_all(request): # 상품을 대량으로 등록할 때
     if request.method == 'GET':
         return render(request, 'board/t2_insert_all.html', {'cnt':range(5)})
@@ -44,7 +73,6 @@ def t2_insert_all(request): # 상품을 대량으로 등록할 때
         print(na)
         return redirect('/board/t2_list')
 
-@csrf_exempt
 def t2_update(request):
     if request.method == 'GET':
         n   = request.GET.get('no', 0) # SELECT*FROM BOARD_TABLE2 WHERE NO=%s
@@ -64,7 +92,6 @@ def t2_update(request):
             # WHERE NO %s
         return redirect('/board/t2_list')
 
-@csrf_exempt
 def t2_delete(request):
     if request.method == 'GET':
         n   = request.GET.get('no', 0) # SELECT*FROM BOARD_TABLE2 WHERE NO=%s
@@ -72,15 +99,14 @@ def t2_delete(request):
         row.delete() # DELETE FROM BOARD_TABLE2 WHERE NO=%s
         return redirect('/board/t2_list')
 
-@csrf_exempt
 def t2_list(request):
     if request.method == 'GET':
         rows = Table2.objects.all() # SELECT*FROM BOARD_TABLE2
         print(rows) # 결과 확인
+        # print("==============================")
         print(type(rows))
         return render(request, 'board/t2_list.html', {'list':rows})
           
-@csrf_exempt
 def t2_insert(request):
     if request.method == 'GET':
         return render(request, 'board/t2_insert.html')
@@ -95,7 +121,7 @@ def t2_insert(request):
 
         return redirect('/board/t2_insert')
 
-@csrf_exempt
+@csrf_exempt # 내가 보낸지를 검증
 def dataframe(request):
     if request.method == 'GET':
         df = pd.read_sql(
