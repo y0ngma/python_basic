@@ -4,14 +4,76 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection 
 from base64 import b64encode
+    # 동영상 등의 파일은 BLOB로 저장되는데 이 byte 배열을 base64로 변경함.
 import pandas as pd
-# 동영상 등의 파일은 BLOB로 저장되는데 이 byte 배열을 base64로 변경함.
-cursor = connection.cursor() # sql문 수행위한 cursor객체
 
+cursor = connection.cursor() # sql문 수행위한 cursor객체
 # 127.0.0.1:8000/board/content?no=21
 # 127.0.0.1:8000/board/content     => 오류발생
 # no = request.GET['no'] # 없을때 기본값 0 을 대신 주는 함수 get
 
+from .models import Table2 # models.py파일의 Table2클래스
+
+
+@csrf_exempt
+def t2_insert_all(request):
+    if request.method == 'GET':
+        n   = request.GET.get('no', 0) # SELECT*FROM BOARD_TABLE2 WHERE NO=%s
+        row = Table2.objects.get(no=n)
+        row.delete() # DELETE FROM BOARD_TABLE2 WHERE NO=%s
+        return redirect('/board/t2_insert_all')
+    elif request.method=='POST':
+        return redirect('/board/t2_insert')
+@csrf_exempt
+def t2_update(request):
+    if request.method == 'GET':
+        n   = request.GET.get('no', 0) # SELECT*FROM BOARD_TABLE2 WHERE NO=%s
+        row = Table2.objects.get(no=n)
+        return render(request, 'board/t2_update.html', {'one':row})
+    elif request.method=='POST':
+        n = request.POST['no']
+
+        obj = Table2.objects.get(no=n)
+        obj.name = request.POST['name']
+        obj.kor  = request.POST['kor']
+        obj.eng  = request.POST['eng']
+        obj.math = request.POST['math']
+        obj.save() 
+            # UPDATE BOARD_TABLE2 SET
+            # NAME = %s, Kor=%s, ENG=%s, MATH=%s
+            # WHERE NO %s
+        return redirect('/board/t2_list')
+
+@csrf_exempt
+def t2_delete(request):
+    if request.method == 'GET':
+        n   = request.GET.get('no', 0) # SELECT*FROM BOARD_TABLE2 WHERE NO=%s
+        row = Table2.objects.get(no=n)
+        row.delete() # DELETE FROM BOARD_TABLE2 WHERE NO=%s
+        return redirect('/board/t2_list')
+
+@csrf_exempt
+def t2_list(request):
+    if request.method == 'GET':
+        rows = Table2.objects.all() # SELECT*FROM BOARD_TABLE2
+        print(rows) # 결과 확인
+        print(type(rows))
+        return render(request, 'board/t2_list.html', {'list':rows})
+          
+@csrf_exempt
+def t2_insert(request):
+    if request.method == 'GET':
+        return render(request, 'board/t2_insert.html')
+    elif request.method =='POST':
+        obj = Table2() # obj 객체생성
+        obj.name = request.POST['name']
+        obj.kor  = request.POST['kor']
+        obj.eng  = request.POST['eng']
+        obj.math = request.POST['math']
+        obj.save() # 저장하기 수행
+            # sql문 없이 하기
+
+        return redirect('/board/t2_insert')
 
 @csrf_exempt
 def dataframe(request):
