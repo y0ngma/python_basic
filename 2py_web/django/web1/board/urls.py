@@ -16,6 +16,7 @@ urlpatterns = [
     path('t2_update',   views.t2_update,    name='t2_update'),
     path('t2_delete',   views.t2_delete,    name='t2_delete'),
     path('t2_insert_all', views.t2_insert_all, name='t2_insert_all'),
+    path('t2_update_all', views.t2_update_all, name='t2_update_all'),
 
     
 
