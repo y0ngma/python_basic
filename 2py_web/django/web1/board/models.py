@@ -13,3 +13,13 @@ class Table1(models.Model):
     hit     = models.IntegerField() # 조회수
     img     = models.BinaryField(null=True) # 바이너리 필수
     regdate = models.DateTimeField(auto_now_add=True) # 자동
+
+class Table2(models.Model):
+    objects = models.Manager() # vs code 오류제거용
+
+    name    = models.CharField(max_length=30)
+    no      = models.AutoField(primary_key=True) 
+    kor     = models.IntergerField()
+    eng     = models.IntergerField()
+    math    = models.IntergerField()
+    regdate = models.DateTimeField(auto_now_add=True) 

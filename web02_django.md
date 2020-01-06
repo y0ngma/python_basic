@@ -326,11 +326,26 @@ a태그는 <a href=> GET만 가능
  $ pyhton manage.py runserver
 ```
 
-#### 다른사람것 참고사항
-# Django WEB 
 
 
-## Step01     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 다른사람것 참고사항
+
+#### Step01     
 - Web 폴더 생성     
     - Istall Django Web     
         - Django 모듈 설치    
