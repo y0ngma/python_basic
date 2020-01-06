@@ -15,15 +15,35 @@ cursor = connection.cursor() # sql문 수행위한 cursor객체
 from .models import Table2 # models.py파일의 Table2클래스
 
 
-@csrf_exempt
-def t2_insert_all(request):
+@csrf_exempt # 내가 보낸지를 검증
+def t2_insert_all(request): # 상품을 대량으로 등록할 때
     if request.method == 'GET':
-        n   = request.GET.get('no', 0) # SELECT*FROM BOARD_TABLE2 WHERE NO=%s
-        row = Table2.objects.get(no=n)
-        row.delete() # DELETE FROM BOARD_TABLE2 WHERE NO=%s
-        return redirect('/board/t2_insert_all')
+        return render(request, 'board/t2_insert_all.html', {'cnt':range(5)})
     elif request.method=='POST':
-        return redirect('/board/t2_insert')
+        na  = request.POST.getlist('name[]')
+        ko  = request.POST.getlist('kor[]')
+        en  = request.POST.getlist('eng[]')
+        ma  = request.POST.getlist('math[]')
+       
+        objs= []
+        for i in range(0, len(na), 1):
+            obj = Table2() # 입금하다 서버다운되면 넣었던것 모두 삭제해야함. 일이 많아짐
+                # 따라서 다 넣거나 하나도 안넣어야함
+                # obj.name = na[0]
+                # obj.kor  = ko[0]
+                # obj.eng  = en[0]
+                # obj.math = ma[0]
+                # obj.save()
+            obj.name = na[i]
+            obj.kor  = ko[i]
+            obj.eng  = en[i]
+            obj.math = ma[i]
+            objs.append(obj)
+        # 일괄 추가 -> .save()는 하나씩
+        Table2.objects.bulk_create(objs)
+        print(na)
+        return redirect('/board/t2_list')
+
 @csrf_exempt
 def t2_update(request):
     if request.method == 'GET':
