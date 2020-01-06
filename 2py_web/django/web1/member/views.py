@@ -25,13 +25,18 @@ def list(request):
         # connection.execute를 사용해도 되지만 아직 세부단위 설정되지 않음
     data = cursor.fetchall() # sql문 실행의 결과값 가져와라
     print(type(data)) # 리스트
-    print(data) # 
+    print(data)
         # [(, , , ,column렬의 수 만큼 ), (row 행의 수 만큼)]
         # list.html으로 넘어갈때
         # list 변수에 data값을, title변수에 회원목록 문자로 해서 넘긴다.
         # 단 title키의 값은 하나뿐이라 list.html에서 {{title}}가능하고
         # list키의 값은 회원수만큼이므로 for문 사용했음
-    return render(request, 'member/list.html', {'list':data, 'title':'회원목록'})
+    sql = 'SELECT*FROM MEMBER1 ORDER BY ID ASC' # vip맴버리스트 취합
+    cursor.execute(sql)
+    data2 = cursor.fetchall()
+    print(type(data)) # 리스트
+    print(data) 
+    return render(request, 'member/list.html', {'list':data, 'list2':data2, 'title':'회원목록'})
 
 def member(request):
     request.method == 'GET'
@@ -83,10 +88,10 @@ def join1(request):
 
         ar = [id, pw, na, em, te, im]
         sql = '''
-            INSERT INTO MEMBER(ID, PW, NAME, EMAIL, TEL, IMG, JOINDATE)
+            INSERT INTO MEMBER1(ID, PW, NAME, EMAIL, TEL, IMG, JOINDATE)
             VALUES (%s, %s, %s, %s, %s, %s, SYSDATE)
             '''
-        cursor.excute(sql, ar)
+        cursor.execute(sql, ar)
         return redirect('/member/member')
 
 @csrf_exempt
