@@ -25,29 +25,31 @@ from django.db.models import Sum, Max, Min, Count, Avg
 def exam_select(request):
     list = Table2.objects.all()
     return render(request, 'member/exam_select.html', {'list':list})
-# 반별 국어, 영어, 수학 합계
-    # list = Table2.objects.aggregate(Sum('math'))
-    #     # SELECT SUM(math) FROM MEMBER_TABLE2
-    #     # WHERE CLASS_ROOM=101    
-    # list = Table2.objects.all().values(['no', 'name'])
-    #     # SELECT NO, NAME FROM MEMBER_TABLE2
-    # list = Table2.objects.all().order_by('name')
-    #     # 복잡한 SELECT은 다음과 같이 raw 안에 SQL문을 넣어 구현
-    # list = Table2.objects.raw("SELECT*FROM MEMBER_TABLE2 ORDER BY name ASC") 
-    # list = Table2.objects.values('classroom').annotate(kor=Sum('kor'), eng=Sum('eng'), math=Sum('math'))   
-    #     # SELECT 
-    #     #     SUM(kor)  AS kor, 
-    #     #     SUM(eng)  AS eng, 
-    #     #     SUM(math) AS math 
-    #     # FROM MEMBER_TABLE2
-    # return render(request, 'member/exam_select.html',{"list":list}) 
+    # 반별 국어, 영어, 수학 합계
+        # list = Table2.objects.aggregate(Sum('math'))
+        #     # SELECT SUM(math) FROM MEMBER_TABLE2
+        #     # WHERE CLASS_ROOM=101    
+        # list = Table2.objects.all().values(['no', 'name'])
+        #     # SELECT NO, NAME FROM MEMBER_TABLE2
+        # list = Table2.objects.all().order_by('name')
+        #     # 복잡한 SELECT은 다음과 같이 raw 안에 SQL문을 넣어 구현
+        # list = Table2.objects.raw("SELECT*FROM MEMBER_TABLE2 ORDER BY name ASC") 
+        # list = Table2.objects.values('classroom').annotate(kor=Sum('kor'), eng=Sum('eng'), math=Sum('math'))   
+        #     # SELECT 
+        #     #     SUM(kor)  AS kor, 
+        #     #     SUM(eng)  AS eng, 
+        #     #     SUM(math) AS math 
+        #     # FROM MEMBER_TABLE2
+        # return render(request, 'member/exam_select.html',{"list":list}) 
           
 def exam_insert(request):
     if request.method == 'GET':
+        # range(5) = 다섯줄씩 입력하기
+        # 성씨묶음 = []5개, 국영수_점수묶음=[]3x5을 서로 묶어보기
+        # 그것을 range()대신 사용해보기
+
         return render(request, 'member/exam_insert.html', {'cnt':range(5)})
-            # range(5) = 다섯줄씩 입력하기
-            # 성씨묶음 = []5개, 국영수_점수묶음=[]3x5을 서로 묶어보기
-            # 그것을 range()대신 사용해보기
+            
     elif request.method=='POST':
         no  = request.POST.getlist('no[]')
         na  = request.POST.getlist('name[]')
