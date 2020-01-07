@@ -9,11 +9,107 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection 
 
-    # 
+cursor = connection.cursor()  
     # 모델거치지 않고 sql-DB 바로 연결시 connection필요
     # cursor 사용
-cursor = connection.cursor() 
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate as auth1
+from django.contrib.auth import login as login1
+from django.contrib.auth import logout as logout1
+    # django에서 제공하는 User 사용
 
+def auth_pw(request): 
+    if request.method == 'GET':
+        if not request.user.is_authenticated:
+            return redirect('/member/auth_login')
+
+        return render(request, 'member/auth_pw.html')
+
+    elif request.method == "POST": 
+        pw = request.POST['pw']
+        pw1 = request.POST['pw1']
+
+        obj = auth1(request, username=request.user, password=pw)
+        if obj:
+            obj.set_password(pw1)
+            obj.save()
+            return redirect('/member/auth_index')
+        return redirect('/member/auth_pw')
+
+def auth_edit(request): 
+    if request.method == 'GET':
+        if not request.user.is_authenticated:
+            return redirect('/member/auth_login')
+            
+        obj = User.objects.get(username=request.user)
+
+        return render(request, 'member/auth_edit.html', {'obj':obj})
+
+    if request.method == "POST":         
+        id = request.POST['username']
+        na = request.POST['first_name']
+        em = request.POST['email']
+
+        obj = User.objects.get(username=id)
+        obj.first_name = na
+        obj.email = em
+        obj.save()
+        return redirect('/member/auth_index')
+
+def auth_login(request):
+    if request.method =="GET":
+        return render(request, 'member/auth_login.html')
+    elif request.method =='POST':
+        id = request.POST['username']
+        pw = request.POST['password']
+        # DB에 인증
+        obj = auth1(request, username=id, password=pw)
+        if obj is not None:
+            login1(request, obj) # 세션에 추가    
+            return redirect('/member/auth_index')
+        return redirect('/member/auth_login')
+
+def auth_logout(request): 
+    if request.method == 'GET' or request.method == "POST": 
+            # GET으로도 로그아웃=주소창에 누군가 치면 싫어도 로그아웃된다.
+        logout1(request) # 세션 초기화
+        return redirect('/member/auth_index')
+
+@csrf_exempt
+def auth_index(request):
+    if request.method =="GET":
+        return render(request, 'member/auth_index.html')
+
+@csrf_exempt
+def auth_join(request):
+    if request.method == 'GET':
+        return render(request, 'member/auth_join.html')
+    elif request.method =='POST':
+        id = request.POST['username']
+        pw = request.POST['password']
+        na = request.POST['first_name']
+        em = request.POST['email']
+        
+        obj = User.objects.create_user(
+            username=id,
+            password=pw,
+            first_name=na,
+            email=em )
+        obj.save()
+            # 회원가입
+                # import
+                # obj = Table2(
+                #     email=em
+                #     username=id
+                # )
+                #  
+                # obj = Table2() 위와 동일 결과
+                # obj.username=request.POST['name']
+                # obj.email=em
+                #
+                # obj.save()
+
+        return redirect('/member/auth_index')
 def list(request): 
     # sql 쓴 이유 :
         # 데이터가 먼저냐 화면이 먼저냐?
