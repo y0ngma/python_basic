@@ -18,6 +18,103 @@ from django.contrib.auth import login as login1
 from django.contrib.auth import logout as logout1
     # django에서 제공하는 User 사용
 
+####실습 시작######################################
+from .models import Table2 # models.py파일의 Table2클래스
+from django.db.models import Sum, Max, Min, Count, Avg
+
+def exam_select(request):
+    list = Table2.objects.all()
+    return render(request, 'member/exam_select.html', {'list':list})
+# 반별 국어, 영어, 수학 합계
+    # list = Table2.objects.aggregate(Sum('math'))
+    #     # SELECT SUM(math) FROM MEMBER_TABLE2
+    #     # WHERE CLASS_ROOM=101    
+    # list = Table2.objects.all().values(['no', 'name'])
+    #     # SELECT NO, NAME FROM MEMBER_TABLE2
+    # list = Table2.objects.all().order_by('name')
+    #     # 복잡한 SELECT은 다음과 같이 raw 안에 SQL문을 넣어 구현
+    # list = Table2.objects.raw("SELECT*FROM MEMBER_TABLE2 ORDER BY name ASC") 
+    # list = Table2.objects.values('classroom').annotate(kor=Sum('kor'), eng=Sum('eng'), math=Sum('math'))   
+    #     # SELECT 
+    #     #     SUM(kor)  AS kor, 
+    #     #     SUM(eng)  AS eng, 
+    #     #     SUM(math) AS math 
+    #     # FROM MEMBER_TABLE2
+    # return render(request, 'member/exam_select.html',{"list":list}) 
+          
+def exam_insert(request):
+    if request.method == 'GET':
+        return render(request, 'member/exam_insert.html', {'cnt':range(5)})
+            # range(5) = 다섯줄씩 입력하기
+            # 성씨묶음 = []5개, 국영수_점수묶음=[]3x5을 서로 묶어보기
+            # 그것을 range()대신 사용해보기
+    elif request.method=='POST':
+        no  = request.POST.getlist('no[]')
+        na  = request.POST.getlist('name[]')
+        ko  = request.POST.getlist('kor[]')
+        en  = request.POST.getlist('eng[]')
+        ma  = request.POST.getlist('math[]')
+        cl  = request.POST.getlist('classroom[]')
+        
+        objs= []
+        print(na)
+        print('길이:', len(na))
+        print('길이:', len(ko))
+        print('길이:', len(objs)) 
+        for i in range(0, len(na), 1):
+            obj = Table2()
+            obj.name        = na[i]
+            obj.kor         = ko[i]
+            obj.eng         = en[i]
+            obj.math        = ma[i]
+            obj.classroom   = cl[i]
+            objs.append(obj)
+        Table2.objects.bulk_create(objs)
+        return redirect('/member/exam_select')
+
+def exam_update(request):
+    if request.method == 'GET':
+        n   = request.session['no']
+        #n   = request.POST.get('no') #한개 
+        rows = Table2.objects.filter(no__in=n)
+        return render(request, 'member/exam_update.html', {'list':rows})
+    elif request.method == 'POST':
+        menu = request.POST['menu']
+        if menu == "list":
+            no = request.POST.getlist('chk[]')
+            request.session['no'] = no
+            return redirect('/member/exam_update')
+        elif menu == "update":
+            print("=================================================")
+            no        = request.POST.getlist('no[]')
+            name      = request.POST.getlist('name[]')
+            kor       = request.POST.getlist('kor[]')
+            eng       = request.POST.getlist('eng[]')
+            math      = request.POST.getlist('math[]')
+            classroom = request.POST.getlist('classroom[]')
+
+            objs=[]
+            for i in range(0, len(no), 1):
+                obj           = Table2.objects.get(no=no[i])
+                obj.name      = name[i]
+                obj.kor       = kor[i]
+                obj.eng       = eng[i]
+                obj.math      = math[i]
+                obj.classroom = classroom[i]
+                objs.append(obj)
+            Table2.objects.bulk_update(objs, ['name', 'kor', 'eng', 'math', 'classroom'])
+            return redirect('/member/exam_select')
+        else:
+            return redirect('/board/list') # 엉뚱한곳으로 보내서 뭐가 잘못되었는지 파악가능
+
+def exam_delete(request):
+    if request.method == 'GET':
+        n   = request.GET.get('no', 0) 
+        row = Table2.objects.get(no=n)
+        row.delete()
+        return redirect('/member/exam_select')
+
+####실습 끝####################################
 def auth_pw(request): 
     if request.method == 'GET':
         if not request.user.is_authenticated:
@@ -110,6 +207,7 @@ def auth_join(request):
                 # obj.save()
 
         return redirect('/member/auth_index')
+
 def list(request): 
     # sql 쓴 이유 :
         # 데이터가 먼저냐 화면이 먼저냐?
@@ -155,12 +253,12 @@ def join(request):
         ag = request.POST['age']
 
         ar = [id, na, ag, pw] # list로 만듬     
-    # # sql용
+    # sql용
         # sql ='''
         #     INSERT INTO MEMBER(ID,NAME,AGE,PW,JOINDATE)
         #     VALUES (%s, %s, %s, %s, date('now'))
         #     '''   
-    # # oracle용
+    # oracle용
         sql ='''
             INSERT INTO MEMBER(ID,NAME,AGE,PW,JOINDATE)
             VALUES (%s, %s, %s, %s, SYSDATE)
@@ -258,7 +356,6 @@ def logout(request):
         del request.session['username']
         return redirect('/member/index')
 
-       
 @csrf_exempt
 def delete(request):
     if request.method == 'GET'or request.method== 'POST':
