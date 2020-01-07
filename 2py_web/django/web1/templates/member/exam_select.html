@@ -11,10 +11,10 @@
 <form action='/member/exam_update' method='post'>{% csrf_token %}
 <input type='hidden' name='menu' value='list' />
     <div class='container'>
-        <h1>게시판 목록</h1>
-        <hr />
+    <h1>게시판 목록</h1>
+    <hr />
+    <input type="submit" class="btn btn-primary" value="일괄수정" />
         <a href='/member/exam_insert' class='btn btn-success'>성적 추가</a>
-        <input type="submit" class="btn btn-primary" value="일괄수정" />
         {% if classroom %}
         <a href="/member/exam_select" class="btn btn-secondary">시작 메뉴로</a>
         {% endif %}
@@ -44,7 +44,7 @@
             </tr>
             {% endfor %}
         </table>
-        <input type="submit" class="btn btn-primary" value="일괄수정" />
+    <input type="submit" class="btn btn-primary" value="일괄수정" />
     </div>
 </form>
 </body>
