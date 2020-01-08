@@ -32,6 +32,9 @@ urlpatterns = [
     path('exam_delete', views.exam_delete, name = 'exam_delete'),
     path('exam_select', views.exam_select, name = 'exam_select'),
     
+    # Script
+    path('js_index', views.js_index, name = 'js_index'),
+    
 
 
 ]

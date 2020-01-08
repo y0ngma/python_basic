@@ -59,7 +59,6 @@ def exam_select(request):
             #     # FROM MEMBER_TABLE2
             # return render(request, 'member/exam_select.html',{"list":list}) 
 
-
 def exam_insert(request):
     if request.method == 'GET':
         # range(5) = 다섯줄씩 입력하기
@@ -385,3 +384,9 @@ def delete(request):
         sql = 'DELETE FROM MEMBER WHERE ID=%s'
         cursor.execute(sql, ar)
         return redirect('/member/logout')
+
+def js_index(request):
+    if request.method=="GET":
+        return render(request, 'member/js_index.html')
+
+        
