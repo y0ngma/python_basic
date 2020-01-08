@@ -385,8 +385,11 @@ def delete(request):
         cursor.execute(sql, ar)
         return redirect('/member/logout')
 
+###################
 def js_index(request):
     if request.method=="GET":
         return render(request, 'member/js_index.html')
 
-        
+def js_chart(request):
+    if request.method=="GET":
+        return render(request, 'member/js_chart.html')
