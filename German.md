@@ -1,6 +1,5 @@
 ## 채식주의 찬반 의견
 
-
 ### - Es ist sehr schwer zum Essen gehen nach dem was die Leute sagen. Und es ist bekannt, dass ein Grossteil Restaurant habt kein Gericht vegetarischer Diät. 
     - 사람들이 말하기에 의하면 외식하는것은 정말 어렵다. 그리고 대다수의 음식점은 채식주의의 요리를 가지고 있지 않다고 알려져 있다.
 
@@ -20,9 +19,13 @@
     - 다른 사람들이 뭐라하든 신경쓰지 마라.
 
 
-
-
 ### 참고문헌 : 모니카 바이드, 채식주의로의 9가지 장단점, https://www.aarp.org/food/diet-nutrition/info-02-2011/9-pros-and-cons-to-going-vegan.html
 
 ## 휴가를 Urlaub im inland oder ausland
-- Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich zu See oder Berg fahren. Zum beispiel nutzt man in aller Küstenstraße Geojes insels frische Luft und eine wunderschöne Landschaft. 
+- Ich denke that Urlaub im inland ist sehr interessant. Im Inland kann man zu einem Berg so oft wie möglich spazieren gehen. Ausgerechnet, als man spazieren gehen wollt.
+
+Zum beispiel nutzt man frische Luft in 
+
+und eine wunderschöne Landschaft in aller Küstenstraße Geojes insels. An der  Straße entlang 
+
+# The reason therefore lay in the fact that ...	Der Grund lag mithin darin, dass

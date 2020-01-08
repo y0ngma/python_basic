@@ -92,8 +92,7 @@ def t2_insert_all(request): # 상품을 대량으로 등록할 때
         Table2.objects.bulk_create(objs)
         print(na)
         return redirect('/board/t2_list')
-
-          
+         
 def t2_insert(request):
     if request.method == 'GET':
         return render(request, 'board/t2_insert.html')
@@ -260,31 +259,6 @@ def content(request):
             'nxt':nxt[0], 'first':str(first[0]), 'last':str(last[0])    }   )
 
 @csrf_exempt
-def list(request):
-    if request.method == 'GET':
-        request.session['hit'] = 1
-
-        writer = request.GET.get('writer', None)
-        sql=""
-        if writer != None:
-            sql = """
-                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
-                FROM BOARD_TABLE1
-                WHERE WRITER=%s
-                ORDER BY NO DESC
-            """
-            cursor.execute(sql,[writer])
-        else:    
-            sql = """
-                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
-                FROM BOARD_TABLE1
-                ORDER BY NO DESC
-            """
-            cursor.execute(sql)
-    data = cursor.fetchall()
-    return render(request, 'board/list.html', {"list":data, "writer":writer})
-
-@csrf_exempt
 def write(request):
     if request.method == 'GET':
         return render(request, 'board/write.html')
@@ -312,3 +286,30 @@ def write(request):
         except Exception as e:
             print('에러')
         return redirect('/board/list') # <a href 와 같음 
+
+@csrf_exempt
+def list(request):
+    if request.method == 'GET':
+        request.session['hit'] = 1
+
+        writer = request.GET.get('writer', None)
+        sql=""
+        if writer != None:
+            sql = """
+                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
+                FROM BOARD_TABLE1
+                WHERE WRITER=%s
+                ORDER BY NO DESC
+            """
+            cursor.execute(sql,[writer])
+        else:    
+            sql = """
+                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
+                FROM BOARD_TABLE1
+                ORDER BY NO DESC
+            """
+            cursor.execute(sql)
+    data = cursor.fetchall()
+    
+    return render(request, 'board/list.html', {"list":data, "writer":writer
+        , 'pages':page})
