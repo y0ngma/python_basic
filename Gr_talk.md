@@ -7,7 +7,7 @@
 - sociallenetswerke SNS
 - wie oft benutzen Sie. ich benutze driviermal am Tag. ich habe nichts zu machen. 
 
-### 반대표 옷, 장소 정하기
+### 반 대표 옷, 장소 정하기
 - am freitag abend kannen wir gehen? wo treffen wir uns? wir treffen uns an U-bahnhof. ist konzert halle 
 - was ziehen
 - weis blause und schwez hose
@@ -38,3 +38,4 @@
 #### die infomationen im internet
 #### fertig essen
 #### 휴가를 Urlaub im inland oder ausland
+- Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich fahren.

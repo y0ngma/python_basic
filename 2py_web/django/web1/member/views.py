@@ -23,32 +23,51 @@ from .models import Table2 # models.py파일의 Table2클래스
 from django.db.models import Sum, Max, Min, Count, Avg
 
 def exam_select(request):
-    list = Table2.objects.all()
-    return render(request, 'member/exam_select.html', {'list':list})
-    # 반별 국어, 영어, 수학 합계
-        # list = Table2.objects.aggregate(Sum('math'))
-        #     # SELECT SUM(math) FROM MEMBER_TABLE2
-        #     # WHERE CLASS_ROOM=101    
-        # list = Table2.objects.all().values(['no', 'name'])
-        #     # SELECT NO, NAME FROM MEMBER_TABLE2
-        # list = Table2.objects.all().order_by('name')
-        #     # 복잡한 SELECT은 다음과 같이 raw 안에 SQL문을 넣어 구현
-        # list = Table2.objects.raw("SELECT*FROM MEMBER_TABLE2 ORDER BY name ASC") 
-        # list = Table2.objects.values('classroom').annotate(kor=Sum('kor'), eng=Sum('eng'), math=Sum('math'))   
-        #     # SELECT 
-        #     #     SUM(kor)  AS kor, 
-        #     #     SUM(eng)  AS eng, 
-        #     #     SUM(math) AS math 
-        #     # FROM MEMBER_TABLE2
-        # return render(request, 'member/exam_select.html',{"list":list}) 
-          
+    if request.method == 'GET':
+        txt  = request.GET.get('txt', '')
+        page = int(request.GET.get('page', 1))
+            # 1 -> 0, 10 게시물
+            # 2 -> 11, 20
+        if txt=='':
+            list = Table2.objects.all() [page*10-10:page*10]
+                # SELECT*FROM MEMBER_TABLE2
+            cnt  = Table2.objects.all().count() 
+                # SELECT COUNT(*) FROM MEMBER_TABLE2
+            tot = (cnt-1)//10+1
+        else: 
+            list = Table2.objects.filter(name__contains=txt)[page*10-10:page*10]
+                # SELECT*FROM MEMBER_TABLE2 WHERE name LIKE '%가%'
+            cnt  = Table2.objects.filter(name__contains=txt).count()
+                # SELECT COUNT(*)FROM MEMBER_TABLE2 WHERE name LIKE '%가%'
+            tot = (cnt-1)//10+1
+        return render(request, 'member/exam_select.html', \
+            {'list':list, 'pages':range(1,tot+1,1),'page_html':page}) # 파라미터 괄호하나에만
+        # 반별 국어, 영어, 수학 합계
+            # list = Table2.objects.aggregate(Sum('math'))
+            #     # SELECT SUM(math) FROM MEMBER_TABLE2
+            #     # WHERE CLASS_ROOM=101    
+            # list = Table2.objects.all().values(['no', 'name'])
+            #     # SELECT NO, NAME FROM MEMBER_TABLE2
+            # list = Table2.objects.all().order_by('name')
+            #     # 복잡한 SELECT은 다음과 같이 raw 안에 SQL문을 넣어 구현
+            # list = Table2.objects.raw("SELECT*FROM MEMBER_TABLE2 ORDER BY name ASC") 
+            # list = Table2.objects.values('classroom').annotate(kor=Sum('kor'), eng=Sum('eng'), math=Sum('math'))   
+            #     # SELECT 
+            #     #     SUM(kor)  AS kor, 
+            #     #     SUM(eng)  AS eng, 
+            #     #     SUM(math) AS math 
+            #     # FROM MEMBER_TABLE2
+            # return render(request, 'member/exam_select.html',{"list":list}) 
+
+
 def exam_insert(request):
     if request.method == 'GET':
         # range(5) = 다섯줄씩 입력하기
         # 성씨묶음 = []5개, 국영수_점수묶음=[]3x5을 서로 묶어보기
         # 그것을 range()대신 사용해보기
 
-        return render(request, 'member/exam_insert.html', {'cnt':range(5)})
+        return render(request, \
+        'member/exam_insert.html', {'cnt':range(10)})
             
     elif request.method=='POST':
         no  = request.POST.getlist('no[]')
@@ -112,9 +131,10 @@ def exam_update(request):
 def exam_delete(request):
     if request.method == 'GET':
         n   = request.GET.get('no', 0) 
+        p   = request.GET.get('page', 1) 
         row = Table2.objects.get(no=n)
         row.delete()
-        return redirect('/member/exam_select')
+        return redirect('/member/exam_select?page='+p)
 
 ####실습 끝####################################
 def auth_pw(request): 

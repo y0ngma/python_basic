@@ -1,4 +1,3 @@
-
 ## 채식주의 찬반 의견
 
 
@@ -24,3 +23,6 @@
 
 
 ### 참고문헌 : 모니카 바이드, 채식주의로의 9가지 장단점, https://www.aarp.org/food/diet-nutrition/info-02-2011/9-pros-and-cons-to-going-vegan.html
+
+## 휴가를 Urlaub im inland oder ausland
+- Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich fahren.
