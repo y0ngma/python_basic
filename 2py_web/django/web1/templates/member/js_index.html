@@ -8,16 +8,39 @@
 </head>
 <body>
     <h3>js_index</h3>
-    <input type='text' id='name' />
-
+    <form action='/member/insert' method="post" id='form'>
+        <input type='text' name='name' id='name' />
+        <input type='submit' value='추가' />
+        <input type='submit' id='btn_delete' value='삭제' />
+    </form>
     
+        
+<!-- 스크립트를 하단에 배치 : 화면이 먼저 렌더링되어 나오게
+    느린 인터넷환경에서는 흰화면 한참 있음 -->
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
     <script>
 
         $(function(){
-            console.log('hello')
-        })
+            $('#name').val("jquery insert")
 
+            $('#btn_delete').click(function(){
+                $('#form').attr('action', '/member/delete')
+            })
+        })
     </script>
+    <p>
+        <script>
+
+            $(function(){
+                $('#name').val("jquery insert")
+    
+                $('#btn_delete').click(function(){
+                    $('#form').attr('action', '/member/delete')
+                })
+            })
+        </script>
+        버튼을 누르면 form.action 
+
+    </p>
 </body>
 </html>
