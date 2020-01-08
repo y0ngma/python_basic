@@ -12,6 +12,7 @@
     <div class='container'>
         <h1>게시판 목록</h1>
         <a href='/board/write' class='btn btn-success'>글쓰기</a>
+        
         {% if writer %}
         <a href="/board/list" class="btn btn-secondary">시작 메뉴로</a>
         {% endif %}
@@ -59,9 +60,11 @@
                     {% for i in pages %}
                     <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
                     <li class="page-item">
-                        <a class="page-link" href="#">{{i}}</a>
+                        <a class="page-link" 
+                        href="/board/list?page={{i}}&txt={{request.GET.txt}}">{{i}}</a>
                     </li>
                     <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+                    {% endfor %}
                 </ul>
             </nav>
         </div>

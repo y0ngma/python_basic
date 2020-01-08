@@ -11,7 +11,7 @@ cursor = connection.cursor() # sql문 수행위한 cursor객체
 # 127.0.0.1:8000/board/content?no=21
 # 127.0.0.1:8000/board/content     => 오류발생
 # no = request.GET['no'] # 없을때 기본값 0 을 대신 주는 함수 get
-
+from .models import Table1
 from .models import Table2 # models.py파일의 Table2클래스
 
 def t2_update_all(request):
@@ -291,25 +291,73 @@ def write(request):
 def list(request):
     if request.method == 'GET':
         request.session['hit'] = 1
-
         writer = request.GET.get('writer', None)
+
+        txt  = request.GET.get('txt', '')
+        page = int(request.GET.get('page', 1))
+
         sql=""
         if writer != None:
-            sql = """
-                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
-                FROM BOARD_TABLE1
-                WHERE WRITER=%s
-                ORDER BY NO DESC
-            """
+            arr = [writer, page*10-10+1, page*10]
+            sqlz = """
+                SELECT 
+                    NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'),
+                    ROW_NUMBER() OVER (ORDER BY NO DESC) ROWN
+                FROM 
+                    BOARD_TABLE1 
+                WHERE
+                    writer=%s"""
+
+            sql = "SELECT COUNT(*) FROM (" + sqlz +")"
             cursor.execute(sql,[writer])
-        else:    
+            
+            cnt = cursor.fetchone()[0]
+                # cnt = Table1.objects.all().count() # 같은결과
+            tot = (cnt-1)//10+1
             sql = """
-                SELECT NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS') 
-                FROM BOARD_TABLE1
-                ORDER BY NO DESC
+                SELECT * FROM(
+                    SELECT 
+                        NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'),
+                        ROW_NUMBER() OVER (ORDER BY NO DESC) ROWN
+                    FROM 
+                        BOARD_TABLE1 
+                    WHERE
+                        writer=%s
+                    )
+                WHERE ROWN BETWEEN %s AND %s
             """
+            cursor.execute(sql,arr)
+        else:    
+            arr = [page*10-10+1, page*10]
+            sqlz = "BOARD_TABLE1"
+
+            sql = "SELECT COUNT(*) FROM (" + sqlz +")"
             cursor.execute(sql)
-    data = cursor.fetchall()
-    
-    return render(request, 'board/list.html', {"list":data, "writer":writer
-        , 'pages':page})
+            
+            cnt = cursor.fetchone()[0]
+                # cnt = Table1.objects.all().count() # 같은결과
+            tot = (cnt-1)//10+1
+            sql = """
+                SELECT * FROM(
+                    SELECT 
+                        NO, TITLE, WRITER, HIT, TO_CHAR(REGDATE, 'YYYY-MM-DD HH:MI:SS'),
+                        ROW_NUMBER() OVER (ORDER BY NO DESC) ROWN
+                    FROM 
+                        BOARD_TABLE1 
+                    )
+                WHERE ROWN BETWEEN %s AND %s
+            """
+            cursor.execute(sql, arr)
+        data = cursor.fetchall()
+
+        # sql = "SELECT COUNT(*) FROM BOARD_TABLE1"
+        # sql = "SELECT COUNT(*) FROM (" + sqlz +")"
+        # cursor.execute(sql)
+        # print(len(data))
+        
+        # cnt = cursor.fetchone()[0]
+        #     # cnt = Table1.objects.all().count() # 같은결과
+        # tot = (cnt-1)//10+1
+        
+        return render(request, 'board/list.html', {"list":data, "writer":writer
+            , 'pages':range(1, tot+1)})
