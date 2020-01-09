@@ -500,7 +500,7 @@ def graph(request):
     score = cursor.fetchall()
     print(score)
     print(score[0][0])
-
+    # 
     group=[]
     ksum=[]
     esum=[]
@@ -520,7 +520,7 @@ def graph(request):
     plt.title("과목 평균")
     plt.xlabel("과목")
     plt.ylabel("점수")
-    
+
     plt.bar(group, ksum)
     plt.bar(group, esum)
     plt.bar(group, msum)
