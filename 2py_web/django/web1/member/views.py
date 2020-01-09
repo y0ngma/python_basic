@@ -487,29 +487,37 @@ def graph(request):
     font_name = font_manager.FontProperties\
         (fname='C:/Windows/Fonts/gulim.ttc').get_name() # 폰트읽기
     rc('font', family=font_name) # 폰트적용
-    
-
+    plt.rcParams['figure.figsize']= (12, 4)
     sql= '''
         SELECT 
-            CLASSROOM, SUM(kor), SUM(eng), SUM(math) FROM MEMBER_TABLE2 GROUP BY CLASSROOM
+            CLASSROOM, SUM(kor) , SUM(eng), SUM(math)
+            FROM MEMBER_TABLE2 
+            GROUP BY CLASSROOM
     '''
+    
     print(sql)
     cursor.execute(sql)
-    ksum = cursor.fetchall()
-    print(ksum)
-    print(ksum[0][0])
+    score = cursor.fetchall()
+    print(score)
+    print(score[0][0])
 
-    x=[]
-    y=[]
-    for i in ksum:
-        x.append(i[0])
-        y.append(i[1])
+    group=[]
+    ksum=[]
+    esum=[]
+    msum=[]
+    
+    for i in score:
+        group.append(i[0])
+        ksum.append(i[1])
+        esum.append(i[2])
+        msum.append(i[3])
         
+    # group = [score[0][0], score[1][0], score[2][0], score[3][0]]
+    # ksum = [score[0][1], score[1][1], score[2][1], score[3][1]]
+    # esum = [score[0][2], score[1][2], score[2][2], score[3][2]]
+    # msum = [score[0][3], score[1][3], score[2][3], score[3][3]]
 
-    # x = [ksum[0][0], ksum[1][0], ksum[2][0], ksum[3][0]]
-    # y = [ksum[0][1], ksum[1][1], ksum[2][1], ksum[3][1]]
-
-    plt.bar(x,y)
+    plt.bar(group, ksum, esum, msum)
     plt.title("과목 평균")
     plt.xlabel("과목")
     plt.ylabel("점수")
