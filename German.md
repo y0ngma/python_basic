@@ -20,6 +20,7 @@
 
 - 참고문헌 : 모니카 바이드, 채식주의로의 9가지 장단점, https://www.aarp.org/food/diet-nutrition/info-02-2011/9-pros-and-cons-to-going-vegan.html
 
+---
 
 ## Urlaub im inland oder ausland
 ### Ich denke dass Urlaub im inland sehr geeignet ist. Im Inland kann man zu einem Berg so oft wie möglich spazieren gehen. Ausgerechnet, als du spazieren gehen wollst, spazier !
@@ -44,6 +45,11 @@ durchlaufen # go through
 der Verkehr # traffic
 der Verkehrsstau
 das Verkehrsmittel # public transport
+
+찬반을 설명하기 위해 da fur da gegen 등 문두 문미에 이용해보기
+종류 : was fur ein/또는 복수형 명사
+종목 : welche 로만 명사를 물을 수 있다.
+~ magst du?
 
 The reason therefore lay in the fact that ...	Der Grund lag mithin darin, dass
 
