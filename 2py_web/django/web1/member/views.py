@@ -517,10 +517,13 @@ def graph(request):
     # esum = [score[0][2], score[1][2], score[2][2], score[3][2]]
     # msum = [score[0][3], score[1][3], score[2][3], score[3][3]]
 
-    plt.bar(group, ksum, esum, msum)
     plt.title("과목 평균")
     plt.xlabel("과목")
     plt.ylabel("점수")
+    
+    plt.bar(group, ksum)
+    plt.bar(group, esum)
+    plt.bar(group, msum)
 
     # plt.show() # 웹에서 사용 불가
     plt.draw() # 안보이게 그림을 캡쳐
