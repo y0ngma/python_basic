@@ -7,22 +7,26 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+### DB 연결
 from django.db import connection 
-
 cursor = connection.cursor()  
     # 모델거치지 않고 sql-DB 바로 연결시 connection필요
     # cursor 사용
+
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate as auth1
 from django.contrib.auth import login as login1
 from django.contrib.auth import logout as logout1
     # django에서 제공하는 User 사용
-
-####실습 시작######################################
 from .models import Table2 # models.py파일의 Table2클래스
 from django.db.models import Sum, Max, Min, Count, Avg
 import pandas as pd
+import matplotlib.pyplot as plt
+import io # byte로 변환
+import base64 #byte를 base64로 변경
+from matplotlib import font_manager, rc # 한글폰트 적용
 
+####실습 시작######################################
 def exam_select(request):
     if request.method == 'GET':
         txt  = request.GET.get('txt', '')
@@ -67,7 +71,7 @@ def exam_insert(request):
         # 그것을 range()대신 사용해보기
 
         return render(request, \
-        'member/exam_insert.html', {'cnt':range(10)})
+        'member/exam_insert.html', {'cnt':range(1,21)})
             
     elif request.method=='POST':
         no  = request.POST.getlist('no[]')
@@ -411,17 +415,113 @@ def dataframe(request):
         # [['no': 260, 'name': '멍뭉이0', 'kor': 0], ...] 
     return render(request, 'member/dataframe.html',\
          {"df_table":df.to_html(), "list":rows})
-
-import matplotlib.pyplot as plt
+    
 def graph(request):
-    x = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-    y = [2, 3, 4, 9, 2, 5, 3, 4, 7]
+# 연습용 코드들
+    # sum_kor = Table2.objects.aggregate(Sum('kor'))
+    # sum_eng = Table2.objects.aggregate(Sum('eng'))
+    # sum_math = Table2.objects.aggregate(Sum('math'))
+    #     # SELECT SUM('kor') FROM MEMBER_TABLE2
+    # print(sum_kor)
+    # print('---------------------------------------------')
+    # print(sum_eng)
+    # print('---------------------------------------------')
+    # print(sum_math)
+    # print(type(sum_math))
+    # sum_kor = Table2.objects.aggregate(sum1=Sum('kor')) # {'sum1':500}
+    # sum_eng = Table2.objects.aggregate(sum1=Sum('eng')) # {'sum1':600}
+    # sum_math = Table2.objects.aggregate(sum1=Sum('math'))
+    #     # SELECT SUM('kor') AS sum1 FROM MEMBER_TABLE2
+    # print(sum_kor)
+    # print('---------------------------------------------')
+    # print(sum_eng)
+    # print('---------------------------------------------')
+    # print(sum_math)
+    # print(type(sum_math))
+    # sum_kor = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('kor'))
+    # sum_eng = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('eng'))
+    # sum_math = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('math'))
+    # print(sum_kor)
+    # print('---------------------------------------------')
+    # print(sum_eng)
+    # print('---------------------------------------------')
+    # print(sum_math)
+    # print(type(sum_math))
+
+    # sum_kor = Table2.objects.filter(kor__gt=80).aggregate(sum1=Sum('kor'))
+    # sum_eng = Table2.objects.filter(eng__gt=80).aggregate(sum1=Sum('eng'))
+    # sum_math = Table2.objects.filter(math__gt=80).aggregate(sum1=Sum('math'))
+    #     # SELECT SUM('kor') FROM MEMBER_TABLE2 WHERE MATH>10
+    #     #>gt, >=gte, <lt, <=lte
+    # print(sum_kor)
+    # print('---------------------------------------------')
+    # print(sum_eng)
+    # print('---------------------------------------------')
+    # print(sum_math)
+    # print(type(sum_math))
+
+    # sum_kor = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
+    # sum_eng = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
+    # sum_math = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
+    #     # SELECT SUM('kor') sum1, SUM('eng') sum2, SUM('math') sum3
+    #     # FROM MEMBER_TABLE2
+    #     # GROUP BY CLASSROOM
+    # print(sum_kor.query)
+    # # print(sum_eng.query)
+    # # print(sum_math.query)
+    # print('---------------------------------------------')
+
+    # df_kor = pd.DataFrame(sum_kor)
+    # df_eng = pd.DataFrame(sum_eng)
+    # df_math = pd.DataFrame(sum_math)
+    
+# DataFrame
+    # df_math = pd.DataFrame(sum_math)
+    # df_math = df_math.set_index("classroom")
+    # print(df_math)
+    # print(df_math.columns)
+    # df_math.plot(kind="bar")
+    # print(df_math)
+#  
+    
+    font_name = font_manager.FontProperties\
+        (fname='C:/Windows/Fonts/gulim.ttc').get_name() # 폰트읽기
+    rc('font', family=font_name) # 폰트적용
+    
+
+    sql= '''
+        SELECT 
+            CLASSROOM, SUM(kor), SUM(eng), SUM(math) FROM MEMBER_TABLE2 GROUP BY CLASSROOM
+    '''
+    print(sql)
+    cursor.execute(sql)
+    ksum = cursor.fetchall()
+    print(ksum)
+    print(ksum[0][0])
+
+    x=[]
+    y=[]
+    for i in ksum:
+        x.append(i[0])
+        y.append(i[1])
+        
+
+    # x = [ksum[0][0], ksum[1][0], ksum[2][0], ksum[3][0]]
+    # y = [ksum[0][1], ksum[1][1], ksum[2][1], ksum[3][1]]
 
     plt.bar(x,y)
-    plt.title("AGES & PERSON")
-    plt.xlabel("AGES")
-    plt.ylabel("PERSON")
+    plt.title("과목 평균")
+    plt.xlabel("과목")
+    plt.ylabel("점수")
 
     # plt.show() # 웹에서 사용 불가
     plt.draw() # 안보이게 그림을 캡쳐
-    return render(request, 'member/graph.html')
+    img = io.BytesIO() # img에 byte배열로 보관
+    plt.savefig(img, format='png') # png파일 포멧으로 저장
+    img_url = base64.b64encode(img.getvalue()).decode()
+
+    plt.close() # 그래프종료
+
+    return render(request, 'member/graph.html',
+        {"graph":'data:;base64,{}'.format(img_url)})
+        # <img src='{{graph}}' /> # graph.html에서

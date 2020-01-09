@@ -244,7 +244,7 @@ def content(request):
         cursor.execute(sql, [no])
         data = cursor.fetchone()  #(89,)
         print('가져온 데이터는 =>', data)
-        
+    #    
         if data[6] : # BLOB형식으로 DB에 첨부된 사진등이있을때
             img = data[6].read() # byte배열을 img에 넣음
             img64 = b64encode(img).decode('utf-8')

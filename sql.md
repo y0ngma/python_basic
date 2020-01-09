@@ -88,3 +88,15 @@ TCL
         WHERE NAME LIKE '%'||'홍길동'||'%'
         WHERE TITLE LIKE '%'||'제목'||'%'
     ```
+- 반별
+    ```SQL
+    
+    SELECT
+        'MEMBER_TABLE2'.'CLASSROOM', # [테이블]의 [클래스룸이라 저장된 데이터]랑
+        SUM('MEMBER_TABLE2'.'KOR') AS 'SUM1', # kor행 데이터합 별칭을 SUM1로
+        SUM('MEMBER_TABLE2'.'ENG') AS 'SUM2',
+        SUM('MEMBER_TABLE2'.'MATH') AS 'SUM3'
+    FROM 'MEMBER_TABLE2'
+    ```
+
+    
