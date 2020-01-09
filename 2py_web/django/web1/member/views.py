@@ -21,6 +21,7 @@ from django.contrib.auth import logout as logout1
 ####실습 시작######################################
 from .models import Table2 # models.py파일의 Table2클래스
 from django.db.models import Sum, Max, Min, Count, Avg
+import pandas as pd
 
 def exam_select(request):
     if request.method == 'GET':
@@ -229,29 +230,29 @@ def auth_join(request):
 
         return redirect('/member/auth_index')
 
-def list(request): 
-    # sql 쓴 이유 :
-        # 데이터가 먼저냐 화면이 먼저냐?
-        # GET을 쓰지 않은 이유
-        # ID 기준으로 오름차순으로 가져오자
-    sql = 'SELECT*FROM MEMBER ORDER BY ID ASC'
-    cursor.execute(sql) # 
-        # cursor는 sql 실행하기위한 단위
-        # connection.execute를 사용해도 되지만 아직 세부단위 설정되지 않음
-    data = cursor.fetchall() # sql문 실행의 결과값 가져와라
-    print(type(data)) # 리스트
-    print(data)
-        # [(, , , ,column렬의 수 만큼 ), (row 행의 수 만큼)]
-        # list.html으로 넘어갈때
-        # list 변수에 data값을, title변수에 회원목록 문자로 해서 넘긴다.
-        # 단 title키의 값은 하나뿐이라 list.html에서 {{title}}가능하고
-        # list키의 값은 회원수만큼이므로 for문 사용했음
-    sql = 'SELECT*FROM MEMBER1 ORDER BY ID ASC' # vip맴버리스트 취합
-    cursor.execute(sql)
-    data2 = cursor.fetchall()
-    print(type(data)) # 리스트
-    print(data) 
-    return render(request, 'member/list.html', {'list':data, 'list2':data2, 'title':'회원목록'})
+# def list(request): 
+#     # sql 쓴 이유 :
+#         # 데이터가 먼저냐 화면이 먼저냐?
+#         # GET을 쓰지 않은 이유
+#         # ID 기준으로 오름차순으로 가져오자
+#     sql = 'SELECT*FROM MEMBER ORDER BY ID ASC'
+#     cursor.execute(sql) # 
+#         # cursor는 sql 실행하기위한 단위
+#         # connection.execute를 사용해도 되지만 아직 세부단위 설정되지 않음
+#     data = cursor.fetchall() # sql문 실행의 결과값 가져와라
+#     print(type(data)) # 리스트
+#     print(data)
+#         # [(, , , ,column렬의 수 만큼 ), (row 행의 수 만큼)]
+#         # list.html으로 넘어갈때
+#         # list 변수에 data값을, title변수에 회원목록 문자로 해서 넘긴다.
+#         # 단 title키의 값은 하나뿐이라 list.html에서 {{title}}가능하고
+#         # list키의 값은 회원수만큼이므로 for문 사용했음
+#     sql = 'SELECT*FROM MEMBER1 ORDER BY ID ASC' # vip맴버리스트 취합
+#     cursor.execute(sql)
+#     data2 = cursor.fetchall()
+#     print(type(data)) # 리스트
+#     print(data) 
+#     return render(request, 'member/list.html', {'list':data, 'list2':data2, 'title':'회원목록'})
 
 def member(request):
     request.method == 'GET'
@@ -393,3 +394,34 @@ def js_index(request):
 def js_chart(request):
     if request.method=="GET":
         return render(request, 'member/js_chart.html')
+
+def dataframe(request):
+    #1. QuerySet -> list로 변경
+    rows = list(Table2.objects.all().values("no", 'name', 'kor'))[0:10]
+        # rows = Table2.objects.all() # = SELECT * FROM MEMBER_TABLE2
+        # SELECT NO,NAME,KOR FROM MEMBER_TABLE2
+        # [{'no': 260, 'name': '멍뭉이0', 'kor': 0}, ...]
+
+    # 2. list->dataframe으로 변경 ***전처리***
+    df = pd.DataFrame(rows)
+        # 표로 바뀜
+
+    # 3. dataframe -> list
+    rows1 = df.values.tolist()
+        # [['no': 260, 'name': '멍뭉이0', 'kor': 0], ...] 
+    return render(request, 'member/dataframe.html',\
+         {"df_table":df.to_html(), "list":rows})
+
+import matplotlib.pyplot as plt
+def graph(request):
+    x = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+    y = [2, 3, 4, 9, 2, 5, 3, 4, 7]
+
+    plt.bar(x,y)
+    plt.title("AGES & PERSON")
+    plt.xlabel("AGES")
+    plt.ylabel("PERSON")
+
+    # plt.show() # 웹에서 사용 불가
+    plt.draw() # 안보이게 그림을 캡쳐
+    return render(request, 'member/graph.html')

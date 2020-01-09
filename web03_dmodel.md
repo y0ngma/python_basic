@@ -23,3 +23,40 @@
             - sql문 없이 구동
 
 ### django model
+
+```SQL
+DDL
+테이블 정의어
+    CREATE      # 생성
+    ALTER       # 타입을 변경
+    DROP        # 삭제
+    RENAME      # 이름
+    TRUNCATE    # 비우기
+
+DML
+데이터 조작어
+    UBSERT 
+        INTO MEMBER(ID, NAME, AGE) VALUEs('a', 'b', 34) # VALUES 철자주의
+    UPDATE
+        MEMBER SET NAME='B1', AGE=44 WHERE ID='a' 
+    DELETE
+        FROM MEMBER WHERE ID='a'
+    SELECT
+        * FROM MEMBER WHERE ID LIKE 'a%'    # LIKE 는 정규식
+        ORDER BY NO DESC | ACS              # 내림 | 오름차순
+    "%" || "가" ||"%"   -> "가" 포함
+    "가"|| "%"          -> "가" 시작
+    "%" || "가"         -> "가" 끝남
+
+   
+
+DCL 
+데이터 제어어
+    GRANT       # 권한 부여
+    REVOKE      # 권한 삭제
+
+TCL
+트랜잭션 제어어
+    COMMIT      # 적용
+    ROLLBACK    # 포인트로 돌아가기
+    SAVEPOINT

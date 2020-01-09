@@ -89,7 +89,7 @@ def t2_insert_all(request): # 상품을 대량으로 등록할 때
             obj.math = ma[i]
             objs.append(obj)
         # 일괄 추가 -> .save()는 하나씩
-        Table2.objects.bulk_create(objs)
+        Table2.objects.bulk_create(objs) 
         print(na)
         return redirect('/board/t2_list')
          

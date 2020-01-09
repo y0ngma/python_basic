@@ -11,7 +11,7 @@ from . import views
 urlpatterns = [
     # index를 url끝에 치면 views의 index함수를 불러와라
     path('index', views.index, name='index'),
-    path('list', views.list, name = 'list'),
+    #path('list', views.list, name = 'list'), #dataframe때문
     path('member', views.member, name = 'member'),
     path('join', views.join, name = 'join'),
     path('join1', views.join1, name = 'join1'),
@@ -36,6 +36,9 @@ urlpatterns = [
     path('js_index', views.js_index, name = 'js_index'),
     path('js_chart', views.js_chart, name = 'js_chart'),
     
+    path('dataframe', views.dataframe, name = 'dataframe'),
+    path('graph', views.graph, name = 'graph'),
+
 
 
 ]
