@@ -34,7 +34,17 @@ INSTALLED_APPS = [
     'member',
     'api',
 ]
-
-
-
+웹
+    view
+    templates 웹페이지 스마트폰(물리적으로 떨어져있음)
+    
+    <xml> 
+    <id> achilles <id>
+    <age>3</age>
+    </xml>
+    에서 간소화
+    json
+    {'id':'achilles', 'age':3}
+    obj로 가져온것을 이렇게 변환해주는것이 library, pickle, serializer
+    
 ```

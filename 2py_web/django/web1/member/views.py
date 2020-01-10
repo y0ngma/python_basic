@@ -483,7 +483,8 @@ def graph(request):
     # df_math.plot(kind="bar")
     # print(df_math)
 #  
-    
+    # std 표준편차는 aggregate쓸 수 없다
+    # df.values.tolist()
     font_name = font_manager.FontProperties\
         (fname='C:/Windows/Fonts/gulim.ttc').get_name() # 폰트읽기
     rc('font', family=font_name) # 폰트적용

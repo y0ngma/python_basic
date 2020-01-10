@@ -10,8 +10,8 @@ DDL
 
 DML
 데이터 조작어
-    UBSERT 
-        INTO MEMBER(ID, NAME, AGE) VALUEs('a', 'b', 34) # VALUES 철자주의
+    INSERT 
+        INTO MEMBER(ID, NAME, AGE) VALUEs('a', 'b', 34) --value S 철자주의
     UPDATE
         MEMBER SET NAME='B1', AGE=44 WHERE ID='a' 
     DELETE
@@ -23,7 +23,6 @@ DML
     "가"|| "%"          -> "가" 시작
     "%" || "가"         -> "가" 끝남
 
-   
 
 DCL 
 데이터 제어어
@@ -58,11 +57,11 @@ TCL
         
     1. 조회;
         SELECT * FROM BOARD_TABLE1;
-        SELECT * FROM BOARD_TABLE1 ORDER BY NO DESC;
+        SELECT * FROM BOARD_TABLE1 ORDER BY NO DESC; 
         SELECT NO FROM BOARD_TABLE1 WHERE HIT >= 5;
         SELECT * FROM BOARD_TABLE1 WHERE NO IN (3, 4, 5, 6, 7, 8, 9);
         SELECT * FROM BOARD_TABLE1 UNION ALL;
-            
+        --ORDER BY [정렬할 내용][ASC/DESC]이다 ORDER NO BY DESC 아니고    
         --SELECT * FROM WHERE NO (
         --    SELECT NO FROM BOARD_TABLE1 WHERE HIT >= 5
         --);
