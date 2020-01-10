@@ -31,35 +31,37 @@
 - was tragen wir?
 - durfen nicht 입지말아야할것 말할 수 있음.
 - 10% ermesigung oder einfach. 사는이유
-#### vegetarische ernerung
+
+
+### vegetarische ernerung
 - heimatland
 - ich esse 
 - fertig essen 패스트푸드
 - kann die bezeihung weiter gehen?
 - wenn ich 
 -
-#### Wie viel zu haus
+### Wie viel zu haus
 - ferngesehen 티비봤다
 - passiert
-#### wie streung die eltern sein
-#### englischelernen als kind
-#### wie lange sollten die kinder zu hause.(독립)
-#### schulesport
-#### allein oder shardehause
-#### mit dem fahrrad zur arbeit
-##### fernsehe oder ins kino gehen
-#### bestimmen die kleidung ihrer kinder
+### wie streung die eltern sein
+### englischelernen als kind
+### wie lange sollten die kinder zu hause.(독립)
+### schulesport
+### allein oder shardehause
+### fernsehe oder ins kino gehen
+### bestimmen die kleidung ihrer kinder
 - 
-#### wie lange soll man protag sport tabe
+### wie lange soll man pro Tag sport tabe
 
 - Muskel taglich zu machen
 - einer Stunde pro Tag.
-#### wie viele fremd sprachen soll man learn
+### wie viele fremd sprachen soll man learn
 - welche Sprache lernst du? 
-#### die infomationen im internet
+### die infomationen im internet
 - wie oft surfen Sie im internet
-#### fertig essen
-#### 휴가를 Urlaub im inland oder ausland
+### fertig essen
+### 휴가를 Urlaub im inland oder ausland
+
 - Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich fahren.
 
 
@@ -74,3 +76,5 @@ dass er mich auch mag
 entfern 떨어지다
 genug Geld habe ich 충분한돈
 begesta
+### mit dem fahrrad zur arbeit
+- 
