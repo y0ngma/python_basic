@@ -66,13 +66,7 @@ def exam_select(request):
 
 def exam_insert(request):
     if request.method == 'GET':
-        # range(5) = 다섯줄씩 입력하기
-        # 성씨묶음 = []5개, 국영수_점수묶음=[]3x5을 서로 묶어보기
-        # 그것을 range()대신 사용해보기
-
-        return render(request, \
-        'member/exam_insert.html', {'cnt':range(1,21)})
-            
+        return render(request,'member/exam_insert.html',{'cnt':range(1,21)})
     elif request.method=='POST':
         no  = request.POST.getlist('no[]')
         na  = request.POST.getlist('name[]')
