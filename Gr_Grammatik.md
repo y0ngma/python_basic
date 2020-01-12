@@ -1,3 +1,4 @@
+
 ## Relativsaetze
 ### Relativpronomen im Nominativ
 ### Relativpronomen in Dativ
@@ -20,42 +21,39 @@
 1. Hast du noch nights von den Azteken, die Ureinwohnere Mexikos, gehoert?
 1. In Australien, dem fuenften Kontinent, gibt es keine Erdbeben.
 ---
+
 ## Ergaenzungen
 ### Adjektive mit Ergaenzungen
 #### Adjektive mit Ergaenzungen im Akkusativ
-```bash
-alt 
-breit                                       #
-gross
-hoch
-lang
-```
-1. Das Baby ist erst einen Monat alt.
-1. Die Tuer ist einen Meter breit.
-1. Ich bin diesen Laerm night gewohnt.
+|Wort   |eine Datenstichprobe|
+|-------|------|
+|alt    |Das Baby ist erst einen Monat alt|
+|breit  |Die Tuer ist einen Meter breit|
+|gross  |
+|hoch   |
+|lang   |
+|gewohnt|Ich bin diesen Laerm night gewohnt|
 #### Adjektive mit Dativ-Ergaenzung
-```py
-aehnlich                                    #
-behilflich                                  #
-bekannt                                     
-dankbar (fuer)
-egal, gleich (gueltig)
-moeglich
-recht
-sympathisch
-ueberlegen (!= unterlegen)
-```
-1. Er ist seinem BRuder sehr aehnlich
-1. Ein Freundlicher Mann war mir behilflich
+|Wort   |eine Datenstichprobe|
+|-------|------|
+|ähnlich|Er ist seinem Bruder sehr ähnlich|                           
+|behilflich             |Ein Freundlicher Mann war mir behilflich|
+|bekannt                |
+|dankbar (fuer)         |
+|egal, gleich (gültig)  |
+|möglich                |
+|recht                  |
+|sympathisch            |
+|überlegen(!=unterlegen)|
 #### Adjektive mit Praepositional-Ergaenzung
 ```py
-abhaengig von
+abhängig von
 angewiesen auf 4
 ```
-1. Die Kinder sind von ihren Eltern abhaengig.
+1. Die Kinder sind von ihren Eltern abhängig.
 1. Ich bin auf seine Hilfe angewiesen.
-
 ---
+
 1. Die Professorin war__  d__ Arbeit des Studenten sehr zufrieden.
 1. Herr Meier ist __ sein__ Bruder Neidisch, weil dieser viel Geld hat.
 1. Der Name des Kuenstlers war __ d__ Journalisten bekannt.
@@ -67,3 +65,31 @@ angewiesen auf 4
 1. Ihr Freund ist __ Drogen abhaengig.
 1. Alte Menschen sind reich __ Erfahrungen.
 1. Viele Mensche sind heute besorgt __ ihr__ Arbeitsplatz.
+---
+
+# 정리
+
+|전치사+명사|eine Datenstichprobe|
+|----------|---------|
+|bei +3
+|
+|
+|
+
+
+|접속사+절|eine Datenstichprobe|
+|----------|---------|
+|wenn
+|als
+|während
+|
+|
+|
+
+
+|부사+|eine Datenstichprobe|
+|----------|---------|
+|gleichzeitig
+|
+|
+|
