@@ -16,12 +16,11 @@
     - 전부 체크 (깃 설치 안되어 있으면 체크 = 깔려있으면 pass )
     - 위에서 아래로 3개 체크 
   - Docker Quickstart Terminal
-    ```bash
-    $ docker ps -a 
-      상태확인
+    ```docker
+    $ docker ps -a # 상태확인
+     
     $ docker start oracle12c 
-    $ docker-machine start 
-      실행완료시 다음 출력됨
+    $ docker-machine start # 실행완료시 다음 출력됨
                         ##         .
                   ## ## ##        ==
               ## ## ## ## ##    ===
@@ -30,10 +29,12 @@
           \______ o           __/
             \    \         __/
               \____\_______/
+    $ docker-machine upgrade # 오류시
     ```
   - 오라클 버전 12c 설치하기
-    - **주의** : virtual box에서 메모리를 4096으로 변경 후 설치
-    ```bash
+    - **주의** : virtual box에서 메모리를 4096으로(절반의양) 변경 후 설치
+    ```docker
+
     $ docker search oracle-12c
     $ docker pull truevoly/oracle-12c
     인기있는 버전임. 
@@ -55,11 +56,13 @@
     ```
 - DB Browser for SQLite
 
+
 ### Connect DB
 - 
 - 포트 연결 (최초 1 회만)
-    ```bash
+    ```docker
     docker run --name oracle12c -d -p 32765:8080 -p 32764:1521 truevoly/oracle-12c
+    docker ip # ip 주소 확인
     ```
     - 32765와 32764는 윈도우 port 번호
     - 8080과 1521은 docker container의 port 번호
