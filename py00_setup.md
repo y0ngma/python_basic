@@ -89,6 +89,7 @@
 - git상 프로젝트 다운로드  
   [public]
   $git clone https://github.com/y0ngma/python_basic.git
+  $git clone https://github.com/y0ngma/Project01_Crawling.git
   [private]
   $git clone https://ID:비번@github.com/y0ngma/python_basic.git
 - vs code에다가 py_projects 폴더를 드래그 앤 드롭   
