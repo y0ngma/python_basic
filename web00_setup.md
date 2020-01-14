@@ -57,8 +57,7 @@
 - DB Browser for SQLite
 
 
-### Connect DB
-- 
+### Container
 - 컨테이너 생성 (최초 1 회만)
     ```docker
     docker run --name oracle12c -d -p 32765:8080 -p 32764:1521 truevoly/oracle-12c
@@ -67,6 +66,7 @@
     - 32765와 32764는 윈도우 port 번호
     - 8080과 1521은 docker container의 port 번호
     - oracle은 8080port에 설치된다. 그리고 윈도우의 32765port와 연결된다
+
     ```bash
     $ docker logs oracle12c 
     # 주기적으로 log를 확인하여 100%가 될때까지 기다려야됨
@@ -82,31 +82,39 @@
 ### Register Admin
 - 서버를 구축하였으니 접속하기 위해 계정을 만든다.
     - sqldeveloper를 실행시킨다
-    - 계정이 아직 없기 떄문에 최초로 로그인 할 때는, system 계정으로 접속하게 된다.
+    - 최고관리자 계정을 생성
         ``` bash
-        user : system # 최고 관리자 : 계정을 만들수 있음 
-        password : oracle
-        SID : xe
-        ```
-    - 새 계정을 생성한다
-        ``` bash
-        Name : 192.168.99.100_system # 도커가 가진 주소 
+        Name       : 192.168.99.100_system # 도커가 가진 주소 
+        
+        사용자 이름 : system # 최고 관리자 : 계정을 만들수 있음 
+        비번        : oracle
+        
         호스트 이름 :192.168.99.100
-        포트 : 32764
+        포트        : 32764
+        SID         : xe
         # 완료시 ( 도움말 위에 >>> 상태 : 성공 )
         ```
+    - 계정이 아직 없기 떄문에 최초로 로그인 할 때는, 최고 관리자인 system 계정으로 접속하게 된다.
+    
+    - 따라서 기본관리자 admin 계정을 만든다.     
         - sql 명령창에 다음 입력 
         ```sql
-        CREATE user admin IDENTIFIED BY 1234; grant connect, resource, dba to admin;
+        CREATE user admin IDENTIFIED BY 1234; 
+        grant connect, resource, dba to admin;
         ```
         - 중요 : 위코드 작성후 ***블록 다 잡고***  명령문 실행 >> 커밋 
 
-    - 사용자 계정 만들기     
+    - 기본 관리자 계정생성
         ``` bash
-        user  :admin    
-        password : 1234
-        자동 로그인 설정하기    
-        ```
+        Name       : 192.168.99.100_admin 
+        
+        사용자 이름 : admin 
+        비번        : 1234 # 비밀번호 저장한다
+        
+        호스트 이름 :192.168.99.100
+        포트        : 32764
+        SID         : xe
+        ``` 
     - 이후 system 계정 로그아웃하고 admin 계정으로 로그인 한다
         - 좌측의 TABLE이 system 계정일때보다 권한이 줄어든것 확인가능
 

@@ -50,12 +50,9 @@
   - 아나콘다 경로
     - ```C:\Users\Schelpptop```
     - 설치시 Anvanced Options에서 **PATH 체크 할것**
+---
 
 ### Visual Studio Code
-- 프로젝트를 원하는 위치에 폴더 생성
-  - py_projects
-  - 해당 폴더를 드레그 해서, vs code에 드롭
-  - 해당 위치로 vs code 재오픈
 - 에디터 설정
   - File > preferecnces > settings
   - 검색(인덱싱) > 항목 찾아서 수정
@@ -79,28 +76,37 @@
   - > vs code 재가동
   - > 좌측메뉴 다섯번째 extention 항목에서 python 검색하여 
     python, python for vscode, python extention pack 설치
+---
 
 ### Git
-- 프로젝트를 연동할 폴더 지정
 - 항상 리프레쉬 해서 꼬이지 않게 습관을 들인다.!!! 중요
-- powershell 에서
-  $mkdir py_projects  
-  $cd py_projects     
+- 프로젝트를 원하는 위치에 폴더 생성
+  - Repository 라는 이름으로 깃 리포지토리들 담을 폴더 생성
+  - vsCode WORKPLACE에 Repository 폴더를 드래그 앤 드롭   
+- ```powershell 에서는
+  mkdir Repository  
+  cd Repository     
+  ```
 - git상 프로젝트 다운로드  
+  ```bash
   [public]
-  $git clone https://github.com/y0ngma/python_basic.git
-  $git clone https://github.com/y0ngma/Project01_Crawling.git
+  git clone https://github.com/y0ngma/python_basic.git
+  git clone https://github.com/y0ngma/Project01_Crawling.git
+  
   [private]
-  $git clone https://ID:비번@github.com/y0ngma/python_basic.git
-- vs code에다가 py_projects 폴더를 드래그 앤 드롭   
+  git clone https://ID:비번@github.com/y0ngma/프로젝트명.git
+  ```
 - git 사용자 임을 등록(powershell 에서)
-    $git config --global user.email "takeit2sy@pusan.ac.kr"  
-    $git config --global user.name "y0ngma"  
+  ```bash
+  git config --global user.email "takeit2sy@pusan.ac.kr"  
+  git config --global user.name "y0ngma"  
+  ```
 - 수정내용 업로드(push)
   - 수정내용이 있으면 Ctrl S 로 저장
   - 좌측세번째 공정관리에서 '1일차 수업내용' 등으로 작성하고 'V' 표시를 누른다.
     -이 내용은 깃허브 repository에 제목과 마지막수정시간 사이칸에 표현된다.
   - vs code 좌측하단에 동기화를 위해 화살표를 누른다.
+---
 
 ### Jupyter notebook
 - 쥬피터에 접속하면 여러가지 무관한 폴더가 많이 보인다.

@@ -45,7 +45,7 @@
     - 가벼운 웹 서버를 포함하고 있고 개발뿐아니라 테스트 용도로 사용가능 
     - 디버깅 모드를 사용 할 경우 장고는 문제를 쉽게 파악하고 해결 할 수 있게 상세한 에러 메세지를 보여줌 
 
-1. 이외
+1. 이 외
     - 간단하고 확장 할 수 있는 템플릿 텍스트 처리 엔진 (template and text filtering engine)
     - 폼을 만들고 사용자 입력을 검사하는 유효성 검사 API
     - 확장할 수 있는 인증 시스템 
@@ -112,7 +112,7 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\urls.py
     ]
     ```
    
-C:\Users\admin\Documents\python_basic\2py_web\django\web1\web1\urls.py    
+    C:\Users\admin\Documents\python_basic\2py_web\django\web1\web1\urls.py    
 - 다음 내용 추가 path('board/', include('board.urls')),
     ```py
     from django.contrib import admin
@@ -128,7 +128,7 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\web1\urls.py
     ]
     ```
 ### 함수 정의
-C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\views.py
+    C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\views.py
 - 다음 내용 추가
 ```py
 from django.shortcuts import render, redirect
