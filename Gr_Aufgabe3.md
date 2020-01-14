@@ -108,3 +108,8 @@ folgend         following
 Geschehen       to occur, events happenings
 Gern geschehen  De nada. you are welcome.
 Telefonanbieter m. telephone carrier companz
+
+## Auf dem land oder in der Stadt 주거를 도시/시골?
+d
+
+

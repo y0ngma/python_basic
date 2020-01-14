@@ -26,6 +26,7 @@ was tragen wir dort?
 - ein kleid 원피스 
 - was fur ein kleidung wir 
 kurstzlenemerin?
+
 #### kaufen
 - 10% ermesigung oder einfach. 사는이유
 - dass is weniger als am shalter kaufen.
@@ -49,6 +50,13 @@ beim oder am bahnhof
 
 ---
 
+### 
+
+## Aufgabe 3
+### ohne Auto Innenstadt
+### Musik im alltag
+### Haben Kinder in zu wenig frei Zeit
+### Auf dem land oder in der Stadt 주거를 도시/시골?
 ### vegetarische ernerung
 - heimatland
 - ich esse 
@@ -71,9 +79,11 @@ dass er mich auch mag
 ### englischelernen als kind
 als kind
 ### wie lange sollten die kinder zu hause.(독립)
-wo moechest du allein 
+wo möchest du allein 
 entfern 떨어지다
 genug Geld habe ich 충분한돈
+wie ich schön 
+von klein auf war.
 
 ### schulesport
 grund/mid/ober 초중고?
@@ -87,6 +97,8 @@ ich personlich allein
 - nachteil
 wenn du 
 ### wie lange soll man pro Tag sport tabe
+Whelsen Sport emphielst du anderen leuten
+ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
 
 - Muskel taglich zu machen
 - einer Stunde pro Tag.
@@ -103,7 +115,9 @@ wenn du
 - Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich fahren.
 
 
-
-##
-##
-##
+### internet
+als ich 15 jahr alt war, 
+welche benutzest du zu suchen
+ich benutze mornalllerwieser im Naver einfach. 
+-a : 
+### 
