@@ -16,11 +16,9 @@
 1. mongoDB
     - mongo DB 설치하기
     ```bash
-    $ docker stop oracle12c
-    $ docker-machine stop
-
-    $ docker search mongo # 이미지 검색
+    $ docker-machine start # 먼저 컨테이너 구동.
     $ docker pull mongo
+    $ docker search mongo # 이미지 검색
     $ docker images # 이미지 확인 364MB
         # 100% 완료되면
     - mongoDB 구축하기
@@ -37,8 +35,11 @@
     $ docker run --name mongodb -d -p 32766:27017 mongo
     $ docker start mongodb 
         # connect 하면 접속됨
-
     ```
+1. robo3t.exe 실행
+create 눌러서 다음을 입력한다.
+address `192.168.99.100` : `32766`
+
 1. html에서 정보 가져오기
 @anaconda prompt
 ```bash

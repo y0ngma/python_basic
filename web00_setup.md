@@ -59,7 +59,7 @@
 
 ### Connect DB
 - 
-- 포트 연결 (최초 1 회만)
+- 컨테이너 생성 (최초 1 회만)
     ```docker
     docker run --name oracle12c -d -p 32765:8080 -p 32764:1521 truevoly/oracle-12c
     docker ip # ip 주소 확인
