@@ -39,3 +39,9 @@
         # connect 하면 접속됨
 
     ```
+1. html에서 정보 가져오기
+@anaconda prompt
+```bash
+$ conda list beautifulsoup # 설치 확인
+```
+
