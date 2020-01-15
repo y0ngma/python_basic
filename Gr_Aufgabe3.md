@@ -109,7 +109,17 @@ Geschehen       to occur, events happenings
 Gern geschehen  De nada. you are welcome.
 Telefonanbieter m. telephone carrier companz
 
-## Auf dem land oder in der Stadt 주거를 도시/시골?
-d
+## Auf dem land oder in der Stadt 
+Im Innenstadt leben leute und gibt es mehr was kann man benutzen. Zum beispiel gibt es Restauranten, Albeiten oder Wohnungen. Dahin kann man fast alles tut. Wenn ich eine Oper zuschauen wolle, kann ich ins Theater mit dem Bus oder der U-bahn gehen. 
 
 
+Während im Innenstadt gibt es viele Dinge einfach zu tun, auch gibt es mir zu denken, ob ich so viele Dinge zu tun. Warum solle ich im Innenstadt leben, wenn ich nicht viele Dinge brauchen. Im land auch kann ich meisten Dinge die ich tun wolle. In Innenstadt gibt es nicht nur viele Dinge sondern auch viele leute. Daher gibt es Lebenserhaltungskosten und Miete zu hoch steigen. 
+
+
+museum beitragen    contribute
+eine Gemeinde       community
+Um einen Museum zubesichtigen, 
+
+beachten        to consider, regard
+Zähne, Zahn      teeth, m. tooth
+Enkel           손자

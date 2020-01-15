@@ -1,40 +1,40 @@
 ## Table of Content
-```SQL
-DDL
-테이블 정의어
-    CREATE      # 생성
-    ALTER       # 타입을 변경
-    DROP        # 삭제
-    RENAME      # 이름
-    TRUNCATE    # 비우기
+- 명령어 종류
+    ```SQL
+    DDL
+    테이블 정의어
+        CREATE      # 생성
+        ALTER       # 타입을 변경
+        DROP        # 삭제
+        RENAME      # 이름
+        TRUNCATE    # 비우기
 
-DML
-데이터 조작어
-    INSERT 
-        INTO MEMBER(ID, NAME, AGE) VALUEs('a', 'b', 34) --value S 철자주의
-    UPDATE
-        MEMBER SET NAME='B1', AGE=44 WHERE ID='a' 
-    DELETE
-        FROM MEMBER WHERE ID='a'
-    SELECT
-        * FROM MEMBER WHERE ID LIKE 'a%'    # LIKE 는 정규식
-        ORDER BY NO DESC | ACS              # 내림 | 오름차순
-    "%" || "가" ||"%"   -> "가" 포함
-    "가"|| "%"          -> "가" 시작
-    "%" || "가"         -> "가" 끝남
+    DML
+    데이터 조작어
+        INSERT 
+            INTO MEMBER(ID, NAME, AGE) VALUEs('a', 'b', 34) --value S 철자주의
+        UPDATE
+            MEMBER SET NAME='B1', AGE=44 WHERE ID='a' 
+        DELETE
+            FROM MEMBER WHERE ID='a'
+        SELECT
+            * FROM MEMBER WHERE ID LIKE 'a%'    # LIKE 는 정규식
+            ORDER BY NO DESC | ACS              # 내림 | 오름차순
+        "%" || "가" ||"%"   -> "가" 포함
+        "가"|| "%"          -> "가" 시작
+        "%" || "가"         -> "가" 끝남
 
+    DCL 
+    데이터 제어어
+        GRANT       # 권한 부여
+        REVOKE      # 권한 삭제
 
-DCL 
-데이터 제어어
-    GRANT       # 권한 부여
-    REVOKE      # 권한 삭제
-
-TCL
-트랜잭션 제어어
-    COMMIT      # 적용
-    ROLLBACK    # 포인트로 돌아가기
-    SAVEPOINT
-```
+    TCL
+    트랜잭션 제어어
+        COMMIT      # 적용
+        ROLLBACK    # 포인트로 돌아가기
+        SAVEPOINT
+    ```
 ---
 
 ## Basic commands
@@ -98,4 +98,25 @@ TCL
     FROM 'MEMBER_TABLE2'
     ```
 
-    
+## Mongo DB -> Oracle DB
+- 크롤링해온 데이터를 서비스 하기 위해 오라클로 옮겨야 한다
+- 배포하고자 하는 정보만 옮기고 정렬 등 한다
+
+- 순차적 번호를 매기기
+     
+    ```sql
+    -- 자동 증가 시퀸스 생성
+    CREATE SEQUENCE SEQ_TABLE1_NO
+    START WITH 1
+    INCREMENT BY 1
+    NOMAXVALUE
+    NOCACHE;
+
+    COMMIT;
+
+    -- SEQ_TABLE1_NO = SEQ_TABLE1_NO+1 번호증가
+    -- TABLE1의 데이터가 번호증가 하는지 확인
+    INSERT INTO TABLE1 (NO, ID, NAME, AGE)
+    VALUES(SEQ_TABLE1_NO.nextval, 'a', 'name', 34);
+    COMMIT;
+    ```

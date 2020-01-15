@@ -100,7 +100,10 @@
   ```bash
   git config --global user.email "takeit2sy@pusan.ac.kr"  
   git config --global user.name "y0ngma"  
+  # git 인증이 계속 다음 입력
+  git config --global credential.helper wincred
   ```
+
 - 수정내용 업로드(push)
   - 수정내용이 있으면 Ctrl S 로 저장
   - 좌측세번째 공정관리에서 '1일차 수업내용' 등으로 작성하고 'V' 표시를 누른다.
