@@ -110,6 +110,7 @@ Gern geschehen  De nada. you are welcome.
 Telefonanbieter m. telephone carrier companz
 
 ## Auf dem land oder in der Stadt 
+
 Im Innenstadt leben viele leute und gibt es mehre Dinge was kann man benutzen. Zum beispiel gibt es mehre Restauranten, Berufe und Wohnungen. 
 시내에서는 많은 사람들이 살고 우리가 이용할 수 있는 많은 것들이 있다. 예시로, 많은 일자리와 식당 그리고 주거공간이 있다. 
 
@@ -135,3 +136,5 @@ Enkel           손자
 Beruf           m. job
 Notwendigkeit   f. necessity
 nun             adj, 이제; 과연
+
+## 

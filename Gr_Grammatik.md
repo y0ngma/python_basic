@@ -67,29 +67,29 @@ angewiesen auf 4
 1. Viele Mensche sind heute besorgt __ ihr__ Arbeitsplatz.
 ---
 
-# 정리
+## 
 
-|전치사+명사|eine Datenstichprobe|
+|Verhältniswort+N|eine Datenstichprobe|
 |----------|---------|
-|bei +3
-|
-|
-|
+|bei +3|
+|während +2|
+|seit |~Seit dem Einzug in unsere neue Wohnung schlafen wir besser|
+| |.|
 
-
-|접속사+절|eine Datenstichprobe|
+|Bindewort+m.Satz|eine Datenstichprobe|
 |----------|---------|
-|wenn
-|als
-|während
-|
-|
-|
+|wenn|.|
+|als|.|
+|während|.|
+|bevor|.|
+|nachdem    |~er sich gedusch hat, fühlte er sich wohler.|
+|seit|Seitdem wir in unsere neue Wohnung eingezögen sind, schlafen wir besser.|
+|seit|Seitdem die Straße gesperrt worden ist, ist es bei uns ruhiger geworden|
 
 
-|부사+|eine Datenstichprobe|
+|Umstandwort|eine Datenstichprobe|
 |----------|---------|
-|gleichzeitig
-|
-|
-|
+|gleichzeitig|.|
+|vorher|.|
+|nachdem|.|
+| |.|

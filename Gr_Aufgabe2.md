@@ -1,3 +1,7 @@
+# Aufgabe 2 
+# B1 정용희 
+
+## der Bräutigam und die Braut
 Liebe Liana,
 
 die Hochzeit in Stuttgart war wirklich toll !
@@ -10,3 +14,4 @@ Konnen wir uns nachste Woche mall treffen?
 dann kann ich dir auch die Fotos von Hochzeit zeigen !
 
 Elisa
+---

@@ -1,5 +1,36 @@
 
 ## Sprechen
+### 독일 늙은사장이 내 회사 방문하여 대접:시내관광 해줘야함.
+어디로 갈지 wohin
+Stadtführung
+mitwem 동료나 가이드를 같이해서 모시자
+verkehrsmittel 늙은사장에 맞게
+gemeinsames Abendessen
+
+### 
+ich weiss es. das weiss ich.
+das habe gehört. ich habe das gehört.
+
+
+weiss du dass Eintreffen nach 12Uhr frei ist.
+übermorgen
+
+ich habe Interesse.
+Lass uns ins Museum gehen. Was für ein Museum möchest du 
+
+
+Hast du um 9Uhr freizeit
+Da habe ich zeit aber ich denke 9uhr is früh. Lass uns um 10Uhr treffen. zu spät
+
+was nehmen wir mit
+
+Im darf man fotografieren also ich bringe die Kamara mit.
+vergiss nicht das bitte
+
+das anbieten ein program an. also können wir schokoladen machen.
+kannst du dich anmelden
+dazu will ich kleines kieste bringen.
+
 ### 반 대표 옷, 장소 정하기
 
 weisst du wir gehen ins konzert nach klass?
@@ -53,9 +84,26 @@ beim oder am bahnhof
 ### 
 
 ## Aufgabe 3
+### 48 jobben neben dem Studium
 ### ohne Auto Innenstadt
+
+Haustier als Familien
+alleinleben
+reisen mit Tier alltag gewollen
+geistisch
+wenn ich ein beruf haben, möchte ich mit Katze leben
 ### Musik im alltag
+- ich habe keine lieblings säger
+jenre. arten
+Welche Musikart magst du. wie ich schön gesagt habe, weil ich meisten sneidigen Musik hören
+ich habe nicht verstanden
 ### Haben Kinder in zu wenig frei Zeit
+- was hast du im der Kindheit gemacht
+zum Spiel
+
+was kaufst du im Einkaufenzentrum ein
+normallerweise kaufe ich scheu
+
 ### Auf dem land oder in der Stadt 주거를 도시/시골?
 ### vegetarische ernerung
 - heimatland
