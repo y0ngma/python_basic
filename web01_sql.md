@@ -5,6 +5,7 @@
     테이블 정의어
         CREATE      # 생성
         ALTER       # 타입을 변경
+        ALTER TABLE 테이블명 RENAME COLUMN 기존컬럼명 TO 바꿀컬럼명;
         DROP        # 삭제
         RENAME      # 이름
         TRUNCATE    # 비우기
@@ -46,7 +47,11 @@
         INSERT INTO BOARD_TABLE1(TITLE, CONTENT, WRITER, HIT, REGDATE)
         VALUES('sql에서 추가', '내용임', '작성자임', 34, SYSDATE);
         COMMIT;
-        
+        -- 예시        
+        INSERT INTO ITEM1 (NAME, CONTENT, PRICE, REGDATE)
+        VALUES('패딩', '파타고니아 남성 겨울신상', 1080000, SYSDATE);
+        COMMIT;
+
     1. 삭제
         delete from board_table1 where no = 47;
         commit;
@@ -106,17 +111,26 @@
      
     ```sql
     -- 자동 증가 시퀸스 생성
+    -- SEQ_TABLE1_NO = SEQ_TABLE1_NO+1 번호증가
     CREATE SEQUENCE SEQ_TABLE1_NO
     START WITH 1
     INCREMENT BY 1
     NOMAXVALUE
     NOCACHE;
-
     COMMIT;
 
-    -- SEQ_TABLE1_NO = SEQ_TABLE1_NO+1 번호증가
     -- TABLE1의 데이터가 번호증가 하는지 확인
     INSERT INTO TABLE1 (NO, ID, NAME, AGE)
     VALUES(SEQ_TABLE1_NO.nextval, 'a', 'name', 34);
     COMMIT;
+
+    -- SEQ_TABLE1_NO.nextval을 테이블편집-기본값에 입력
+    -- 위sql문과 동일한 실행문이 된다.
+    INSERT INTO TABLE1 (ID, NAME, AGE)
+    VALUES('a', 'name', 34);
+    COMMIT;
     ```
+
+
+
+- 
