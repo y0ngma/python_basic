@@ -8,13 +8,41 @@
     - csv
     - html 
 
-
 - Macro    
     - 로그인 정보 넣기 및 클릭 시키기
     - 로그인 이후 페이지
     - 자바스크립트 페이지
 
+---
+## Crawling
+- 기본 경로에서 상/하위 이동:`BASE_DIR, '../상위' 또는 '하위'`
+    ```py
+    import os
 
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    print('============== base dir============')
+    print(os.path.join(BASE_DIR, 'selenium', 'chromedriver.exe'))
+    ```
+- css_selector
+    - image 하나 직접 긁어오기
+        - 원하는 (사진)우클릭 검사-해당코드우클릭-Copy-css selector
+    `img = driver.find_element_by_css_selector("#image_view_0")`
+    - 원하는 이미지 검색실행 후 긁어 오기  
+    네이버 검색칸에 우클릭 검사<input id="query".. ->copy xpath
+        ```py
+        from selenium.webdriver.common.keys import Keys
+        driver.find_element_by_xpath('//*[@id="query"]').send_key('사과')
+        driver.find_element_by_xpath('//*[@id="query"]').send_key(Keys.ENTER)
+    
+    - 원하는 클래스에 포함되어 <li>안에 감싸인 정보만 가져오기
+        ```py
+        driver.find_element_by_class_name('rank_top1000_list') \
+        .find_elements_by_tag_name("li")
+        ```
+
+
+- Beautiful Soup
+    - 스크립트 없이 html위주로 렌더링된 페이지 크롤링용
 ## Setup
 - Robo 3T (sql 처럼 DB 관리)
     - https://robomongo.org/download
@@ -33,7 +61,7 @@
     conda install pymongo
     conda install bs4
     ```
-
+---
     
 ## Macro
 - 드라이버를 제공하는 크롬 등을 통해 클릭 자동화등 구현  

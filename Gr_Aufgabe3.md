@@ -1,4 +1,23 @@
+# 글쓰기
 
+## 48 jobben neben dem Studium
+Ich möchte über das Gesprächsthema reden, ob es einen Versuch wert ist.
+
+Stichword Erfahrung, ich denke, dass jobben sehr unbezahlbar.
+경험에 대하여 말한다면, 아르바이트는 아주 값을 따질 수 없다고 생각한다.
+
+
+
+Es ist in Ordnung, wenn ich nicht darüber reden willst.
+
+
+
+Stichwort Geld, ich wollte mit Ihnen über eine Gehaltserhöhung reden.
+Speaking of money, I wanted to talk to you about a raise.
+
+Es ist in Ordnung, wenn ich nicht darüber reden willst.
+It's cool if you don't want to talk about it.
+---
 ## Vegetarismus
 
 ### - Es ist sehr schwer zum Essen gehen nach dem was die Leute sagen. Und es ist bekannt, dass ein Grossteil Restaurant habt kein Gericht vegetarischer Diät. 

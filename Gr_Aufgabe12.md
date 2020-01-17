@@ -1,13 +1,30 @@
 
 ## Sprechen
 ### 독일 늙은사장이 내 회사 방문하여 대접:시내관광 해줘야함.
-어디로 갈지 wohin
-Stadtführung
-mitwem 동료나 가이드를 같이해서 모시자
-verkehrsmittel 늙은사장에 맞게
-gemeinsames Abendessen
 
-### 
+
+Am Samstag übernächstes Wochenenden bestimmt sie um Gimhae Flugzeug ankommen.
+
+Der Flug den sie nehmen wird wird Um genau Mittwoch ankommen, soweit der eine Verspätung habt.
+
+- mitwem 동료나 가이드를 같이해서 모시자
+    - Mit unserem Geschäftswagen kann ich mitnehmen 
+    - Geschäftsführer 사장
+    - der Fremdenführer 가이드
+    - Lasst uns sie am der Eingang mit einem Auto warten um sie aufzunehmen.
+
+- Wohin?
+
+bedienen 모시다
+- Stadtführung
+    - Ins Yeongdo 
+
+- verkehrsmittel 늙은사장에 맞게
+
+- gemeinsames Abendessen
+
+
+### Museum gehen
 ich weiss es. das weiss ich.
 das habe gehört. ich habe das gehört.
 
@@ -81,7 +98,6 @@ beim oder am bahnhof
 
 ---
 
-### 
 
 ## Aufgabe 3
 ### 48 jobben neben dem Studium
