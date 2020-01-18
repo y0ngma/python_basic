@@ -1,8 +1,8 @@
 
 ## Sprechen
 ### 독일 늙은사장이 내 회사 방문하여 대접:시내관광 해줘야함.
-
-
+Geschäftsführerin
+chefin oder chef
 Am Samstag übernächstes Wochenenden bestimmt sie um Gimhae Flugzeug ankommen.
 
 Der Flug den sie nehmen wird wird Um genau Mittwoch ankommen, soweit der eine Verspätung habt.
@@ -14,14 +14,21 @@ Der Flug den sie nehmen wird wird Um genau Mittwoch ankommen, soweit der eine Ve
     - Lasst uns sie am der Eingang mit einem Auto warten um sie aufzunehmen.
 
 - Wohin?
+    - ein Stadtführung machen
+    - bedienen 모시다
+    - nach Yeong Insel
+    - Gwangan Bricke 
 
-bedienen 모시다
-- Stadtführung
-    - Ins Yeongdo 
 
 - verkehrsmittel 늙은사장에 맞게
-
+    의문사 특수제작?
+    Womit fahren wir 
+    Woran
 - gemeinsames Abendessen
+    Im Planwagen포장마차 
+    roher Fisch und die Seeprodukte
+    bekannt 유명해 gut geschumeckt 맛있었어.
+
 
 
 ### Museum gehen
@@ -100,14 +107,31 @@ beim oder am bahnhof
 
 
 ## Aufgabe 3
+### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
+### ein musikinstrument
+### haben Kinder zu wenig Freizeit
+### karier oder kind
+arbeit
+sich konzentriere
+sich 
+Im meine Heimatland hat viele Problemen damit das viele Frauen keine kind haben. Was meinst du damit?
+Ich denke auch dass ist grosse Probleme, aber jetzt bin ich jung. 
 ### 48 jobben neben dem Studium
-### ohne Auto Innenstadt
+Was für eineArbeit hast du gemacht_
+vertretung
 
+### ohne Auto Innenstadt
+Was benutst du wenn du reist
+,weil das willig ist
 Haustier als Familien
 alleinleben
 reisen mit Tier alltag gewollen
 geistisch
 wenn ich ein beruf haben, möchte ich mit Katze leben
+
+### 이웃과의 교류
+wenn laut sind, was machst du dagegen? 
+
 ### Musik im alltag
 - ich habe keine lieblings säger
 jenre. arten
@@ -121,6 +145,10 @@ was kaufst du im Einkaufenzentrum ein
 normallerweise kaufe ich scheu
 
 ### Auf dem land oder in der Stadt 주거를 도시/시골?
+Jeju Insel
+weil ich nicht unter vielen leuten leben m
+
+
 ### vegetarische ernerung
 - heimatland
 - ich esse 
@@ -163,9 +191,10 @@ wenn du
 ### wie lange soll man pro Tag sport tabe
 Whelsen Sport emphielst du anderen leuten
 ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
-
 - Muskel taglich zu machen
 - einer Stunde pro Tag.
+welche Sportart willst du machen?
+Ich machst Tenis. 
 ### wie viele fremd sprachen soll man learn
 - welche Sprache lernst du? 
 ### die infomationen im internet
