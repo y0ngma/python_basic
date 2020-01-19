@@ -1,15 +1,37 @@
 
 ## Sprechen
+```
+1. warum
+    - es ist bekannt. gut geschuemeckt.
+    - Das ist etwas, woran ich arbeiten möchte.
+1. was zu tun
+    - Lass uns ein Stadtfuerung machen. Nach Yeong Insel, Gwangan Brike
+    - Ich schlage vor, dass wir ins Museum gehen. Was meinen Sie?
+1. wann zu tun
+    - Wann findet dass konzert statt?
+    - Wann ist es geöffnet? Gibt es Schließtage?
+    - Das ist täglich von 10-18 Uhr geöffnet.
+    - es beginnt um sechzehn Uhr also wir gehen ab 15 Uhr nach Ulsan
+1. wann treffen wir uns
+    - 
+1. wo treffen wir uns
+    - Lass und treffen beim Busan Hauptbahnhof.
+    - am eingang oder am shalter
+1. womit fahren wir 
+    - Woran 
+
+
+```
+ 
 ### 독일 늙은사장이 내 회사 방문하여 대접:시내관광 해줘야함.
-Geschäftsführerin
+
 chefin oder chef
 Am Samstag übernächstes Wochenenden bestimmt sie um Gimhae Flugzeug ankommen.
 
-Der Flug den sie nehmen wird wird Um genau Mittwoch ankommen, soweit der eine Verspätung habt.
+Der Flug den sie nehmen wird wird Um genau Mittag ankommen, soweit der eine Verspätung habt.
 
 - mitwem 동료나 가이드를 같이해서 모시자
     - Mit unserem Geschäftswagen kann ich mitnehmen 
-    - Geschäftsführer 사장
     - der Fremdenführer 가이드
     - Lasst uns sie am der Eingang mit einem Auto warten um sie aufzunehmen.
 
@@ -28,14 +50,20 @@ Der Flug den sie nehmen wird wird Um genau Mittwoch ankommen, soweit der eine Ve
     Im Planwagen포장마차 
     roher Fisch und die Seeprodukte
     bekannt 유명해 gut geschumeckt 맛있었어.
-
-
+---
 
 ### Museum gehen
+
+Wann ist das Deutsche Historische Museum geöffnet? Gibt es Schließtage?
+Das Museum ist täglich von 10-18 Uhr geöffnet.
+
+Ist das Fotografieren in den Ausstellungen(exhibit) erlaubt(allow)?
+Ja, dürfen wir für private Zwecke(purpose) fotografieren und filmen.
+Nein, es sind nicht zulässig.
+아니, 그것은 permissible 아니야(lässig=casual)
+
 ich weiss es. das weiss ich.
 das habe gehört. ich habe das gehört.
-
-
 weiss du dass Eintreffen nach 12Uhr frei ist.
 übermorgen
 
@@ -60,7 +88,6 @@ dazu will ich kleines kieste bringen.
 weisst du wir gehen ins konzert nach klass?
 plannen wir
 ich schlage vor dass ich moechte ins klassiche konzert gehen
-was tragen wir dort?
 
 - was machst du am besten 
 - am diesen wochenende
@@ -69,13 +96,12 @@ was tragen wir dort?
 - ein klasse konzert besuchen
 - am freitag abend kannen wir gehen? wo treffen wir uns? wir treffen uns an U-bahnhof. ist konzert halle 
 - was ziehen
-- weis blause und schwez hose
-- wo findet das konzert
 - Wohin moechtest du gehen.
 - meine freundin habt gesagt
 
-
 #### kleidung
+- was tragen wir dort?
+- weis blause und schwez hose
 - wie were rotem Mantel. das finde ich toll!
 - durfen nicht 입지말아야할것 말할 수 있음.
 - ein kleid 원피스 

@@ -1,59 +1,23 @@
 # 글쓰기
-## 47 Unterwegs이동 mit dem Auto oder mit dem offentlichen Verkehrsmittel  
-Womit möchte ich fahren um Unterweg zumachen? Es hängt davon ab, welcher weg mehr Zeit spart oder verbringen. Zum beispiel Untergrundbahn oder U-Bahn ist im  Berufsverkehr schnellsten. Das liegt daran, dass auf der Straße es einen Rückstau oder eine Straßenverstopfung gibt. 
-이동을 위해 어떤것을 잡아 탈 것인가 ? 그것은 어떤 수단이 시간을 더 절약 또는 낭비하느냐에 달려 있다. 예를 들어 통근시간에 지하철은 가장 빠르다. 왜냐하면, 도로에서는 교통체증이 있기 때문이다. 
 
-Falls ich brache entweder die U-Bahn oder den Bus oder beides mehr als ein mal umsteigen, wahrscheinlich ist es mit dem Auto mehr geeignet. Gehe ich um in Lotte Einkaufhaus Lebensmittel einzukaufen, ist es geeignet mit dem Auto als zürück. Gehe ich  um doch alcolisches Getränk in Planwagen zutrinken, ist es geeignet mit dem öffentlichen Verkehrsmittel bei zürück.  
-한번 이상 지하철이나 버스를 또는 둘다를 환승할 필요가 있을때엔 차가 더 편리하다. 롯데백화점에 시장보러 갈때는 차로 가는게 올때 편하다. 포장마차에 술마시러 갈 때면 대중교통을 이용하는것이 올때 편하다.
-
-Zum Schluss glaube ich womit um zufahren, dass alles von Situation abhängen ist. 
-결론적으로 무엇을 잡아탈것인가에 대해서는 모든것은 상황에 달려 있다고 생각한다.
-
-
-Es hängt von ... an, ob         it depends on whether...
-Es kommt darauf an              It depends.
-Lebensmittel                    n. grocery
-Kaufhaus                        n. department store
-geeignet                        convenient
-wahrscheinlich                  probably
-möglicherweise                  possibly
-sparren.sparte.gespart          save
-verbringen.brachte.bracht       spend, waste
----
-
-## 48 jobben neben dem Studium
-Ich möchte über das Gesprächsthema reden, ob es einen Versuch wert ist. Während viele Hausaufgaben ich machen sollte und viele Fach ich überdenken sollte, mache ich eine Job auch? Es wird sehr ermüdend sein.
-
-Es ist aber in Ordnung, wenn ich während des Studium eine Arbeit machen kann. 
-Stichword Erfahrung, ich denke, dass Joggen sehr unbezahlbar. 
-경험에 대하여 말한다면, 아르바이트는 아주 값을 따질 수 없다고 생각한다.
-
-
-
-Stichwort Geld, ich wollte mit Ihnen über eine Gehaltserhöhung reden.
-Speaking of money, I wanted to talk to you about a raise.
-
-Es ist in Ordnung, wenn ich nicht darüber reden willst.
-It's cool if you don't want to talk about it.
----
 ## Vegetarismus
 
-### - Es ist sehr schwer zum Essen gehen nach dem was die Leute sagen. Und es ist bekannt, dass ein Grossteil Restaurant habt kein Gericht vegetarischer Diät. 
+- Es ist sehr schwer zum Essen gehen nach dem was die Leute sagen. Und es ist bekannt, dass ein Grossteil Restaurant habt kein Gericht vegetarischer Diät. 
     - 사람들이 말하기에 의하면 외식하는것은 정말 어렵다. 그리고 대다수의 음식점은 채식주의의 요리를 가지고 있지 않다고 알려져 있다.
 
-### - Unter anderem gibt es eine Hinweise darauf, dass vegane Diäten kein Vitamin B12 enthalten. Veganer können Vitamin B12 aus Lebensmitteln wie zum beispiel eine Sojamilch, ein künstlichen Fleisch, das Getreide und aus Ergänzungsmitteln essen. 
+- Unter anderem gibt es eine Hinweise darauf, dass vegane Diäten kein Vitamin B12 enthalten. Veganer können Vitamin B12 aus Lebensmitteln wie zum beispiel eine Sojamilch, ein künstlichen Fleisch, das Getreide und aus Ergänzungsmitteln essen. 
     - 그외에도 채식주의식단에는 비타민B가 포함되어 있지 않다는 증거가 있다. 채식주의자들은 두유, 인공육류품, 씨리얼과 영양보충제와 같은 식료품으로 부터 섭취할 수 있다.
 
-### - Trotzdem, Vegetarisches Leben ist besser wenigestens zum Körper. Jackie Keller, Wellnesstrainerin von NutriFit, einem Lebensmittel-Lieferservice in LA, berichtet über eine Studie in der Diabetes aus dem zweitausandundsieben Jahr,  in der Studie gezeigt wurde, dass Menschen mit Diabetes, die sich von vegan ernährten, ihr Cholesterin senkte um einundzwanzig Prozent. 
+- Trotzdem, Vegetarisches Leben ist besser wenigestens zum Körper. Jackie Keller, Wellnesstrainerin von NutriFit, einem Lebensmittel-Lieferservice in LA, berichtet über eine Studie in der Diabetes aus dem zweitausandundsieben Jahr,  in der Studie gezeigt wurde, dass Menschen mit Diabetes, die sich von vegan ernährten, ihr Cholesterin senkte um einundzwanzig Prozent. 
     - 그럼에도 불구하고 채식주의생활이 낫다. 적어도 몸에는 말이다. LA의 식료품배달업 뉴트리핏의 웰빙코치 제키는 2007년 당뇨에 관한 연구를 보고했는데 그 연구는 당뇨병이 있는 사람들중 채식을 하는 집단의 콜레스테롤 수치가 21퍼센트 떨어졌다고 보여진다.
 
-### - Das ist um sieben Prozent deutlich mehr abfall als andere Gruppe, derren Diät vegan ist nicht.
+- Das ist um sieben Prozent deutlich mehr abfall als andere Gruppe, derren Diät vegan ist nicht.
     - 이는 채식 식단이 아닌 다른집단에 비해 괄목할만한 7퍼센트 더 많은 수치 감소이다.
 
-### - Der Bericht kam auch zu dem Schluss, dass vegetarische Menschen  neigen nicht zum Dickwerden und auch zu niedriger Häufigkeit vom Bluthochdruck.
+- Der Bericht kam auch zu dem Schluss, dass vegetarische Menschen  neigen nicht zum Dickwerden und auch zu niedriger Häufigkeit vom Bluthochdruck.
     - 그 보고는 또 하나의 결론에 이르렀는데 그것은 채식주의자들은 살찌기 쉽지 않고 또한 고혈압 또한 적게 경험한다.
 
-### - Schere dich nicht um das Gerede der Leute.
+- Schere dich nicht um das Gerede der Leute.
     - 다른 사람들이 뭐라하든 신경쓰지 마라.
 
 - 참고문헌 : 모니카 바이드, 채식주의로의 9가지 장단점, https://www.aarp.org/food/diet-nutrition/info-02-2011/9-pros-and-cons-to-going-vegan.html
@@ -61,21 +25,21 @@ It's cool if you don't want to talk about it.
 ---
 
 ## Urlaub im inland oder ausland
-### Ich denke dass Urlaub im inland sehr geeignet ist. Im Inland kann man zu einem Berg so oft wie möglich spazieren gehen. Ausgerechnet, als du spazieren gehen wollst, spazier !
+- Ich denke dass Urlaub im inland sehr geeignet ist. Im Inland kann man zu einem Berg so oft wie möglich spazieren gehen. Ausgerechnet, als du spazieren gehen wollst, spazier !
     - 나는 국내에서의 휴가가 참 편리하다고 생각한다. 국내에서는 산으로 얼마든지 자주 산책갈 수 있다. 산책하고 싶을때에는 그냥 떠나라! 
 
-### Weil Koreanische Halbinsel insbesondere aus Berge gemacht ist, in der Nähe kann man einen Berg finden. Und außerdem diese Berge, die Halbinsel gibt See herum. Was kann man täglich aus diesem geografischen Vorteil benutzen?
+- Weil Koreanische Halbinsel insbesondere aus Berge gemacht ist, in der Nähe kann man einen Berg finden. Und außerdem diese Berge, die Halbinsel gibt See herum. Was kann man täglich aus diesem geografischen Vorteil benutzen?
     - 왜냐하면 한반도는 산으로 이루어져 있기 때문에 주변에서 쉽게 산을 찾아볼수 있다. 그 뿐만 아니라 반도는 바다에 둘러쌓여 있다. 이러한 지리적 이점으로 부터 무엇을 매일 얻을 수 있냐고?
 
-### Zum beispiel nutzt man frische Luft in dieser Natur irgendwann. Und wenn du nach Geoje Insel fahrst, du kannst eine wunderschöne Landschaft genießen. An aller Küstenstraße entlang! Man, wer fahren vorzieht nicht oder den Verkehrsstau haßt, kann sogar verkehrsmittel nahmen, wenn er oder sie in Busan lebt. 
+- Zum beispiel nutzt man frische Luft in dieser Natur irgendwann. Und wenn du nach Geoje Insel fahrst, du kannst eine wunderschöne Landschaft genießen. An aller Küstenstraße entlang! Man, wer fahren vorzieht nicht oder den Verkehrsstau haßt, kann sogar verkehrsmittel nahmen, wenn er oder sie in Busan lebt. 
     - 예를 들어 신선한 공기를 언제라도 이러한 자연속에서 누릴 수 있다. 그리고 거제도로 간다면, 아름다운 경관을 즐길 수 있다. 모든 해안도로에서! 운전을 즐겨하지 않거나 교통체증을 싫어하는 혹자는 심지어 대중교통을 이용할 수도 있다. 부산에 거주한다면 말이다.
 
-### Kannst du das in Urlaub ausland? Ja, natürlich doch nachdem langweiligen  
+- Kannst du das in Urlaub ausland? Ja, natürlich doch nachdem langweiligen  
 Stunden in Flugzeug und Warteschlange der Einwanderung in Flughafen
     - 당신은 이런것들을 외국 휴가에서 할 수 있는가? 물론 가능하다. 지루한 항공시간과 입국수속을 위한 길 줄 다음에.
 
 
-
+```
 die Warteschlange # waiting queue
 der Hafen # port
 die Einwanderung # immigration
@@ -90,7 +54,7 @@ das Verkehrsmittel # public transport
 ~ magst du?
 
 The reason therefore lay in the fact that ...	Der Grund lag mithin darin, dass
-
+```
 
 ## mit dem fahrrad zur Arbeit
 - Mit welchem Verkehrsmittel willst du zu deiner Arbeit gehen? Hast du mit einem Fahrrad zur Arbeit radgefahren? Es gibt mehrere Sachen die du sollst zum Auserwählen bedenken. Daüber wolle ich diskutieren.
@@ -173,5 +137,59 @@ Enkel           손자
 Beruf           m. job
 Notwendigkeit   f. necessity
 nun             adj, 이제; 과연
+
+
+
+
+
+
+## 48 jobben neben dem Studium
+Ich möchte über das Gesprächsthema reden, ob es einen Versuch wert ist. Während viele Hausaufgaben ich machen sollte und viele Fach ich überdenken sollte, mache ich eine Job auch? Es wird sehr ermüdend sein. 학업과 병행하는 아르바이트가 할 만한 가치가 과연 있을지 없을지에 대한 주제에 대해 말해보고자 한다. 많은 숙제들을 해야 하고 많은 과목들을 복습하면서 아르바이트를 한다? 그것은 정말 피곤한 일이다. 
+
+Es ist aber in Ordnung, wenn ich während des Studium eine Arbeit machen kann. Weil ich beide Job und Studium leiste, lerne ich um Zeit zuführen.
+하지만 학업과 병행하여 아르바이트를 할 수 있다면 그것은 멋진 일이다. 왜냐하면 두가지 일을 해내면서 시간 관리 하는법을 배우기 때문이다.
+
+Stichword Erfahrung, ich denke, dass zum Leisten eines Jog selbst auch sehr unbezahlbar ist. 
+경험에 대하여 말한다면, 아르바이트 해내기는 그 자체로도 아주 값을 따질 수 없다고 생각한다. 
+
+
+```
+leisten                 이루다
+Stichwort Geld, ich wollte mit Ihnen über eine Gehaltserhöhung reden.
+Speaking of money, I wanted to talk to you about a raise.
+
+Es ist in Ordnung, wenn ich nicht darüber reden willst.
+It's cool if you don't want to talk about it.
+```
+---
+
+## 47 Unterwegs이동 mit dem Auto oder mit dem offentlichen Verkehrsmittel  
+Womit möchte ich fahren um Unterweg zumachen? Es hängt davon ab, welcher weg mehr Zeit spart oder verbringen. Zum beispiel Untergrundbahn oder U-Bahn ist im  Berufsverkehr schnellsten. Das liegt daran, dass auf der Straße es einen Rückstau oder eine Straßenverstopfung gibt. 
+이동을 위해 어떤것을 잡아 탈 것인가 ? 그것은 어떤 수단이 시간을 더 절약 또는 낭비하느냐에 달려 있다. 예를 들어 통근시간에 지하철은 가장 빠르다. 왜냐하면, 도로에서는 교통체증이 있기 때문이다. 
+
+Falls ich brache entweder die U-Bahn oder den Bus oder beides mehr als ein mal umsteigen, wahrscheinlich ist es mit dem Auto mehr geeignet. Gehe ich um in Lotte Einkaufhaus Lebensmittel einzukaufen, ist es geeignet mit dem Auto als zürück.
+한번 이상 지하철이나 버스를 또는 둘다를 환승할 필요가 있을때엔 차가 더 편리하다. 롯데백화점에 시장보러 갈때는 차로 가는게 올때 편하다. 
+
+Gehe ich  um doch alcolisches Getränk in Planwagen zutrinken, ist es geeignet mit dem öffentlichen Verkehrsmittel bei zürück. Weil diese Verkehrsmitteln worein ich steigen wird später werden selbst fahren, kann ich mich besoffen bin.
+포장마차에 술마시러 갈때는 반면 대중교통을 이용하는것이 올때 편하다. 왜냐하면 내가 나중에 타게 될 교통수단들은 스스로 가게 되므로, 나는 만취할 수 있다.  
+
+Zum Schluss glaube ich womit um zufahren, dass alles von Situation abhängen ist. 
+결론적으로 무엇을 잡아탈것인가에 대해서는 모든것은 상황에 달려 있다고 생각한다.
+
+
+```
+einsteigen                      (버스 등에) 올라 타다
+sich besoffen (p.adj.)          만취하다                    
+Es hängt von ... an, ob         it depends on whether...
+Es kommt darauf an              It depends.
+Lebensmittel                    n. grocery
+Kaufhaus                        n. department store
+geeignet                        convenient
+wahrscheinlich                  probably
+möglicherweise                  possibly
+sparren.sparte.gespart          save
+verbringen.brachte.bracht       spend, waste
+```
+---
 
 ##
