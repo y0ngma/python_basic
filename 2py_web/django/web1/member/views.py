@@ -228,29 +228,29 @@ def auth_join(request):
 
         return redirect('/member/auth_index')
 
-# def list(request): 
-#     # sql 쓴 이유 :
-#         # 데이터가 먼저냐 화면이 먼저냐?
-#         # GET을 쓰지 않은 이유
-#         # ID 기준으로 오름차순으로 가져오자
-#     sql = 'SELECT*FROM MEMBER ORDER BY ID ASC'
-#     cursor.execute(sql) # 
-#         # cursor는 sql 실행하기위한 단위
-#         # connection.execute를 사용해도 되지만 아직 세부단위 설정되지 않음
-#     data = cursor.fetchall() # sql문 실행의 결과값 가져와라
-#     print(type(data)) # 리스트
-#     print(data)
-#         # [(, , , ,column렬의 수 만큼 ), (row 행의 수 만큼)]
-#         # list.html으로 넘어갈때
-#         # list 변수에 data값을, title변수에 회원목록 문자로 해서 넘긴다.
-#         # 단 title키의 값은 하나뿐이라 list.html에서 {{title}}가능하고
-#         # list키의 값은 회원수만큼이므로 for문 사용했음
-#     sql = 'SELECT*FROM MEMBER1 ORDER BY ID ASC' # vip맴버리스트 취합
-#     cursor.execute(sql)
-#     data2 = cursor.fetchall()
-#     print(type(data)) # 리스트
-#     print(data) 
-#     return render(request, 'member/list.html', {'list':data, 'list2':data2, 'title':'회원목록'})
+def list(request): 
+    # sql 쓴 이유 :
+        # 데이터가 먼저냐 화면이 먼저냐?
+        # GET을 쓰지 않은 이유
+        # ID 기준으로 오름차순으로 가져오자
+    sql = 'SELECT*FROM MEMBER ORDER BY ID ASC'
+    cursor.execute(sql) # 
+        # cursor는 sql 실행하기위한 단위
+        # connection.execute를 사용해도 되지만 아직 세부단위 설정되지 않음
+    data = cursor.fetchall() # sql문 실행의 결과값 가져와라
+    print(type(data)) # 리스트
+    print(data)
+        # [(, , , ,column렬의 수 만큼 ), (row 행의 수 만큼)]
+        # list.html으로 넘어갈때
+        # list 변수에 data값을, title변수에 회원목록 문자로 해서 넘긴다.
+        # 단 title키의 값은 하나뿐이라 list.html에서 {{title}}가능하고
+        # list키의 값은 회원수만큼이므로 for문 사용했음
+    sql = 'SELECT*FROM MEMBER1 ORDER BY ID ASC' # vip맴버리스트 취합
+    cursor.execute(sql)
+    data2 = cursor.fetchall()
+    print(type(data)) # 리스트
+    print(data) 
+    return render(request, 'member/list.html', {'list':data, 'list2':data2, 'title':'회원목록'})
 
 def member(request):
     request.method == 'GET'
@@ -393,92 +393,92 @@ def js_chart(request):
     if request.method=="GET":
         return render(request, 'member/js_chart.html')
 
-def dataframe(request):
-    #1. QuerySet -> list로 변경
-    rows = list(Table2.objects.all().values("no", 'name', 'kor'))[0:10]
-        # rows = Table2.objects.all() # = SELECT * FROM MEMBER_TABLE2
-        # SELECT NO,NAME,KOR FROM MEMBER_TABLE2
-        # [{'no': 260, 'name': '멍뭉이0', 'kor': 0}, ...]
+# def dataframe(request):
+#     #1. QuerySet -> list로 변경
+#     rows = list(Table2.objects.all().values("no", 'name', 'kor'))[0:10]
+#         # rows = Table2.objects.all() # = SELECT * FROM MEMBER_TABLE2
+#         # SELECT NO,NAME,KOR FROM MEMBER_TABLE2
+#         # [{'no': 260, 'name': '멍뭉이0', 'kor': 0}, ...]
 
-    # 2. list->dataframe으로 변경 ***전처리***
-    df = pd.DataFrame(rows)
-        # 표로 바뀜
+#     # 2. list->dataframe으로 변경 ***전처리***
+#     df = pd.DataFrame(rows)
+#         # 표로 바뀜
 
-    # 3. dataframe -> list
-    rows1 = df.values.tolist()
-        # [['no': 260, 'name': '멍뭉이0', 'kor': 0], ...] 
-    return render(request, 'member/dataframe.html',\
-         {"df_table":df.to_html(), "list":rows})
+#     # 3. dataframe -> list
+#     rows1 = df.values.tolist()
+#         # [['no': 260, 'name': '멍뭉이0', 'kor': 0], ...] 
+#     return render(request, 'member/dataframe.html',\
+#          {"df_table":df.to_html(), "list":rows})
     
 def graph(request):
-# 연습용 코드들
-    # sum_kor = Table2.objects.aggregate(Sum('kor'))
-    # sum_eng = Table2.objects.aggregate(Sum('eng'))
-    # sum_math = Table2.objects.aggregate(Sum('math'))
-    #     # SELECT SUM('kor') FROM MEMBER_TABLE2
-    # print(sum_kor)
-    # print('---------------------------------------------')
-    # print(sum_eng)
-    # print('---------------------------------------------')
-    # print(sum_math)
-    # print(type(sum_math))
-    # sum_kor = Table2.objects.aggregate(sum1=Sum('kor')) # {'sum1':500}
-    # sum_eng = Table2.objects.aggregate(sum1=Sum('eng')) # {'sum1':600}
-    # sum_math = Table2.objects.aggregate(sum1=Sum('math'))
-    #     # SELECT SUM('kor') AS sum1 FROM MEMBER_TABLE2
-    # print(sum_kor)
-    # print('---------------------------------------------')
-    # print(sum_eng)
-    # print('---------------------------------------------')
-    # print(sum_math)
-    # print(type(sum_math))
-    # sum_kor = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('kor'))
-    # sum_eng = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('eng'))
-    # sum_math = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('math'))
-    # print(sum_kor)
-    # print('---------------------------------------------')
-    # print(sum_eng)
-    # print('---------------------------------------------')
-    # print(sum_math)
-    # print(type(sum_math))
+    # 연습용 코드들
+        # sum_kor = Table2.objects.aggregate(Sum('kor'))
+        # sum_eng = Table2.objects.aggregate(Sum('eng'))
+        # sum_math = Table2.objects.aggregate(Sum('math'))
+        #     # SELECT SUM('kor') FROM MEMBER_TABLE2
+        # print(sum_kor)
+        # print('---------------------------------------------')
+        # print(sum_eng)
+        # print('---------------------------------------------')
+        # print(sum_math)
+        # print(type(sum_math))
+        # sum_kor = Table2.objects.aggregate(sum1=Sum('kor')) # {'sum1':500}
+        # sum_eng = Table2.objects.aggregate(sum1=Sum('eng')) # {'sum1':600}
+        # sum_math = Table2.objects.aggregate(sum1=Sum('math'))
+        #     # SELECT SUM('kor') AS sum1 FROM MEMBER_TABLE2
+        # print(sum_kor)
+        # print('---------------------------------------------')
+        # print(sum_eng)
+        # print('---------------------------------------------')
+        # print(sum_math)
+        # print(type(sum_math))
+        # sum_kor = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('kor'))
+        # sum_eng = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('eng'))
+        # sum_math = Table2.objects.filter(classroom='301').aggregate(sum1=Sum('math'))
+        # print(sum_kor)
+        # print('---------------------------------------------')
+        # print(sum_eng)
+        # print('---------------------------------------------')
+        # print(sum_math)
+        # print(type(sum_math))
 
-    # sum_kor = Table2.objects.filter(kor__gt=80).aggregate(sum1=Sum('kor'))
-    # sum_eng = Table2.objects.filter(eng__gt=80).aggregate(sum1=Sum('eng'))
-    # sum_math = Table2.objects.filter(math__gt=80).aggregate(sum1=Sum('math'))
-    #     # SELECT SUM('kor') FROM MEMBER_TABLE2 WHERE MATH>10
-    #     #>gt, >=gte, <lt, <=lte
-    # print(sum_kor)
-    # print('---------------------------------------------')
-    # print(sum_eng)
-    # print('---------------------------------------------')
-    # print(sum_math)
-    # print(type(sum_math))
+        # sum_kor = Table2.objects.filter(kor__gt=80).aggregate(sum1=Sum('kor'))
+        # sum_eng = Table2.objects.filter(eng__gt=80).aggregate(sum1=Sum('eng'))
+        # sum_math = Table2.objects.filter(math__gt=80).aggregate(sum1=Sum('math'))
+        #     # SELECT SUM('kor') FROM MEMBER_TABLE2 WHERE MATH>10
+        #     #>gt, >=gte, <lt, <=lte
+        # print(sum_kor)
+        # print('---------------------------------------------')
+        # print(sum_eng)
+        # print('---------------------------------------------')
+        # print(sum_math)
+        # print(type(sum_math))
 
-    # sum_kor = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
-    # sum_eng = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
-    # sum_math = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
-    #     # SELECT SUM('kor') sum1, SUM('eng') sum2, SUM('math') sum3
-    #     # FROM MEMBER_TABLE2
-    #     # GROUP BY CLASSROOM
-    # print(sum_kor.query)
-    # # print(sum_eng.query)
-    # # print(sum_math.query)
-    # print('---------------------------------------------')
+        # sum_kor = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
+        # sum_eng = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
+        # sum_math = Table2.objects.values('classroom').annotate(sum1=Sum('kor'), sum2=Sum('eng'), sum3=Sum('math'))
+        #     # SELECT SUM('kor') sum1, SUM('eng') sum2, SUM('math') sum3
+        #     # FROM MEMBER_TABLE2
+        #     # GROUP BY CLASSROOM
+        # print(sum_kor.query)
+        # # print(sum_eng.query)
+        # # print(sum_math.query)
+        # print('---------------------------------------------')
 
-    # df_kor = pd.DataFrame(sum_kor)
-    # df_eng = pd.DataFrame(sum_eng)
-    # df_math = pd.DataFrame(sum_math)
-    
-# DataFrame
-    # df_math = pd.DataFrame(sum_math)
-    # df_math = df_math.set_index("classroom")
-    # print(df_math)
-    # print(df_math.columns)
-    # df_math.plot(kind="bar")
-    # print(df_math)
-#  
-    # std 표준편차는 aggregate쓸 수 없다
-    # df.values.tolist()
+        # df_kor = pd.DataFrame(sum_kor)
+        # df_eng = pd.DataFrame(sum_eng)
+        # df_math = pd.DataFrame(sum_math)
+        
+    # DataFrame
+        # df_math = pd.DataFrame(sum_math)
+        # df_math = df_math.set_index("classroom")
+        # print(df_math)
+        # print(df_math.columns)
+        # df_math.plot(kind="bar")
+        # print(df_math)
+    #  
+        # std 표준편차는 aggregate쓸 수 없다
+        # df.values.tolist()
     font_name = font_manager.FontProperties\
         (fname='C:/Windows/Fonts/gulim.ttc').get_name() # 폰트읽기
     rc('font', family=font_name) # 폰트적용

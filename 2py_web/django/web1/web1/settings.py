@@ -141,6 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
 # 정적파일 경로 지정하는 방법이다.
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 CORS_ORIGIN_ALLOW_ALL = True
