@@ -5,6 +5,14 @@
 column을 미리 짜서 데이터를 맞춰 넣는다.  
 맞지 않는 데이터는 가짜데이터를 넣거나, column을 추가해야함
 
+- 다른 컴퓨터의 DB 테이블에 접속하기
+    `ipconfig`
+    ip주소 192.168.0.69 등 을 알아내서
+    ```sql
+    sqldevelop에서 
+    32764
+
+```
 - **Oracle**
 
     - `Data Modeler`로 DB테이블 간 관계 설정하기

@@ -61,18 +61,16 @@
         update board_table1 set no=53 where no = 52;
         
     1. 조회;
-        SELECT * FROM BOARD_TABLE1;
+        -- 데이터 많을시 가장 빠른 조건문:NO 이용
+        SELECT * FROM BOARD_TABLE1 WHERE NO IN (3, 4, 5, 6, 7);
+        
+        --ORDER BY [정렬할 내용][ASC/DESC]이다 ORDER NO BY DESC 아니고    
         SELECT * FROM BOARD_TABLE1 ORDER BY NO DESC; 
         SELECT NO FROM BOARD_TABLE1 WHERE HIT >= 5;
-        SELECT * FROM BOARD_TABLE1 WHERE NO IN (3, 4, 5, 6, 7, 8, 9);
         SELECT * FROM BOARD_TABLE1 UNION ALL;
-        --ORDER BY [정렬할 내용][ASC/DESC]이다 ORDER NO BY DESC 아니고    
-        --SELECT * FROM WHERE NO (
-        --    SELECT NO FROM BOARD_TABLE1 WHERE HIT >= 5
-        --);
     ```
 
-## 검색하는 방법(SELECT)
+## SELECT
 -     
     ```SQL
     - mysql 기준 1부터
@@ -92,7 +90,7 @@
         WHERE NAME LIKE '%'||'홍길동'||'%'
         WHERE TITLE LIKE '%'||'제목'||'%'
     ```
-- 반별
+- 집계함수:SUM,MAX,MIN,COUNT개수, AVG
     ```SQL
     
     SELECT
@@ -108,7 +106,6 @@
 - 배포하고자 하는 정보만 옮기고 정렬 등 한다
 
 - 순차적 번호를 매기기
-     
     ```sql
     -- 자동 증가 시퀸스 생성
     -- SEQ_TABLE1_NO = SEQ_TABLE1_NO+1 번호증가
@@ -118,6 +115,9 @@
     NOMAXVALUE
     NOCACHE;
     COMMIT;
+
+    -- 테이블 편집-자동 
+
 
     -- TABLE1의 데이터가 번호증가 하는지 확인
     INSERT INTO TABLE1 (NO, ID, NAME, AGE)
@@ -131,6 +131,60 @@
     COMMIT;
     ```
 
+## Advanced Commands
+- distinct / group by
+```sql
 
+SELECT * 
+FROM BOARD_BOARD1
+WHERE 
+GROUP BY --집계하고자 하는 컬럼(들)
 
-- 
+-- 집계하기
+COUNT(*) null값포함 테이블 전체건수
+COUNT(컬럼명) null 제외한 해당컬럼 건수
+COUNT(DISTINCT 원하는 컬럼) 데이터 종류수
+ORDER BY COUNT(*) DESC
+
+-- 집계된 값 기준으로 정렬
+SELECT  T1.REGION_CD
+        ,COUNT(*) STORE_CNT
+FROM    SQL_TEST.MA_STORE T1
+GROUP BY T1.REGION_CD
+ORDER BY COUNT(*) DESC 
+```
+
+- Multiple-Row Subquery
+    - 조건절 오른쪽에 괄호로 묶어 위치시켜야 함
+    ```sql
+    -- IN  하나의 컬럼이 하나이상의 "=" 조건 가질때
+    -- 부서별 최저 임금받는 사원의 정보 
+    SELECT NAME, SAL, DEPTNO FROM EMPLOYEES
+    WHERE SAL IN (
+        SELECT MIN(SAL) FROM EMPLOYEES GROUP BY DEPTNO)
+    
+    -- ANY 하나이상 맞으면 참 (>MIN 또는 OR와 비슷)
+    -- ALL 모두 맞아야 (>MAX 또는 AND와 비슷)
+    -- 10000이상 받는 모든사원의 나이보다 낮은연령의 사원정보
+    SELECT DEPTNO, NAME, SAL FROM EMPLOYEES
+    WHERE AGE < ALL (
+        SELECT AGE FROM EMPLOYEES WHERE SAL > 10000 )
+
+    -- 인덱스<1000 중 검색어 1순위, 입력한시간에 해당하는 검색어
+    SELECT WORD FROM BOARD_TABLE1
+    WHERE NO IN (
+        SELECT NO FROM BOARD_TABLE1 WHERE NO <= 100) 
+        AND RANK = 1 AND YEAR = %s    
+    GROUP BY WORD
+
+    -- Bruce와  동일직책, 동일부서인 사원 검색 
+    select employee_id, first_name, job_id, salary
+    from employees
+    where (manager_id, job_id) in (
+        select manager_id, job_id
+        from employees
+        where first_name = 'Bruce')
+        and first_name <> 'Bruce' 
+        -- != 
+    ```
+

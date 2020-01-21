@@ -104,17 +104,24 @@ Django web project
     $ django-admin startapp member
     
 ---
-## 회원가입 및 탈퇴
 
-## 게시판 글쓰기 만들기
-- write.html
-[django 서버 구동시]
+
+## templates에 html만들기
 ```bash
     $ python manage.py runserver  $ # django 서버 구동
-    $ django-admin startapp board $ #  board앱 생성
+    $ django-admin startapp board $ # board앱 생성
 ```
+- 메인 setting의 templates 
+    ```py 
+    # 60 번째 줄에 templates 경로 잡아주기
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [os.path.join(BASE_DIR, 'templates')],
+            'APP_DIRS': True,
+    ```
 
-### 상위project와 하위 앱의 url 연결
+### 게시판 글쓰기 만들기
 - 상위 프로젝트의 urls.py에서 앱urls 연결
     ```py
     # C:\Users\admin\Documents\python_basic\2py_web\django\web1\web1\urls.py    
@@ -130,39 +137,50 @@ Django web project
     ]
     ```
 
-- 앱 내에 urls.py 생성
-    ``` py
-    # C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\urls.py
-    from django.urls import path
-    from . import views
+    - 앱 내에 urls.py 생성
+        ``` py
+        # C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\urls.py
+        from django.urls import path
+        from . import views
 
-    urlpatterns = [
-        # index를 url끝에 치면 views의index함수를 불러와라
-        path('write', views.write, name='write'),
-    ]
-    ```
+        urlpatterns = [
+            # index를 url끝에 치면 views의index함수를 불러와라
+            path('write', views.write, name='write'),
+        ]
+        ```
 
 
 ### 함수 정의
 - 다음 내용 추가
-```py
-# C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\views.py
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.db import connection 
+    ```py
+    # C:\Users\admin\Documents\python_basic\2py_web\django\web1\board\views.py
+    from django.shortcuts import render, redirect
+    from django.http import HttpResponse
+    from django.views.decorators.csrf import csrf_exempt
+    from django.db import connection 
 
-@csrf_exempt # html의 post줄에 입력하면 생략가능 {% csrf_token %}
-def write(request):
-    if request.method == 'GET':
-        return render(request, 'board/write.html')
-```
+    @csrf_exempt # html의 post줄에 입력하면 생략가능 {% csrf_token %}
+    def write(request):
+        if request.method == 'GET':
+            return render(request, 'board/write.html')
+    ```
 
-### write.html 만들기
+- write.html 만들기
 C:\Users\admin\Documents\python_basic\2py_web\django\web1\templates\board\write.html
 
 - 구동 확인
     `http://127.0.0.1:8000/board/write`
+
+
+### CSS 꾸미기 static setup    
+    ```py    
+    # 상위 프로젝트의 setting 142번째 줄에 추가
+    STATIC_URL = '/static/'
+
+    # 정적파일 경로 지정하는 방법이다.
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    CORS_ORIGIN_ALLOW_ALL = True
+    ```
 
 ## model으로 DB에 입력
 - 원하는 앱의 models.py에서 
@@ -235,31 +253,11 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\templates\board\write.
         $ python manage.py check                # 문제없음 확인
         $ python manage.py makemigrations board # 만들기
         $ python manage.py migrate              # 이동하기
-        # -> __init__.py 에 연동내역 확인
+        # models.py있는 폴더/migrations/에 연동내역 확인
+
+        # 오류시 models.py가 있는 폴더내 migrations를 지우고 sqldevelop-DJANGO_MIGRATION 테이블의 데이터중 관련내역을 지우고 재실행 
     ```
 ---
-
-## templates에 html만들기
-- 메인 setting의 templates 
-    ```py 
-    # 60 번째 줄에 templates 경로 잡아주기
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR, 'templates')],
-            'APP_DIRS': True,
-    ```
-
-- CSS 꾸미기 static setup    
-    ```py    
-    # 상위 프로젝트의 setting 142번째 줄에 추가
-    STATIC_URL = '/static/'
-
-    # 정적파일 경로 지정하는 방법이다.
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-    CORS_ORIGIN_ALLOW_ALL = True
-    ```
-
 
 ## 관리자 http://127.0.0.1:8000/admin/ 환경구축
 - Oracle SQL Developer 와 같은 관리용 사이트

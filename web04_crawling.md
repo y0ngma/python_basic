@@ -2,6 +2,14 @@
 
 ## Table of Content
 - Setup
+- 서비스를 위한 총 순서
+    1. 크롤링
+    1. 몽고디비
+    1. 몽고디비-오라클로 이동
+    1. 오라클에서 번호매기고 중복값,null제거
+    1. 장고, json,    등 활용한 서비스 제공
+
+
 - 데이터별 크롤링 방법
     - json
     - xml
@@ -14,19 +22,26 @@
     - 자바스크립트 페이지
 
 ---
-## Crawling
-- 기본 경로에서 상/하위 이동:`BASE_DIR, '../상위' 또는 '하위'`
+
+## css_selector
+
+- 드라이버를 제공하는 크롬 등을 통해 클릭 자동화등 구현  
+파이썬에서 보기 위해 driver 설치  
+- 크롬 도움말-버전확인-해당버전에 맞는것 다운로드 및 적절경로에 옮기기  
+
     ```py
     import os
 
+    # 기본 경로에서 상/하위 이동:`BASE_DIR, '../상위' 또는 '하위'`
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     print('============== base dir============')
     print(os.path.join(BASE_DIR, 'selenium', 'chromedriver.exe'))
     ```
-- css_selector
-    - image 하나 직접 긁어오기
-        - 원하는 (사진)우클릭 검사-해당코드우클릭-Copy-css selector
+
+- image 하나 직접 긁어오기
+    - 원하는 (사진)우클릭 검사-해당코드우클릭-Copy-css selector  
     `img = driver.find_element_by_css_selector("#image_view_0")`
+    
     - 원하는 이미지 검색실행 후 긁어 오기  
     네이버 검색칸에 우클릭 검사<input id="query".. ->copy xpath
         ```py
@@ -40,9 +55,12 @@
         .find_elements_by_tag_name("li")
         ```
 
+---
+
 
 - Beautiful Soup
     - 스크립트 없이 html위주로 렌더링된 페이지 크롤링용
+
 ## Setup
 - Robo 3T (sql 처럼 DB 관리)
     - https://robomongo.org/download
@@ -63,8 +81,4 @@
     ```
 ---
     
-## Macro
-- 드라이버를 제공하는 크롬 등을 통해 클릭 자동화등 구현  
-파이썬에서 보기 위해 driver 설치  
-크롬 도움말-버전확인  
  
