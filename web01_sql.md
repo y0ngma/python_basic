@@ -155,7 +155,7 @@ ORDER BY COUNT(*) DESC
 ```
 
 - Multiple-Row Subquery
-    - 조건절 오른쪽에 괄호로 묶어 위치시켜야 함
+    - 괄호로 묶어서 활용
     ```sql
     -- IN  하나의 컬럼이 하나이상의 "=" 조건 가질때
     -- 부서별 최저 임금받는 사원의 정보 
@@ -170,12 +170,6 @@ ORDER BY COUNT(*) DESC
     WHERE AGE < ALL (
         SELECT AGE FROM EMPLOYEES WHERE SAL > 10000 )
 
-    -- 인덱스<1000 중 검색어 1순위, 입력한시간에 해당하는 검색어
-    SELECT WORD FROM BOARD_TABLE1
-    WHERE NO IN (
-        SELECT NO FROM BOARD_TABLE1 WHERE NO <= 100) 
-        AND RANK = 1 AND YEAR = %s    
-    GROUP BY WORD
 
     -- Bruce와  동일직책, 동일부서인 사원 검색 
     select employee_id, first_name, job_id, salary
@@ -188,3 +182,33 @@ ORDER BY COUNT(*) DESC
         -- != 
     ```
 
+- COUNT와 GROUP BY
+    ```sql
+    -- 인덱스<1000 중 검색어 1순위, 입력한시간에 해당하는 검색어
+    SELECT COUNT(*) FROM (
+    SELECT WORD FROM BOARD_BOARD1
+    WHERE NO IN (
+        SELECT NO FROM BOARD_BOARD1 WHERE NO <= 1000) 
+    AND RANK = 1   
+    )
+    ```
+    | Option | Description |
+    | ------ | ----------- |
+    |1행|50|
+
+    ```sql
+    SELECT WORD,COUNT(*) FROM (
+        SELECT WORD FROM BOARD_BOARD1
+        WHERE NO IN (
+            SELECT NO FROM BOARD_BOARD1 WHERE NO <= 1000) 
+        AND RANK = 1   
+        )
+    GROUP BY WORD
+    ```
+    | Option | Description |
+    | ------ | ----------- |
+    |유한양행	     | 3|
+    |버스도착정보    |	11|
+    |아리따움대란    |	12|
+    |상류사회	     | 6|
+    |송중기탈모사진  |	1|
