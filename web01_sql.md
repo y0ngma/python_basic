@@ -92,13 +92,20 @@
     ```
 - 집계함수:SUM,MAX,MIN,COUNT개수, AVG
     ```SQL
-    
     SELECT
         'MEMBER_TABLE2'.'CLASSROOM', # [테이블]의 [클래스룸이라 저장된 데이터]랑
         SUM('MEMBER_TABLE2'.'KOR') AS 'SUM1', # kor행 데이터합 별칭을 SUM1로
         SUM('MEMBER_TABLE2'.'ENG') AS 'SUM2',
         SUM('MEMBER_TABLE2'.'MATH') AS 'SUM3'
     FROM 'MEMBER_TABLE2'
+    ```
+        
+    ```sql
+    -- 검색어 최초검색된 날짜, 최종일
+    SELECT YEAR, MONTH, DAY, TIME FROM BOARD_BOARD1
+    WHERE NO IN (SELECT NO FROM BOARD_BOARD1 WHERE NO <= 1000)AND
+        WORD LIKE %s
+    ORDER BY YEAR, MONTH, DAY, TIME ASC
     ```
 
 ## Mongo DB -> Oracle DB
@@ -133,26 +140,25 @@
 
 ## Advanced Commands
 - distinct / group by
-```sql
+    ```sql
+    SELECT * 
+    FROM BOARD_BOARD1
+    WHERE 
+    GROUP BY --집계하고자 하는 컬럼(들)
 
-SELECT * 
-FROM BOARD_BOARD1
-WHERE 
-GROUP BY --집계하고자 하는 컬럼(들)
+    -- 집계하기
+    COUNT(*) null값포함 테이블 전체건수
+    COUNT(컬럼명) null 제외한 해당컬럼 건수
+    COUNT(DISTINCT 원하는 컬럼) 데이터 종류수
+    ORDER BY COUNT(*) DESC
 
--- 집계하기
-COUNT(*) null값포함 테이블 전체건수
-COUNT(컬럼명) null 제외한 해당컬럼 건수
-COUNT(DISTINCT 원하는 컬럼) 데이터 종류수
-ORDER BY COUNT(*) DESC
-
--- 집계된 값 기준으로 정렬
-SELECT  T1.REGION_CD
-        ,COUNT(*) STORE_CNT
-FROM    SQL_TEST.MA_STORE T1
-GROUP BY T1.REGION_CD
-ORDER BY COUNT(*) DESC 
-```
+    -- 집계된 값 기준으로 정렬
+    SELECT  T1.REGION_CD
+            ,COUNT(*) STORE_CNT
+    FROM    SQL_TEST.MA_STORE T1
+    GROUP BY T1.REGION_CD
+    ORDER BY COUNT(*) DESC 
+    ```
 
 - Multiple-Row Subquery
     - 괄호로 묶어서 활용
@@ -170,7 +176,6 @@ ORDER BY COUNT(*) DESC
     WHERE AGE < ALL (
         SELECT AGE FROM EMPLOYEES WHERE SAL > 10000 )
 
-
     -- Bruce와  동일직책, 동일부서인 사원 검색 
     select employee_id, first_name, job_id, salary
     from employees
@@ -179,7 +184,7 @@ ORDER BY COUNT(*) DESC
         from employees
         where first_name = 'Bruce')
         and first_name <> 'Bruce' 
-        -- != 
+        -- != 이랑 같음 <>
     ```
 
 - COUNT와 GROUP BY
@@ -194,7 +199,7 @@ ORDER BY COUNT(*) DESC
     ```
     | Option | Description |
     | ------ | ----------- |
-    |1행|50|
+    |1행|30|
 
     ```sql
     SELECT WORD,COUNT(*) FROM (
@@ -207,8 +212,27 @@ ORDER BY COUNT(*) DESC
     ```
     | Option | Description |
     | ------ | ----------- |
-    |유한양행	     | 3|
-    |버스도착정보    |	11|
-    |아리따움대란    |	12|
-    |상류사회	     | 6|
-    |송중기탈모사진  |	1|
+    |유한양행	     | 10|
+    |버스도착정보    |	5|
+    |아리따움대란    |	15|
+
+- 컬럼 합쳐서 비교 (To_CHAR, TO_DATE, TO_NUMBER)
+```sql
+SELECT WORD,TO_NUMBER(YEAR||MONTH||DAY||TIME) 
+FROM BOARD_BOARD1 
+WHERE 
+    GENE LIKE '%10대%' AND
+    TO_NUMBER(YEAR||MONTH||DAY||TIME) >= 2019721 AND
+    TO_NUMBER(YEAR||MONTH||DAY||TIME) < 2019742 AND
+    RANK >= 1 AND RANK <=3
+
+-- 아래는 2020년 1월 2일 ~ 2월 1일 검색시 월은 만족 일은 불만족으로 에러.. 합칠필요   
+SELECT WORD FROM BOARD_BOARD1
+WHERE 
+    GENE LIKE %s AND 
+    (YEAR  >= %s AND YEAR  <= %s) AND
+    (MONTH >= %s AND MONTH <= %s) AND
+    (DAY   >= %s AND DAY   <= %s) AND 
+    (TIME  >= %s AND TIME  <= %s) AND 
+    (RANK  >= %s AND RANK  <= %s)
+```    
