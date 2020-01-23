@@ -1,6 +1,5 @@
 ## 47 Unterwegs이동 mit dem Auto oder mit dem offentlichen Verkehrsmittel  
 
-
 Womit möchte ich fahren um Unterweg zumachen? Es hängt davon ab, welcher weg mehr Zeit spart oder verbringen.
 
 Zum beispiel Untergrundbahn oder U-Bahn ist im  Berufsverkehr schnellsten. 
@@ -28,6 +27,7 @@ Zum Schluss glaube ich womit um zufahren, dass alles von Situation abhängen ist
 
 
 ```
+Fahrerfahrungen haben
 einsteigen                                          (버스 등에) 올라 타다
 sich besoffen (p.adj.)                              만취하다               
 Es hängt von ... an, ob                             it depends on whether...      
