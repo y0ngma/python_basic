@@ -15,15 +15,50 @@
 1. wann treffen wir uns
     - 
 1. wo treffen wir uns
+    - gehen wir dorthin.~으로 가자
     - Lass und treffen beim Busan Hauptbahnhof.
     - am eingang oder am shalter
 1. womit fahren wir 
     - Woran 
 
-
 ```
- 
+#### 30 musik im altag
+
+37 soll jeder mehre sprachen lerne
+18 ohne autoins stadtzentrum
+9 darf man in den mittag pause in firma kurzschlafen
+
+
+### eine ueberaschung party 
+시험(내일) 끝난후 파티 모레
+wo wann die Prufung
+abholen
+geschenk
+woin wann
+was machen
+
+### 독일사진사
+weisst du die Fotografin aus Deutschland Frau Smitt besuchen
+weisst du es?
+
+1. was fuer ein Hotel 
+ah haben wir vergessen fuer ihn reservieren!!
+reservieren wir 
+
+1. abholen픽업
+wo und wann kommt er an?
+von einem Firma Mietwagen 
+
+1. 관광 und zum fotografieren 사진찍을곳
+zum Fotografieren
+
+1. Gemeinsames Essen
+nach der Stadtfuehrung was essen wir?
+in der naeh des Hotel lassen wir uns um zuessen, sodass wir nach einem Essen farhen mussen nicht. 
+---
+
 ### 독일 늙은사장이 내 회사 방문하여 대접:시내관광 해줘야함.
+weisst du der Chef aus Deutschland Herr Smitt besuchen
 
 chefin oder chef
 Am Samstag übernächstes Wochenenden bestimmt sie um Gimhae Flugzeug ankommen.
@@ -31,8 +66,8 @@ Am Samstag übernächstes Wochenenden bestimmt sie um Gimhae Flugzeug ankommen.
 Der Flug den sie nehmen wird wird Um genau Mittag ankommen, soweit der eine Verspätung habt.
 
 - mitwem 동료나 가이드를 같이해서 모시자
-    - Mit unserem Geschäftswagen kann ich mitnehmen 
-    - der Fremdenführer 가이드
+    - Mit unserem Firmawagen회사차 kann ich mitnehmen
+    - Kennst du guten Reiseleiter?
     - Lasst uns sie am der Eingang mit einem Auto warten um sie aufzunehmen.
 
 - Wohin?
@@ -40,13 +75,16 @@ Der Flug den sie nehmen wird wird Um genau Mittag ankommen, soweit der eine Vers
     - bedienen 모시다
     - nach Yeong Insel
     - Gwangan Bricke 
-
+    - Besichtigen
 
 - verkehrsmittel 늙은사장에 맞게
-    의문사 특수제작?
     Womit fahren wir 
     Woran
+
 - gemeinsames Abendessen
+    ich habe schoen gehoert, dass es ist
+    wir reservieren fuer uns einen Tisch im Restaurant
+    das waere sehr net von dir.
     Im Planwagen포장마차 
     roher Fisch und die Seeprodukte
     bekannt 유명해 gut geschumeckt 맛있었어.
@@ -133,9 +171,18 @@ beim oder am bahnhof
 
 
 ## Aufgabe 3
+### SNS sozial network
+
 ### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
 ### ein musikinstrument
+### extreme sport
+auf dem Berg, am Meer
+Stress abbauen
 ### haben Kinder zu wenig Freizeit
+
+nach hilfeinstitud 학원
+Wie lange Freizeit willst du geben, wenn du ein kind habst?
+wenn ich ein Kind haben, lass ich mein Kind viel freizeit haben.
 ### karier oder kind
 arbeit
 sich konzentriere
@@ -196,6 +243,8 @@ werde ich verrueckt.
 dass er mich auch mag
 ### englischelernen als kind
 als kind
+
+
 ### wie lange sollten die kinder zu hause.(독립)
 wo möchest du allein 
 entfern 떨어지다
@@ -211,6 +260,8 @@ BG : hatest du ein probleme bin von freunden.
 wenn ich zur Uni gehe, dass badezimmer und immer jemande benutzt, also musste ich warte. 
 ### fernsehe oder ins kino gehen
 ich personlich allein 
+was ist dein der beste Flim?
+mein beste Flim, weil lustig ist.
 ### bestimmen die kleidung ihrer kinder
 - nachteil
 wenn du 
