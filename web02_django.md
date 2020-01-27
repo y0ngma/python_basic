@@ -96,11 +96,12 @@ Django web project
     $ cd C:\python_basic\2py_web\django\web1
     원하는 경로로 이동 후 다음을 입력
     ```
-    ```
+    ```bash
     # 웹 프로젝트 생성
     $ django-admin startproject web1
 
     # web1디렉토리에서 필요한 앱 생성
+    $ cd web1
     $ django-admin startapp member
     
 ---
@@ -117,7 +118,10 @@ Django web project
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR, 'templates')],
+            ##
+            'DIRS': [os.path.join(BASE_DIR, 
+            'templates')],
+
             'APP_DIRS': True,
     ```
 

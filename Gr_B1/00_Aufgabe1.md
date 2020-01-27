@@ -1,41 +1,69 @@
 
 ## Sprechen
-```
-1. warum
-    - es ist bekannt. gut geschuemeckt.
-    - Das ist etwas, woran ich arbeiten möchte.
-1. was zu tun
-    - Lass uns ein Stadtfuerung machen. Nach Yeong Insel, Gwangan Brike
-    - Ich schlage vor, dass wir ins Museum gehen. Was meinen Sie?
-1. wann zu tun
+1. der öffner
+    - Willst du mit mir ins Restaurant gehen?
+    - Wollen wir zusammen trinken gehen?
+    - Hast du am Donnerstag Lust auf Golf?
+    - Hast du Zeit morgen
+    - Nein, morgen kann ich leider nicht.
+
+2. wann zu tun
     - Wann findet dass konzert statt?
     - Wann ist es geöffnet? Gibt es Schließtage?
     - Das ist täglich von 10-18 Uhr geöffnet.
     - es beginnt um sechzehn Uhr also wir gehen ab 15 Uhr nach Ulsan
-1. wann treffen wir uns
-    - 
-1. wo treffen wir uns
+
+3. warum
+    - es ist bekannt. gut geschuemeckt.
+    - Das ist etwas, woran ich arbeiten möchte.
+
+4. was zu tun
+    - Lass uns ein Stadtfuerung machen. Nach Yeong Insel, Gwangan Brike
+    - Ich schlage vor, dass wir ins Museum gehen. Was meinen Sie?
+
+5. wann treffen wir uns
+
+6. wo treffen wir uns
     - gehen wir dorthin.~으로 가자
-    - Lass und treffen beim Busan Hauptbahnhof.
+    - Lass uns treffen beim Busan Hauptbahnhof.
     - am eingang oder am shalter
-1. womit fahren wir 
+
+7. womit fahren wir 
     - Woran 
 
-```
-#### 30 musik im altag
+---
+- [x] Hausaufgabe
+- [ ] 문법 접속사,전치사, 부사 정리
 
-37 soll jeder mehre sprachen lerne
-18 ohne autoins stadtzentrum
-9 darf man in den mittag pause in firma kurzschlafen
+### eine ueberaschung party
+
+1. 시험(내일) 끝난후 파티 모레  
+   - Kennst du, dass das Morgen für ihm wichtig ist?
+   Um einen Arbeitplatz in Deutschland zufinden, braucht er eine Prüfung bestehen. 
+
+1. wo wann die Pruefung?
+    - wo und wann macht er den Test machen? kennst du das?  
+    In Busan foreign Universität macht er den Test am fünfundzwanzigten April/Vierten. 
+
+    - Ab seinem Abschluss des Test (um siebzehn Uhr Donnerstag, den dreißigsten Januar) wird sie sich von allem frei.
+    am Donnerstag 
+
+1. abholen
+    - Bevor das, können wir zuerst bestimmen um was überraschung Party zumachen 
+    - womit fahren wir uns um ihn abzuholen?
+    - Mit dem Taxi hohlen wir ihn ab
+    - Holen wir ihn mit dem Taxi ab, brauchen keiner von uns um zürückzufahren.  
 
 
-### eine ueberaschung party 
-시험(내일) 끝난후 파티 모레
-wo wann die Prufung
-abholen
-geschenk
-woin wann
-was machen
+2. was zumachen  
+den ganzen Tag온종일  trinken wir auf der erste Straße des Seomyeon
+
+1. wohin wann  
+Ausser wir Geschenk
+
+1. geschenk  
+Hast du übermorgen eine Zeit am vormittags? 
+Lasst uns ins Lotte Kaufhaus gehen und ein gute Geschenk für ihn suchen.  
 
 ### 독일사진사
 weisst du die Fotografin aus Deutschland Frau Smitt besuchen
@@ -171,27 +199,21 @@ beim oder am bahnhof
 
 
 ## Aufgabe 3
+- 주제에 대해 짧게 준비하고 생각을 말한다.
+- 상대의견 들으며 질문내용을 준비한다.
+#### 9 darf man in den mittag pause in firma kurzschlafen
+
 ### SNS sozial network
 
-### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
-### ein musikinstrument
-### extreme sport
-auf dem Berg, am Meer
-Stress abbauen
-### haben Kinder zu wenig Freizeit
+#### 18 ohne autoins stadtzentrum
 
-nach hilfeinstitud 학원
-Wie lange Freizeit willst du geben, wenn du ein kind habst?
-wenn ich ein Kind haben, lass ich mein Kind viel freizeit haben.
-### karier oder kind
-arbeit
-sich konzentriere
-sich 
-Im meine Heimatland hat viele Problemen damit das viele Frauen keine kind haben. Was meinst du damit?
-Ich denke auch dass ist grosse Probleme, aber jetzt bin ich jung. 
-### 48 jobben neben dem Studium
-Was für eineArbeit hast du gemacht_
-vertretung
+### 30 Musik im alltag
+- ich habe keine lieblings säger
+jenre. arten
+Welche Musikart magst du. wie ich schön gesagt habe, weil ich meisten sneidigen Musik hören
+ich habe nicht verstanden
+
+### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
 
 ### ohne Auto Innenstadt
 Was benutst du wenn du reist
@@ -202,14 +224,36 @@ reisen mit Tier alltag gewollen
 geistisch
 wenn ich ein beruf haben, möchte ich mit Katze leben
 
+### ein musikinstrument
+
+
+### extreme sport
+- auf dem Berg, am Meer
+- Stress abbauen
+
+
+### haben Kinder zu wenig Freizeit
+>nach hilfeinstitud 학원  
+Wie lange Freizeit willst du geben, wenn du ein kind habst?  
+wenn ich ein Kind haben, lass ich mein Kind viel freizeit haben.  
+
+
+### karier oder kind
+arbeit
+sich konzentriere
+sich 
+Im meine Heimatland hat viele Problemen damit das viele Frauen keine kind haben. Was meinst du damit?
+Ich denke auch dass ist grosse Probleme, aber jetzt bin ich jung. 
+
+### 48 jobben neben dem Studium
+Was für eineArbeit hast du gemacht_
+vertretung
+
+
 ### 이웃과의 교류
 wenn laut sind, was machst du dagegen? 
 
-### Musik im alltag
-- ich habe keine lieblings säger
-jenre. arten
-Welche Musikart magst du. wie ich schön gesagt habe, weil ich meisten sneidigen Musik hören
-ich habe nicht verstanden
+
 ### Haben Kinder in zu wenig frei Zeit
 - was hast du im der Kindheit gemacht
 zum Spiel
@@ -233,6 +277,8 @@ weil ich nicht unter vielen leuten leben m
 - wie oft benutzen Sie. ich benutze driviermal am Tag. ich habe nichts zu machen. 
 - ferngesehen 티비봤다
 - passiert
+
+
 ### wie streung die eltern sein
 부모가 얼마나 엄격해야 하는가? 부모도 친구가 될 수 있는가?
 wir unterhalten usn wie freunde
@@ -241,6 +287,8 @@ nicht jemand, der viel aelter is als ich.
 so alt wie ich 동등할떄
 werde ich verrueckt.
 dass er mich auch mag
+
+
 ### englischelernen als kind
 als kind
 
@@ -255,16 +303,24 @@ von klein auf war.
 ### schulesport
 grund/mid/ober 초중고?
 in der wochenende
+
+
 ### allein oder shardehause
 BG : hatest du ein probleme bin von freunden.
 wenn ich zur Uni gehe, dass badezimmer und immer jemande benutzt, also musste ich warte. 
+
+
 ### fernsehe oder ins kino gehen
 ich personlich allein 
 was ist dein der beste Flim?
 mein beste Flim, weil lustig ist.
+
+
 ### bestimmen die kleidung ihrer kinder
 - nachteil
 wenn du 
+
+
 ### wie lange soll man pro Tag sport tabe
 Whelsen Sport emphielst du anderen leuten
 ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
@@ -272,15 +328,23 @@ ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
 - einer Stunde pro Tag.
 welche Sportart willst du machen?
 Ich machst Tenis. 
-### wie viele fremd sprachen soll man learn
+
+
+### 37 wie viele fremd Sprachen soll man learn
 - welche Sprache lernst du? 
+
+
 ### die infomationen im internet
 - sociallenetswerke SNS
 - wie oft surfen Sie im internet
+
+
 ### fertig essen
 - wie gross hund sein
 - fertigessen 가공식품
 - normalerweise ich esse cupnoodle, weil ich einfach machen kann.
+
+
 ### 휴가를 Urlaub im inland oder ausland
 - Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich fahren.
 
@@ -289,5 +353,7 @@ Ich machst Tenis.
 als ich 15 jahr alt war, 
 welche benutzest du zu suchen
 ich benutze mornalllerwieser im Naver einfach. 
--a : 
+-a :
+
+
 ### 
