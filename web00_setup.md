@@ -48,6 +48,7 @@
   - 압축을 C:\Programs of Develop 에 풀고 다음을 설정.  
   - 자바 설치경로 잡아주기
     - 기본설치경로 C:\Program Files\Java\jdk
+    
 - 오라클 클라이언트 다운로드
   - [오라클 홈페이지](https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
   - 압축을 C:\Programs of Develop 에 풀고 다음을 설정.
