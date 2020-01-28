@@ -251,6 +251,9 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\templates\board\write.
     }
     ```
 
+- 해당앱 views.py에 `from.models import Table1` 추가 
+    - DB에서 끌어올 수 있게 해준다.
+    
 - DB연동 
     - setup을 마치고 연동 실행. 
     ```bash
