@@ -260,6 +260,7 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\templates\board\write.
         $ python manage.py check                # 문제없음 확인
         $ python manage.py makemigrations board # 만들기
         $ python manage.py migrate              # 이동하기
+        
         # models.py있는 폴더/migrations/에 연동내역 확인
 
         # 오류시 models.py가 있는 폴더내 migrations를 지우고 sqldevelop-DJANGO_MIGRATION 테이블의 데이터중 관련내역을 지우고 재실행 

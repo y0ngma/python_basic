@@ -7,7 +7,7 @@
     1. 몽고디비
     1. 몽고디비-오라클로 이동
     1. 오라클에서 번호매기고 중복값,null제거
-    1. 장고, json,    등 활용한 서비스 제공
+    1. 자바스크립트-데이터 변환 중요
 
 
 - 데이터별 크롤링 방법
@@ -22,6 +22,29 @@
     - 자바스크립트 페이지
 
 ---
+
+## Setup
+- Robo 3T (sql 처럼 DB 관리)
+    - https://robomongo.org/download
+    - Download Robo 3T 최신버전 다운 (압축파일으로. 실행파일은 지저분해지므로)
+    - robo3t.exe 실행
+        - create 눌러서 다음을 입력한다.
+        - address `192.168.99.100` : `32766`
+
+- Beautiful Soup  
+    ```bash
+    @Anaconda Prompt
+    # html에서 정보 가져오기
+    conda list beautifulsoup # 설치 확인
+    
+    conda install beautifulsoup
+    conda install pymongo
+    conda install bs4
+    ```
+---
+
+## Beautiful Soup
+    - 스크립트 없이 html위주로 렌더링된 페이지 크롤링용
 
 ## css_selector
 
@@ -54,31 +77,7 @@
         driver.find_element_by_class_name('rank_top1000_list') \
         .find_elements_by_tag_name("li")
         ```
-
 ---
 
-
-- Beautiful Soup
-    - 스크립트 없이 html위주로 렌더링된 페이지 크롤링용
-
-## Setup
-- Robo 3T (sql 처럼 DB 관리)
-    - https://robomongo.org/download
-    - Download Robo 3T 최신버전 다운 (압축파일으로. 실행파일은 지저분해지므로)
-    - robo3t.exe 실행
-        - create 눌러서 다음을 입력한다.
-        - address `192.168.99.100` : `32766`
-
-- Beautiful Soup  
-    ```bash
-    @Anaconda Prompt
-    # html에서 정보 가져오기
-    conda list beautifulsoup # 설치 확인
-    
-    conda install beautifulsoup
-    conda install pymongo
-    conda install bs4
-    ```
----
     
  
