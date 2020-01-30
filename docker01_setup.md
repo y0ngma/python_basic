@@ -26,26 +26,30 @@
         mrsono0이라는 이름의 도커 아이디 레포지토리의 eda 라는 이미지
 
 1. 이미지로 컨테이너 설치하기
-    1. docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes `mrsono0/base_project:eda` 
+    1. docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes mrsono0/base_project:eda 
     1. docker ps -a 실행중인 컨테이너  확인
+    2. 
 
-1. 토큰값 받아서 주피터렙 접속하기
+2. 토큰값 받아서 주피터렙 접속하기
     1. docker logs --tail 30 eda
-    1. `192.168.99.100:8888`
-    1. notebook 하나 text.ipynb 작업저장
+    2. `192.168.99.100:8888`
+    3. notebook 하나 text.ipynb 작업저장
 
-1. 설치된 컨테이너를 내아이디로 커밋(최초 복사)
+3. 설치된 컨테이너를 내아이디로 커밋(최초 복사)
     1. docker commit eda(컨테이너명) y0ngma(도커아이디)/eda(이미지명):태크명(생략가능)
-    1. docker images
+    2. docker images
 
-1. 설치된 다른 이미지 삭제
+4. 설치된 다른 이미지 삭제
     1. docker images
-    1. docker rmi 지우고싶은 IMAGE ID 입력
+    2. docker rmi 지우고싶은 IMAGE ID 입력
         - 단, 다른곳에서 참조중인것은 삭제 불가 할 수 있음.
 
-1. 푸쉬하기
+5. 푸쉬하기
     1. 나를 포함한 다른사람이 pull하여 내 이미지를 받을 수 있게 한다.
-    1. docker push 도커아이디/이미지명
+    2. docker push 도커아이디/이미지명
+
+1. 다음날 실행하기
+   1. docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes y0ngma/eda 
 
 
 ## setup
@@ -95,7 +99,7 @@
     - `jupyter lab` 입력
 
 ## 온라인 쥬피터랩 접속하기
-
+- docker logs --tail 30 eda
     ```bash
     docker ps -a
     # 실행 확인 후
@@ -130,8 +134,36 @@
             or http://127.0.0.1:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
     ```
 
-## 쥬피터 렙
-- 콘솔창아이콘 클릭
+## 쥬피터 렙 콘솔창
+- 기본 명령어
+    ```sql
+        ls                              --현경로 파일확인
+        ls -al                          --현경로 모든 파일확인
+
+        cd ..                           --하위
+        cd dest                         --상위
+        cd ./folder1/dest               --현재에서부터 목표\
+
+        mkdir newfolder                 --만들기
+
+        sudo -i                         --루트계정으로(admin) 로그인
+        exit                            --로그인한 루트 로그아웃
+            예: vscode@6ad77634b826:/$ pwd
+                /
+                vscode@6ad77634b826:/$ sudo -i
+                root@6ad77634b826:~# pwd
+                /root
+                root@6ad77634b826:~# exit
+                logout
+                vscode@6ad77634b826:/$ 
+            
+        --conda install xlwt라고 검색하여
+        conda install -c anaconda xlwt  --공홈에서 추천해주는 명령 이용가능
+        
+
+    ```
+
+- + 누른후 콘솔창아이콘 클릭
 
     ```sql
     --모든 파일 확인
@@ -149,7 +181,7 @@
     -- notebooks 확인 후
         drwxr-xr-x 2 vscode vscode 4096 Jan 29 09:54 notebooks
 
-    --pwd 루트계정으로 경로변경
+    -- 루트계정으로 경로변경
         vscode@9406f700bac8:~$ sudo -i
         root@9406f700bac8:~# pwd
         /root
@@ -170,7 +202,7 @@
         -rw-r--r-- 1 vscode vscode  807 Apr 18  2019 .profile
         drwxr-xr-x 2 vscode vscode 4096 Jan 29 09:54 notebooks
 
-    --chown -R vscode:vscode ./notebooks입력
+    --chown -R 체인지 오너
         root@9406f700bac8:/home/vscode# chown -R vscode:vscode ./notebooks
         root@9406f700bac8:/home/vscode# ls -al
         total 52
@@ -187,12 +219,12 @@
         root@9406f700bac8:/home/vscode# 
     ```
 
-- cp 복사하는법
+- cp:복사하기
 ```bash
 docker cp ./a.py eda:/home/vscode/notebooks/
 # cp(복사) SRC_PATH소스경로 DEST_PATH목표경로
 # 현재 경로./에서 a.py(이름.확장자)를 eda의 다음경로로 
-docker cp eda:/home/vscode/notebooks/test.ipynb ./
+docker cp eda:/home/vscode/notebooks/pd01_boolseries.ipynb ./
 # eda라는 컨테이너의 해당경로의 파일을 현재경로로 복사하라
-# notebooks 철자 유의 
+# notebookS 철자 유의 
 ```

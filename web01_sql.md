@@ -184,7 +184,7 @@
         from employees
         where first_name = 'Bruce')
         and first_name <> 'Bruce' 
-        -- != 이랑 같음 <>
+        -- <>는 != 이랑 같음 
     ```
 
 - COUNT와 GROUP BY
@@ -226,7 +226,7 @@ WHERE
     TO_NUMBER(YEAR||MONTH||DAY||TIME) < 2019742 AND
     RANK >= 1 AND RANK <=3
 
--- 아래는 2020년 1월 2일 ~ 2월 1일 검색시 월은 만족 일은 불만족으로 에러.. 합칠필요   
+-- 아래는 2020년 1월 2일 ~ 2월 1일 검색시 월은 만족,일은 불만족으로 에러.. 합칠필요   
 SELECT WORD FROM BOARD_BOARD1
 WHERE 
     GENE LIKE %s AND 
