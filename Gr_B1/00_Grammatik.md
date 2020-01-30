@@ -74,7 +74,15 @@ angewiesen auf 4
     | bei +3           |
     | während +2       |
     | seit             | ~Seit dem Einzug in unsere neue Wohnung schlafen wir besser |
-    |                  | .                                                           |
+    | durch                 | .                                                           |
+bis
+solange
+sobald
+damit
+umzu
+wenn/falls
+obwohl
+sodass
 
     | Bindewort+m.Satz | eine Datenstichprobe                                                     |
     | ---------------- | ------------------------------------------------------------------------ |
@@ -85,6 +93,12 @@ angewiesen auf 4
     | nachdem          | ~er sich gedusch hat, fühlte er sich wohler.                             |
     | seit             | Seitdem wir in unsere neue Wohnung eingezögen sind, schlafen wir besser. |
     | seit             | Seitdem die Straße gesperrt worden ist, ist es bei uns ruhiger geworden  |
+wegen
+aus Angst
+bei
+für
+durch
+trotz
 
 
     | Umstandwort  | eine Datenstichprobe |
@@ -93,6 +107,12 @@ angewiesen auf 4
     | vorher       | .                    |
     | nachdem      | .                    |
     |              | .                    |
+deshalb
+dafür
+dann
+so
+trotzdem
+
 
 # Nomen
 ## Nomen.Zahlen 수사.시각

@@ -54,7 +54,6 @@
     - Mit dem Taxi hohlen wir ihn ab
     - Holen wir ihn mit dem Taxi ab, brauchen keiner von uns um zürückzufahren.  
 
-
 2. was zumachen  
 den ganzen Tag온종일  trinken wir auf der erste Straße des Seomyeon
 
@@ -206,13 +205,15 @@ beim oder am bahnhof
 ### SNS sozial network
 
 #### 18 ohne autoins stadtzentrum
+19 mit geswesten oder ohne geswester
 
 ### 30 Musik im alltag
 - ich habe keine lieblings säger
 jenre. arten
 Welche Musikart magst du. wie ich schön gesagt habe, weil ich meisten sneidigen Musik hören
 ich habe nicht verstanden
-
+- kann ich englisch beim lernen hoeren??
+- 
 ### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
 
 ### ohne Auto Innenstadt
@@ -223,6 +224,9 @@ alleinleben
 reisen mit Tier alltag gewollen
 geistisch
 wenn ich ein beruf haben, möchte ich mit Katze leben
+weil U-bahn an jeder Station 멈추다
+Hast du führerschein
+
 
 ### ein musikinstrument
 
