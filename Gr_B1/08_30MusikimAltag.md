@@ -1,5 +1,5 @@
 #### 30 Musik im Alltag
-29 studieren oder gleich geld verdienen 고딩 돈벌기
+
 
 Als ich im Junger war, habe ich Musik im Alltag zuhören. 
 

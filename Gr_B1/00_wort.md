@@ -6,12 +6,12 @@ an D|leiden|Er **leidet** an einer schweren Krankheit(->unter)|~병으로 고통
 an D|es liegt|**Es** **lag** am Wetter, dass wir nicht kommen konnten|~에 달려있다
 an D|sterben|Die alte Frau **starb** an Krebs|~병으로 죽다
 an D|teilnehmen|Wir **nehmen** am Sprachkurs **teil**|~에 참여하다
-an D|zweifeln|Ich **Zweifle** an seiner Ehrlichkeit|~을 의심하다
+an D|zweifeln|Ich **Zweifle** an seiner Ehrlichkeit|~을 의심하다(ehrlich honest)
 an A|denken|Ich **denke** oft an meine Kindheit|~을 생각하다
 an A|sich erinnern|Ich **erinnere** **mich** gern an die Ferien|~을 기억,회상하다
 an A|sich gewöhnen|Wir müssen **uns** an das schlechte Wetter **gewöhnen**|~에 익숙해지다
 an A|glauben|**Glauben** Sie an den Fortschritt|~을 믿다
-an A|sich wenden|Ich **wende** **mich** wegen der Miete an das Sozialamt(-gegen)|~을 질문하다
+an A|sich wenden|Ich **wende** **mich** wegen der Miete an das Sozialamt(-gegen)|(to turn->)~을 질문하다(n. Amt office)
 
 auf A|achten|Der Busfahere **achtete** nicht auf den Gegenverkehr|~
 auf A|antworten|Ich habe sofort auf seinen Brief **geantwortet**|~

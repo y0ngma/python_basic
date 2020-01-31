@@ -73,7 +73,7 @@
     # 1. 도커 허브에 있는 이미지로 컨테이너 런 (최초 실행시)
     docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes mrsono0/base_project:eda 
     
-    -v /C/Users/user/PNU_201912/eda:/home/vscode/notebooks/eda 
+    -v /C/Users/admin/yonglab/eda:/home/vscode/notebooks/eda 
 
     #   # 이미지      : 파일
         # docker run    :
@@ -85,7 +85,7 @@
         # -u 돌아가는 계정설정. vscode에서 돌림
         # -p 8888-8889:8888-8889 주피터노트북-vscode : vscode차용 포트범위. 후자는 컨테이너 내부
         # 8881-8882 등으로 전자의 번호 바꿀 수 있음 
-        # -e JUPYTER_RUN=yes : 리소스가 딸릴때 비활성화
+        # -e JUPYTER_RUN=yes : 리소스가 딸릴때 비활성화=no 가능
         # -v            : 특정폴더 로컬(경로) 연결. 
         # 단, /C/User.. 표기유의.  
         # ../eda:/home/vscode/notebooks/eda 

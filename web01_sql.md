@@ -217,6 +217,7 @@
     |아리따움대란    |	15|
 
 - 컬럼 합쳐서 비교 (To_CHAR, TO_DATE, TO_NUMBER)
+- 
 ```sql
 SELECT WORD,TO_NUMBER(YEAR||MONTH||DAY||TIME) 
 FROM BOARD_BOARD1 
