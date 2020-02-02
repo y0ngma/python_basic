@@ -112,7 +112,8 @@ angewiesen auf 4
     | dann         |
     | so           |
     | trotzdem     |
-
+쓰임별 정리
+---
 
 # Nomen
 ## Nomen.Zahlen 수사.시각

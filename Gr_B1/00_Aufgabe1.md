@@ -150,58 +150,77 @@ dazu will ich kleines kieste bringen.
 
 ### 반 대표 옷, 장소 정하기
 
-weisst du wir gehen ins konzert nach klass?
-plannen wir
-ich schlage vor dass ich moechte ins klassiche konzert gehen
+- weisst du wir gehen ins konzert nach klass?
+- plannen wir
+- ich schlage vor dass ich moechte ins klassiche konzert gehen
 
-- was machst du am besten 
-- am diesen wochenende
-- am eingang von busan haupbahnhof
-- whelche deutsche klassische konzert gehen wir. was meist du?
-- ein klasse konzert besuchen
-- am freitag abend kannen wir gehen? wo treffen wir uns? wir treffen uns an U-bahnhof. ist konzert halle 
-- was ziehen
-- Wohin moechtest du gehen.
-- meine freundin habt gesagt
+    - was machst du am besten 
+    - am diesen wochenende
+    - am eingang von busan haupbahnhof
+    - whelche deutsche klassische konzert gehen wir. was meist du?
+    - ein klasse konzert besuchen
+    - am freitag abend kannen wir gehen? wo treffen wir uns? wir treffen uns an U-bahnhof. ist konzert halle 
+    - was ziehen
+    - Wohin moechtest du gehen.
+    - meine freundin habt gesagt
 
-#### kleidung
-- was tragen wir dort?
-- weis blause und schwez hose
-- wie were rotem Mantel. das finde ich toll!
-- durfen nicht 입지말아야할것 말할 수 있음.
-- ein kleid 원피스 
-- was fur ein kleidung wir 
-kurstzlenemerin?
+- kleidung
+  - was tragen wir dort?
+  - weis blause und schwez hose
+  - wie were rotem Mantel. das finde ich toll!
+  - durfen nicht 입지말아야할것 말할 수 있음.
+  - ein kleid 원피스 
+  - was fur ein kleidung wir 
+  - kurstzlenemerin?
 
-#### kaufen
-- 10% ermesigung oder einfach. 사는이유
-- dass is weniger als am shalter kaufen.
-- was fur eine Kleidung
-- was tragen wir?
-ich bin da gegen
+- kaufen
+  - 10% ermesigung oder einfach. 사는이유
+  - dass is weniger als am shalter kaufen.
+  - was fur eine Kleidung
+  - was tragen wir?
+  - ich bin da gegen
 
 
-#### wann und wo trefen wir uns
-- dann treffen wir uns am eingan oder am shalter.
-- wir mussen um 7 uhr am montag
-- wann findet dass konzert start?
-- und wir brauchen nach ulsan fahre 
-- unsere teilnemer 
-- es beginnt um sechzen Uhr also wir gehen ab 15Uhr nach Ulsan.
-- sechs Uhr am Montag.
-- lass uns treffen am Busan bahnhof.
+- wann und wo trefen wir uns
+  - dann treffen wir uns am eingan oder am shalter.
+  - wir mussen um 7 uhr am montag
+  - wann findet dass konzert start?
+  - und wir brauchen nach ulsan fahre 
+  - unsere teilnemer 
+  - es beginnt um sechzen Uhr also wir gehen ab 15Uhr nach Ulsan.
+  - sechs Uhr am Montag.
+  - lass uns treffen am Busan bahnhof.
 
-- start finden
-beim oder am bahnhof
+  - start finden
+  - beim oder am bahnhof
 
 ---
-
 
 ## Aufgabe 3
 - 주제에 대해 짧게 준비하고 생각을 말한다.
 - 상대의견 들으며 질문내용을 준비한다.
-#### 9 darf man in den mittag pause in firma kurzschlafen
+- 질문이 이상해도 받아칠 수 있으면 좋다.
+- 
+### 9 darf man in den mittag pause in firma kurzschlafen
 
+
+### 26 feste feiern 설, 불꽃부산 지역 등 하라 마라
+
+
+### 15 wie lange soll man jeden tag sport machen
+
+### 28 ein musik instrument lernen
+### 46contact nachbarn
+### 1 haustier
+aus gejetzete hunde adoptieren
+
+### 46 allein oder wohngemeinschaft셰어하우스
+### 55 wie wichtig sind sozialle netzwerke
+
+### Nachbarn
+- wenn deiner Nachbarn laub machen, was machst du?
+- Ich besuche meine Nachbarn um mich mit meinen Nachbarn zuunterhalten.
+- 
 ### SNS sozial network
 
 #### 18 ohne autoins stadtzentrum
@@ -215,6 +234,9 @@ ich habe nicht verstanden
 - kann ich englisch beim lernen hoeren??
 - 
 ### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
+- Es gibt Stau 
+- BRT zu nahmen
+- die baustelle war unbekuben. aber jetzt ich kann scheneller ans Ziel komme. 
 
 ### ohne Auto Innenstadt
 Was benutst du wenn du reist
@@ -276,7 +298,8 @@ weil ich nicht unter vielen leuten leben m
 - fertig essen 패스트푸드
 - kann die bezeihung weiter gehen?
 - wenn ich 
--
+- 동물보호
+-  
 ### Wie viel zu haus
 - wie oft benutzen Sie. ich benutze driviermal am Tag. ich habe nichts zu machen. 
 - ferngesehen 티비봤다
@@ -303,6 +326,12 @@ entfern 떨어지다
 genug Geld habe ich 충분한돈
 wie ich schön 
 von klein auf war.
+unabhängig 비의존적인
+selbstandig werden 독립하다
+wann willst du selb standig werden, wenn du über 22 jahre bei deiner Eltern bleibst.
+wann ich Arbeit habe, 
+
+ampassen
 
 ### schulesport
 grund/mid/ober 초중고?
