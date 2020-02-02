@@ -107,7 +107,7 @@ angewiesen auf 4
     | gleichzeitig | .                    |
     | vorher       | .                    |
     | nachdem      | .                    |
-    | deshalb      |
+    | deshalb, deswegen|
     | dafür        |
     | dann         |
     | so           |
