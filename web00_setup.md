@@ -41,7 +41,7 @@
     - 
     ```
     docker-machine rm default
-    docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "2048" --virtualbox-disk-size "50000" default
+    docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "8192" --virtualbox-disk-size "50000" default
     ```
 
 ### SQL Developer 자바 연결하기

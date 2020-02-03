@@ -21,7 +21,7 @@
     - 가상 크기 50GB으로 확장하기
     ```
     docker-machine rm default
-    docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "2048" --virtualbox-disk-size "50000" default
+    docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "8192" --virtualbox-disk-size "50000" default
     ```
 
 ## 완전삭제법
@@ -31,7 +31,7 @@
 2. 프로그램제거 변경에서 VirtualBox, Docker ToolBox 삭제
 3. C:\Users\(사용자 이름)\.docker\machine\machines(docker-machine 설치경로)
     1. .docker 폴더 삭제
-4. C:\Program Files\Docker Toolbox 삭제
+<!-- 4. C:\Program Files\Docker Toolbox 삭제 -->
 5. C:\Users\admin\AppData\.docker 삭제
   
 ---
