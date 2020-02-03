@@ -16,39 +16,59 @@
     - 버전차이
     - 도커기반으로 만들면 해결 가능
 
+## 도커 이미지 용량 확장 방법
+- 기존 이미지 전체 삭제 돼므로 꼭 백업 후 실행!!!
+    - 가상 크기 50GB으로 확장하기
+    ```
+    docker-machine rm default
+    docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "2048" --virtualbox-disk-size "50000" default
+    ```
+
+## 완전삭제법
+1. 실행중 컨테이너 중지
+   1. 모든 컨테이너 이미지, 네트워크, 볼륨제거
+   2. `docker system prune --volumes --all`
+2. 프로그램제거 변경에서 VirtualBox, Docker ToolBox 삭제
+3. C:\Users\(사용자 이름)\.docker\machine\machines(docker-machine 설치경로)
+    1. .docker 폴더 삭제
+4. C:\Program Files\Docker Toolbox 삭제
+5. C:\Users\admin\AppData\.docker 삭제
+  
+---
+
 ## - 도커 기본 사용법
     http://pyrasis.com/Docker/Docker-HOWTO
     https://dataitgirls2.github.io/10minutes2pandas/
 
 1. 도커 이미지 다운로드
     1. docker pull `mrsono0/base_project:eda`
-    1. docker images 이미지 확인  
+    2. docker images 이미지 확인  
         mrsono0이라는 이름의 도커 아이디 레포지토리의 eda 라는 이미지
 
-1. 이미지로 컨테이너 설치하기
+2. 이미지로 컨테이너 설치하기
     1. docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes mrsono0/base_project:eda 
-    1. docker ps -a 실행중인 컨테이너  확인
-    2. 
+    2. docker ps -a 실행중인 컨테이너  확인
+    3. 
 
-2. 토큰값 받아서 주피터렙 접속하기
+3. 토큰값 받아서 주피터렙 접속하기
     1. docker logs --tail 30 eda
     2. `192.168.99.100:8888`
     3. notebook 하나 text.ipynb 작업저장
 
-3. 설치된 컨테이너를 내아이디로 커밋(최초 복사)
+4. 설치된 컨테이너를 내아이디로 커밋(최초 복사)
     1. docker commit eda(컨테이너명) y0ngma(도커아이디)/eda(이미지명):태크명(생략가능)
     2. docker images
 
-4. 설치된 다른 이미지 삭제
+5. 설치된 다른 이미지 삭제
     1. docker images
     2. docker rmi 지우고싶은 IMAGE ID 입력
         - 단, 다른곳에서 참조중인것은 삭제 불가 할 수 있음.
 
-5. 푸쉬하기
+6. 푸쉬하기
     1. 나를 포함한 다른사람이 pull하여 내 이미지를 받을 수 있게 한다.
     2. docker push 도커아이디/이미지명
 
-1. 다음날 실행하기
+7. 다음날 실행하기
    1. docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes y0ngma/eda 
 
 
@@ -164,6 +184,11 @@
         conda install -c anaconda xlwt  --공홈에서 추천해주는 명령 이용가능
         
     ```
+    - 압축하기
+    ```sql
+    tar -cvf (압축 파일명).tar (압축할 폴더 또는 파일)
+    ```
+    
     - 압축풀기
     ```sql
     vscode@441e368db4cd:/$ cd home/vscode/notebooks

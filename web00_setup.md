@@ -5,42 +5,46 @@
 1. 
 
 
-### Set up Server
+## Set up Server
 - docker의 필요성 :
-    ``` 개인 컴퓨터 사용을 깔끔하게 하고 서버 환경설정 관리를 용이하게 하기 위해 docker로 만든 container안에 Oracle을 설치하여 서버를 구축한다.
-    ``` 
-- 압축파일 풀고 모아둘 경로 C:\Programs of Develop 생성
-- Docker 툴박스 다운로드
-  - https://github.com/docker/toolbox/releases
-  - 인스톨     
-    - 전부 체크 (깃 설치 안되어 있으면 체크 = 깔려있으면 pass )
-    - 위에서 아래로 3개 체크 
-  - Docker Quickstart Terminal
-    ```docker
-    $ docker ps -a # 상태확인
-     
-                        ##         .
-                  ## ## ##        ==
-              ## ## ## ## ##    ===
-          /"""""""""""""""""\___/ ===
-      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
-          \______ o           __/
-            \    \         __/
-              \____\_______/
-    $ docker-machine upgrade # 오류시
-    ```
-    - **주의** : virtual box에서 메모리를 4096으로(절반의양) 변경 후 설치
+    - 개인 컴퓨터 사용을 깔끔하게 하고 서버 환경설정 관리를 용이하게 하기 위해 docker로 만든 container안에 Oracle을 설치하여 서버를 구축한다.
     
-    - 오라클 버전 12c 설치하기
-        ```docker
-        $ docker search oracle-12c
-        $ docker pull truevoly/oracle-12c
-        인기있는 버전임. 
-        $ docker images
-        이미지 확인 5.7GB
-        $ docker start oracle12c 
-        $ docker-machine start
-        ```
+- 압축파일 풀고 모아둘 경로 C:\Programs of Develop 생성
+- 
+### Docker 툴박스 다운로드
+- https://github.com/docker/toolbox/releases
+- 인스톨     
+  - 전부 체크 (깃 설치 안되어 있으면 체크 = 깔려있으면 pass )
+  - 위에서 아래로 3개 체크 (기본)
+  - 
+- Docker Quickstart Terminal 실행
+  ```docker
+  $ docker ps -a # 상태확인
+   
+                      ##         .
+                ## ## ##        ==
+            ## ## ## ## ##    ===
+        /"""""""""""""""""\___/ ===
+    ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+        \______ o           __/
+          \    \         __/
+            \____\_______/
+  $ docker-machine upgrade # 오류시
+  ```
+- **주의** : virtual box에서 메모리를 4096으로(절반의양) 변경 후 설치
+  
+- 도커 이미지 용량 확장 방법
+    - 기존 이미지 전체 삭제 되므로 꼭 백업 후 실행!!!
+    - dist size 가상 크기 50GB으로 확장하기
+    - cpu count 2
+    - memory 2048
+    - 
+    ```
+    docker-machine rm default
+    docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "2048" --virtualbox-disk-size "50000" default
+    ```
+
+### SQL Developer 자바 연결하기
 - Java 설치
   - 비트에 맞는 Java 다운로드
     - jdk-8u211-windows-x64
@@ -49,11 +53,23 @@
   - 자바 설치경로 잡아주기
     - 기본설치경로 C:\Program Files\Java\jdk
     
-- 오라클 클라이언트 다운로드
-  - [오라클 홈페이지](https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
-  - 압축을 C:\Programs of Develop 에 풀고 다음을 설정.
-    ```
-    내컴퓨터 우클릭> 시스템 > 고급시스템 설정 > 환경변수 > 아래의 시스템변수에서 path찾아 편집클릭 > instantclient_19_3 를 경로로 잡아줌
+### 오라클 클라이언트 다운로드
+- [오라클 홈페이지](https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
+- 압축을 C:\Programs of Develop 에 풀고 다음을 설정.
+  ```
+  내컴퓨터 우클릭> 시스템 > 고급시스템 설정 > 환경변수 > 아래의 시스템변수에서 path찾아 편집클릭 > instantclient_19_3 를 경로로 잡아줌
+  ```
+
+### 도커 이미지 pull
+- 오라클 버전 12c 설치하기
+    ```docker
+    $ docker search oracle-12c
+    $ docker pull truevoly/oracle-12c
+    인기있는 버전임. 
+    $ docker images
+    이미지 확인 5.7GB
+    $ docker start oracle12c 
+    $ docker-machine start
     ```
 - DB Browser for SQLite
 
