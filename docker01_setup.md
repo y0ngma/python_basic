@@ -73,6 +73,7 @@
     # 1. 도커 허브에 있는 이미지로 컨테이너 런 (최초 실행시)
     docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes mrsono0/base_project:eda 
     
+    # 2. 다음을 추가하면 로컬
     -v /C/Users/admin/yonglab/eda:/home/vscode/notebooks/eda 
 
     #   # 이미지      : 파일
@@ -99,39 +100,41 @@
     - `jupyter lab` 입력
 
 ## 온라인 쥬피터랩 접속하기
-- docker logs --tail 30 eda
+- `docker logs --tail 30 eda`으로 토큰번호 알아내어 쥬피터랩 접속하기
     ```bash
     docker ps -a
     # 실행 확인 후
     docker logs --tail 30 eda
     # 뒤에서부터 30줄 보여달라.
     # docker logs --head 50 eda 앞에서부터 50줄
-        (base) C:\Project_git\Project01_Crawling\MiniProject01\project>docker logs --tail 30 eda
-        vscode@9406f700bac8:/$ Error: could not find config file /etc/supervisord.conf
-        For help, use /usr/bin/supervisord -h
-        info  Server listening on http://0.0.0.0:8889 # 포트
-        info    - No authentication
-        info    - Not serving HTTPS
-        generated new fontManager
-        [I 09:54:05.426 LabApp] Writing notebook server cookie secret to /home/vscode/.local/share/jupyter/runtime/notebook_cookie_secret
-        [W 09:54:05.445 LabApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
-        [I 09:54:05.495 LabApp] [beakerx] enabled
-        [I 09:54:07.169 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
-        [I 09:54:07.169 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-        [I 09:54:08.850 LabApp] Serving notebooks from local directory: /home/vscode/notebooks
-        [I 09:54:08.850 LabApp] The Jupyter Notebook is running at:
-        [I 09:54:08.850 LabApp] http://9406f700bac8:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
-        [I 09:54:08.851 LabApp]  or http://127.0.0.1:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
-        [I 09:54:08.851 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-        [C 09:54:08.855 LabApp]
+    ```
+    ```bash
+    (base) C:\Project_git\Project01_Crawling\MiniProject01\project>docker logs --tail 30 eda
+    vscode@9406f700bac8:/$ Error: could not find config file /etc/supervisord.conf
+    For help, use /usr/bin/supervisord -h
+    info  Server listening on http://0.0.0.0:8889 # 포트
+    info    - No authentication
+    info    - Not serving HTTPS
+    generated new fontManager
+    [I 09:54:05.426 LabApp] Writing notebook server cookie secret to /home/vscode/.local/share/jupyter/runtime/notebook_cookie_secret
+    [W 09:54:05.445 LabApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+    [I 09:54:05.495 LabApp] [beakerx] enabled
+    [I 09:54:07.169 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+    [I 09:54:07.169 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+    [I 09:54:08.850 LabApp] Serving notebooks from local directory: /home/vscode/notebooks
+    [I 09:54:08.850 LabApp] The Jupyter Notebook is running at:
+    [I 09:54:08.850 LabApp] http://9406f700bac8:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
+    [I 09:54:08.851 LabApp]  or http://127.0.0.1:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
+    [I 09:54:08.851 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+    [C 09:54:08.855 LabApp]
 
-            To access the notebook, open this file in a browser:
-                file:///home/vscode/.local/share/jupyter/runtime/nbserver-13-open.html
-            Or copy and paste one of these URLs:
-                http://9406f700bac8:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
-            # 맨 하단 token= 이후 번호 복사
-            # 192.168.99.100:8888에 접속하여 토큰번호로 쥬피터렙 접속
-            or http://127.0.0.1:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
+        To access the notebook, open this file in a browser:
+            file:///home/vscode/.local/share/jupyter/runtime/nbserver-13-open.html
+        Or copy and paste one of these URLs:
+            http://9406f700bac8:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
+        # 맨 하단 token= 이후 번호 복사
+        # 192.168.99.100:8888에 접속하여 토큰번호로 쥬피터렙 접속
+        or http://127.0.0.1:8888/?token=5217fdc3b4c9995adbeeae90c18d05d6e901dbbe4574523b
     ```
 
 ## 쥬피터 렙 콘솔창
@@ -160,10 +163,24 @@
         --conda install xlwt라고 검색하여
         conda install -c anaconda xlwt  --공홈에서 추천해주는 명령 이용가능
         
-
+    ```
+    - 압축풀기
+    ```sql
+    vscode@441e368db4cd:/$ cd home/vscode/notebooks
+    vscode@441e368db4cd:~/notebooks$ ls
+    a.py  data.zip  test.ipynb
+    vscode@441e368db4cd:~/notebooks$ mkdir data
+    vscode@441e368db4cd:~/notebooks$ ls
+    a.py  data  data.zip  test.ipynb
+    vscode@441e368db4cd:~/notebooks$ mv data.zip ./data
+    vscode@441e368db4cd:~/notebooks$ cd data
+    vscode@441e368db4cd:~/notebooks/data$ ls
+    data.zip
+    vscode@441e368db4cd:~/notebooks/data$ unzip data.zip
     ```
 
-- + 누른후 콘솔창아이콘 클릭
+
+- 계정 변환 chown -R
 
     ```sql
     --모든 파일 확인
@@ -220,11 +237,11 @@
     ```
 
 - cp:복사하기
-```bash
-docker cp ./a.py eda:/home/vscode/notebooks/
-# cp(복사) SRC_PATH소스경로 DEST_PATH목표경로
-# 현재 경로./에서 a.py(이름.확장자)를 eda의 다음경로로 
-docker cp eda:/home/vscode/notebooks/pd01_boolseries.ipynb ./
-# eda라는 컨테이너의 해당경로의 파일을 현재경로로 복사하라
-# notebookS 철자 유의 
-```
+    ```bash
+    docker cp ./a.py eda:/home/vscode/notebooks/
+    # cp(복사) SRC_PATH소스경로 DEST_PATH목표경로
+    # 현재 경로./에서 a.py(이름.확장자)를 eda의 다음경로로 
+    docker cp eda:/home/vscode/notebooks/pd01_boolseries.ipynb ./
+    # eda라는 컨테이너의 해당경로의 파일을 현재경로로 복사하라
+    # notebookS 철자 유의 
+    ```
