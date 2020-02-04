@@ -11,8 +11,8 @@ column을 미리 짜서 데이터를 맞춰 넣는다.
     ```sql
     sqldevelop에서 
     32764
-
-```
+    ```
+    
 - **Oracle**
 
     - `Data Modeler`로 DB테이블 간 관계 설정하기

@@ -55,7 +55,7 @@
     2. `192.168.99.100:8888`
     3. notebook 하나 text.ipynb 작업저장
 
-4. 설치된 컨테이너를 내아이디로 커밋(최초 복사)
+4. 설치된 컨테이너를 내아이디로 커밋(최초 복사) login
     1. docker commit eda(컨테이너명) y0ngma(도커아이디)/eda(이미지명):태크명(생략가능)
     2. docker images
 
@@ -158,6 +158,13 @@
     ```
 
 ## 쥬피터 렙 콘솔창
+- xlrd 으로 엑셀파일 읽기
+    ``` sql
+    --conda install xlwt라고 검색하여
+    sudo -i
+    pwd
+    conda install -c anaconda xlrd  --공홈에서 추천해주는 명령 이용가능
+    ```
 - 기본 명령어
     ```sql
         ls                              --현경로 파일확인
@@ -180,8 +187,6 @@
                 logout
                 vscode@6ad77634b826:/$ 
             
-        --conda install xlwt라고 검색하여
-        conda install -c anaconda xlwt  --공홈에서 추천해주는 명령 이용가능
         
     ```
     - 압축하기

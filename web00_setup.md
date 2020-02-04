@@ -35,7 +35,7 @@
   
 - 도커 이미지 용량 확장 방법
     - 기존 이미지 전체 삭제 되므로 꼭 백업 후 실행!!!
-    - dist size 가상 크기 50GB으로 확장하기
+    - disk size 가상 크기 50GB으로 확장하기
     - cpu count 2
     - memory 2048
     - 
@@ -43,6 +43,12 @@
     docker-machine rm default
     docker-machine create --driver virtualbox --virtualbox-cpu-count "2" --virtualbox-memory "8192" --virtualbox-disk-size "50000" default
     ```
+    
+### 오라클 클라이언트 다운로드
+- [오라클 홈페이지](https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
+- 압축을 C:\Programs of Develop 에 풀고 다음을 설정.
+  
+  내컴퓨터 우클릭> 시스템 > 고급시스템 설정 > 환경변수 > 아래의 시스템변수에서 path찾아 편집클릭 > instantclient_19_3 를 경로로 잡아줌
 
 ### SQL Developer 자바 연결하기
 - Java 설치
@@ -52,12 +58,6 @@
   - 압축을 C:\Programs of Develop 에 풀고 다음을 설정.  
   - 자바 설치경로 잡아주기
     - 기본설치경로 C:\Program Files\Java\jdk
-    
-### 오라클 클라이언트 다운로드
-- [오라클 홈페이지](https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
-- 압축을 C:\Programs of Develop 에 풀고 다음을 설정.
-  ```
-  내컴퓨터 우클릭> 시스템 > 고급시스템 설정 > 환경변수 > 아래의 시스템변수에서 path찾아 편집클릭 > instantclient_19_3 를 경로로 잡아줌
   ```
 
 ### 도커 이미지 pull
