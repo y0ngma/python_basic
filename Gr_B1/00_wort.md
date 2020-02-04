@@ -41,6 +41,7 @@ gegen A|kämpfen|Wir müssen gegen die Armut **kämpfen** (=für)|~에 반대하
 gegen A|protestieren|Die Schüler **protestieren** gegen die Fahrpreiserhöhung|~에 대해 항의하다
 gegen A|verstoßen|Sie hat gegen das Gesetz **verstoßen**|(법,규정을)어기다
 gegen A|sich wenden|ich **wende** **mich** gegen die falschen Vorwürfe (=an)|~강력히 항의하다
+
 in D|sich irren|Er hat sich im Datum **geirrt**|착각하다
 mit|anfangen|Wir **fangen** mit der ersten Seite **an**|시작하다
 mit|aufhören|Sie **höreten** mit der Diskussion **auf**|그만두다 끝나다

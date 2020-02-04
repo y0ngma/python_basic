@@ -34,13 +34,25 @@
 ---
 - [x] Hausaufgabe
 - [ ] 문법 접속사,전치사, 부사 정리
+45 schule sport
+5 darf man in der mittag 
+
+
+### Stadtführung 
+이미 1주정도 수업 함. 반친구 다른동네에서 온
+wilkommen party환영파티.
+
+wann
+wohin 어디로
+wie 교통수단
+wen einladen
 
 ### eine ueberaschung party
-
+- auf Party
 1. 시험(내일) 끝난후 파티 모레  
-   - Kennst du, dass das Morgen für ihm wichtig ist?
+   - Kennst du, dass das Morgen für ihm wichtig Tag ist?
    Um einen Arbeitplatz in Deutschland zufinden, braucht er eine Prüfung bestehen. 
-
+    -
 1. wo wann die Pruefung?
     - wo und wann macht er den Test machen? kennst du das?  
     In Busan foreign Universität macht er den Test am fünfundzwanzigten April/Vierten. 
@@ -53,16 +65,24 @@
     - womit fahren wir uns um ihn abzuholen?
     - Mit dem Taxi hohlen wir ihn ab
     - Holen wir ihn mit dem Taxi ab, brauchen keiner von uns um zürückzufahren.  
+    - Ich glaube, dass wir ihm abholen soll.
 
+1. wann treffen wir uns an U-bahnhof
+   - treffen wir uns um 19 Uhr.
+   - 
 2. was zumachen  
-den ganzen Tag온종일  trinken wir auf der erste Straße des Seomyeon
-
-1. wohin wann  
-Ausser wir Geschenk
-
-1. geschenk  
-Hast du übermorgen eine Zeit am vormittags? 
-Lasst uns ins Lotte Kaufhaus gehen und ein gute Geschenk für ihn suchen.  
+    - den ganzen Tag온종일  trinken 
+    - obst saft trinken
+    - 
+3. wohin wann  
+    - Ausser wir Geschenk
+    - bei mir zu Hause
+    - auf der erste Straße des Seomyeon
+    - 
+4. Geschenk  
+    - Wie wehre es ein Geschek für ihn  
+    - Hast du übermorgen eine Zeit am vormittags? 
+    - Lasst uns ins Lotte Kaufhaus gehen und ein gute Geschenk für ihn suchen.  
 
 ### 독일사진사
 weisst du die Fotografin aus Deutschland Frau Smitt besuchen
@@ -93,7 +113,8 @@ Am Samstag übernächstes Wochenenden bestimmt sie um Gimhae Flugzeug ankommen.
 Der Flug den sie nehmen wird wird Um genau Mittag ankommen, soweit der eine Verspätung habt.
 
 - mitwem 동료나 가이드를 같이해서 모시자
-    - Mit unserem Firmawagen회사차 kann ich mitnehmen
+    - Mit unserem Firma
+    - wagen회사차 kann ich mitnehmen
     - Kennst du guten Reiseleiter?
     - Lasst uns sie am der Eingang mit einem Auto warten um sie aufzunehmen.
 
@@ -210,20 +231,32 @@ dazu will ich kleines kieste bringen.
 ### 15 wie lange soll man jeden tag sport machen
 
 ### 28 ein musik instrument lernen
-### 46contact nachbarn
+
+### 46 contact nachbarn
+- haltest du Contact mit deinen Nachbarn?
+- seit ich Student bin, 
+- weil ich nach Busan umgezogen bin.
+- Beiziehung
+
 ### 1 haustier
 aus gejetzete hunde adoptieren
 
 ### 46 allein oder wohngemeinschaft셰어하우스
+- einsam
+- wenn du allein lebst, **in** was für **einem** gebäude lebst du leben
+- ich möchte in einem Böhnung leben, weil die bekühbem ist.
+
 ### 55 wie wichtig sind sozialle netzwerke
 
 ### Nachbarn
 - wenn deiner Nachbarn laub machen, was machst du?
 - Ich besuche meine Nachbarn um mich mit meinen Nachbarn zuunterhalten.
 - 
-### SNS sozial network
+### sozial network
+- verbringen
+- 
 
-#### 18 ohne autoins stadtzentrum
+### 18 ohne autoins stadtzentrum
 19 mit geswesten oder ohne geswester
 
 ### 30 Musik im alltag
@@ -361,7 +394,9 @@ ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
 - einer Stunde pro Tag.
 welche Sportart willst du machen?
 Ich machst Tenis. 
-
+- ein Stunden
+- für gute 
+- fitness 헬스(웨이트)
 
 ### 37 wie viele fremd Sprachen soll man learn
 - welche Sprache lernst du? 
