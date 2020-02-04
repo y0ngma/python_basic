@@ -24,7 +24,7 @@ auf A|sich verlassen|Wir können **uns** immer auf unseren Freund **verlassen**|
 auf A|verzichten|Der Arzt hat auf das Honorar **verzichtet**|~포기하다
 auf A|sich vorbereiten|Wir **bereiten** **uns** auf die Prüfung **vor**|~준비하다
 auf A|warten|Wir **warten** auf gutes Wetter|~기다리다
-aus D|bestehen|Unsere Wohnung **besteht** aus vier **Räumen**|~ 구성되다
+aus D|bestehen|Unsere Wohnung **besteht** aus vier Räumen|~ 구성되다
 bei jemandem|sich bedanken(für)|ich möchte **mich** bei Ihnen für die Hilfe **bedanken**|~에게 감사하다
 bei jemandem|sich beschweren (Über)|Er **beschwert** **sich** bei der Chfin **über** die Kollegen|~에게 불평하다
 bei jemandem|sich entschuldigen(für)|Er **entschuldigt** **sich** bei den Nachbarn für den Krach|~사과하다

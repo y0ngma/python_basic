@@ -6,7 +6,8 @@
     - Hast du am Donnerstag Lust auf Golf?
     - Hast du Zeit morgen
     - Nein, morgen kann ich leider nicht.
-
+- (Das) hört sich gut an!
+- (Es) klingt gut (für mich) an!
 2. wann zu tun
     - Wann findet dass konzert statt?
     - Wann ist es geöffnet? Gibt es Schließtage?
@@ -42,15 +43,35 @@
 이미 1주정도 수업 함. 반친구 다른동네에서 온
 wilkommen party환영파티.
 
-wann
-wohin 어디로
-wie 교통수단
-wen einladen
+- Hast du Max kennengelernt?
+  - Nein, leider ich ihm noch nicht kennengelernt habe
+  - Aber ich will ihm mehr/besser noch kennenlernen. 
+  - willst du enge Verhältnis 친한 사이 mit ihm bauen
+  - Ya, finde ich ihn bodenständig
+
+- wann
+  - Gleich nach der Vorlesung lass uns ihm berichten zu einladen.
+  - Und   
+
+- wohin
+  - Gehen wir in PNU oder Seomyeon hin, kann ich uns in fremdartigen Kneiben mitbringen
+  - Was meinst du ?
+  - Fast jede Nacht geht er  Koreanische Kneibe hin, sodass er vielleicht interessiert sich für dort.
+  - 
+- wie 교통수단
+  - Weil hiervon bis dort ganz in der Nähe ist, lass uns dort hinlaufen.
+  - Weil es weit von hier ist, ist es viellicht besser um dort mit Taxi hinzufahren.
+  - 
+- wen einladen
+  - Wen sollen wir einladen?
+  - Und wie sollen wir ihn tun 
+  - Ich finde unsere Lehrerin sehr entspannt, und dann sie will wirklich sich freun auf Chillend mit uns
+
 
 ### eine ueberaschung party
 - auf Party
 1. 시험(내일) 끝난후 파티 모레  
-   - Kennst du, dass das Morgen für ihm wichtig Tag ist?
+   - Wissest du, dass das Morgen für ihm wichtig Tag ist?
    Um einen Arbeitplatz in Deutschland zufinden, braucht er eine Prüfung bestehen. 
     -
 1. wo wann die Pruefung?
