@@ -72,7 +72,16 @@
    1. docker run --rm --name eda -itd -u vscode -p 8888-8889:8888-8889 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes y0ngma/eda 
 
 
+
 ## setup
+- 
+    ```jupyter
+    !pip show plotnine
+    !pip show missingno
+    ```
+  - 설치되어 있지 않으면 쥬피터 cmd가서 
+  - conda install 원하는것 검색하여 홈페이지에서 명령어를 찾아 입력
+  - 
 
 - numpy, pandas 설치
     ```bash
