@@ -1,0 +1,3 @@
+### 24 Familie gemeinsame Abendessen
+
+Als ich klein war, hab ich mit meiner Familie gemeinsame Abendessen. Ich erinnere mich nicht an die genauen Zeit wann wir auf das Essen verziechen hatten. Aber da bin ich mir sicher, dass es gute Zeit war. Solange ich hatte die Abendessen, sagten meine Eltern mit mir. Vielleicht vermisse ich alles rund um gemeinsame Abendessen. Während meine Mutter kocht, fernsah ich einen zeichenfilm für Kinder oder legte ich auf dem Tisch den Löffel und das Stäbchen. Wenn das Essen vorbereiten wird, ru  Herum dem Tisch saßen wir zusammen, und wir aßen was meine Mutter kochte. Also wenn ich meine Eltern besuchen, essen wir immer zusammen.  

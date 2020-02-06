@@ -68,50 +68,45 @@ angewiesen auf 4
 ---
 
 ### 2.1.4. Datenstichprobe 
-
-    | Verhältniswort+N | eine Datenstichprobe                                        |
-    | ---------------- | ----------------------------------------------------------- |
+- eine Datenstichprobe {stitch trial, specimen, sample}
+    | Verhältniswort+N | s   |
+    | ---------------- | --- |
     | bei +3           |
     | während +2       |
-    | seit             | ~Seit dem Einzug in unsere neue Wohnung schlafen wir besser |
-    | durch            | .                                                           |
-    | bis              |                                                             |
-    | solange          |                                                             |
-    | sobald           |                                                             |
+    | seit             |     |
+    | durch            | .   |
+    | bis              |     |
+    | solange          |     |
+    | sobald           |     |
     | damit            |
     | umzu             |
     | wenn/falls       |
     | obwohl           |
     | sodass           |
+    | für              |
 
-
-    | Bindewort+m.Satz | eine Datenstichprobe                                                     |
-    | ---------------- | ------------------------------------------------------------------------ |
-    | wenn             | .                                                                        |
-    | als              | .                                                                        |
-    | während          | .                                                                        |
-    | bevor            | .                                                                        |
-    | nachdem          | ~er sich gedusch hat, fühlte er sich wohler.                             |
-    | seit             | Seitdem wir in unsere neue Wohnung eingezögen sind, schlafen wir besser. |
-    | seit             | Seitdem die Straße gesperrt worden ist, ist es bei uns ruhiger geworden  |
+    | Bindewort+m.Satz | eine Datenstichprobe |
+    | ---------------- | -------------------- |
+    | wenn             | .                    |
+    | als              | .                    |
+    | während          | .                    |
+    | bevor            | .                    |
+    | nachdem          |                      |
+    | seit             |                      |
+    | seit             |                      |
     | wegen            |
     | aus Angst        |
-    | bei              |
-    | für              |
-    | durch            |
     | trotz            |
 
-
-    | Umstandwort  | eine Datenstichprobe |
-    | ------------ | -------------------- |
-    | gleichzeitig | .                    |
-    | vorher       | .                    |
-    | nachdem      | .                    |
-    | deshalb, deswegen|
-    | dafür        |
-    | dann         |
-    | so           |
-    | trotzdem     |
+    | Umstandwort       | eine Datenstichprobe |
+    | ----------------- | -------------------- |
+    | gleichzeitig      | .                    |
+    | vorher            | .                    |
+    | deshalb, deswegen |
+    | dafür             |
+    | dann              |
+    | so                |
+    | trotzdem          |
 쓰임별 정리
 ---
 

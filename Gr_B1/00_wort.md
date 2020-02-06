@@ -1,6 +1,6 @@
 1|2|3|4
 ---|---|---|---
-an D|erkennen A|Man kann sie an ihere Stimme **erkennen**|~을 인식하다
+an D|erkennen A|Man kann sie an ihre Stimme **erkennen**|~을 인식하다
 an D|es fehlt (D)|**Es** **fehlt** uns an Geld|~이 모자르다
 an D|leiden|Er **leidet** an einer schweren Krankheit(->unter)|~병으로 고통받다
 an D|es liegt|**Es** **lag** am Wetter, dass wir nicht kommen konnten|~에 달려있다
@@ -10,38 +10,40 @@ an D|zweifeln|Ich **Zweifle** an seiner Ehrlichkeit|~을 의심하다(ehrlich ho
 an A|denken|Ich **denke** oft an meine Kindheit|~을 생각하다
 an A|sich erinnern|Ich **erinnere** **mich** gern an die Ferien|~을 기억,회상하다
 an A|sich gewöhnen|Wir müssen **uns** an das schlechte Wetter **gewöhnen**|~에 익숙해지다
-an A|glauben|**Glauben** Sie an den Fortschritt|~을 믿다
-an A|sich wenden|Ich **wende** **mich** wegen der Miete an das Sozialamt(-gegen)|(to turn->)~을 질문하다(n. Amt office)
-auf A|achten|Der Busfahere **achtete** nicht auf den Gegenverkehr|~유의하다
-auf A|antworten|Ich habe sofort auf seinen Brief **geantwortet**|~대답하다
-auf A|sich freuen|Wir **freuen** **uns** schon auf die nächsten **Ferien**(-über)|~기뻐하다
-auf A|hoffen|Wir **hoffen** auf schnelle Hilfe|~희망하다
+an A|glauben|**Glauben** Sie an den Fortschritt { m. progress }|~을 믿다
+an A|sich wenden|Ich **wende** **mich** wegen der Miete an das Sozialamt (n. office) (-gegen)|(to turn->)~을 질문하다
+auf A|achten|Der Busfahere **achtete** nicht auf den Gegenverkehr{반대차}|~유의하다
+auf A|antworten|Ich habe sofort **auf** seinen Brief **geantwortet**|~대답하다
+auf A|sich freuen|Wir **freuen uns schon auf** die nächsten Ferien(-über)|~기뻐하다
+auf A|hoffen|Wir **hoffen auf** schnelle Hilfe|~희망하다
 auf A|es kommt an|**Es** **Kommt** jetzt auf eine schnelle Hilfe **an**|~에 달려 있다
-auf A|sich konzentrieren|Wir **konzentrieren** **uns** auf ein einziges Problem|~에 집중하다
-auf A|sich spezialisieren|Die Firma hat **sich** auf die Produktion von Ersatzteilen **speialisiert**|~에 전문이다
-auf A|stoßen|Bei der Lektüre bin ich auf ein interessantes Problem **gestoßen**|~에 부딧히다
+auf A|sich konzentrieren|Wir **konzentrieren uns auf** ein einziges Problem|~에 집중하다
+auf A|sich spezialisieren|Die Firma hat **sich auf** die Produktion von Ersatzteilen **speialisiert**|~에 전문이다
+auf A|stoßen|Bei der Lektüre {reading} bin ich **auf** ein interessantes Problem **gestoßen**|~에 부딧히다
 auf A|sich verlassen|Wir können **uns** immer auf unseren Freund **verlassen**|~을 신뢰하다
-auf A|verzichten|Der Arzt hat auf das Honorar **verzichtet**|~포기하다
+auf A|verzichten|Der Arzt hat auf das Honorar {fee} **verzichtet**|~포기하다
 auf A|sich vorbereiten|Wir **bereiten** **uns** auf die Prüfung **vor**|~준비하다
-auf A|warten|Wir **warten** auf gutes Wetter|~기다리다
-aus D|bestehen|Unsere Wohnung **besteht** aus vier Räumen|~ 구성되다
-bei jemandem|sich bedanken(für)|ich möchte **mich** bei Ihnen für die Hilfe **bedanken**|~에게 감사하다
-bei jemandem|sich beschweren (Über)|Er **beschwert** **sich** bei der Chfin **über** die Kollegen|~에게 불평하다
-bei jemandem|sich entschuldigen(für)|Er **entschuldigt** **sich** bei den Nachbarn für den Krach|~사과하다
-für|sich bedanken(bei)|Ich **bedanke** **mich** **bei** ihm für das Geschenk|~에 감사하다
-für|danken(*D*)Ich **danke** **ihm** für seine Hilfe|~감사하다
-für|eintreten|Wir **treten** für die Verküzung der Schulzeit **ein**|~지지, 찬성하다
-für|sich entscheiden|Tee oder Kaffee? -Ich habe **mich** für Tee **entschieden**|~결정하다
-für|sich entschuldigen(bei)|Er **entschuldigte** **sich** bei seinem Chef für die Verspätung (auch:wegen der Verspätung)|~대해 사과하다
-für|halten A |Ich habe den Türken Ali Kurt lange Zeit für einen Griechen **gehalten**|~라고 간주하다
-für|sich interessieren|**Intressierst** du **dich** für Politik?|~에 관심있다
-für|kämpfen|Sie **kämpfen** für mehr Chancengleichheit(=gegen)|~을 위해 투쟁하다
-für|sorgen|Die Eltern **sorgen** gut für ihre Kinder|~을 돌보다
-gegen A|kämpfen|Wir müssen gegen die Armut **kämpfen** (=für)|~에 반대하며 싸우다
-gegen A|protestieren|Die Schüler **protestieren** gegen die Fahrpreiserhöhung|~에 대해 항의하다
-gegen A|verstoßen|Sie hat gegen das Gesetz **verstoßen**|(법,규정을)어기다
-gegen A|sich wenden|ich **wende** **mich** gegen die falschen Vorwürfe (=an)|~강력히 항의하다
+auf A|warten|Wir **warten auf** gutes Wetter|~기다리다
+aus D|bestehen|Unsere Wohnung **besteht aus** vier Räumen|~ 구성되다
+bei jemandem|sich bedanken(für)|ich möchte **mich bei** Ihnen **für** die Hilfe **bedanken**|~에게 감사하다
+bei jemandem|sich beschweren (Über)|Er **beschwert sich bei** der Chefin **über** die Kollegen|~에게 불평하다
+bei jemandem|sich entschuldigen(für)|Er **entschuldigt sich bei** den Nachbarn für den Krach|~사과하다
+für|sich bedanken(bei)|Ich **bedanke mich bei** ihm **für** das Geschenk|~에 감사하다
+für|danken(*D*)|Ich **danke** ihm **für** seine Hilfe|~감사하다
+für|eintreten|Wir **treten** für die Verkürzung {to shorten} der Schulzeit **ein**|~지지, 찬성하다
+für|sich entscheiden|Tee oder Kaffee? -Ich habe **mich für** Tee **entschieden**|~결정하다
+für|sich entschuldigen(bei)|Er **entschuldigte sich bei** seinem Chef **für** [wegen{concerning}] die Verspätung |~사과하다
+für|halten|Ich habe den Türken Ali Kurt lange Zeit **für** einen Griechen **gehalten**|~라고 간주하다
+für|sich interessieren|**Intressierst** du **dich für** Politik?|~에 관심있다
+für|kämpfen|Sie **kämpfen für** mehr Chancengleichheit(=gegen)|~을 위해 투쟁하다
+für|sorgen|Die Eltern **sorgen gut für** ihre Kinder|~을 돌보다
+gegen A|kämpfen|Wir müssen **gegen** die Armut {poverty} **kämpfen** (=für)|~에 반대하며 싸우다
+gegen A|protestieren|Die Schüler **protestieren gegen** die Fahrpreiserhöhung|~에 대해 항의하다
+gegen A|verstoßen|Sie hat **gegen** das Gesetz{n. law} **verstoßen**|(법,규정을)어기다
+gegen A|sich wenden|ich **wende mich gegen** die falschen Vorwürfe{reproach비난} (=an)|~강력히 항의하다
 
+1|2|3|4
+---|---|---|---
 in D|sich irren|Er hat sich im Datum **geirrt**|착각하다
 mit|anfangen|Wir **fangen** mit der ersten Seite **an**|시작하다
 mit|aufhören|Sie **höreten** mit der Diskussion **auf**|그만두다 끝나다
