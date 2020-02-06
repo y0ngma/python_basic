@@ -10,24 +10,3 @@ Wenn ich gekonnt hätte, hätte ich ihn umgebracht    Had I been able (to), I'd 
 Kasse                           checkout, checkstand
 getrennte Kasse machen          to go Dutch
 getrennte Rechnungen            separate bills
-
-### 24 mit der familie gemeinsam zu abend essen
-반창회
-시험동기
-nach 3jahr
-wann wo
-welche programme
-    - 점심
-    - 운동
-    - 커피차
-    - 술 등
-essen und trinken
-
-
-
-
- 6 partner suchen im internet
-
-44 wie viel handy kon
-56 urlaub im inland oder im ausland
-ebuch oder paper

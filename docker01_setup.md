@@ -75,9 +75,15 @@
 
 ## setup
 - 
-    ```jupyter
+    ```bash
+    sudo -i # 쥬피터랩 cmd에서 필요
     !pip show plotnine
+    conda install -c conda-forge plotnine
+
+    sudo -i # 로컬에서는 생략가능 
     !pip show missingno
+    conda install -c conda-forge missingno
+
     ```
   - 설치되어 있지 않으면 쥬피터 cmd가서 
   - conda install 원하는것 검색하여 홈페이지에서 명령어를 찾아 입력

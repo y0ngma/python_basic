@@ -38,6 +38,19 @@
 45 schule sport
 5 darf man in der mittag 
 
+### 시험동기 반창회
+- nach 3jahr
+1. wann 
+1. wo
+1. welche programme
+    - 점심
+    - 운동
+    - 커피차
+    - 술 등
+    - essen und trinken
+
+
+
 
 ### Stadtführung 
 이미 1주정도 수업 함. 
@@ -259,10 +272,18 @@ dazu will ich kleines kieste bringen.
 - 상대의견 들으며 질문내용을 준비한다.
 - 질문이 이상해도 받아칠 수 있으면 좋다.
 - 
+
+### 6 partner suchen im internet
+
+
 ### 9 darf man in den mittag pause in firma kurzschlafen
 
 
-### papier buch
+### 44 wie viel handy kon
+
+### 56 urlaub im inland oder im ausland
+
+### E-Buch oder Papierbuch
 - Wie oft kaufest du Papierbuch
 - ich kaufe ein Buch.
 
@@ -310,7 +331,9 @@ aus gejetzete hunde adoptieren
 - 
 
 ### 18 ohne autoins stadtzentrum
-19 mit geswesten oder ohne geswester
+
+
+### 19 mit geswesten oder ohne geswester
 
 ### 30 Musik im alltag
 - ich habe keine lieblings säger
