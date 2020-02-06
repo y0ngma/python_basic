@@ -40,33 +40,49 @@
 
 
 ### Stadtführung 
-이미 1주정도 수업 함. 반친구 다른동네에서 온
+이미 1주정도 수업 함. 
+Kurs teilnehmerinnen 반친구 다른동네에서 온
 wilkommen party환영파티.
 
 - Hast du Max kennengelernt?
   - Nein, leider ich ihm noch nicht kennengelernt habe
   - Aber ich will ihm mehr/besser noch kennenlernen. 
-  - willst du enge Verhältnis 친한 사이 mit ihm bauen
+  - willst du enge Verhältnis 친한 사이/Beziehung mit ihm knüpfen 관계를 만들어간다
   - Ya, finde ich ihn bodenständig
+  - 
+
+- Lass uns 
 
 - wann
-  - Gleich nach der Vorlesung lass uns ihm berichten zu einladen.
+  - **Gleich nach der Vorlesung** lass uns ihm berichten zu einladen.
   - Und   
+  - das wäre nett von dir
 
 - wohin
-  - Gehen wir in PNU oder Seomyeon hin, kann ich uns in fremdartigen Kneiben mitbringen
-  - Was meinst du ?
-  - Fast jede Nacht geht er  Koreanische Kneibe hin, sodass er vielleicht interessiert sich für dort.
-  - 
+    - nette Kneibe
+    - menu
+    - 
+    - Falls wir in PNU oder nach Seomyeon hingehen, kann ich uns in fremdartigen Kneiben mitbringen
+    - Was meinst du ?
+    - Gehen wir dorthin
+    - **Fast jede Nacht** geht er Koreanische Kneibe hin, sodass er vielleicht interessiert sich für dort.
+    - werden bestimm
+    - durch das fenster 
+    - bekuben, schenelle fahren
+
 - wie 교통수단
+  - **nach dem Besuch vom** Beomeo Tempel gehen wir zum Market in der Nähe 
   - Weil hiervon bis dort ganz in der Nähe ist, lass uns dort hinlaufen.
   - Weil es weit von hier ist, ist es viellicht besser um dort mit Taxi hinzufahren.
-  - 
+  - punktlichen ankommen kann
+
 - wen einladen
-  - Wen sollen wir einladen?
+  - Wen laden wir ein?
+  - kursteilnehmer 
+  **- um uns besser kennenzulernen** 
   - Und wie sollen wir ihn tun 
   - Ich finde unsere Lehrerin sehr entspannt, und dann sie will wirklich sich freun auf Chillend mit uns
-
+    - mitteilen
 
 ### eine ueberaschung party
 - auf Party
@@ -246,10 +262,26 @@ dazu will ich kleines kieste bringen.
 ### 9 darf man in den mittag pause in firma kurzschlafen
 
 
+### papier buch
+- Wie oft kaufest du Papierbuch
+- ich kaufe ein Buch.
+
+### 25 getrennte schule
+als du kind war, 
+ich bin gleicher Meinung.
+bilden 만든다
+
 ### 26 feste feiern 설, 불꽃부산 지역 등 하라 마라
+- Zu/auf was für einen Fest gehest du?
+- auf welschem feste warest du schon mal
+- die musik best war interessant.
+- 
 
-
+### 32 Ist der Beruf am wichtigesten im Leben?
+viel freizeit aber wenig Geld
+- Ich will die Stell mit ... weil ich viel freizeit haben möchte.
 ### 15 wie lange soll man jeden tag sport machen
+weil es einfach zu spielen ist und es kann viele 
 
 ### 28 ein musik instrument lernen
 
