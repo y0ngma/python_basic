@@ -40,6 +40,9 @@
 
 ### 시험동기 반창회
 - nach 3jahr
+- alumni reunion : Ehemaligentreffen, Klassentreffen 
+- 동창회 : Wiedersehensfeier,  
+- m. Ehemaliger, m. Absolvent
 1. wann 
 1. wo
 1. welche programme
@@ -67,7 +70,7 @@ wilkommen party환영파티.
 - Lass uns 
 
 - wann
-  - **Gleich nach der Vorlesung** lass uns ihm berichten zu einladen.
+  - **Gleich nach der ~~Vorlesung~~ unterrichten** lass uns ihm berichten zu einladen.
   - Und   
   - das wäre nett von dir
 
