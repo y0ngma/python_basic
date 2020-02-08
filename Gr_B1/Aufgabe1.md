@@ -33,27 +33,34 @@
     - Woran 
 
 ---
-- [x] Hausaufgabe
-- [ ] 문법 접속사,전치사, 부사 정리
 45 schule sport
 5 darf man in der mittag 
 
 ### 시험동기 반창회
-- nach 3jahr
-- alumni reunion : Ehemaligentreffen, Klassentreffen 
-- 동창회 : Wiedersehensfeier,  
-- m. Ehemaliger, m. Absolvent
-1. wann 
-1. wo
-1. welche programme
+  - nach 3jahr
+  - alumni reunion : Ehemaligentreffen, Klassentreffen 
+  - 동창회 : Wiedersehensfeier,  
+  - m. Ehemaliger, m. Absolvent
+1. wann
+   - Wie
+   - wann statt die party finden
+   - weil allen arbeiten mussen
+   - plannen wir
+2. wo->in/wohin->nach
+    - ... schmecken gut
+    - danach spielen wir Golf
+    - 
+   - Wohin gehen wir uns.
+   - 
+3. welche programme
     - 점심
+    - in eine Kneife
+    - mithalten 공지?
     - 운동
+    - Süßigkeiten
     - 커피차
     - 술 등
     - essen und trinken
-
-
-
 
 ### Stadtführung 
 이미 1주정도 수업 함. 
@@ -65,20 +72,15 @@ wilkommen party환영파티.
   - Aber ich will ihm mehr/besser noch kennenlernen. 
   - willst du enge Verhältnis 친한 사이/Beziehung mit ihm knüpfen 관계를 만들어간다
   - Ya, finde ich ihn bodenständig
-  - 
-
-- Lass uns 
 
 - wann
-  - **Gleich nach der ~~Vorlesung~~ unterrichten** lass uns ihm berichten zu einladen.
+  - **Gleich nach der ~~Vorlesung~~ unterrichten** lass uns ihm ~~berichten zu~~ einladen.
   - Und   
   - das wäre nett von dir
 
 - wohin
     - nette Kneibe
-    - menu
-    - 
-    - Falls wir in PNU oder nach Seomyeon hingehen, kann ich uns in fremdartigen Kneiben mitbringen
+    - Falls wir nach Seomyeon hingehen, kann ich uns in eine fremdartigen Kneiben mitbringen
     - Was meinst du ?
     - Gehen wir dorthin
     - **Fast jede Nacht** geht er Koreanische Kneibe hin, sodass er vielleicht interessiert sich für dort.
@@ -271,84 +273,10 @@ dazu will ich kleines kieste bringen.
 ---
 
 ## Aufgabe 3
-- 주제에 대해 짧게 준비하고 생각을 말한다.
-- 상대의견 들으며 질문내용을 준비한다.
-- 질문이 이상해도 받아칠 수 있으면 좋다.
-- 
-
-### 6 partner suchen im internet
-
-
-### 9 darf man in den mittag pause in firma kurzschlafen
-
-
-### 44 wie viel handy kon
-
-### 56 urlaub im inland oder im ausland
-
 ### E-Buch oder Papierbuch
 - Wie oft kaufest du Papierbuch
 - ich kaufe ein Buch.
-
-### 25 getrennte schule
-als du kind war, 
-ich bin gleicher Meinung.
-bilden 만든다
-
-### 26 feste feiern 설, 불꽃부산 지역 등 하라 마라
-- Zu/auf was für einen Fest gehest du?
-- auf welschem feste warest du schon mal
-- die musik best war interessant.
-- 
-
-### 32 Ist der Beruf am wichtigesten im Leben?
-viel freizeit aber wenig Geld
-- Ich will die Stell mit ... weil ich viel freizeit haben möchte.
-### 15 wie lange soll man jeden tag sport machen
-weil es einfach zu spielen ist und es kann viele 
-
-### 28 ein musik instrument lernen
-
-### 46 contact nachbarn
-- haltest du Contact mit deinen Nachbarn?
-- seit ich Student bin, 
-- weil ich nach Busan umgezogen bin.
-- Beiziehung
-
-### 1 haustier
-aus gejetzete hunde adoptieren
-
-### 46 allein oder wohngemeinschaft셰어하우스
-- einsam
-- wenn du allein lebst, **in** was für **einem** gebäude lebst du leben
-- ich möchte in einem Böhnung leben, weil die bekühbem ist.
-
-### 55 wie wichtig sind sozialle netzwerke
-
-### Nachbarn
-- wenn deiner Nachbarn laub machen, was machst du?
-- Ich besuche meine Nachbarn um mich mit meinen Nachbarn zuunterhalten.
-- 
-### sozial network
-- verbringen
-- 
-
-### 18 ohne autoins stadtzentrum
-
-
-### 19 mit geswesten oder ohne geswester
-
-### 30 Musik im alltag
-- ich habe keine lieblings säger
-jenre. arten
-Welche Musikart magst du. wie ich schön gesagt habe, weil ich meisten sneidigen Musik hören
-ich habe nicht verstanden
-- kann ich englisch beim lernen hoeren??
-- 
-### 47 Unterwegs이동 mit dem Auto oder mit dem offentlich Verkehrsmittel
-- Es gibt Stau 
-- BRT zu nahmen
-- die baustelle war unbekuben. aber jetzt ich kann scheneller ans Ziel komme. 
+- Das gefalen mir gut
 
 ### ohne Auto Innenstadt
 Was benutst du wenn du reist
@@ -361,63 +289,29 @@ wenn ich ein beruf haben, möchte ich mit Katze leben
 weil U-bahn an jeder Station 멈추다
 Hast du führerschein
 
-
-### ein musikinstrument
-
-
 ### extreme sport
 - auf dem Berg, am Meer
 - Stress abbauen
 
-
-### haben Kinder zu wenig Freizeit
->nach hilfeinstitud 학원  
-Wie lange Freizeit willst du geben, wenn du ein kind habst?  
-wenn ich ein Kind haben, lass ich mein Kind viel freizeit haben.  
-
-
-### karier oder kind
+### karrier oder kind
 arbeit
 sich konzentriere
 sich 
 Im meine Heimatland hat viele Problemen damit das viele Frauen keine kind haben. Was meinst du damit?
 Ich denke auch dass ist grosse Probleme, aber jetzt bin ich jung. 
 
-### 48 jobben neben dem Studium
-Was für eineArbeit hast du gemacht_
-vertretung
-
-
-### 이웃과의 교류
-wenn laut sind, was machst du dagegen? 
-
-
 ### Haben Kinder in zu wenig frei Zeit
-- was hast du im der Kindheit gemacht
-zum Spiel
-
+nach hilfeinstitud 학원  
+Wie lange Freizeit willst du geben, wenn du ein kind habst?  
+wenn ich ein Kind haben, lass ich mein Kind viel freizeit haben.  
+- was hast du im der Kindheit zum Spiel gemacht
 was kaufst du im Einkaufenzentrum ein
 normallerweise kaufe ich scheu
 
 ### Auf dem land oder in der Stadt 주거를 도시/시골?
 Jeju Insel
 weil ich nicht unter vielen leuten leben m
-
-
-### vegetarische ernerung
-- heimatland
-- ich esse 
-- fertig essen 패스트푸드
-- kann die bezeihung weiter gehen?
-- wenn ich 
-- 동물보호
--  
-### Wie viel zu haus
-- wie oft benutzen Sie. ich benutze driviermal am Tag. ich habe nichts zu machen. 
-- ferngesehen 티비봤다
-- passiert
-
-
+  
 ### wie streung die eltern sein
 부모가 얼마나 엄격해야 하는가? 부모도 친구가 될 수 있는가?
 wir unterhalten usn wie freunde
@@ -428,79 +322,20 @@ werde ich verrueckt.
 dass er mich auch mag
 
 
-### englischelernen als kind
-als kind
-
-
-### wie lange sollten die kinder zu hause.(독립)
-wo möchest du allein 
-entfern 떨어지다
-genug Geld habe ich 충분한돈
-wie ich schön 
-von klein auf war.
-unabhängig 비의존적인
-selbstandig werden 독립하다
-wann willst du selb standig werden, wenn du über 22 jahre bei deiner Eltern bleibst.
-wann ich Arbeit habe, 
-
-ampassen
-
-### schulesport
-grund/mid/ober 초중고?
-in der wochenende
-
-
-### allein oder shardehause
-BG : hatest du ein probleme bin von freunden.
-wenn ich zur Uni gehe, dass badezimmer und immer jemande benutzt, also musste ich warte. 
-
 
 ### fernsehe oder ins kino gehen
 ich personlich allein 
 was ist dein der beste Flim?
 mein beste Flim, weil lustig ist.
 
-
-### bestimmen die kleidung ihrer kinder
-- nachteil
-wenn du 
-
-
-### wie lange soll man pro Tag sport tabe
-Whelsen Sport emphielst du anderen leuten
-ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
-- Muskel taglich zu machen
-- einer Stunde pro Tag.
-welche Sportart willst du machen?
-Ich machst Tenis. 
-- ein Stunden
-- für gute 
-- fitness 헬스(웨이트)
-
-### 37 wie viele fremd Sprachen soll man learn
-- welche Sprache lernst du? 
-
-
 ### die infomationen im internet
 - sociallenetswerke SNS
 - wie oft surfen Sie im internet
-
+als ich 15 jahr alt war, 
+welche benutzest du zu suchen
+ich benutze mornalllerwieser im Naver einfach. 
 
 ### fertig essen
 - wie gross hund sein
 - fertigessen 가공식품
 - normalerweise ich esse cupnoodle, weil ich einfach machen kann.
-
-
-### 휴가를 Urlaub im inland oder ausland
-- Ich denke that Urlaub im inland ist sehr interessant. mit einem Auto kann ich fahren.
-
-
-### internet
-als ich 15 jahr alt war, 
-welche benutzest du zu suchen
-ich benutze mornalllerwieser im Naver einfach. 
--a :
-
-
-### 

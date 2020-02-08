@@ -56,6 +56,8 @@ mit|verwechseln A|Ich habe sie mit ihrer Schwester **verwechselt**|혼돈하다
 mit|zusammenstoßen|Das Auto **stieß** mit dem Zug **zusammen**|~와 충돌하다
 nach|sich erkundigen|Wir **erkundigen** **uns** nach der Abfahrt des Zuges|문의하다
 nach|fragen A|Der Tourist **fragte** einen Polizisten nach dem Weg|문의하다
+
+
 über|sich ängern|Ich **ärgere** **mich** über meine Fehler|~때문에 화내다
 über|sich aufregen|Ich **rege** **mich** über meine Chefin **auf**|흥분하다
 über|berichten|Die Zeugin berichtet über den Unfall|보도하다
