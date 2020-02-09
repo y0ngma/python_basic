@@ -46,16 +46,16 @@ gegen A|sich wenden|ich **wende mich gegen** die falschen Vorwürfe{reproach비�
 ---|---|---|---
 in D|sich irren|Er hat sich im Datum **geirrt**|착각하다
 mit|anfangen|Wir **fangen** mit der ersten Seite **an**|시작하다
-mit|aufhören|Sie **höreten** mit der Diskussion **auf**|그만두다 끝나다
-mit|sich befassen|Wir haben und lange mit diesem Thema **befasst**|~을 주제로 다루다
-mit|beginnen|Wir **beginnen** mit einer Wiederholung|시작하다
-mit|sich beschäftigen|Sie **beschäftigt** **sich** mit moderner Musik|~에 몰두하다, 종사하다
+mit|aufhören|Sie **hörten** mit der Diskussion **auf**|그만두다 끝나다
+mit|sich befassen|Wir haben **uns** lange mit diesem Thema **befasst**|~을 주제로 다루다
+mit|beginnen|Wir **beginnen** mit einer Wiederholung{repetition}|시작하다
+mit|sich beschäftigen|Sie **beschäftigt sich mit** moderner Musik|~에 몰두하다, 종사하다
 mit|handeln|Mein Freund **handelt** mit Gebrauchtwagen|~을 판매하다
 mit|vergleichen A|Er **vergleicht** Rostock mit seiner Heimatstadt|~을 비교하다
 mit|verwechseln A|Ich habe sie mit ihrer Schwester **verwechselt**|혼돈하다
 mit|zusammenstoßen|Das Auto **stieß** mit dem Zug **zusammen**|~와 충돌하다
 nach|sich erkundigen|Wir **erkundigen** **uns** nach der Abfahrt des Zuges|문의하다
-nach|fragen A|Der Tourist **fragte** einen Polizisten nach dem Weg|문의하다
+nach|fragen A|Der Tourist **fragte** einen Polizisten nach dem Weg{경찰,길을}|문의하다
 
 
 über|sich ängern|Ich **ärgere** **mich** über meine Fehler|~때문에 화내다
