@@ -44,6 +44,7 @@ java -version
       dir /x
 
       ```
+
     1. hadoop-env.cmd
          - 25번째 줄
            - set JAVA_HOME=%JAVA_HOME% 을 다음 중 하나로 바꾼다
@@ -111,7 +112,7 @@ java -version
          </configuration>
 
     3. mapred-site.xml
-         - 
+         - dddd
          <configuration>
            <property>
              <name>mapreduce.framework.name</name>
@@ -181,8 +182,10 @@ java -version
           # NodeManager, Jps, NameNode, DataNode, ResourceManager 5줄 출력확인
           ```
 
+
+
 ## 하둡명령어
-- ㄴㄴ
+  - 설치 완료되면 준비완료됨.
     ```bash
     # 모든 데몬
     start-all.sh
@@ -210,6 +213,8 @@ java -version
   ssh slave3 jps
   ...
   ```
+
+
 
 ## 하둡
 - HADOOP 이란? High-Availablilty Distruibuted Object-Oriented Platform
