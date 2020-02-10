@@ -16,6 +16,7 @@ Wie der Liedtext `zuviel Liebe wird dich töten`, von die Rock-Kapelle Queen, fi
 
 '너무많은 사랑은 널 죽일거야' 라는 록밴드 퀸의 노래가사 처럼 나는 너무 과한 사랑과 도움은 자식에게 좋지 않다. 더 일칙 아이가 부모의 도움없이 살면 살수록 아이는 더 많이 사회에서 경험 할 수 있다.
 
+
 Was um alles in der Welt        what in the world
 weniger wahrscheinlich          less likely
 Je mehr ich gebe, desto mehr bekomme ich. 

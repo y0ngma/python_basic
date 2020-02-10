@@ -1,6 +1,10 @@
 ## 친구에게 차구매 자랑하고 드라이브 제안
+
 Hallo Jiho,
+
+
 Wie geht es dir? Ich hoffe, dass alles bei dir gut geht. 
+
 Hast du Pläne am diesem Wochenende? 
 
 Weil ich ein neues Auto einkaufen habe, solltest du meinen ersten Insasse sein! 
@@ -15,7 +19,9 @@ Mit halber Anzahlung des Autopreis gleiche ich den Saldo nach und nach pro Monat
 
 그래 드디어 나는 생애 첫차를 샀어, 리스 이긴 하지만. 그래서 내가 아니라 딜러에게 처음부터 속해있긴 하지만 내가 차를 항상 가지고 있고 몰 수 있어. 차값 절반의 선수금을 먼저 내고 매달 조금씩 잔금을 치루고 있어.
 
-Nachdem ich die Kreditsumme sechzigmonatig abzahle, um meiner verpflichtun nachzukommen, werde ich ein paar Orte haben zur Auswahl. 
+Nachdem ich die Kreditsumme sechzigmonatig abzahle, um meiner verpflichtun nachzukommen, 
+
+werde ich ein paar Orte haben zur Auswahl. 
 
 Nämlich ich kann mich für Autorücknahme oder zu übernehmen entscheiden. 
 
@@ -35,6 +41,7 @@ Lass uns irgendwohin Küstenstraßen entlang in der Nähe fahren.
 
 Klingt das für dich nach Spaß? Also bis bald.
 
+
 VG
 Yonghee
 
@@ -42,7 +49,14 @@ Yonghee
 
 
 
+
+
+
+
+
+
 ### 독일에서 차량 구매방법(리스) 및 보험, 등록법 정리 
+
 
 Autoversicherung|f. auto insurance
 Bargeld|n. cash
