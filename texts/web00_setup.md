@@ -90,6 +90,7 @@
     docker ps -a  => 구동중인 컨테이너 확인
     ```
 - docker container 구동 및 구동 중지
+
     ``` bash
     - docker start oracle12c # 컨테이너 구동
     - docker stop oracle12c # 옵션) 컨데이너 실행 중지
