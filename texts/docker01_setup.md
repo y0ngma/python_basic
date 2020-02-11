@@ -41,7 +41,7 @@
     https://dataitgirls2.github.io/10minutes2pandas/
 
 1. 도커 이미지 다운로드
-    1. docker pull `mrsono0/base_project:eda`
+    1. docker pull mrsono0/base_project:eda
     2. docker images 이미지 확인  
         mrsono0이라는 이름의 도커 아이디 레포지토리의 eda 라는 이미지
 
@@ -52,7 +52,7 @@
 
 3. 토큰값 받아서 주피터렙 접속하기
     1. docker logs --tail 30 eda
-    2. `192.168.99.100:8888`
+    2. 192.168.99.100:8888
     3. notebook 하나 text.ipynb 작업저장
 
 4. 설치된 컨테이너를 내아이디로 커밋(최초 복사) login
