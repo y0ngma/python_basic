@@ -7,6 +7,8 @@ aus gejetztete hunde adoptieren
 - wie ich schon gesagt habe, die einstellung zuerst gegen uber die Haushaltsteilung geendet.
 # 9 Darf man in den Mittagpause in Firma kurzschlafen
 # 12 Rauchverboten im Restaurant
+Was meinst du, dass es keine Raucher Restaurant gibt in vergleichig zu Japan.
+Ich das Gesätz ist gut.
 # 15 Wie lange soll man jeden Tag Sport machen
 Whelsen Sport emphielst du anderen leuten
 ich habe keine erfahrungen mit yoga, weil meinen freunden gesund ist be
@@ -20,8 +22,12 @@ Ich machst Tenis.
 weil es einfach zu spielen ist und es kann viele 
 # 18 Ohne Auto ins Stadzentrum
 # 19 Mit geswesten oder ohne geswester
+was für ein Vorteil mit deinem älteren Bruder. ich kann abhängig von
+# 20 betreung Oma 
 # 22 wie lange sollten die kinder zu hause bleiben.(독립)
 wo möchest du allein 
+Wann willst/möchest du deines Kind auszuziehen.
+je früher desto besser.
 entfern 떨어지다
 genug Geld habe ich 충분한돈
 wie ich schön 
@@ -31,6 +37,8 @@ selbstandig werden 독립하다
 wann willst du selbstandig werden, wenn du über 22 jahre bei deiner Eltern bleibst.
 wann ich Arbeit habe, 
 ampassen
+# 24 mit der Familie gemeinsame Essen
+
 # 25 Getrennte Schule
 als du kind war, bilest du
 ich bin gleicher Meinung.
@@ -50,10 +58,16 @@ ich bin gleicher Meinung.
 # 32 Ist der Beruf am wichtigesten im Leben?
 - Magst du viel freizeit aber wenig Geld oder wenig Freizeit aber viel Geld
 - Ich will die Stelle mit ... weil ich viel freizeit haben möchte.
-# 34 Frei 봉사활동
+# 34 Freiwilligen Arbeit 봉사활동
+In dem Pakt möchte ich es sauber machen.
+
 # 37 Wie viele Fremdsprachen soll man lernen
 - welche Sprache lernst du?
-# 44 Wie viel Handy kon 휴대폰중독
+# 44 Wie viel Handy Komsume kon 휴대폰중독
+sozialennettwerken
+wie lange benutzst du die Handy am Tag
+ich benutze drei stunde am tag, ich es liebe Youtube zu sehen.
+ich unterhalte mich mit per Handy. 
 # 46 Contact Nachbarn
 
 - haltest du Contact mit deinen Nachbarn?
@@ -73,8 +87,9 @@ ich bin gleicher Meinung.
 
 
 # 48 Jobben neben dem Studium
-Was für eineArbeit hast du gemacht_
+Was für eineArbeit hast du gemacht?
 vertretung
+
 # 55 Wie wichtig sind Soziellenetzwerke
 # 56 Urlaub im Inland oder ins Ausland
 - südosten asien 동남아시아

@@ -36,16 +36,29 @@
 45 schule sport
 5 darf man in der mittag 
 
+
+
+### 
+neue Mäbel Kaufen
+was macht man mit Alten möbeln
+noch andere sachen kaufen
+presentation im Büro 이사에 관한 내용, 언제, 청자
+
 ### 시험동기 반창회
   - nach 3jahr
+  - unsere Sprachschule Klassentreffen
   - alumni reunion : Ehemaligentreffen, Klassentreffen 
   - 동창회 : Wiedersehensfeier,  
   - m. Ehemaliger, m. Absolvent
+wir haben uns lange nicht gesehen
+ein Klassentreffen
+
 1. wann
    - Wie
    - wann statt die party finden
    - weil allen arbeiten mussen
    - plannen wir
+   - 
 2. wo->in/wohin->nach
     - ... schmecken gut
     - danach spielen wir Golf

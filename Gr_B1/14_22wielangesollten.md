@@ -20,3 +20,5 @@ Wie der Liedtext `zuviel Liebe wird dich töten`, von die Rock-Kapelle Queen, fi
 Was um alles in der Welt        what in the world
 weniger wahrscheinlich          less likely
 Je mehr ich gebe, desto mehr bekomme ich. 
+Wann willst/möchest du deines Kind auszuziehen.
+je früher desto besser.
