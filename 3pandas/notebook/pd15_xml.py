@@ -29,6 +29,69 @@ def parse_XML(xml_file, df_cols):
         
     return out_df
     
+
+"""
+result
+    header
+        columns
+        pages
+    body
+        rows
+            row
+"""    
+
+doc = et.parse('C:/Repository/python_basic/3pandas/coffee/busan_rtr1.xml')
+root = doc.getroot()
+# print(root[0], root[1])
+# print(type(root))
+
+# col = []
+# for child in root:
+#     print(child)
+#     if child.tag == 'header' :
+#         for i in range(len(child.iter())):
+#             col.append(child[i].text)
+#             print('c', child[i].text)
+#         pass
+#     if child.tag == 'body' :
+#         pass
+    # print(child)
+
+col1 = []
+for child in root:
+    b = child.getchildren()
+    print(b)
+    for tmp1 in b:
+        if tmp1.tag == 'columns' :
+            print('COLUMNS========================') 
+            for i in range(len(tmp1.getchildren())):
+                col1.append(tmp1[i].text)
+                # print('c',tmp1[i].text)
+        elif tmp1.tag == 'rows':    
+            print('ROWS===========================')
+print(col1)
+
+
+        #for tmp2 in tmp1:
+        #    print(tmp2.text)
+
+#b= a.findall("header")
+#print(b)
+
+#b= a.find("columns")
+
+#print(a)
+#print(b)
+
+# for tmp in a:
+#     print(tmp.findtext("opnSvcNm"))
+
+
+#parse_XML('../coffee/busan_rtr1.xml', list_col)
+
+
+
+
 # <row>
 # <rowNum>1</rowNum>
 # <opnSvcNm>휴게음식점</opnSvcNm>
@@ -78,3 +141,52 @@ def parse_XML(xml_file, df_cols):
 # <jtUpsoMainEdf></jtUpsoMainEdf>
 # <homepage></homepage>
 # </row> 
+
+# <columns>
+# <opnSvcNm>개방서비스명</opnSvcNm>
+# <opnSvcId>개방서비스ID</opnSvcId>
+# <opnSfTeamCode>개방자치단체코드</opnSfTeamCode>
+# <mgtNo>관리번호</mgtNo>
+# <apvPermYmd>인허가일자</apvPermYmd>
+# <apvCancelYmd>인허가취소일자</apvCancelYmd>
+# <trdStateGbn>영업상태구분코드</trdStateGbn>
+# <trdStateNm>영업상태명</trdStateNm>
+# <dtlStateGbn>상세영업상태코드</dtlStateGbn>
+# <dtlStateNm>상세영업상태명</dtlStateNm>
+# <dcbYmd>폐업일자</dcbYmd>
+# <clgStdt>휴업시작일자</clgStdt>
+# <clgEnddt>휴업종료일자</clgEnddt>
+# <ropnYmd>재개업일자</ropnYmd>
+# <siteTel>소재지전화</siteTel>
+# <siteArea>소재지면적</siteArea>
+# <sitePostNo>소재지우편번호</sitePostNo>
+# <siteWhlAddr>소재지전체주소</siteWhlAddr>
+# <rdnWhlAddr>도로명전체주소</rdnWhlAddr>
+# <rdnPostNo>도로명우편번호</rdnPostNo>
+# <bplcNm>사업장명</bplcNm>
+# <lastModTs>최종수정시점</lastModTs>
+# <updateGbn>데이터갱신구분</updateGbn>
+# <updateDt>데이터갱신일자</updateDt>
+# <uptaeNm>업태구분명</uptaeNm>
+# <x>좌표정보(X)</x>
+# <y>좌표정보(Y)</y>
+# <sntUptaeNm>위생업태명</sntUptaeNm>
+# <manEipCnt>남성종사자수</manEipCnt>
+# <wmEipCnt>여성종사자수</wmEipCnt>
+# <trdpJubnSeNm>영업장주변구분명</trdpJubnSeNm>
+# <lvSeNm>등급구분명</lvSeNm>
+# <wtrSplyFacilSeNm>급수시설구분명</wtrSplyFacilSeNm>
+# <totEpNum>총종업원수</totEpNum>
+# <hoffEpCnt>본사종업원수</hoffEpCnt>
+# <fctyOwkEpCnt>공장사무직종업원수</fctyOwkEpCnt>
+# <fctySilJobEpCnt>공장판매직종업원수</fctySilJobEpCnt>
+# <fctyPdtJobEpCnt>공장생산직종업원수</fctyPdtJobEpCnt>
+# <bdngOwnSeNm>건물소유구분명</bdngOwnSeNm>
+# <isreAm>보증액</isreAm>
+# <monAm>월세액</monAm>
+# <multUsnUpsoYn>다중이용업소여부</multUsnUpsoYn>
+# <facilTotScp>시설총규모</facilTotScp>
+# <jtUpsoAsgnNo>전통업소지정번호</jtUpsoAsgnNo>
+# <jtUpsoMainEdf>전통업소주된음식</jtUpsoMainEdf>
+# <homepage>홈페이지</homepage>
+# </columns>
