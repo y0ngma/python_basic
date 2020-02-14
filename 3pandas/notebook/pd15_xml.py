@@ -30,67 +30,6 @@ def parse_XML(xml_file, df_cols):
     return out_df
     
 
-"""
-result
-    header
-        columns
-        pages
-    body
-        rows
-            row
-"""    
-
-doc = et.parse('C:/Repository/python_basic/3pandas/coffee/busan_rtr1.xml')
-root = doc.getroot()
-# print(root[0], root[1])
-# print(type(root))
-
-# col = []
-# for child in root:
-#     print(child)
-#     if child.tag == 'header' :
-#         for i in range(len(child.iter())):
-#             col.append(child[i].text)
-#             print('c', child[i].text)
-#         pass
-#     if child.tag == 'body' :
-#         pass
-    # print(child)
-
-col1 = []
-for child in root:
-    b = child.getchildren()
-    print(b)
-    for tmp1 in b:
-        if tmp1.tag == 'columns' :
-            print('COLUMNS========================') 
-            for i in range(len(tmp1.getchildren())):
-                col1.append(tmp1[i].text)
-                # print('c',tmp1[i].text)
-        elif tmp1.tag == 'rows':    
-            print('ROWS===========================')
-print(col1)
-
-
-        #for tmp2 in tmp1:
-        #    print(tmp2.text)
-
-#b= a.findall("header")
-#print(b)
-
-#b= a.find("columns")
-
-#print(a)
-#print(b)
-
-# for tmp in a:
-#     print(tmp.findtext("opnSvcNm"))
-
-
-#parse_XML('../coffee/busan_rtr1.xml', list_col)
-
-
-
 
 # <row>
 # <rowNum>1</rowNum>
