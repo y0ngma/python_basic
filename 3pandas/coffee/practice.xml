@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<data>
+    <country name="Liechtenstein">
+        <rank>1</rank>
+        <year>2008</year>
+        <gdppc>141100</gdppc>
+        <neighbor name="Austria" direction="E"/>
+        <neighbor name="Switzerland" direction="W"/>
+    </country>
+    <country name="Singapore">
+        <rank>4</rank>
+        <year>2011</year>
+        <gdppc>59900</gdppc>
+        <neighbor name="Malaysia" direction="N"/>
+    </country>
+    <country name="Panama">
+        <rank>68</rank>
+        <year>2011</year>
+        <gdppc>13600</gdppc>
+        <neighbor name="Costa Rica" direction="W"/>
+        <neighbor name="Colombia" direction="E"/>
+    </country>
+</data>
+<!-- <rows>
+    <row>
+        <rowNum>1</rowNum>
+        <sitePostNo>608020</sitePostNo>
+        <siteWhlAddr>부산광역시 남구 대연동 1858번지 대연힐스테이트푸르지오 115동 106-1호</siteWhlAddr>
+    </row>
+    <row>
+        <rowNum>2</rowNum>
+        <sitePostNo>608804</sitePostNo>
+        <siteWhlAddr>부산광역시 남구 대연동 55-6번지 청호빌딩</siteWhlAddr>
+    </row>
+</rows> -->
