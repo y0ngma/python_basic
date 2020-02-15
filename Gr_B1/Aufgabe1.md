@@ -38,11 +38,41 @@
 
 
 
-### 
-neue Mäbel Kaufen
-was macht man mit Alten möbeln
-noch andere sachen kaufen
-presentation im Büro 이사에 관한 내용, 언제, 청자
+### 회사 이사가기
+- ich bin auch wie du gleicher meinung.
+um zuorganisieren
+die sind alt
+sofa fur gaste
+alten möbel wegwerfen
+auf dem flo markt
+im
+
+
+- neue Mäbel Kaufen
+    - 어디서 사?
+    - 근처에서 보고 인터넷으로 사자
+    - Denke ich, dass wir 
+    - 200 Schreibtische, stuhl und Kühlschrank
+    - Schreibwaren 필기구 
+- was macht man mit Alten möbeln
+    - Unsere meisten Möbeln sind zu alt oder kaputt.
+    - Also die Hälfte von ihnen sollten wegwerfen werden.
+    - Lass uns es im gebrauchtwarenladen(중고샾) in der Nähe verkaufen.
+    - 
+- noch andere sachen kaufen
+    - druckpapier
+    - mittagspause 간식
+    - 
+    - Ich finde unseren Computer verbessern.
+    - Die sind viel zu langsam. 
+    - der Computer, die Tastatur, die Maus, der Blidschirm, der Ordner 
+    - 
+- presentation im Büro 이사에 관한 내용, 언제, 청자
+    - wir müssen chef, Kollegen, mitteilen공지하다, wann die presentation stattfindet
+    - 또는 wann wir die halten 
+  - um diesem Wochenende
+  - ins neuen Büro in Seomyeon
+  - alle Kollegen 
 
 ### 시험동기 반창회
   - nach 3jahr
@@ -286,10 +316,13 @@ dazu will ich kleines kieste bringen.
 ---
 
 ## Aufgabe 3
+
 ### E-Buch oder Papierbuch
 - Wie oft kaufest du Papierbuch
 - ich kaufe ein Buch.
 - Das gefalen mir gut
+- hast du Auge schmerzen, wenn du Ebuch lange list(읽다) 
+- tun meinen Auge schmerzen.
 
 ### ohne Auto Innenstadt
 Was benutst du wenn du reist
@@ -333,6 +366,9 @@ nicht jemand, der viel aelter is als ich.
 so alt wie ich 동등할떄
 werde ich verrueckt.
 dass er mich auch mag
+ich bin auch wie du gleicher meinung.
+eltern sollten ihrer kinder job suchen
+nur helfen, nicht bestimmen
 
 
 

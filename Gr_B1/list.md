@@ -23,7 +23,9 @@ weil es einfach zu spielen ist und es kann viele
 # 18 Ohne Auto ins Stadzentrum
 # 19 Mit geswesten oder ohne geswester
 was für ein Vorteil mit deinem älteren Bruder. ich kann abhängig von
-# 20 betreung Oma 
+# 20 betreung Oma (to supervise, guide)
+- Hattest du keine Schwerigkeit mit deines Oma?
+- Nein, Weil sie
 # 22 wie lange sollten die kinder zu hause bleiben.(독립)
 wo möchest du allein 
 Wann willst/möchest du deines Kind auszuziehen.
@@ -38,6 +40,8 @@ wann willst du selbstandig werden, wenn du über 22 jahre bei deiner Eltern blei
 wann ich Arbeit habe, 
 ampassen
 # 24 mit der Familie gemeinsame Essen
+falls du isst, was du meisten isst?
+Ich will Koreanischen Essen essen. z.B 
 
 # 25 Getrennte Schule
 als du kind war, bilest du
@@ -60,7 +64,7 @@ ich bin gleicher Meinung.
 - Ich will die Stelle mit ... weil ich viel freizeit haben möchte.
 # 34 Freiwilligen Arbeit 봉사활동
 In dem Pakt möchte ich es sauber machen.
-
+# 36 누구나 영화를 할 수 있어야 하나    
 # 37 Wie viele Fremdsprachen soll man lernen
 - welche Sprache lernst du?
 # 44 Wie viel Handy Komsume kon 휴대폰중독
