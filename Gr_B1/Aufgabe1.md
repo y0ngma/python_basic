@@ -37,37 +37,48 @@
 5 darf man in der mittag 
 
 
+### Musik pickic von deutschkurz
+wann 
+wo
+verkehr
+was mit (도시락) wir nehmen
+uberlaschung person (음악인 초대 깜짝)
+
 
 ### 회사 이사가기
 - ich bin auch wie du gleicher meinung.
-um zuorganisieren
-die sind alt
-sofa fur gaste
-alten möbel wegwerfen
-auf dem flo markt
+Lass uns unterhalten um Umzug zuorganisieren
 im
 
-
-- neue Mäbel Kaufen
+- neue Möbel Kaufen
     - 어디서 사?
+    - die Schubladen, Tische und Stühle
+    - Möbelgeschäft
     - 근처에서 보고 인터넷으로 사자
-    - Denke ich, dass wir 
-    - 200 Schreibtische, stuhl und Kühlschrank
+    - weil alle im Internet preiswekr sind, 
+    - In unsere Speisekammer 탕비실 gibt es zu alten Kessel커피포트
+    - Neue kessel und Kühlschrank
     - Schreibwaren 필기구 
-- was macht man mit Alten möbeln
+    - 
+- was macht man mit Alten möbel
     - Unsere meisten Möbeln sind zu alt oder kaputt.
     - Also die Hälfte von ihnen sollten wegwerfen werden.
     - Lass uns es im gebrauchtwarenladen(중고샾) in der Nähe verkaufen.
-    - 
+    - oder auf dem flo markt
+    - ich bin gleich wie du
+er
 - noch andere sachen kaufen
     - druckpapier
-    - mittagspause 간식
-    - 
+    - mittagspause in der Personalraum
     - Ich finde unseren Computer verbessern.
     - Die sind viel zu langsam. 
     - der Computer, die Tastatur, die Maus, der Blidschirm, der Ordner 
-    - 
+    - wir brauchen ein sofa fur gaste
+
 - presentation im Büro 이사에 관한 내용, 언제, 청자
+    - Umzug datum
+    - mitteilen wir uns 
+    - und ich will unser bost 
     - wir müssen chef, Kollegen, mitteilen공지하다, wann die presentation stattfindet
     - 또는 wann wir die halten 
   - um diesem Wochenende

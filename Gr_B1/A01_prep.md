@@ -67,9 +67,8 @@ mit|anfangen|Wir **fangen** mit der ersten Seite **an**|시작하다
 über|lachen|Über diesen Witz kann ich nicht **lachen**|(비)웃다
 über|nachdenken|Ich muss über das Problem **nachdenken**|심사숙고 하다
 über|sprechen (mit)|Wir haben über seine Studienpläne **gesprochen**|~대해 말하다
-über|sich unterhalten|Worüber habt ihr **euch** **unterhalten**|놀라다
-über|sich wundern|Ich **wundere** **mich** über die hohen Preise|노력하다
-
+über|sich unterhalten|Worüber habt ihr **euch** **unterhalten**|대화하다
+über|sich wundern|Ich **wundere** **mich** über die hohen Preise|놀라다
 Ich **bemühe** **mich** seit langem um ein Zimmer
 Sie **Bewirbt** **sich** um einen besseren Arbeitsplatz
 Er hat mich um Geld **gebeten**
@@ -77,6 +76,8 @@ in diesem Text **geht** **es** um die Arbeitslosigkeit
 Bei dem Verletzten **handelt** **es** **sich** um einen alten Mann
 Er **sorgt sich** um die Gesundheit seines Kindes
 Wir **trauern** um den toten Freund
+
+
 
 Er **leidet** unter der Hitze (->an)
 
