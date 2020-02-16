@@ -90,8 +90,12 @@
 - git상 프로젝트 다운로드  
   ```bash
   [public]
+  git clone https://github.com/y0ngma/GR.git
   git clone https://github.com/y0ngma/python_basic.git
   git clone https://github.com/y0ngma/Project01_Crawling.git
+  git clone https://y0ngma@bitbucket.org/y0ngma/semma.git
+  git clone https://y0ngma@bitbucket.org/bcduck89/mini_project_2nd.git
+
   
   [private]
   git clone https://ID:비번@github.com/y0ngma/프로젝트명.git
