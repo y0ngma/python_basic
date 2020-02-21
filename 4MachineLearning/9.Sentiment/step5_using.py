@@ -5,7 +5,7 @@ import numpy as np
 
 def step5_using() :
     # 객체를 복원한다.
-    with open('./9.Sentiment/data/pipe.dat', 'rb') as fp :
+    with open('C:/Repository/data/pipe.dat', 'rb') as fp :
         pipeline = pickle.load(fp)
 
     while True :

@@ -5,7 +5,7 @@ import codecs
 
 def step1_get_data():
     # 데어터 경로
-    path = './9.Sentiment/data/aclImdb/'
+    path = 'C:/Repository/data/aclImdb/'
     # 긍정 도는 부정 의미
     labels = {'pos' :1, 'neg':0}
     # csv 에 저장할 값을 관리할 객체
@@ -41,4 +41,4 @@ def step1_get_data():
     np.random.seed(0)
     df = df.reindex(np.random.permutation(df.index))
     # 저장한다
-    df.to_csv('./9.Sentiment/data/movie_review.csv', index=False)
+    df.to_csv('C:/Repository/data/movie_review.csv', index=False)

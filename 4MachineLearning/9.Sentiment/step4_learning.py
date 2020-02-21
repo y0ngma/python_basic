@@ -16,7 +16,7 @@ from step3_word_tokenizer import tokenizer, tokenizer_porter, tokenizer_stopword
 
 def step4_learning() :
     # csv 파일에서 데이터를 읽어온다.
-    df = pd.read_csv('./9.Sentiment/data/refined_movie_review.csv')
+    df = pd.read_csv('C:/Repository/data/refined_movie_review.csv')
     # 테스트, 학습데이터로 나눈다.
     X_train = df.loc[:35000 - 1, 'review'].values
     y_train = df.loc[:35000 - 1, 'sentiment'].values
@@ -55,7 +55,7 @@ def step4_learning() :
     print("mean_squared_error : ", mean_squared_error(y_true, y_hat))
 
     # 학습이 완료된 객체를 저장한다.
-    with open('./9.Sentiment/data/pipe.dat', 'wb') as fp :
+    with open('C:/Repository/data/pipe.dat', 'wb') as fp :
         pickle.dump(pipeline, fp)
 
     print('저장완료')

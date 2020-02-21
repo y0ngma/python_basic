@@ -21,7 +21,7 @@ def preprocessor(text):
 
 def step2_preprocessing():
     # csv 데이터를 읽어온다.
-    df = pd.read_csv('./9.Sentiment/data/movie_review.csv')
+    df = pd.read_csv('C:/Repository/data/movie_review.csv')
 
     # 전처리 작업
     stime = time()
@@ -31,4 +31,4 @@ def step2_preprocessing():
     print('소요시간 : %d' % (time()-stime))
 
     # 전처리된 데이터를 저장한다.
-    df.to_csv('./9.Sentiment/data/refined_movie_review.csv', index=False)
+    df.to_csv('C:/Repository/data/refined_movie_review.csv', index=False)
