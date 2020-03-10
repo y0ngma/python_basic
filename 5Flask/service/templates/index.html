@@ -16,13 +16,13 @@
 <body>
     <div>
         <fieldset>
-            <textarea>원문</textarea>
+            <textarea class='oriInput'>원문을 입력하세요</textarea>
             <br>
             <button id='LangDetectBtn'>언어감지</button>
             <br>
             <button>번역</button>
             <br>
-            <textarea>번역문</textarea>
+            <textarea>번역문을 입력하세요</textarea>
         </fieldset>
     </div>
     <script>
@@ -37,6 +37,16 @@
             // http프로토콜로 통신, 데이터를 들고가는 방식:메소드
             // 메소드:get, push, post, ...
             // 통신, ajax, post, 수단 => js
+            console.log( $('.oriInput').val() )
+            $.post({
+                'url':'/LangTypeDetect',              // 서버주소
+                'data':'ori=' + $('.oriInput').val(),// 파라미터
+                'dataType':'json',      // 서버가 json으로 응답한다
+                'success':( resJson )=>{}, // 통신성공후
+                'error':function ( err ){
+                    console.log('통신실패', err)
+                }, // 통신실패후
+            })
             alert('호출')
         })
         //$('css selector').on('', function(){})
