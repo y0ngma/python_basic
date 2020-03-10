@@ -14,7 +14,12 @@ def home():
 def LangTypeDetect():
     if request.method == 'POST':
         # 1. 원문데이터 획득(get, post 방식으로 전달된 데이터 획득)
-        print( request.form )
+        # index기법 form['ori1'] 사용하면 오류발생시 서버오류 500(INTERNAL SERVER ERROR)
+        # 함수get()으로 처리하면 에러가 나오지 않고 none으로 리턴되어 처리가능
+        # print( request.form.get('ori1') ) # Keyerror 뜨는것확인가능
+        oriTxt = request.form.get('ori')
+        if not oriTxt:
+            return {'code':0, 'lang':'', 'desc':'원문데이터 누락'}
         # 2. 언어 감지
         # 2-1. DB에 로그처리
         # 3. 응답
