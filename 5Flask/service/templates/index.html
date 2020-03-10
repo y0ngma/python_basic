@@ -1,6 +1,18 @@
 <html>
 
-<head></head>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        //문서가 모두 로드되었다는 이벤트 발생시 자동호출
+        //DOM(Document Object Model) tree가 로드되었다
+        //아래 두줄 상동
+        //$(document).ready(function(){
+        $(document).ready(()=>{
+            console.log(1)
+        })
+    </script>
+</head>
+
 <body>
     <div>
         <fieldset>
@@ -13,6 +25,10 @@
             <textarea>번역문</textarea>
         </fieldset>
     </div>
+    <script>
+        //내가 조작할 모든 요소가 메모리에 다 로드되었다
+        console.log(2)
+    </script>
 </body>
 
 </html>
