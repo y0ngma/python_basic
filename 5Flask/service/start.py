@@ -1,6 +1,11 @@
 # flask 기본 구성
 # 1. 모듈가져오기
 from flask import Flask, render_template, request
+# entry 가 run.py일때는 다음과 같이
+# from service.ml import detect_lang
+from ml import detect_lang
+import os
+print('====================================', os.getcwd())
 # 2. 플라스크 객체 생성
 app = Flask(__name__)
 # 3. 라우팅
@@ -21,9 +26,10 @@ def LangTypeDetect():
         if not oriTxt:
             return {'code':0, 'lang':'', 'desc':'원문데이터 누락'}
         # 2. 언어 감지
+        lang, desc = detect_lang( oriTxt )
         # 2-1. DB에 로그처리
         # 3. 응답
-        return { 'code':1, 'lang':'en', 'desc':'영어' }
+        return { 'code':1, 'lang':lang, 'desc':desc }
     if request.method == 'GET': # else:
         return render_template('index.html')
 
