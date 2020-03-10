@@ -18,7 +18,7 @@
         <fieldset>
             <textarea>원문</textarea>
             <br>
-            <button>언어감지</button>
+            <button id='LangDetectBtn'>언어감지</button>
             <br>
             <button>번역</button>
             <br>
@@ -28,6 +28,20 @@
     <script>
         //내가 조작할 모든 요소가 메모리에 다 로드되었다
         console.log(2)
+        //언어감지 버튼을 찾아서, click이벤트를 적용해라
+        //$('css selector') => html내에 특정요소를 특정/찾기
+        //$('css selector').on('이벤트',
+        //          콜백함수(이벤트가발생하면 실제적으로 일하는함수)) 
+        $('#LangDetectBtn').on('click', ()=>{
+            // ajax를 이용, 원문들고 서버로 request수행
+            // http프로토콜로 통신, 데이터를 들고가는 방식:메소드
+            // 메소드:get, push, post, ...
+            // 통신, ajax, post, 수단 => js
+            alert('호출')
+        })
+        //$('css selector').on('', function(){})
+        //표준함수
+        //function a(){}
     </script>
 </body>
 
