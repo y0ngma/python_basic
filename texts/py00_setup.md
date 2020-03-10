@@ -118,15 +118,19 @@
 ### Jupyter notebook
 - 쥬피터에 접속하면 여러가지 무관한 폴더가 많이 보인다.
   - 다음을 실행하면 프로젝트폴더로 바로 가는 등 편리
-  - cmd에서 다음을 입력
-    ```bash
-    jupyter notebook --generate-config
-    ```
-  - 다음 경로에서 생성된 파일을 찾아 연다  C:\Users\Schlepptop\.jupyter\jupyter_notebook_config.py
-    - 아래와 같이 해당 줄의 주석제거 및  ' '  안에 원하는 경로지정
-    ```py
-    c.NotebookApp.notebook_dir = 'C:\Project_git'
-    ``` 
+    1. cmd에서 다음을 입력
+      ```bash
+      jupyter notebook --generate-config
+      ```
+    1. 다음 경로에서 생성된 파일을 찾아 연다  
+      `C:\Users\Schlepptop\.jupyter\jupyter_notebook_config.py`
+      1. 아래와 같이 261 줄의 주석제거 및  ' '  안에 원하는 경로지정
+        ```py
+        c.NotebookApp.notebook_dir = 'C:\Project_git'
+        ``` 
+      1. 주피터 노트북 속성 창에서 대상 입력란에 있는 `%USERPROFILE%`을 삭제합니다. 그리고 `시작위치란`은 공란으로 하고 확인합니다.
+
+
 - extension 설치하기
   - 다음을 cmd 에 입력하여 설치한다.
   ``` bash
