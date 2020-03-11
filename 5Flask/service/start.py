@@ -1,6 +1,6 @@
 # flask 기본 구성
 # 1. 모듈가져오기
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 # entry 가 run.py일때는 다음과 같이
 # from service.ml import detect_lang
 from ml import detect_lang
@@ -10,18 +10,27 @@ print('====================================', os.getcwd())
 app = Flask(__name__)
 
 # 3. 라우팅
-@app.route('/') # 데코레이터. 함수안의 함수
+@app.route('/test') # 데코레이터. 함수안의 함수
+def test():
+    return render_template('test.html')
+
+@app.route('/')
 def home():
     return render_template('dom.html')
 
 @app.route('/getAreaGps') # 
 def getAreaGps():
-    return [ {'lat':37.55487682, 'lng':126.9696652},
+    # 데이터 추출
+    tmp = [ {'lat':37.55487682, 'lng':126.9696652},
             {'lat':37.55487682, 'lng':126.9696652} ]
+    # json으로 응답
+    # 응답 데이터에 html이 없다 => 전문통신, 미들웨어서버, API서버
+    # 무게중심이 client에 쏠림 : angularjs, reactjs, vue
+    return jsonify(tmp)
 
 # 3-1. 언어감지 처리
-# GET반식만 현재 되어 있는데, POST도 지원하겠다
-# 1개의 url로 여러 메소드를 지원 => restful
+    # GET반식만 현재 되어 있는데, POST도 지원하겠다
+    # 1개의 url로 여러 메소드를 지원 => restful
 @app.route('/LangTypeDetect', methods=['GET', 'POST'])
 def LangTypeDetect():
     if request.method == 'POST':
