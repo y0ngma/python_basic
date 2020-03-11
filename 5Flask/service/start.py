@@ -21,8 +21,9 @@ def home():
 
 @app.route('/getAreaGps') # 
 def getAreaGps():
-    print( request )
-    gu_id = 1#request
+    # 파라미터 받는부분(get방식)
+    gu_id =request.args.get('gu_id')
+    print( gu_id )
     return jsonify( selectAreaGps( gu_id ) )
     # 데이터 추출
     # tmp = [ {'lat':37.55487682, 'lng':126.9696652}, {'lat':37.55487682, 'lng':126.9696652} ]
