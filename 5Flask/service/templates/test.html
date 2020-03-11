@@ -9,7 +9,9 @@
     <!-- 화면보이는 부분 시작 -->
     <div>
         <h2>제목</h2>
+        <h2 class='food'>점심</h2>
         <button>색변경</button>
+        <button id='blackBtn'>글자색검정으로변경</button>
     </div>
     <!-- 화면 보이는 부분 끝 -->
     <script>
@@ -23,6 +25,11 @@
         // h2의 하위 글자색이 파랑색으로 바뀐다.
         $('button').on('click', ()=>{
             $('h2').css('color', 'blue')
+        })
+        // 아이디가 blackBtn인 요소를 찾아서(단수,id값 고유)이벤트등록
+        // id-클래스-부모자식관계-자식서열-특성속성
+        $('#blackBtn').on('click', ()=>{
+            $('h2').css('color', 'black')
         })
     </script>
     <script>
