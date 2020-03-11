@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, jsonify
 # entry 가 run.py일때는 다음과 같이
 # from service.ml import detect_lang
 from ml import detect_lang
+from db import selectAreaGps
 import os
 print('====================================', os.getcwd())
 # 2. 플라스크 객체 생성
@@ -20,13 +21,15 @@ def home():
 
 @app.route('/getAreaGps') # 
 def getAreaGps():
+    print( request )
+    gu_id = 1#request
+    return jsonify( selectAreaGps( gu_id ) )
     # 데이터 추출
-    tmp = [ {'lat':37.55487682, 'lng':126.9696652},
-            {'lat':37.55487682, 'lng':126.9696652} ]
+    # tmp = [ {'lat':37.55487682, 'lng':126.9696652}, {'lat':37.55487682, 'lng':126.9696652} ]
     # json으로 응답
     # 응답 데이터에 html이 없다 => 전문통신, 미들웨어서버, API서버
     # 무게중심이 client에 쏠림 : angularjs, reactjs, vue
-    return jsonify(tmp)
+    # return jsonify(tmp)
 
 # 3-1. 언어감지 처리
     # GET반식만 현재 되어 있는데, POST도 지원하겠다
@@ -50,7 +53,7 @@ def LangTypeDetect():
         return render_template('index.html')
 
 # 4. 서버가동
-# run.py 를 실행하면, __name__ => 'start(파일명)' 이므로
-# 조건에 맞지 않아 run 되지 않음
+    # run.py 를 실행하면, __name__ => 'start(파일명)' 이므로
+    # 조건에 맞지 않아 run 되지 않음
 if __name__=='__main__':
     app.run(debug=True)

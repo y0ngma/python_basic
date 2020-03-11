@@ -9,8 +9,3 @@ from service.start import app
 if __name__ == '__main__' :
     #app.run(host='0.0.0.0', port=80, debug=True)
     app.run(debug=True)
-
-# 왼쪽 파일 리스트 중 run.py에서 마우스 오른쪽 
-# -> Run Python in Terminal 
-# -> Terminal창에 주소 링크 뜨면 CTRL누르고 클릭하면
-# -> 결과 창 뜸!

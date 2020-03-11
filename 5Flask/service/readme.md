@@ -58,13 +58,13 @@ show databases;
     - 파일에 SQL 파일 불러오기
 
 
-- 최상단텝 query
-    ```slq
+- 최상단 query텝
+    ```sql
         -- 용산구의 행정구역 경계 gps를 가져와라
         SELECT *  FROM tbl_gps WHERE gu_id = '1';
         -- 다음과 같은 명령문임
         SELECT *  FROM tbl_gps 
-            WHERE gu_id = (
-                SELECT gu_id FROM tbl_areas WHERE gu ='용산구'
-                );
+        WHERE gu_id = (
+            SELECT gu_id FROM tbl_areas WHERE gu ='용산구'
+            );
     ```
