@@ -10,8 +10,10 @@
     <div>
         <h2>제목</h2>
         <h2 class='food'>점심</h2>
+        <p class='food'>도시락</p>
         <button>색변경</button>
         <button id='blackBtn'>글자색검정으로변경</button>
+            
     </div>
     <!-- 화면 보이는 부분 끝 -->
     <script>
@@ -31,6 +33,11 @@
         $('#blackBtn').on('click', ()=>{
             $('h2').css('color', 'black')
         })
+    </script>
+    <script>
+        // class 가 food 인 요소의 글자색을 yellow, 단 h2만
+        // 이 문서상 존재하는 모든 h2중에 class가 food인 요소
+        $('h2.food').css('color', 'yellow')
     </script>
     <script>
         // jQuery : javascript framework의 가장 전통적인 제품
