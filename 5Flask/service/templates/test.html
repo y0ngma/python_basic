@@ -13,6 +13,19 @@
     </div>
     <!-- 화면 보이는 부분 끝 -->
     <script>
+        // h2을 찾아서,
+        // $('css selector') : 요소를 찾는 방법
+        // 문서상에 존재하는 모든 h2 => 리스트, 배열..
+        $('h2')
+        // h2를 찾아서 빨간색으로 처리(DOM조작-css)
+        $('h2').css('color', 'red')
+        // 색변경 버튼누르면(click, 값change 대표적 event) 
+        // h2의 하위 글자색이 파랑색으로 바뀐다.
+        $('button').on('click', ()=>{
+            $('h2').css('color', 'blue')
+        })
+    </script>
+    <script>
         // jQuery : javascript framework의 가장 전통적인 제품
         // 손쉽게 js를 사용할 수 있어서 생산성을 극대화
         // 대부분의 js들이 jQuery를 기반으로 구현되었다.
