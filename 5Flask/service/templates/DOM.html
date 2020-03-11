@@ -58,6 +58,25 @@ crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
         // 지도가 화면에 보이면
         // 자치구를 선책하면 해당 행정구역의 경계선 gps를 받아서
         // 지도상에 구역을 표현한다.
+        $('#gu').on('change', ()=>{
+            //alert( $('#gu').val() )
+            // 서버쪽으로 해당 행정구역 gps값 요청
+            getAreaGps( $('#gu').val() )
+        })
+        function getAreaGps( gu_id ){
+            // 서버쪽으로 해당 행정구역 gps값 요청-> ajax
+            // ajax : 화면은그대로두고, 백그라운드(비동기)에서 통신을수행
+            // 서버요청
+            // js에서는 {}이 객체이고, 안에는 맴버변수, 맴버함수
+            $.get({
+                url:'/getAreaGps',
+                data:'gu_id='+gu_id,
+                dataType:'json',
+                success:(gpses)=>{},
+                error:(err)=>{}
+            })
+        }
+
 
         /*
         var areas = []
