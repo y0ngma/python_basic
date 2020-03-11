@@ -9,11 +9,53 @@
     <!-- 화면보이는 부분 시작 -->
     <div>
         <h2>제목</h2>
-        <h2 class='food'>점심</h2>
+        <h3 class='food'>점심</h3>
         <p class='food'>도시락</p>
         <button>색변경</button>
         <button id='blackBtn'>글자색검정으로변경</button>
-            
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                    <ol>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ol>
+            </ul>
+            <input type='text' name='uid'>
+            <input type='password' name='upw'>
+
+            <table border="1" id='data'>
+                <thead>
+                    <tr>
+                        <td>컬럼1</td>
+                        <td>컬럼2</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                </tbody>
+            </table>
     </div>
     <!-- 화면 보이는 부분 끝 -->
     <script>
@@ -38,6 +80,40 @@
         // class 가 food 인 요소의 글자색을 yellow, 단 h2만
         // 이 문서상 존재하는 모든 h2중에 class가 food인 요소
         $('h2.food').css('color', 'yellow')
+        // li중에 1,2,3번만 글자색 빨강
+        // 특정이 안되면 부모 자식등 관계를 따진다
+        $('ul>li').css('color', 'red')
+        // 후손(직계자식도 포함)
+        //$('ul li').css('color', 'blue')
+        // 열거
+        $('h2,  p').css('color', 'pink')
+        // 속성셀렉터
+        // uid입력창의 배경색을 lightgreen
+        // name은 form 전송시 키값
+        $('[name=uid]').css('background', 'lightgreen')
+        // 의사결정셀렉터 ->테이블, 리스트, 동적 리스트 구성시
+        // 아이디가 data인요소의 직계자식tbody의 모든 직계자식tr들
+        $('#data>tbody>tr').css('background', 'yellow')
+        $('#data>tbody>tr:first').css('background', 'green')
+        $('#data>tbody>tr:last').css('background', 'red')
+        $('#data>tbody>tr:odd').css('background', 'white')
+        $('#data>tbody>tr:even').css('background', 'gray')
+        // 기준위치 3 equal, greater, less than
+        $('#data>tbody>tr:eq(3)').css('background', 'black')
+        $('#data>tbody>tr:gt(3)').css('background', 'red')
+        $('#data>tbody>tr:lt(3)').css('background', 'blue')
+        // 특정위치
+        $('#data>tbody>tr:nth-child(1)').css('background', 'blue')
+        // 요소찾기
+        // html4 까지 사용
+        document.getElementsByTagName('h2')
+        document.getElementsById('h2')
+        // html5 에서 추가
+        document.querySelector('h2')
+        document.querySelector('#data')
+        // jQuery
+        $('h2')
+        $('#data')
     </script>
     <script>
         // jQuery : javascript framework의 가장 전통적인 제품
