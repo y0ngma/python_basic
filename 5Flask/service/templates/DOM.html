@@ -33,8 +33,14 @@ crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
 </head>
 
 <body>
-    
-    <div id="map" style="width:100%;height:350px;"></div>
+    <div>
+        <select id='gu'>
+            <option value='1'>용산구</option>
+            <option value='2' selected>중구</option>
+        </select>
+    </div>
+
+    <div id="map" style="width:100%;height:550px;"></div>
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3caedb6476a93a2d3dcceb1cb2a24b32"></script>
     <script>
