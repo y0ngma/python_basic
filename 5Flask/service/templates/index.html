@@ -3,14 +3,14 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        //문서가 모두 로드되었다는 이벤트 발생시 자동호출
-        //DOM(Document Object Model) tree가 로드되었다
-        //아래 두줄 상동
-        //$(document).ready(function(){
+        // 문서가 모두 로드되었다는 이벤트 발생시 자동호출
+        // DOM(Document Object Model) tree가 로드되었다
+        // 아래 두줄 상동
+        // $(document).ready(function(){
         $(document).ready(()=>{
             console.log(1)
-            // 테스트용 텍스트
-            //const // 는 상수.
+            // 테스트용 텍스트 뛰우기
+            // const // 는 상수.
             let testMsg = `
             BTS (Korean: 방탄소년단; RR: Bangtan Sonyeondan), also known as the Bangtan Boys, is a seven-member South Korean boy band formed in Seoul in 2010.[3] The septet co-writes and produces much of their output. Originally a hip hop group, their musical style has evolved to include a wide range of genres. Their lyrics, often focused on personal and social commentary, touch on the themes of mental health, troubles of school-age youth, loss, the journey towards loving oneself, and individualism. Their work features references to literature and psychological concepts and includes an alternative universe storyline. The group have staged several world tours.
             `
@@ -27,7 +27,7 @@
             <br>
             <button id='LangDetectBtn'>언어감지</button>
             <br>
-            <button>번역</button>
+            <button onclick="alert('#inline방식');">번역</button>
             <br>
             <textarea>번역문을 입력하세요</textarea>
         </fieldset>
