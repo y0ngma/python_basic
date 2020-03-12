@@ -7,8 +7,10 @@ crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
 <head>
     <meta charset="utf-8">
     <title>다각형에 이벤트 등록하기2</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 배포시 후처리 : js를 로컬에 저정(webpack 처리가 됨-
+    한줄로 처리 ->가독성다운, 용량최적화)
+    ...min.js로 끝나는 확장자는 불필요공백 날린 최소버전 -->
     <style>
         .area {
             position: absolute;

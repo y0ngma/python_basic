@@ -112,3 +112,17 @@ L service
             SELECT gu_id FROM tbl_areas WHERE gu ='용산구'
             );
     ```
+
+## geoJson
+- opinet.co.kr 에서 읍면동 까지 나누는 지도 참고
+1. geoJson => 반정형
+1. 디비오픈
+1. 폴리곤 갯수만큼 반복
+    - 행정구역별 (폴리곤단위) 한줄식 읽어서 (파일처리)
+    - 읽은 데이터 한개는 json 형식이므로, json.load()
+    - json.load() 자료구조를 그대로 유지
+    - => gps, 기타 정보를 인덱싱 처리 가능
+    - => df 구성 => db에 insert
+        - 다만 시군별로 테이블 나눠서 넣기
+        - 너무 느림 
+1. 디비 닫기
