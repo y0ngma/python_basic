@@ -99,7 +99,7 @@ L service
         df1.to_sql( name ='tbl_areas', con=conn, if_exists='replace', index=False)
     df2 = pd.read_csv('./raws/gps.csv')
     with engine.connect() as conn:
-        df2.to_sql( name ='tbl_areas', con=conn, if_exists='replace', index=False)
+        df2.to_sql( name ='tbl_gpses', con=conn, if_exists='replace', index=False)
                 
     ```
 
