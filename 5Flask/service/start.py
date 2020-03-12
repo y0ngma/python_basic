@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify
 # entry 가 run.py일때는 다음과 같이
 # from service.ml import detect_lang
 from ml import detect_lang
-from db import selectAreaGps
+from db import selectAreaGps, selectAreaIndex
 import os
 print('====================================', os.getcwd())
 # 2. 플라스크 객체 생성
@@ -17,7 +17,10 @@ def test():
 
 @app.route('/')
 def home():
-    return render_template('dom.html')
+    # 기본 지역정보를 최초 화면 구성시 반영하여 처리
+    areas = selectAreaIndex()
+    # 구 정보를 gus라는 키값으로 지정하여 렌더링시 전달하겠다
+    return render_template('dom.html', gus = areas)
 
 @app.route('/getAreaGps') # 
 def getAreaGps():

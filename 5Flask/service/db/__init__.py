@@ -32,6 +32,27 @@ def selectAreaGps(gu_id):
             connection.close()    
     return result
 
+def selectAreaIndex(  ):
+    connection = pSql.connect(  host    ='localhost',
+                                user    ='root',
+                                password='1'*8,
+                                db      ='python_db',
+                                charset ='utf8mb4',
+                                cursorclass=pSql.cursors.DictCursor )
+    result = []
+    try:
+        with connection.cursor() as cursor:
+            sql = '''
+                SELECT * FROM tbl_areas ORDER BY gu ASC;
+            '''
+            cursor.execute(sql)
+            result = cursor.fetchall()
+    finally:
+        if connection:
+            connection.close()    
+    return result
+
 # for test
 if __name__ == '__main__':
-    selectAreaGps(1)
+    # selectAreaGps(1)
+    print(selectAreaIndex)
