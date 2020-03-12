@@ -1,9 +1,8 @@
-<!-- dev kakao 에서 앱키를 가져오고
-계정에 설정-일반-플랫폼-웹추가 
-crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
 <!DOCTYPE html>
 <html>
-
+    <!-- dev kakao 에서 앱키를 가져오고
+    계정에 설정-일반-플랫폼-웹추가 
+    crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
 <head>
     <meta charset="utf-8">
     <title>다각형에 이벤트 등록하기2</title>
@@ -48,6 +47,7 @@ crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
             {% for gu in gus: %}
                 <option value='{{gu.gu_id}}'>{{ gu.get('gu') }}</option>
             {% endfor %}
+            <!-- 삼항연산자 -->
             <!-- <option value='2' selected>중구</option> -->
         </select>
     </div>
@@ -168,7 +168,7 @@ crtl A , k, f 순으로 누르면 전체 정렬 (html형식에서만)-->
         }
 
         // 초기화
-        getAreaGps(2)
+        getAreaGps( {{ default }} )
     </script>
 </body>
 

@@ -26,7 +26,7 @@ def selectAreaGps(gu_id):
             cursor.execute(sql, (gu_id,))
             # 결과 집합을 가져온다 (one or all[{},{}])
             result = cursor.fetchall()
-            print(result)
+            # print(result)
     finally: # 무조건 실행되는 문
         if connection: # 따라서 연결시에만 접속해제
             connection.close()    

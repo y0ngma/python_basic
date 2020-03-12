@@ -20,7 +20,7 @@ def home():
     # 기본 지역정보를 최초 화면 구성시 반영하여 처리
     areas = selectAreaIndex()
     # 구 정보를 gus라는 키값으로 지정하여 렌더링시 전달하겠다
-    return render_template('dom.html', gus = areas)
+    return render_template('dom.html', gus = areas, default=2 )
 
 @app.route('/getAreaGps') # 
 def getAreaGps():
