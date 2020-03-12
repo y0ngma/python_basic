@@ -17,7 +17,7 @@ L service
         L index.html    # 서비스 메인화면
 ```
 
-## jQuery
+### jQuery
     1. 요소(element)를 찾는다
     1. 그 요소에 이벤트를 준다. or 요소를 조작한다.
     1. 기타 통신처리(ajax)
@@ -28,6 +28,20 @@ L service
             - 순서:id-클래스-부모자식관계-자식서열-특성속성
         - 이벤트 주기
         - 조작
+
+### geoJson
+- opinet.co.kr 에서 읍면동 까지 나누는 지도 참고
+1. geoJson => 반정형
+1. 디비오픈
+1. 폴리곤 갯수만큼 반복
+    - 행정구역별 (폴리곤단위) 한줄식 읽어서 (파일처리)
+    - 읽은 데이터 한개는 json 형식이므로, json.load()
+    - json.load() 자료구조를 그대로 유지
+    - => gps, 기타 정보를 인덱싱 처리 가능
+    - => df 구성 => db에 insert
+        - 다만 시군별로 테이블 나눠서 넣기
+        - 너무 느림 
+1. 디비 닫기
 
 ## 1. MariaDB install
 - 다운로드
@@ -49,12 +63,10 @@ L service
     # 생성 확인후 exit로 나가기 
     ```
 
-## Maria 장점
-- 테이블을 알아서 만들어준다
-- csv -> DataFrame -> database에 insert(끝)
-
-
 ## DF -> SQL -> DB
+- Maria 장점
+    - 테이블을 알아서 만들어준다
+    - csv -> DataFrame -> database에 insert(끝)
 - 업로드 준비하기
     ```py 
     # 설치 이 환경 : conda, 범용:pip
@@ -96,13 +108,11 @@ L service
 1. 암호입력 11111111
 1. 데이터베이스 : python_db 드롭다운 후 선택
 1. 저장 후 열기
-
-- DB삭제후 복원해보기
-    - python_db 우클릭해서 SQL로 내보내기
-    - 파일에 SQL 파일 불러오기
-
-
-- 최상단 query텝
+    - DB삭제후 복원해보기
+        - python_db 우클릭해서 SQL로 내보내기
+        - 파일에 SQL 파일 불러오기
+- DB 에 넣기 
+    - 최상단 query텝
     ```sql
         -- 용산구의 행정구역 경계 gps를 가져와라
         SELECT *  FROM tbl_gps WHERE gu_id = '1';
@@ -113,16 +123,117 @@ L service
             );
     ```
 
-## geoJson
-- opinet.co.kr 에서 읍면동 까지 나누는 지도 참고
-1. geoJson => 반정형
-1. 디비오픈
-1. 폴리곤 갯수만큼 반복
-    - 행정구역별 (폴리곤단위) 한줄식 읽어서 (파일처리)
-    - 읽은 데이터 한개는 json 형식이므로, json.load()
-    - json.load() 자료구조를 그대로 유지
-    - => gps, 기타 정보를 인덱싱 처리 가능
-    - => df 구성 => db에 insert
-        - 다만 시군별로 테이블 나눠서 넣기
-        - 너무 느림 
-1. 디비 닫기
+### HeidiSQL에서 AWS 연결
+- 파일 밑의 코드접속 아이콘 (세션관리자)
+    1. 신규 - aws
+    1. 호스트명 : 엔드포인트 복사 붙여넣기
+    1. 사용자   :root
+    1. 암호     :11111111
+    1. 데이터베이스 드롭다운 메뉴클릭(안될시 인바운드 막힌것)
+        - python_db 선택
+        - 안될시
+            - aws 서버의 보안에서 퍼블릭엑세스 가능성 확인
+            - inbound rules의 Source에 적힌 IP만 접속허용이다.
+            - Edit inbound rules 에서 0.0.0.0/32 추가(모두허용)       
+    1. 저장-열기
+
+## AWS
+### 서버 프리티어 세부설정 : 추가과금 방지하기
+- **상단 서비스텝 클릭**
+- @ 컴퓨팅
+    - EC2
+        - 인스턴스 시작
+            - 총 1~7단계인데 좌측 `프리티어` 체크
+            - Ubuntu Server 18.04 LTS 64비트
+            시작
+            시작
+            키페어
+            새키페어 생성
+            다운
+            시작
+            인스턴스보기
+            Name에 서버이름을 flask_svr 등으로 적기
+            pending -> running 확인
+            IPv4 퍼블릭 IP 가 내 IP 주소
+            https://kr.godaddy.com/
+            에서 도메인 구입 가능 (~.xyz주소이름)
+            - 검토 및 시작
+- @ 데이터베이스
+    - RDS
+        - (기존인터페이스로 전환)
+        - 1/3단계
+            1. 하단 프리티어 체크 후 MariaDB 선택
+        - 2/3단계
+            1. DB인스턴스 클래스 드롭다운메뉴에 db.t2 (무료)확인
+            1. 스토리지 자동 조정 활성화 체크해제(과금방지)
+            1. 인스턴스 식별자
+                - python_db
+            1. 마스터 사용자 이름
+                - root(보안유의)
+            1. 암호
+                - 11111111
+        - 3/3단계
+            1. 퍼블릭엑세스 가능성
+                - 예
+            1. 데이터베이스이름
+                - python_db
+            1. 백업보전기강 
+                - 0일
+            1. 스냅샷 태그복사 
+                - 해제
+            1. 확장모니터링
+                - 사용안함
+            1. 마이너 버전 자동 업그레이드 
+                - 사용 안 함
+            1. 삭제 방지
+                - 비활성
+    - 데이터베이스 삭제하는법
+        - 우클릭 `상태 - 종료(terminate)`
+
+### putty 프로그램 다운로드
+- https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+1. putty.exe (the SSH and Telnet client itself)
+1. puttygen.exe (a RSA and DSA key generation utility)
+    - 위 두개를 64 bit 다운로드
+
+### puttygen 실행
+- 윈도우에서 실행하므로 필요한 ppk 변환기
+    1. Load 
+        1. 모든확장자 
+        1. 자신의 .pem 선택 
+    1. Save private key
+        1. passphrase 경고창 뜨면 예
+        1. 동일한 이름으로 .ppk 로 저장
+
+### putty 실행
+- Ubuntu 열어보기
+    1. Host Name : ubuntu@자신의 IPv4 퍼블릭 IP
+        1. 자신의 aws Save
+    1. SSH
+        1. Auth
+            1. browse 본인 ppk 파일 선택
+    1. 다시 Session 에서
+        1. aws Save 눌러서 SSH 설정 저장
+        1. Open 후 실행확인
+    1. putty 재 시작시 저장된 aws 를 Load 
+
+### ubuntu
+- 우분투 실행창에서 경로 확인해보기
+```py
+ubuntu@ip-172-31-46-157:~$ cd ..
+ubuntu@ip-172-31-46-157:/home$ cd ..
+ubuntu@ip-172-31-46-157:/$ ls
+bin   home            lib64       opt   sbin  tmp      vmlinuz.old
+boot  initrd.img      lost+found  proc  snap  usr
+dev   initrd.img.old  media       root  srv   var
+etc   lib             mnt         run   sys   vmlinuz
+ubuntu@ip-172-31-46-157:/$ cd /home/ubuntu # 처음 시작위치
+ubuntu@ip-172-31-46-157:~$ ls
+ubuntu@ip-172-31-46-157:~$
+```
+
+
+
+
+
+
