@@ -94,7 +94,9 @@
   git clone https://github.com/y0ngma/python_basic.git
   git clone https://github.com/y0ngma/Project01_Crawling.git
   git clone https://y0ngma@bitbucket.org/y0ngma/semma.git
-  git clone https://y0ngma@bitbucket.org/bcduck89/mini_project_2nd.git
+  git clone https://y0ngma@bitbucket.org/bcduck89/
+  mini_project_2nd.git
+  git clone http://www.github.com/y0ngma/deploy01_AWS.git
 
   
   [private]
