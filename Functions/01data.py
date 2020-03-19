@@ -1,3 +1,5 @@
+import numpy as np
+
 def loadData( filename, dir='/content/drive/My Drive/data/ml-100k' ):
     data = list()
     array = list()
@@ -5,7 +7,8 @@ def loadData( filename, dir='/content/drive/My Drive/data/ml-100k' ):
     with open( f'{dir}/{filename}' ) as f:
         # 한줄씩 읽는다
         for line in f:
-            pass
+            print( line.split('\n') )
+            break
         pass
     return ( data, np.array(array) )
 
