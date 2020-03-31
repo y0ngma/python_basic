@@ -187,11 +187,15 @@ class EpsilonGreedyEngine(GameEngine):
       return np.argmax( self.v )
       pass
     pass
-  def policyUpdate(self):
+  def policyUpdate(self, choice_arm, reward, ):
     # 1. 이번 에피소드에 선택한 Arm의 수행 횟수를 증가
-    
+    self.n[ choice_arm ] += 1
     # 2. 이번 에피소드에 선택한 Arm의 가치를 증가
-    
+    ## (n-1)/n * Vt - 1 + (1/n) * Rt
+    n = self.n[ choice_arm ]
+    # 갱신직전가치
+    v = self.v[ choice_arm ]
+    self.v[ choice_arm ] = ((n-1)/n) * v + (1/n) * reward
     pass
   def getName(self):
     return 'ε-greedy 알고리즘 이용한다'
