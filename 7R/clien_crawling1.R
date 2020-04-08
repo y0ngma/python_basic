@@ -15,13 +15,13 @@ library(stringr)
 i <- 1
 final_data <- NULL
 
-for(i in 1:10) {
+for(i in 1:1) {
     url <- paste0("https://www.clien.net/service/board/park?&od=T31&po=", i-1)
     # url
     b <- readLines(url, encoding="UTF-8")
     # str(b)
     # length(b)
-    #head(b)
+    head(b)
     #tail(b)
     
     b2 <- b[str_detect(b, "subject_fixed")]
@@ -102,11 +102,16 @@ write.csv(final_data, "final_data.csv", row.names=F)
 
 ######## 글 본문 데이터를 이용하여 형태소 분석 및 워드 클라우드
 setwd("./")
-final_data <- read.csv("./final_data.csv", encoding="EUC-KR", fileEncoding="EUC-KR")
-#final_data <- read.csv("./Data/final_data.csv", encoding="cp949", fileEncoding="UTF-8")
+#final_data <- read.csv("./final_data.csv", encoding="EUC-KR", fileEncoding="EUC-KR")
+final_data <- read.csv("./Data/final_data.csv", encoding="cp949", fileEncoding="UTF-8")
 #final_data <- read.csv("./final_data.csv")
 head(data)
-install.packages("KoNLP")
+install.packages("rJava")
+install.packages("DBI")
+install.packages("bit64")
+install.packages("blob")
+#library(KoNLP)
+#install.packages("KoNLP")
 install.packages("wordcloud")
 
 library(KoNLP) # 한글 형태소 분석기

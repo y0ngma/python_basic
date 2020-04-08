@@ -67,13 +67,13 @@ tail(final_data)
 
 # 글목록 데이터 저장
 setwd("./")
-write.csv( final_data, "./Data/base_data.csv", row.names=F )
+write.csv( final_data, "./Data/base_data1.csv", row.names=F )
 
 ## -------------------------------------------------------------------- ##
 
 # 글목록수집데이터에서 글본문 링크로 글 본문 수집
 setwd("./")
-data <- read.csv("./Data/base_data.csv")
+data <- read.csv("./Data/base_data1.csv")
 head(data)
 # save(data, file="base_data.RData")
 # load("base_data.RData")
