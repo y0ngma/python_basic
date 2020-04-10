@@ -1,7 +1,7 @@
 #####################################################
 #Data Exploration
 rm(list=ls())
-data_cust <- read.csv("Working/data_cust_1-1.csv", header=TRUE)
+data_cust <- read.csv("./Working/data_cust_1-1.csv", header=TRUE)
 
 #####################################################
 #연령대 별 사기자 수

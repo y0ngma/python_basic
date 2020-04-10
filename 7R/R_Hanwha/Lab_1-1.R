@@ -6,23 +6,18 @@
 rm(list=ls())
 
 #작업 디렉토리 설정
-setwd("C:/Projects/R_Project/Hanwha/Workplace")
+# setwd("C:/Projects/R_Project/Hanwha/Workplace")
+setwd("C:/Repository/python_basic/7R/R_Hanwha")
 
 #####################################################
 #원본 데이터 읽기
 #####################################################
 data_cust <- read.csv("Data/BGCON_CUST_DATA.csv", header=TRUE, sep=",", encoding="CP949", fileEncoding="UCS-2")
-
 data_claim <- read.csv("Data/BGCON_CLAIM_DATA.csv", header=TRUE, sep=",", encoding="CP949", fileEncoding="UCS-2")
-
 data_cntt <- read.csv("Data/BGCON_CNTT_DATA.csv", header=TRUE, sep=",", encoding="CP949", fileEncoding="UCS-2")
-
 data_fmly <- read.csv("Data/BGCON_FMLY_DATA.csv", header=TRUE, sep=",", encoding="CP949", fileEncoding="UCS-2")
-
 data_fpinfo <- read.csv("Data/BGCON_FPINFO_DATA.csv", header=TRUE, sep=",", encoding="CP949", fileEncoding="UCS-2")
-
-
-#####################################################
+####################################################
 #정상인과 사기자의수 확인
 #####################################################
 (count_siu <- table(data_cust$SIU_CUST_YN)) #사기자가 아닌 사람과 사기자인 사람의 수 18801, 1806
@@ -164,4 +159,5 @@ rm(occp_grp_1_to_no)
 rm(nullstring_to_N)
 
 #데이터 임시 저장
-write.csv(data_cust, "Working/data_cust_1-1.csv", row.names = FALSE)
+write.csv(data_cust, "./Working/data_cust_1-1.csv", row.names = FALSE)
+
