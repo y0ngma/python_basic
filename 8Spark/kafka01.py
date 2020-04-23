@@ -24,9 +24,10 @@ df1 = df.selectExpr("CAST (key AS STRING)", "CAST(value AS STRING)")
 
 
 
-#df1의 실시간 값을 console에 출력함 (출력을 위한 코드)
+#df1의 실시간 값을 console에 출력함(출력을 위한 코드. 계속실행 셀)
 df1.writeStream.outputMode("append") \
     .format("console") \
     .option("truncate", "false") \
+    .trigger(processingTime="10 seconds") \
     .start() \
     .awaitTermination()

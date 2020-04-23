@@ -1,3 +1,6 @@
+# 다음은 우분투 쥬피터에서 카프카를 실행한 후 실행시킨다
+####################################
+
 # pip install kafka-python
 import time, threading, multiprocessing
 from kafka import KafkaConsumer, KafkaProducer
@@ -16,7 +19,7 @@ class Consumer(multiprocessing.Process):
         # auto_offset_reset : latest, earliest
         consumer = KafkaConsumer( bootstrap_servers='192.168.0.15'
                     , auto_offset_reset='latest', consumer_timeout_ms=1000 )
-        consumer.subscribe(['testTopic2'])
+        consumer.subscribe(['testTopic2']) # list:즉, 다양한곳에서부터 받을 수 있음
         while not self.stop_event.is_set():
             for msg in consumer:
                 # str = msg.value # 기본 한글안됨 버전
@@ -27,7 +30,7 @@ class Consumer(multiprocessing.Process):
                     break
         consumer.close()
 
-class Producer(threading.Thread):
+class Producer(threading.Thread): #=multiprocessing.Process
     def __init__(self):
         threading.Thread.__init__(self)
         self.stop_event = threading.Event()
@@ -36,12 +39,13 @@ class Producer(threading.Thread):
         self.stop_event.set()
 
     def run(self): 
-        producer = KafkaProducer( bootstrap_servers='192.168.0.37:9092' ) # 15
+        producer = KafkaProducer( bootstrap_servers='192.168.0.15:9092' ) # 15
 
         while not self.stop_event.is_set():
             str = input('send msg : ')
-            producer.send( 'testTopic2', str.encode() ) #string to byte
-            time.sleep(3)
+            #string to byte, senable only to 1 of topic
+            producer.send( 'testTopic2', str.encode() ) 
+            time.sleep(0.1)
             
         producer.close() 
 
