@@ -84,6 +84,7 @@ pwd # home/user1
 
 
 # 4. 하둡
+- start-all.sh
 ## 다운로드
 - @ MobaXterm cmd
 ```py
@@ -236,6 +237,7 @@ mkdir -p ~/hadoop-3.1.3/data/dataNode
     Your Hardware Enablement Stack (HWE) is supported until April 2023.
     Last login: Tue Apr 21 13:17:43 2020 from 192.168.0.65
     ```
+
 #### name노드 포멧
 - hdfs namenode -format
 - start-all.sh
@@ -248,6 +250,7 @@ mkdir -p ~/hadoop-3.1.3/data/dataNode
     7822 SecondaryNameNode
     8222 NodeManager
     ```
+
 #### 방화벽 허용
 - sudo ufw allow 9000
 - sudo ufw allow 9870
@@ -255,6 +258,7 @@ mkdir -p ~/hadoop-3.1.3/data/dataNode
 - sudo ufw allow 9866
 
 ## 접속
+### 크롬에서 접속 확인해보기
 - 크롬에서 192.168.0.`XXX`:9870 으로 이동
     - @ Utilities텝
         - Browser the file system 이 파일 저장소
@@ -315,7 +319,7 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
 
 
 
-# 아나콘다 3
+# 5. 아나콘다 3
 ## 다운로드
 - 공식홈페이지에서 링크 얻어서 다운
     ```py
@@ -362,8 +366,10 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
 
 
 
-# 스파크
-## 실행 
+# 6. 스파크
+- start-master.sh
+- start-slave.sh spark://127.0.0.1:7077
+## 설치 
     ```py
     start-all.sh
     sudo apt install scala -y
@@ -380,6 +386,7 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
     export SPARK_HOME=/home/user1/spark-2.4.5-bin-hadoop2.7
     export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
     ```
+
 ## 환경변수 설정
 - 경로 `/home/user1/spark-2.4.5-bin-hadoop2.7/conf/`
     ```py
@@ -419,7 +426,7 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
     ```
 
 
-- 마스터/슬레이브 추가
+## 마스터/슬레이브 실행
     ```py
     # 방화벽열기
     sudo ufw allow 7077
@@ -449,7 +456,7 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
     # 크롬에서 http://192.168.0.XXX:8888
     ```
 
-# Docker
+# 7. Docker
 ## 설치
 - 이미지 리포지토리 키 가져오기
     ```py
@@ -473,9 +480,10 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
 
     ```
 
-# Kafka
+# 8. Kafka & Zookeeper
 - zookeeper위에 설치된 통신 서버
 - 토픽 생성한 자에게만 통신가능
+
 ## 설치
 ```py
 # 다운로드
@@ -560,6 +568,58 @@ jps
 
 # [필요 시 : 토픽삭제]
 ~/kafka_2.11-2.2.0/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --delete --topic testTopic2
-
 ```
 
+## spark-kafka 라이브러리 다운로드
+```py
+wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.11/2.4.5/spark-sql-kafka-0-10_2.11-2.4.5.jar
+
+wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafka-clients-0.11.0.0.jar
+```
+
+# 주요 명령어 정리
+```py
+# Hadoop 구동
+start-all.sh
+# Spark master 구동
+start-master.sh
+# Spark slave 구동
+start-slave.sh spark://127.0.0.1:7077
+
+stop-all.sh
+# 강제종료(jps시 나오는 번호입력)
+kill xxxx
+```
+## 
+## spark 토픽
+```py
+# 토픽 생성 => testTopic2   => 채널
+~/kafka_2.11-2.2.0/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic testTopic2
+
+# 토픽 확인
+~/kafka_2.11-2.2.0/bin/kafka-topics.sh --list --zookeeper 127.0.0.1:2181
+
+# Producer생성 (송신자)
+~/kafka_2.11-2.2.0/bin/kafka-console-producer.sh --broker-list 192.168.0.15:9092 --topic testTopic2
+
+# Consumer생성 (수신자)
+~/kafka_2.11-2.2.0/bin/kafka-console-consumer.sh --bootstrap-server 192.168.0.15:9092 --topic testTopic2 --from-beginning
+
+# [필요 시 : 토픽삭제]
+~/kafka_2.11-2.2.0/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --delete --topic testTopic2
+```
+
+## Zookeeper 서버
+```py
+# zookeeper 서버 구동 &를 마지막에 붙이면 백그라운드로 구동됨
+~/kafka_2.11-2.2.0/bin/zookeeper-server-start.sh 
+~/kafka/config/zookeeper.properties &
+
+# zookeeper 서버 구동 확인
+jps
+# 16494 QuorumPeerMain
+
+
+# [필요 시] zookeeper 서버 중지
+~/kafka_2.11-2.2.0/bin/zookeeper-server-stop.sh
+```

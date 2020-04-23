@@ -36,7 +36,7 @@ class Producer(threading.Thread):
         self.stop_event.set()
 
     def run(self): 
-        producer = KafkaProducer( bootstrap_servers='192.168.0.15:9092' )
+        producer = KafkaProducer( bootstrap_servers='192.168.0.37:9092' ) # 15
 
         while not self.stop_event.is_set():
             str = input('send msg : ')
