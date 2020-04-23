@@ -472,3 +472,94 @@ hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용
     docker exec -it mariadb-01 bash => mariadb-01컨테이너로 진입
 
     ```
+
+# Kafka
+- zookeeper위에 설치된 통신 서버
+- 토픽 생성한 자에게만 통신가능
+## 설치
+```py
+# 다운로드
+wget https://archive.apache.org/dist/kafka/2.2.0/kafka_2.11-2.2.0.tgz
+
+# 압축풀기
+tar -zxvf kafka_2.11-2.2.0.tgz => 압축풀기
+
+# 환경설정
+nano ~/.bashrc  
+# 마지막줄에 다음 추가
+export KAFKA_HOME=/home/user1/kafka_2.11-2.2.0
+export PATH=$PATH:$KAFKA_HOME/bin
+# 추가 후 적용
+$ source ~/.bashrc
+
+# 방화벽열기
+sudo ufw allow 2181
+sudo ufw allow 9092
+```
+
+- 편집하기(확인만)
+```py
+# limitations under the License.
+# the directory where the snapshot is stored.
+dataDir=/tmp/zookeeper
+# the port at which the clients will connect
+clientPort=2181
+# disable the per-ip limit on the number of connections since this is a non-production config
+maxClientCnxns=0
+```
+
+## 서버
+```py
+# zookeeper 서버 구동 &를 마지막에 붙이면 백그라운드로 구동됨
+~/kafka_2.11-2.2.0/bin/zookeeper-server-start.sh 
+~/kafka/config/zookeeper.properties &
+
+# zookeeper 서버 구동 확인
+jps
+# 16494 QuorumPeerMain
+
+
+# [필요 시] zookeeper 서버 중지
+~/kafka_2.11-2.2.0/bin/zookeeper-server-stop.sh
+```
+- 서버 환경 설정
+```py
+nano ~/kafka_2.11-2.2.0/config/server.properties
+# 다음을 추가기입
+31 라인 : listeners=PLAINTEXT://0.0.0.0:9092
+36 라인 : advertised.listeners=PLAINTEXT://192.168.0.XXX:9092
+123 라인 : zookeeper.connect=127.0.0.1:2181
+가장마지막라인에 추가 : delete.topic.enable=true
+
+# kafka 서버 구동
+~/kafka_2.11-2.2.0/bin/kafka-server-start.sh ~/kafka_2.11-2.2.0/config/server.properties &
+
+
+# kafka 서버 구동 확인
+jps
+16494 QuorumPeerMain
+1234 Kafka
+
+# [필요시] kafka 서버 중지
+~/kafka_2.11-2.2.0/bin/kafka-server-stop.sh    
+```
+
+## 토픽
+```py
+# 토픽 생성 => testTopic2   => 채널
+~/kafka_2.11-2.2.0/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic testTopic2
+
+# 토픽 확인
+~/kafka_2.11-2.2.0/bin/kafka-topics.sh --list --zookeeper 127.0.0.1:2181
+
+# Producer생성 (송신자)
+~/kafka_2.11-2.2.0/bin/kafka-console-producer.sh --broker-list 192.168.0.15:9092 --topic testTopic2
+
+# Consumer생성 (수신자)
+~/kafka_2.11-2.2.0/bin/kafka-console-consumer.sh --bootstrap-server 192.168.0.15:9092 --topic testTopic2 --from-beginning
+
+# [필요 시 : 토픽삭제]
+~/kafka_2.11-2.2.0/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --delete --topic testTopic2
+
+```
+
