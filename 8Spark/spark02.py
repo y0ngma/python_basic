@@ -13,26 +13,45 @@ class Consumer(multiprocessing.Process):
         self.stop_event.set()
 
     def run(self):
-        consumer = KafkaConsumer(
-             bootstrap_servers='192.168.0.15'
-            , auto_offset_reset='latest'
-            , consumer_timeout_ms=1000 )
+        # auto_offset_reset : latest, earliest
+        consumer = KafkaConsumer( bootstrap_servers='192.168.0.15'
+                    , auto_offset_reset='latest', consumer_timeout_ms=1000 )
         consumer.subscribe(['testTopic2'])
         while not self.stop_event.is_set():
             for msg in consumer:
-                str=msg.value
+                # str = msg.value # 기본 한글안됨 버전
+                str = (msg.value).decode('utf-8')
                 print(str)
 
                 if self.stop_event.is_set():
                     break
         consumer.close()
 
+class Producer(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+        self.stop_event = threading.Event()
+
+    def stop(self):
+        self.stop_event.set()
+
+    def run(self): 
+        producer = KafkaProducer( bootstrap_servers='192.168.0.15:9092' )
+
+        while not self.stop_event.is_set():
+            str = input('send msg : ')
+            producer.send( 'testTopic2', str.encode() ) #string to byte
+            time.sleep(3)
+            
+        producer.close() 
+
 def main():
-    tasks=[Consumer()]
+    tasks=[Consumer(), Producer()]
 
     for tmp in tasks:
         tmp.start()
-        time.sleep(1000)
+    
+    time.sleep(1000)
 
     # 안전하게 종료해주는 코드
     for tmp in tasks:
