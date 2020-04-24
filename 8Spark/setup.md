@@ -69,119 +69,119 @@
 
 ## 서버주소로 이름 변경
 - @ MobaXterm cmd
-```py
-# @cmd 
-hostname # 현재 이름 : user1-virtualbox를 ip주소로 변경
-sudo nostnamectl set-hostname 192.168.0.15
-hostname # 192.168.0.15로 변경 확인
-sudo reboot # 재접속시 user1/1234로 로그인
-sudo apt install openjdk-8-jre-headless -y
-sudo apt install openjdk-8-jdk-headless -y
+    ```py
+    # @cmd 
+    hostname # 현재 이름 : user1-virtualbox를 ip주소로 변경
+    sudo nostnamectl set-hostname 192.168.0.15
+    hostname # 192.168.0.15로 변경 확인
+    sudo reboot # 재접속시 user1/1234로 로그인
+    sudo apt install openjdk-8-jre-headless -y
+    sudo apt install openjdk-8-jdk-headless -y
 
-java -version # 1.8.0_242
-pwd # home/user1
-```
+    java -version # 1.8.0_242
+    pwd # home/user1
+    ```
 
 
 # 4. 하둡
 - start-all.sh
 ## 다운로드
 - @ MobaXterm cmd
-```py
-# @크롬에서 http://apache.tt.co.kr/hadoop/common/hadoop-3.1.3/
-# @페이지에서 마지막 hadoop-3.1.3.tar.gz우클릭 링크주소복사
-# @MobaXterm 에서
-wget 링크주소 붙여넣기 
-ls
-tar -zxvf hadoop-3.1.3.tar.gz # 압축풀기
-ls
-```
+    ```py
+    # @크롬에서 http://apache.tt.co.kr/hadoop/common/hadoop-3.1.3/
+    # @페이지에서 마지막 hadoop-3.1.3.tar.gz우클릭 링크주소복사
+    # @MobaXterm 에서
+    wget 링크주소 붙여넣기 
+    ls
+    tar -zxvf hadoop-3.1.3.tar.gz # 압축풀기
+    ls
+    ```
 
 ## 하둡 환경 설정
 - @ MobaXterm cmd
-```py 
-# 환경설정 파일
-nano ~/.bashrc
-# 가장 밑으로 이동후 복사
-export HADOOP_HOME=/home/user1/hadoop-3.1.3
-export HADOOP_COMMON_HOME=/home/user1/hadoop-3.1.3
-export HDFS_NAMENODE_USER="user1"
-export HDFS_DATANODE_USER="user1"
-export HDFS_SECONDARYNAMENODE_USER="user1"
-export YARN_RESOURCEMANAGER_USER="user1"
-export YARN_NODEMANAGER_USER="user1"
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$JAVA_HOME/bin
-# 저장 ctrl + S 후 나오기 ctrl + X
-```
+    ```py 
+    # 환경설정 파일
+    nano ~/.bashrc
+    # 가장 밑으로 이동후 복사
+    export HADOOP_HOME=/home/user1/hadoop-3.1.3
+    export HADOOP_COMMON_HOME=/home/user1/hadoop-3.1.3
+    export HDFS_NAMENODE_USER="user1"
+    export HDFS_DATANODE_USER="user1"
+    export HDFS_SECONDARYNAMENODE_USER="user1"
+    export YARN_RESOURCEMANAGER_USER="user1"
+    export YARN_NODEMANAGER_USER="user1"
+    export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$JAVA_HOME/bin
+    # 저장 ctrl + S 후 나오기 ctrl + X
+    ```
 - 환경변수 변동사항 적용 
-```py
-# 수정된 환경변수를 적용
-source ~/.bashrc
-``` 
+    ```py
+    # 수정된 환경변수를 적용
+    source ~/.bashrc
+    ``` 
 - 여러 환경변수 수정하기
     - 경로 `~/hadoop-3.1.3/etc/hadoop/` 에서 직접 열어서 수정하거나 nano 이용
-```py
-# 1 #######################################################
-nano ~/hadoop-3.1.3/etc/hadoop/hadoop-env.sh
-# @54라인 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
+    ```py
+    # 1 #######################################################
+    nano ~/hadoop-3.1.3/etc/hadoop/hadoop-env.sh
+    # @54라인 
+    export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 
-# 2 ########################################################
-nano ~/hadoop-3.1.3/etc/hadoop/core-site.xml
-# 마지막줄에 추가
-<configuration>
-    <property>
-        <name>fs.default.name</name>
-        <value>hdfs://192.168.0.XXX:9000</value> ### 자신 주소
-    </property>
-</configuration>
+    # 2 ########################################################
+    nano ~/hadoop-3.1.3/etc/hadoop/core-site.xml
+    # 마지막줄에 추가
+    <configuration>
+        <property>
+            <name>fs.default.name</name>
+            <value>hdfs://192.168.0.XXX:9000</value> ### 자신 주소
+        </property>
+    </configuration>
 
-# 3 #######################################################
-nano ~/hadoop-3.1.3/etc/hadoop/hdfs-site.xml
-# 마지막줄에 추가
-<configuration>
-    <property>
-        <name>dfs.namenode.name.dir</name>
-        <value>/home/vagrant/hadoop-3.1.3/data/nameNode</value>
-    </property>
+    # 3 #######################################################
+    nano ~/hadoop-3.1.3/etc/hadoop/hdfs-site.xml
+    # 마지막줄에 추가
+    <configuration>
+        <property>
+            <name>dfs.namenode.name.dir</name>
+            <value>/home/vagrant/hadoop-3.1.3/data/nameNode</value>
+        </property>
 
-    <property>
-        <name>dfs.datanode.data.dir</name>
-        <value>/home/vagrant/hadoop-3.1.3/data/dataNode</value>
-    </property>
+        <property>
+            <name>dfs.datanode.data.dir</name>
+            <value>/home/vagrant/hadoop-3.1.3/data/dataNode</value>
+        </property>
 
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-</configuration>
+        <property>
+            <name>dfs.replication</name>
+            <value>1</value>
+        </property>
+    </configuration>
 
-# 4 #######################################################
-nano ~/hadoop-3.1.3/etc/hadoop/mapred-site.xml
-# 마지막줄에 추가
-<configuration>
-    <property>
-        <name>map.framework.name</name>
-        <value>yarn</value>
-    </property>
-</configuration>
+    # 4 #######################################################
+    nano ~/hadoop-3.1.3/etc/hadoop/mapred-site.xml
+    # 마지막줄에 추가
+    <configuration>
+        <property>
+            <name>map.framework.name</name>
+            <value>yarn</value>
+        </property>
+    </configuration>
 
-# 5 #######################################################
-nano ~/hadoop-3.1.3/etc/hadoop/yarn-site.xml
-# 마지막줄에 추가
-<configuration>
-    <property>
-        <name>yarn.nodemanager.aux-services</name>
-        <value>mapreduce_shuffle</value>
-    </property>
-</configuration>
+    # 5 #######################################################
+    nano ~/hadoop-3.1.3/etc/hadoop/yarn-site.xml
+    # 마지막줄에 추가
+    <configuration>
+        <property>
+            <name>yarn.nodemanager.aux-services</name>
+            <value>mapreduce_shuffle</value>
+        </property>
+    </configuration>
 
-# 6 #######################################################
-# 네임노드 데이터노드 디렉토리 생성
-mkdir -p ~/hadoop-3.1.3/data/nameNode
-mkdir -p ~/hadoop-3.1.3/data/dataNode
-```
+    # 6 #######################################################
+    # 네임노드 데이터노드 디렉토리 생성
+    mkdir -p ~/hadoop-3.1.3/data/nameNode
+    mkdir -p ~/hadoop-3.1.3/data/dataNode
+    ```
 
 ## 하둡접속 설정
 ### 인증키 등록
@@ -262,50 +262,52 @@ mkdir -p ~/hadoop-3.1.3/data/dataNode
 - 크롬에서 192.168.0.`XXX`:9870 으로 이동
     - @ Utilities텝
         - Browser the file system 이 파일 저장소
-```py
-hdfs dfs -ls  # 없음
-hdfs dfs -mkdir /test1  # 하둡 파일시스템에 폴더 생성 
-hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용할 수 있게
-                # R 하위경로에 대한 권한 범위
-                # 777 뜻 (모든사용자 모든 권한)
-                    # 744, 755 많이 씀
-```
-비고|주사용자|그룹|일반인
---|--|--|--
-권한여부|Read<br>Write<br>Execute|Read<br>-<br>Execute|Read<br>-<br>- 
-이진수|111|101|100
-십진수|7|5|4
+    ```py
+    hdfs dfs -ls  # 없음
+    hdfs dfs -mkdir /test1  # 하둡 파일시스템에 폴더 생성 
+    hdfs dfs -chmod -R 777 /test1  #  /test1의 권한을 모든 사용자가 사용할 수 있게
+                    # R 하위경로에 대한 권한 범위
+                    # 777 뜻 (모든사용자 모든 권한)
+                        # 744, 755 많이 씀
+    ```
+       
+    비고|주사용자|그룹|일반인
+    --|--|--|--
+    권한여부|Read<br>Write<br>Execute|Read<br>-<br>Execute|Read<br>-<br>- 
+    이진수|111|101|100
+    십진수|7|5|4
 
 ***************************************************
 
 ### 접속 실패시
-```py
-# 1. 프로세스 중지
-    stop-all.sh
+-
+    ```py
+    # 1. 프로세스 중지
+        stop-all.sh
 
-# 2. jps로 확인
+    # 2. jps로 확인
 
-# 3. 환경설정 다시확인
+    # 3. 환경설정 다시확인
 
-# 4. 데이터노드 네임노드의 폴더안의 파일 지우기
-    rm -rf ~/hadoop-3.1.3/data/nameNode
-    rm -rf ~/hadoop-3.1.3/data/dataNode
+    # 4. 데이터노드 네임노드의 폴더안의 파일 지우기
+        rm -rf ~/hadoop-3.1.3/data/nameNode
+        rm -rf ~/hadoop-3.1.3/data/dataNode
 
-    mkdir -p ~/hadoop-3.1.3/data/nameNode
-    mkdir -p ~/hadoop-3.1.3/data/dataNode
+        mkdir -p ~/hadoop-3.1.3/data/nameNode
+        mkdir -p ~/hadoop-3.1.3/data/dataNode
 
-# 5. name노드 포멧
-    hdfs namenode -format
-    start-all.sh
+    # 5. name노드 포멧
+        hdfs namenode -format
+        start-all.sh
 
-# 6. jps
-    7377 NameNode
-    8537 Jps
-    8042 ResourceManager
-    7580 DataNode
-    7822 SecondaryNameNode
-    8222 NodeManager
-``` 
+    # 6. jps
+        7377 NameNode
+        8537 Jps
+        8042 ResourceManager
+        7580 DataNode
+        7822 SecondaryNameNode
+        8222 NodeManager
+    ``` 
 
 ### 케이블연결 실패시
 - 공유기 하나에 여럿이 물려 있는 환경에서는 자동으로 포트번호가 바뀌므로 수동으로 이를 고정하는 방법
@@ -576,6 +578,214 @@ wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.11/2
 
 wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafka-clients-0.11.0.0.jar
 ```
+
+# 9. 여러 우분투 연결
+## 호스트 설정
+- 각 우분투 ifconfig로 ip주소 확인
+    ```py
+    # 각 호스트 이름을 확인한 아이피로 변경
+    # 완료후 리부팅
+    sudo hostnamectl set-hostname 192.168.0.15
+    sudo hostnamectl set-hostname 192.168.0.103
+    sudo hostnamectl set-hostname 192.168.0.107
+    ```
+- 호스트 등록하기
+        - SERVER1, SERVER2, SERVER3 에 편집
+    ```py
+    sudo nano /etc/hosts
+    # 젤 위쪽에 추가
+    ###########################
+    # host register
+    192.168.0.15    hadoop1
+    192.168.0.103    hadoop2
+    192.168.0.107    hadoop3
+    ##########################
+
+    # 편집 후 서버에 적용하기
+    sudo service networking restart
+    ```
+
+## 환경변수 설정
+### source ~/.bashrc
+- SERVER1, SERVER2, SERVER3 편집
+    ```py
+    # 아래쪽에 다음 추가
+    nano ~/.bashrc
+    #export HADOOP_HOME=/home/user1/hadoop-3.1.3
+    #export HADOOP_COMMON_HOME=/home/user1/hadoop-3.1.3
+    export HADOOP_MAPRED_HOME=${HADOOP_HOME}    
+    export HADOOP_HDFS_HOME=${HADOOP_HOME}      
+    export YARN_HOME=${HADOOP_HOME}             
+    #export HDFS_NAMENODE_USER="user1"
+    #export HDFS_DATANODE_USER="user1"
+    #export HDFS_SECONDARYNAMENODE_USER="user1"
+    #export YARN_RESOURCEMANAGER_USER="user1"
+    #export YARN_NODEMANAGER_USER="user1"
+    #export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    #export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/#sbin:$JAVA_HOME/bin
+    source ~/.bashrc
+    # 적용하기
+    ```
+### 각 서버 xml 편집
+- SERVER1, SERVER2, SERVER3 편집
+    ```xml
+    nano ~/hadoop-3.1.3/etc/hadoop/core-site.xml
+    <!-- 변경할 것 없음 -->
+    <configuration>
+        <property>
+            <name>fs.defaultFS</name>
+            <value>hdfs://192.168.0.1:9000</value>
+        </property>
+    </configuration>
+
+    <!-- ################################################ -->
+
+    nano ~/hadoop-3.1.3/etc/hadoop/hdfs-site.xml
+    <configuration>
+        <property>
+            <name>dfs.namenode.name.dir</name>
+            <value>/home/user1/hadoop-3.1.3/data/nameNode</value>
+        </property>
+
+        <property>
+            <name>dfs.datanode.data.dir</name>
+            <value>/home/user1/hadoop-3.1.3/data/dataNode</value>
+        </property>
+
+        <property>
+            <name>dfs.replication</name>
+            <value>3</value> <!-- 데이터 노드 개수만큼 -->
+        </property>
+    </configuration>
+
+    <!-- ################################################ -->
+
+    nano ~/hadoop-3.1.3/etc/hadoop/mapred-site.xml
+    <configuration>
+        <property>
+            <name>mapreduce.jobtracker.address</name>
+            <value>192.168.0.15:54311</value><!--첫번째PC로-->
+        </property>
+
+        <property><!-- 다음내용 덮어쓰기 -->
+            <name>mapreduce.framework.name</name>
+            <value>yarn</value>
+        </property>
+    </configuration>
+
+    <!-- ################################################ -->
+
+    nano ~/hadoop-3.1.3/etc/hadoop/yarn-site.xml
+    <configuration>
+        <property>
+            <name>yarn.nodemanager.aux-services</name>
+            <value>mapreduce_shuffle</value>
+        </property>
+
+        <property>
+            <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+            <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+        </property>
+
+        <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>192.168.0.15</value><!--첫번째PC로-->
+        </property>
+    </configuration>
+
+    ```
+
+## 암호없이 접속
+- SERVER1 에서 암호없이 접속되는지 확인
+    - 192.168.0.1에서 192.168.0.2 으로 암호없이 접속가능해야함.
+    - 192.168.0.1에서 192.168.0.3 으로 암호없이 접속가능해야함.
+    ```py
+    # 1번에서 접속방법
+    ssh 192.168.0.103
+    ssh 192.168.0.107
+    # 접속 확인 후 
+    exit
+    # 돌아온거 확인
+    ifconfig
+    ```
+
+## 인증키 없거나 오류시 설정방법
+- 
+    ```py
+    # SERVER1에서 인증키 생성 
+    ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+    chmod 0600 ~/.ssh/authorized_keys
+
+    # SERVER2, SERVER3에 폴더생성 /home/user1/폴더 아래에 .ssh폴더가 있어야 함
+    # 해당 경로가서 확인후 없으면 다음실행
+    mkdir ~/.ssh
+
+    # SERVER1에서 인증키 인증하게
+    scp ~/.ssh/authorized_keys 192.168.0.2:/home/user1/.ssh/authorized_keys
+    scp ~/.ssh/authorized_keys 192.168.0.3:/home/user1/.ssh/authorized_keys
+
+    ```
+
+## 접속 후
+
+- SERVER1에서만
+    ```py 
+    sudo ufw allow 54311
+
+    nano ~/hadoop-3.1.3/etc/hadoop/masters
+    192.168.0.15
+
+    nano ~/hadoop-3.1.3/etc/hadoop/workers
+    192.168.0.15
+    192.168.0.103
+    192.168.0.107
+    ```
+- SERVER1, SERVER2, SERVER3에서 수행
+    ```py
+    rm -rf ~/hadoop-3.1.3/data/nameNode
+    rm -rf ~/hadoop-3.1.3/data/dataNode
+
+    mkdir -p ~/hadoop-3.1.3/data/nameNode
+    mkdir -p ~/hadoop-3.1.3/data/dataNode
+
+    hdfs namenode -format
+    ```
+
+## 정상구동 확인방법
+- SERVER1에서 구동시  SERVER2, SERVER3가 꺼져있어도 자동 구동됨.
+    ```py
+    start-all.sh
+
+    # SERVER1에서 jps
+    29555 Jps
+    28804 SecondaryNameNode
+    29205 NodeManager
+    29031 ResourceManager
+    28362 NameNode
+    28540 DataNode
+
+    # SERVER2에서 jps
+    3394 NodeManager
+    3230 DataNode
+    3519 Jps
+
+    # SERVER3에서 jps
+    3161 DataNode
+    3437 Jps
+    3325 NodeManager
+
+    # 크롬에서 192.168.0.1:9870 수행했을때 datanode가 3개
+    # 하나밖에 안뜰때?
+    ```
+
+
+
+
+
+
+
+
 
 # 주요 명령어 정리
 ```py
