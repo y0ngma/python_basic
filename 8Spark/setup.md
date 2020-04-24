@@ -85,7 +85,7 @@
 
 # 4. 하둡
 - start-all.sh
-## 다운로드
+## 4.1 다운로드
 - @ MobaXterm cmd
     ```py
     # @크롬에서 http://apache.tt.co.kr/hadoop/common/hadoop-3.1.3/
@@ -97,7 +97,7 @@
     ls
     ```
 
-## 하둡 환경 설정
+## 4.2 하둡 환경 설정
 - @ MobaXterm cmd
     ```py 
     # 환경설정 파일
@@ -183,7 +183,7 @@
     mkdir -p ~/hadoop-3.1.3/data/dataNode
     ```
 
-## 하둡접속 설정
+## 4.3 하둡접속 설정
 ### 인증키 등록
 #### 파일생성
 - ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
@@ -257,7 +257,7 @@
 - sudo ufw allow 9864
 - sudo ufw allow 9866
 
-## 접속
+## 4.4 접속
 ### 크롬에서 접속 확인해보기
 - 크롬에서 192.168.0.`XXX`:9870 으로 이동
     - @ Utilities텝
@@ -322,7 +322,7 @@
 
 
 # 5. 아나콘다 3
-## 다운로드
+## 5.1 다운로드
 - 공식홈페이지에서 링크 얻어서 다운
     ```py
     # 설치중에 홈텝에서 주소 더블클릭해서 창하나 더 열기
@@ -333,7 +333,8 @@
     source ~/.bashrc # "~" = home/사용자
     # rm -rf ~/anaconda3 # 아나콘다 삭제하기
     ```
-## 세팅
+
+## 5.2 세팅
 - 주피터환경설정파일생성
 1. jupyter notebook --generate-config 
 2. ipython
@@ -371,7 +372,7 @@
 # 6. 스파크
 - start-master.sh
 - start-slave.sh spark://127.0.0.1:7077
-## 설치 
+## 6.1 설치 
     ```py
     start-all.sh
     sudo apt install scala -y
@@ -381,7 +382,7 @@
     tar -xzvf spark-2.4.5-bin-hadoop2.7.tgz
     ```
 
-## 설정
+## 6.2 설정
     ```py
     nano ~/.bashrc
     # 아랫줄에 추가
@@ -389,7 +390,7 @@
     export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
     ```
 
-## 환경변수 설정
+## 6.3 환경변수 설정
 - 경로 `/home/user1/spark-2.4.5-bin-hadoop2.7/conf/`
     ```py
     # 해당경로로 이동해서
@@ -459,7 +460,7 @@
     ```
 
 # 7. Docker
-## 설치
+## 7.1 설치
 - 이미지 리포지토리 키 가져오기
     ```py
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -481,12 +482,130 @@
     docker exec -it mariadb-01 bash => mariadb-01컨테이너로 진입
 
     ```
+- 우분투에 도커 설치
+    ```py
+    # Docker 설치 이미지 리포지토리 키 가져오기
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+    # 리포지토리 추가하는 부분
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    
+    sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+    # docker그룹에 추가
+    sudo usermod -aG docker user1
+
+    # 리부팅
+    sudo reboot 
+    ```
+- tensorflow 설치
+    ```py
+    docker search tensorflow
+    # https://www.tensorflow.org/install/docker?hl=ko
+
+    docker pull tensorflow/tensorflow:latest-gpu-py3-jupyter
+    # docker로부터 tensorflow를 pull하는데 /
+    # latest버전-gpu엔진-py3파이선버전을-jupyter으로 돌리겠다
+    ```
+
+- tensorflow를 사용방법
+    ```py
+    # 방화벽
+    sudo ufw allow 8889
+    # 
+    docker run -it --name tf01 -d -p 8889:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter
+    # -it 
+    # --name tf01 
+    # -d : 백그라운드 
+    # -p 8889:8888 : 기존 8888을 8889에 연결해서 접속
+    ```
+
+- 토큰번호 확인하기
+    ```py
+    # 하단에 생성되는 토큰 번호를 포함하여 쥬피터 실행 혹은 쥬피터에서 토큰번호 직접 입력하게된다
+    (base) user1@192:~$     docker logs tf01
+
+    ________                               _______________
+    ___  __/__________________________________  ____/__  /________      __
+    __  /  _  _ \_  __ \_  ___/  __ \_  ___/_  /_   __  /_  __ \_ | /| / /
+    _  /   /  __/  / / /(__  )/ /_/ /  /   _  __/   _  / / /_/ /_ |/ |/ /
+    /_/    \___//_/ /_//____/ \____//_/    /_/      /_/  \____/____/|__/
+
+
+    WARNING: You are running this container as root, which can cause new files in
+    mounted volumes to be created as the root user on your host machine.
+
+    To avoid this, run the container by specifying your user's userid:
+
+    $ docker run -u $(id -u):$(id -g) args...
+
+    [I 05:58:11.994 NotebookApp] Writing notebook server cookie secret to /root/.local/share/jupyter/runtime/notebook_cookie_secret
+    jupyter_http_over_ws extension initialized. Listening on /http_over_websocket
+    [I 05:58:12.260 NotebookApp] Serving notebooks from local directory: /tf
+    [I 05:58:12.260 NotebookApp] The Jupyter Notebook is running at:
+    [I 05:58:12.260 NotebookApp] http://052316a79947:8888/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
+    [I 05:58:12.261 NotebookApp]  or http://127.0.0.1:8888/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
+    [I 05:58:12.261 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+    [C 05:58:12.266 NotebookApp]
+
+        To access the notebook, open this file in a browser:
+            file:///root/.local/share/jupyter/runtime/nbserver-1-open.html
+        Or copy and paste one of these URLs:
+            http://052316a79947:8888/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
+        or http://127.0.0.1:8888/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
+    ```
+
+- 주피터 실행하기
+    ```py
+    # 세번째 서버에서 접속한다면 ip주소 유의
+    192.168.0.107:8889/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
+
+    ```
+- 컨테이너로 진입
+    ```py
+    docker exec -it tf01 bash
+    # -it : attach
+    
+    컨테이너> jupyter notebook --generate-config # 주피터 환경설정파일 생성
+    컨테이너> ipython # 암호 만들기
+    ln [1]: from notebook.auth import passwd
+    ln [2]: passwd()
+    Enter password: 1234 # 암호 입력
+    Verify password: 1234 # 암호 재입력
+    Out[2]: 'sha1:b2a0b1af916c:081c1b09cc5afb83485dfad82f875e5789141c91'
+    # 입력한 비밀번호 암호화
+    In[3]: exit() 
+    exit
+
+    # 컨테이너 내부에 있는 파일을 우분투의 현재 폴더로 복사함
+    # 복사 : cp 복사할경로의_파일 복사될경로의_파일명
+    # "."  : 현재경로 즉, /home/user1
+    # docker cp tf01:/root/.jupyter/jupyter_notebook_config.py /home/user1 # 동일
+    docker cp tf01:/root/.jupyter/jupyter_notebook_config.py .
+    
+    # 복사해온 파일을 편집함
+    # cp한 경로 /home/user1
+    # nano ~/jupyter_notebook_config.py # 동일
+    nano /home/user1/jupyter_notebook_config.py
+    281라인 : c.NotebookApp.password = u'sha1로 시작하는 암호...' #비밀번호 설정
+
+    # 편집한 파일을 다시 컨테이너로 복사함.
+    # docker cp 원본파일 복사할파일
+    docker cp jupyter_notebook_config.py tf01:/root/.jupyter/jupyter_notebook_config.py
+
+    # 컨테이너 중지
+    docker stop tf01
+
+    # 컨테이너 다시 구동
+    docker start tf01
+    ```
+
 
 # 8. Kafka & Zookeeper
 - zookeeper위에 설치된 통신 서버
 - 토픽 생성한 자에게만 통신가능
 
-## 설치
+## 8.1 설치
 ```py
 # 다운로드
 wget https://archive.apache.org/dist/kafka/2.2.0/kafka_2.11-2.2.0.tgz
@@ -518,43 +637,44 @@ clientPort=2181
 maxClientCnxns=0
 ```
 
-## 서버
-```py
-# zookeeper 서버 구동 &를 마지막에 붙이면 백그라운드로 구동됨
-~/kafka_2.11-2.2.0/bin/zookeeper-server-start.sh 
-~/kafka/config/zookeeper.properties &
+## 8.2 서버
+- Zookeeper
+    ```py
+    # zookeeper 서버 구동 &를 마지막에 붙이면 백그라운드로 구동됨
+    ~/kafka_2.11-2.2.0/bin/zookeeper-server-start.sh 
+    ~/kafka/config/zookeeper.properties &
 
-# zookeeper 서버 구동 확인
-jps
-# 16494 QuorumPeerMain
+    # zookeeper 서버 구동 확인
+    jps
+    # 16494 QuorumPeerMain
 
 
-# [필요 시] zookeeper 서버 중지
-~/kafka_2.11-2.2.0/bin/zookeeper-server-stop.sh
-```
+    # [필요 시] zookeeper 서버 중지
+    ~/kafka_2.11-2.2.0/bin/zookeeper-server-stop.sh
+    ```
 - 서버 환경 설정
-```py
-nano ~/kafka_2.11-2.2.0/config/server.properties
-# 다음을 추가기입
-31 라인 : listeners=PLAINTEXT://0.0.0.0:9092
-36 라인 : advertised.listeners=PLAINTEXT://192.168.0.XXX:9092
-123 라인 : zookeeper.connect=127.0.0.1:2181
-가장마지막라인에 추가 : delete.topic.enable=true
+    ```py
+    nano ~/kafka_2.11-2.2.0/config/server.properties
+    # 다음을 추가기입
+    31 라인 : listeners=PLAINTEXT://0.0.0.0:9092
+    36 라인 : advertised.listeners=PLAINTEXT://192.168.0.XXX:9092
+    123 라인 : zookeeper.connect=127.0.0.1:2181
+    가장마지막라인에 추가 : delete.topic.enable=true
 
-# kafka 서버 구동
-~/kafka_2.11-2.2.0/bin/kafka-server-start.sh ~/kafka_2.11-2.2.0/config/server.properties &
+    # kafka 서버 구동
+    ~/kafka_2.11-2.2.0/bin/kafka-server-start.sh ~/kafka_2.11-2.2.0/config/server.properties &
 
 
-# kafka 서버 구동 확인
-jps
-16494 QuorumPeerMain
-1234 Kafka
+    # kafka 서버 구동 확인
+    jps
+    16494 QuorumPeerMain
+    1234 Kafka
 
-# [필요시] kafka 서버 중지
-~/kafka_2.11-2.2.0/bin/kafka-server-stop.sh    
-```
+    # [필요시] kafka 서버 중지
+    ~/kafka_2.11-2.2.0/bin/kafka-server-stop.sh    
+    ```
 
-## 토픽
+## 8.3 토픽
 ```py
 # 토픽 생성 => testTopic2   => 채널
 ~/kafka_2.11-2.2.0/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic testTopic2
@@ -572,7 +692,7 @@ jps
 ~/kafka_2.11-2.2.0/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --delete --topic testTopic2
 ```
 
-## spark-kafka 라이브러리 다운로드
+## 8.4 spark-kafka 라이브러리 다운로드
 ```py
 wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.11/2.4.5/spark-sql-kafka-0-10_2.11-2.4.5.jar
 
@@ -580,7 +700,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
 ```
 
 # 9. 여러 우분투 연결
-## 호스트 설정
+## 9.1 호스트 설정
 - 각 우분투 ifconfig로 ip주소 확인
     ```py
     # 각 호스트 이름을 확인한 아이피로 변경
@@ -605,7 +725,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
     sudo service networking restart
     ```
 
-## 환경변수 설정
+## 9.2 환경변수 설정
 ### source ~/.bashrc
 - SERVER1, SERVER2, SERVER3 편집
     ```py
@@ -695,7 +815,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
 
     ```
 
-## 암호없이 접속
+## 9.3 암호없이 접속
 - SERVER1 에서 암호없이 접속되는지 확인
     - 192.168.0.1에서 192.168.0.2 으로 암호없이 접속가능해야함.
     - 192.168.0.1에서 192.168.0.3 으로 암호없이 접속가능해야함.
@@ -709,7 +829,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
     ifconfig
     ```
 
-## 인증키 없거나 오류시 설정방법
+## 9.4인증키 없거나 오류시 설정방법
 - 
     ```py
     # SERVER1에서 인증키 생성 
@@ -727,7 +847,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
 
     ```
 
-## 접속 후
+## 9.5 접속 후
 
 - SERVER1에서만
     ```py 
@@ -752,7 +872,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
     hdfs namenode -format
     ```
 
-## 정상구동 확인방법
+## 9.6 정상구동 확인방법
 - SERVER1에서 구동시  SERVER2, SERVER3가 꺼져있어도 자동 구동됨.
     ```py
     start-all.sh
@@ -780,13 +900,13 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
     ```
 
 
+# 10. 각종 설치
+``` py
+# 그래프 라이브러리
+wget http://dl.bintray.com/spark-packages/maven/graphframes/graphframes/0.7.0-spark2.4-s_2.11/graphframes-0.7.0-spark2.4-s_2.11.jar
 
 
-
-
-
-
-
+```
 # 주요 명령어 정리
 ```py
 # Hadoop 구동
@@ -795,13 +915,16 @@ start-all.sh
 start-master.sh
 # Spark slave 구동
 start-slave.sh spark://127.0.0.1:7077
+# 주피터 실행
+jupyter notebook
+
 
 stop-all.sh
 # 강제종료(jps시 나오는 번호입력)
 kill xxxx
 ```
-## 
-## spark 토픽
+## 세부 명령어 모음
+### spark 토픽
 ```py
 # 토픽 생성 => testTopic2   => 채널
 ~/kafka_2.11-2.2.0/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic testTopic2
@@ -819,7 +942,7 @@ kill xxxx
 ~/kafka_2.11-2.2.0/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --delete --topic testTopic2
 ```
 
-## Zookeeper 서버
+### Zookeeper 서버
 ```py
 # zookeeper 서버 구동 &를 마지막에 붙이면 백그라운드로 구동됨
 ~/kafka_2.11-2.2.0/bin/zookeeper-server-start.sh 
