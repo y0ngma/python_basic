@@ -1,13 +1,18 @@
-# topic (channel)
-
-
-# broker
+# Broker
+- 서버로써 실제 브로커 처럼 클라이언트를 서로 연결시켜 주는 역할
+## kafka
+### Zookeeper
+- 전화국
+- 서버에 여러대의 zookeeper 들어감
+- 백엔드DB 역할을 Zookeeper가 대신함
+---
 ## MQTT
+- 주요 사용 기관 : Facebook, 배달의 민족
 - 사물인터넷(라즈베리파이 실무용), 파이선가능
     - 온실하우스 온도계가 서버로 MQTT를 통해 전달
     - 적정온도 유지 가능
 - 데이터 통신 + 백엔드DB에 통신내역 저장
-- 배달의 민족(고객-라이더1km 이내의)
+- 배달의 민족(고객-라이더1km 이내의) 
     - 한국 토픽 / 부산 토픽 / 동래구 토픽 / 장전동 토픽
     - 메세지queue 형태
     - 다음은 배달이 되기까지의 통신과정 설명임
@@ -20,15 +25,5 @@
     Restaurant|store/pusan/<br>051-000-0001|4단계 :<br>해당매장이 배달소요시간(ETA)을 주문고객에게 전달<br>`producer.send(client/pusan/010-xxx-xxxx, ETA)`
     Customer|client/pusan/<br>010-xxx-xxxx|5단계 :<br>주문고객이 해당 매장으로 부터 메세지 받음<br>`consumer.subscribe([store/pusan/051-000-0001])`
 
-
-- facebook
-## kafka
-- 서버, 브로커
-### Zookeeper
-- 전화국
-- 서버에 여러대의 zookeeper 들어감
-- 백엔드DB 역할을 Zookeeper가 대신함
-
-## XMPP
-- kakaotalk
-## rabbitMQ
+- MQTT와 같은 Broker(서버)로는 kafka, XMPP(KakaoTalk), RabbitMQ 가 있다 
+---

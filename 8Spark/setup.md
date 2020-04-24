@@ -514,7 +514,7 @@
     sudo ufw allow 8889
     # 
     docker run -it --name tf01 -d -p 8889:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter
-    # -it 
+    # -it : attach
     # --name tf01 
     # -d : 백그라운드 
     # -p 8889:8888 : 기존 8888을 8889에 연결해서 접속
@@ -555,13 +555,19 @@
         or http://127.0.0.1:8888/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
     ```
 
-- 주피터 실행하기
+- 토큰번호로 주피터 실행하기
     ```py
     # 세번째 서버에서 접속한다면 ip주소 유의
+    # 다음 토큰번호는 매번 바뀌므로 유의
     192.168.0.107:8889/?token=6d5a18345d3c7cd652ec1bf9be3c5cfa59e6e3cce1ef47ed
 
     ```
-- 컨테이너로 진입
+### 텐서플로 실행 간편화 하기
+- 매번 바뀌는 토큰을 매번 docker logs tf01으로 확인하여서 실행해야함
+- 따라서 `jupyter_notebook_config.py`에 암호화된 1234의 번호를 입력 시켜놓고
+- 주피터 실행시 1234로 진입하도록 해보자
+- 다만, 컨테이너내의 주피터 환경설정 파일은 바로 수정이 안되므로 꺼내어 수정 및 넣기
+1. 컨테이너 내에서 패스워드 암호화 번호 확보하기
     ```py
     docker exec -it tf01 bash
     # -it : attach
@@ -572,12 +578,14 @@
     ln [2]: passwd()
     Enter password: 1234 # 암호 입력
     Verify password: 1234 # 암호 재입력
+    # 입력한 비밀번호의 암호화된 번호 확보
     Out[2]: 'sha1:b2a0b1af916c:081c1b09cc5afb83485dfad82f875e5789141c91'
-    # 입력한 비밀번호 암호화
     In[3]: exit() 
-    exit
-
-    # 컨테이너 내부에 있는 파일을 우분투의 현재 폴더로 복사함
+    exit # 도커에서 빠져나오기
+    ```
+1. 수정을 위해 쥬피터 환경변수 파일을 컨테이너 밖에서 수정
+    ```py
+    # 컨테이너 내부에 있는 파일을 밖의 우분투의 현재 폴더로 복사함
     # 복사 : cp 복사할경로의_파일 복사될경로의_파일명
     # "."  : 현재경로 즉, /home/user1
     # docker cp tf01:/root/.jupyter/jupyter_notebook_config.py /home/user1 # 동일
@@ -587,8 +595,10 @@
     # cp한 경로 /home/user1
     # nano ~/jupyter_notebook_config.py # 동일
     nano /home/user1/jupyter_notebook_config.py
-    281라인 : c.NotebookApp.password = u'sha1로 시작하는 암호...' #비밀번호 설정
-
+    281라인 : c.NotebookApp.password = u'sha1로 시작하는 암호...' # 패스워드 암호화번호
+    ```
+1. 수정 후 다시 컨테이너로 넣고 구동하기
+    ```py
     # 편집한 파일을 다시 컨테이너로 복사함.
     # docker cp 원본파일 복사할파일
     docker cp jupyter_notebook_config.py tf01:/root/.jupyter/jupyter_notebook_config.py
