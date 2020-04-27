@@ -610,6 +610,15 @@
     docker start tf01
     ```
 
+ 
+## 7.2 도커에서 스파크 실행
+- pyspark-notebook을 도커내에서 실행시키기
+    ```py
+    docker pull jupyter/pyspark-notebook
+    docker images
+    docker run -it --name spark01 -p 8889:8888 jupyter/pyspark-notebook
+    ```
+- 192.168.99.100:8889 접속
 
 # 8. Kafka & Zookeeper
 - zookeeper위에 설치된 통신 서버
