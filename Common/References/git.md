@@ -34,18 +34,27 @@
 1. 자신의 
 
 ```bash
+# git clone 원본
+git clone https://github.com/baniota/git-upstream.git
+
+# git remote add 원하는이름 깃주소 
+git remote add fork-master https://github.com/y0ngma/git-upstream.git
+
+
 admin@DESKTOP-3VULP62 MINGW64 /c/Repository/git-upstream (master)
 git remote -v
 git remote rename origin fork-master
 # git remote rename 바꿀이름 새이름
-git remote -v 
 # 확인
 
 
 git pull from upstream # 최종버전 받기
 
 ```
-
+1. 원격저장소 추가하기
+```bash
+git
+```
 
 
 # Local Repository
