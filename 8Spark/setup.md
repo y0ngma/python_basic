@@ -729,7 +729,7 @@ wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.11.0.0/kafk
     sudo hostnamectl set-hostname 192.168.0.107
     ```
 - 호스트 등록하기
-        - SERVER1, SERVER2, SERVER3 에 편집
+    - SERVER1, SERVER2, SERVER3 에 편집
     ```py
     sudo nano /etc/hosts
     # 젤 위쪽에 추가
