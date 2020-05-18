@@ -147,139 +147,139 @@ java -version
   ```
 
 1. hadoop-env.cmd
-  - 25번째 줄
-    - set JAVA_HOME=%JAVA_HOME% 을 다음 중 하나로 바꾼다
-    - set JAVA_HOME=%JAVA_HOME=c:\PROGRA~1\Java\jdk1.8.0_211%
-    - set JAVA_HOME=%JAVA_HOME=\c:\PROGRA~1\Java\jdk1.8.0_211%
-    - set JAVA_HOME=%JAVA_HOME=/c:/PROGRA~1/Java/jdk1.8.0_211%
-    - set JAVA_HOME=%JAVA_HOME=c:\Program" "file\Java\jdk1.8.0_211%
+    - 25번째 줄
+      - set JAVA_HOME=%JAVA_HOME% 을 다음 중 하나로 바꾼다
+      - set JAVA_HOME=%JAVA_HOME=c:\PROGRA~1\Java\jdk1.8.0_211%
+      - set JAVA_HOME=%JAVA_HOME=\c:\PROGRA~1\Java\jdk1.8.0_211%
+      - set JAVA_HOME=%JAVA_HOME=/c:/PROGRA~1/Java/jdk1.8.0_211%
+      - set JAVA_HOME=%JAVA_HOME=c:\Program" "file\Java\jdk1.8.0_211%
 
-  - 90번째 줄
-    - set HADOOP_IDENT_STRING=`%USERNAME%`
-    - cmd에서 set 쳐서 USERNAME을 찾아 바꾸기
-    - set HADOOP_IDENT_STRING=`admin`
+    - 90번째 줄
+      - set HADOOP_IDENT_STRING=`%USERNAME%`
+      - cmd에서 set 쳐서 USERNAME을 찾아 바꾸기
+      - set HADOOP_IDENT_STRING=`admin`
 
-  - 92번째 줄에 새로 작성
-    ```
-    set HADOOP_PREFIX=C:\Bigdata\hadoop-3.1.2
-    set HADOOP_CONF_DIR=%HADOOP_PREFIX%\etc\hadoop
-    set YARN_CONF_DIR=%HADOOP_CONF_DIR%
-    set PATH=%PATH%;%HADOOP_PREFIX%\bin;%HADOOP_PREFIX%\sbin
-    ```
-  - `hadoop version`을 cmd 에서 확인가능.
+    - 92번째 줄에 새로 작성
+      ```
+      set HADOOP_PREFIX=C:\Bigdata\hadoop-3.1.2
+      set HADOOP_CONF_DIR=%HADOOP_PREFIX%\etc\hadoop
+      set YARN_CONF_DIR=%HADOOP_CONF_DIR%
+      set PATH=%PATH%;%HADOOP_PREFIX%\bin;%HADOOP_PREFIX%\sbin
+      ```
+    - `hadoop version`을 cmd 에서 확인가능.
 
 1. core-site.xml
-  - tmp폴더를 만들고 다음을 추가
-    <configuration>
-        <property>    
-            <name>fs.default.name</name>
-            <value>hdfs://0.0.0.0:9000</value>
-        </property>
-        <property>
-            <name>hadoop.tmp.dir</name>
-            <value>/c:/Bigdata/hadoop-3.1.2/tmp</value>
-        </property>
-    </configuration>
+    - tmp폴더를 만들고 다음을 추가
+      <configuration>
+          <property>    
+              <name>fs.default.name</name>
+              <value>hdfs://0.0.0.0:9000</value>
+          </property>
+          <property>
+              <name>hadoop.tmp.dir</name>
+              <value>/c:/Bigdata/hadoop-3.1.2/tmp</value>
+          </property>
+      </configuration>
 
-  - 만약 안되면 
-    - 0.0.0.0:9000 대신 127.0.0.1
-    - `C:\Windows\System32\drivers\etc` 에서 보안프로그램 끄고 hosts 다음과 같이 주석해제
-      ```py
-      # localhost name resolution is handled within DNS itself.
-      127.0.0.1       localhost
-      #	::1             localhost
-      ```
+    - 만약 안되면 
+      - 0.0.0.0:9000 대신 127.0.0.1
+      - `C:\Windows\System32\drivers\etc` 에서 보안프로그램 끄고 hosts 다음과 같이 주석해제
+        ```py
+        # localhost name resolution is handled within DNS itself.
+        127.0.0.1       localhost
+        #	::1             localhost
+        ```
 
 2. hdfs-site.xml
-  - 1 번째것은 복사 몇개 할건지 설정.(1번)
-  - 3, 4번째것 namenode용 설정이랑 datanode용 설정
-  <configuration>
-  <property>
-    <name>dfs.replication</name>
-    <value>1</value>
-  </property>
-  <property>
-    <name>dfs.permissions</name>
-    <value>false</value>
-  </property>
-  <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>/c:/Bigdata/hadoop-3.1.2/namenode</value>
-  </property>
-  <property>
-    <name>dfs.datanode.data.dir</name>
-    <value>/c:/Bigdata/hadoop-3.1.2/datanode</value>
-  </property>
-  </configuration>
+    - 1 번째것은 복사 몇개 할건지 설정.(1번)
+    - 3, 4번째것 namenode용 설정이랑 datanode용 설정
+    <configuration>
+    <property>
+      <name>dfs.replication</name>
+      <value>1</value>
+    </property>
+    <property>
+      <name>dfs.permissions</name>
+      <value>false</value>
+    </property>
+    <property>
+      <name>dfs.namenode.name.dir</name>
+      <value>/c:/Bigdata/hadoop-3.1.2/namenode</value>
+    </property>
+    <property>
+      <name>dfs.datanode.data.dir</name>
+      <value>/c:/Bigdata/hadoop-3.1.2/datanode</value>
+    </property>
+    </configuration>
 
 3. mapred-site.xml
-  - dddd
-  <configuration>
-    <property>
-      <name>mapreduce.framework.name</name>
-      <value>yarn</value>
-    </property>
-    <property>
-      <name>mapred.job.tracker</name>
-      <value>0.0.0.0:9001</value>
-    </property>
-  </configuration>
+    - dddd
+    <configuration>
+      <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+      </property>
+      <property>
+        <name>mapred.job.tracker</name>
+        <value>0.0.0.0:9001</value>
+      </property>
+    </configuration>
 
 4. yarn-site.xml
-  - 리소스 관리
-  <configuration>
-    <!-- Site specific YARN configuration properties -->
-    <property>
-      <name>yarn.nodemanager.aux-services</name>
-      <value>mapreduce_shuffle</value>
-    </property>
-    <property>
-      <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
-      <value>org.apache.hadoop.mapred.ShuffleHandler</value>
-    </property>
-    <property>
-      <name>yarn.log-aggregation-enable</name>
-      <value>true</value>
-    </property>
-    <property>
-      <name>yarn.nodemanager.pmem-check-enabled</name>
-      <value>false</value>
-    </property>
-    <property>
-      <name>yarn.nodemanager.vmem-check-enabled</name>
-      <value>false</value>
-    </property>
-  </configuration>
+    - 리소스 관리
+    <configuration>
+      <!-- Site specific YARN configuration properties -->
+      <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+      </property>
+      <property>
+        <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+      </property>
+      <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>true</value>
+      </property>
+      <property>
+        <name>yarn.nodemanager.pmem-check-enabled</name>
+        <value>false</value>
+      </property>
+      <property>
+        <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
+      </property>
+    </configuration>
 
 5. workers
-  - 컴퓨터들 목록 등록하는곳
-  - local host 만 있는지 확인
-  - `ping localhost` cmd에 입력하면
-    ```bash
-    ::1의 응답: 시간<1ms # 등으로 아무것도 안나오면 정상
-    ```
-    - `C:\Windows\System32\drivers\etc`의 hosts 에서 다음을 추가하는식으로 등록가능
-      ```py
-      # localhost name resolution is handled within DNS itself.
-      127.0.0.1       localhost
-      #	::1             localhost
-      
-      # 192.168.0.xx datanode1
+    - 컴퓨터들 목록 등록하는곳
+    - local host 만 있는지 확인
+    - `ping localhost` cmd에 입력하면
+      ```bash
+      ::1의 응답: 시간<1ms # 등으로 아무것도 안나오면 정상
       ```
-  
-  - 정보를 저장하는 공간 생성. 중도에 창 닫지말것
-    ```bash
-    # 관리자 권한으로 cmd 실행
-    hdfs namenode -format
-    # Storage directory C:..../namenode has been successfully formatted 확인
+      - `C:\Windows\System32\drivers\etc`의 hosts 에서 다음을 추가하는식으로 등록가능
+        ```py
+        # localhost name resolution is handled within DNS itself.
+        127.0.0.1       localhost
+        #	::1             localhost
+        
+        # 192.168.0.xx datanode1
+        ```
     
-    start-dfs.cmd
-    # 창 2개 추가로 뜨고, 자바 스크립트 허용 확인
-    # 안되면 sbin 환경변수 및 hadoop-env.cmd 확인
-    
-    # 기존창에 다음을 입력
-    start-yarn.cmd
-    jps
-    # NodeManager, Jps, NameNode, DataNode, ResourceManager 5줄 출력확인
-    ```
+    - 정보를 저장하는 공간 생성. 중도에 창 닫지말것
+      ```bash
+      # 관리자 권한으로 cmd 실행
+      hdfs namenode -format
+      # Storage directory C:..../namenode has been successfully formatted 확인
+      
+      start-dfs.cmd
+      # 창 2개 추가로 뜨고, 자바 스크립트 허용 확인
+      # 안되면 sbin 환경변수 및 hadoop-env.cmd 확인
+      
+      # 기존창에 다음을 입력
+      start-yarn.cmd
+      jps
+      # NodeManager, Jps, NameNode, DataNode, ResourceManager 5줄 출력확인
+      ```
 

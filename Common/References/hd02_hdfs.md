@@ -35,12 +35,13 @@ test|
     
     - 압축푼 경로에 파일없고
     - 하둡 datanode에 들어있음
-    livenode에서|처음값|압축푼후
-    ---|---|---
-    capacity|237.8 GB| 
-    Blocks|0|6
-    Block Pool Used|0|662MB(128MB 블럭 6개 쓰므로 다르게 나옴)
-    DataloadUsage|0 %|
+      
+      livenode에서|처음값|압축푼후
+      ---|---|---
+      capacity|237.8 GB| 
+      Blocks|0|6
+      Block Pool Used|0|662MB(128MB 블럭 6개 쓰므로 다르게 나옴)
+      DataloadUsage|0 %|
 
     
 - hadoop jar
