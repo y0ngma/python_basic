@@ -3,12 +3,12 @@
     ```SQL
     DDL
     테이블 정의어
-        CREATE      # 생성
-        ALTER       # 타입을 변경
+        CREATE      -- 생성
+        ALTER       -- 타입을 변경
         ALTER TABLE 테이블명 RENAME COLUMN 기존컬럼명 TO 바꿀컬럼명;
-        DROP        # 삭제
-        RENAME      # 이름
-        TRUNCATE    # 비우기
+        DROP        -- 삭제
+        RENAME      -- 이름
+        TRUNCATE    -- 비우기
 
     DML
     데이터 조작어
@@ -19,21 +19,21 @@
         DELETE
             FROM MEMBER WHERE ID='a'
         SELECT
-            * FROM MEMBER WHERE ID LIKE 'a%'    # LIKE 는 정규식
-            ORDER BY NO DESC | ACS              # 내림 | 오름차순
+            * FROM MEMBER WHERE ID LIKE 'a%'    -- LIKE 는 정규식
+            ORDER BY NO DESC | ACS              -- 내림 | 오름차순
         "%" || "가" ||"%"   -> "가" 포함
         "가"|| "%"          -> "가" 시작
         "%" || "가"         -> "가" 끝남
 
     DCL 
     데이터 제어어
-        GRANT       # 권한 부여
-        REVOKE      # 권한 삭제
+        GRANT       -- 권한 부여
+        REVOKE      -- 권한 삭제
 
     TCL
     트랜잭션 제어어
-        COMMIT      # 적용
-        ROLLBACK    # 포인트로 돌아가기
+        COMMIT      -- 적용
+        ROLLBACK    -- 포인트로 돌아가기
         SAVEPOINT
     ```
 ---
@@ -93,8 +93,8 @@
 - 집계함수:SUM,MAX,MIN,COUNT개수, AVG
     ```SQL
     SELECT
-        'MEMBER_TABLE2'.'CLASSROOM', # [테이블]의 [클래스룸이라 저장된 데이터]랑
-        SUM('MEMBER_TABLE2'.'KOR') AS 'SUM1', # kor행 데이터합 별칭을 SUM1로
+        'MEMBER_TABLE2'.'CLASSROOM', -- [테이블]의 [클래스룸이라 저장된 데이터]랑
+        SUM('MEMBER_TABLE2'.'KOR') AS 'SUM1', -- kor행 데이터합 별칭을 SUM1로
         SUM('MEMBER_TABLE2'.'ENG') AS 'SUM2',
         SUM('MEMBER_TABLE2'.'MATH') AS 'SUM3'
     FROM 'MEMBER_TABLE2'

@@ -94,23 +94,23 @@ Django web project
 - anaconda prompt 에서
     ``` 
     $ cd C:\python_basic\2py_web\django\web1
-    원하는 경로로 이동 후 다음을 입력
     ```
+    - 원하는 경로로 이동 후 다음을 입력
     ```bash
     # 웹 프로젝트 생성
-    $ django-admin startproject web1
+    django-admin startproject web1
 
     # web1디렉토리에서 필요한 앱 생성
-    $ cd web1
-    $ django-admin startapp member
-    
+    cd web1
+    django-admin startapp member
+    ```
 ---
 
 
 ## templates에 html만들기
 ```bash
-    $ python manage.py runserver  $ # django 서버 구동
-    $ django-admin startapp board $ # board앱 생성
+    python manage.py runserver  # django 서버 구동
+    django-admin startapp board # board앱 생성
 ```
 - 메인 setting의 templates 
     ```py 
@@ -270,11 +270,10 @@ C:\Users\admin\Documents\python_basic\2py_web\django\web1\templates\board\write.
 ## 관리자 http://127.0.0.1:8000/admin/ 환경구축
 - Oracle SQL Developer 와 같은 관리용 사이트
 - anaconda에서 다음과 같이 입력
-    ```
-    $ conda list => django 버전확인
-    $ pip install django==2.2.5 => version 변경(기존것 자동삭제)
-    $ python manage.py createsuperuser
-        L id/pw = admin/1234
+    ```py
+    $ conda list                        # django 버전확인
+    $ pip install django==2.2.5         # version 변경(기존것 자동삭제)
+    $ python manage.py createsuperuser  # id/pw = admin/1234
     $ pyhton manage.py runserver
     ```
 
