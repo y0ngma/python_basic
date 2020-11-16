@@ -63,19 +63,21 @@
     - Theme, font, terminal integrated에서 폰트크기(powershell), 
     - 전체줌/아웃은 Ctrl +/- 
     - 리누스 명령어(cmd말고 powershell)을 ctrl `(1옆의 버튼)
+
 - 왼쪽 메뉴
   1. file exploper
   1. 검색, 대체
   1. 공정관리:소스 컨트롤
   1. 디버깅(코드가 오류가 있을때 잡는 방법)
   1. 플러그인 검색 및 설치
+
 - 파이썬 설치 한 후에 파이썬 파일 한개를 생성시
-  - ./python_basic/p1.py
-  - vs code가 해당 파일을 인식하고, python경로를 잡거나 
-  extention을 설치하라고 유도
+  - > 좌측메뉴 다섯번째 extension 항목에서 python 검색하여 다음을 설치
+    - python
+    - python for vscode
+    - python extention pack
+    - 필요시 print기능이 있는 extension 설치
   - > vs code 재가동
-  - > 좌측메뉴 다섯번째 extention 항목에서 python 검색하여 
-    python, python for vscode, python extention pack 설치
 ---
 
 ### Git
